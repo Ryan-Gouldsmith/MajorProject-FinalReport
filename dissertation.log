@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.8.29)  25 MAR 2016 17:21
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.8.29)  30 MAR 2016 21:42
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -323,21 +323,21 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
 [1
 
 
-]) [2]
+] [2]) [3] [4]
 \openout2 = `Chapter2/chapter2.aux'.
 
  (./Chapter2/chapter2.tex
 Chapter 2.
-) [3
+) [5
 
 
 
-] [4]
+] [6]
 \openout2 = `Chapter3/chapter3.aux'.
 
  (./Chapter3/chapter3.tex
 Chapter 3.
-) [5
+) [7
 
 
 
@@ -348,7 +348,7 @@ Chapter 3.
 Chapter 4.
 Missing character: There is no Õ in font ptmr7t!
 Missing character: There is no Õ in font ptmr7t!
-) [6
+) [8
 
 
 
@@ -357,11 +357,11 @@ Missing character: There is no Õ in font ptmr7t!
 
  (./Chapter5/chapter5.tex
 Chapter 5.
-) [7
+) [9
 
 
 
-] [8
+] [10
 
 
 ]
@@ -371,7 +371,7 @@ Chapter 5.
 Appendix A.
 Missing character: There is no Ð in font ptmr7t!
 Missing character: There is no Õ in font ptmr7t!
-) [9
+) [11
 
 
 ]
@@ -379,7 +379,7 @@ Missing character: There is no Õ in font ptmr7t!
 
  (./Appendix2/appendix2.tex
 Appendix B.
-) [10
+) [12
 
 
 
@@ -391,34 +391,34 @@ Appendix C.
 LaTeX Font Info:    Try loading font information for OT1+pcr on input line 7.
 (/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
-) [11
+) [13
 
 
 
-] [12]) [13] (./dissertation.bbl
+] [14]) [15] (./dissertation.bbl
 Underfull \hbox (badness 1661) in paragraph at lines 22--24
 []\OT1/ptm/m/n/10.95 Apache Soft-ware Foun-da-tion, ``Apache Li-cense, Ver-sion 2.0,'' $http : / / www . apache . org /
  []
 
 ) 
 AED: lastpage setting LastPage
-[14
+[16
 
 
 ] (./dissertation.aux (./cover.aux) (./declaration.aux) (./acknowledgements.aux) (./abstract.aux) (./Chapter1/chapter1.aux) (./Chapter2/chapter2.aux) (./Chapter3/chapter3.aux) (./Chapter4/chapter4.aux) (./Chapter5/chapter5.aux) (./Appendix1/appendix1.aux) (./Appendix2/appendix2.aux) (./Appendix3/appendix3.aux)) ) 
 Here is how much of TeX's memory you used:
  3278 strings out of 493089
  44043 string characters out of 6134842
- 109761 words of memory out of 5000000
+ 109762 words of memory out of 5000000
  6582 multiletter control sequences out of 15000+600000
  26005 words of font info for 57 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,10n,45p,562b,401s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,10n,45p,828b,401s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on dissertation.pdf (21 pages, 103869 bytes).
+Output written on dissertation.pdf (23 pages, 110383 bytes).
 PDF statistics:
- 97 PDF objects out of 1000 (max. 8388607)
- 67 compressed objects within 1 object stream
+ 103 PDF objects out of 1000 (max. 8388607)
+ 71 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
