@@ -6,6 +6,8 @@ A level-1 auxiliary file: declaration.aux
 A level-1 auxiliary file: acknowledgements.aux
 A level-1 auxiliary file: abstract.aux
 A level-1 auxiliary file: Chapter1/chapter1.aux
+A level-1 auxiliary file: ChapterImageProcessing/imagepreprocessing.aux
+A level-1 auxiliary file: ChapterHandwritingTraining/handwritingtraining.aux
 A level-1 auxiliary file: Chapter2/chapter2.aux
 A level-1 auxiliary file: Chapter3/chapter3.aux
 A level-1 auxiliary file: Chapter4/chapter4.aux
@@ -30,45 +32,45 @@ Warning--entry type for "apache_license" isn't style-file defined
 ** Sorting version - not for use with work to be submitted to the IEEE.
 
 Done.
-You've used 7 entries,
+You've used 8 entries,
             4538 wiz_defined-function locations,
-            945 strings with 9432 characters,
-and the built_in function-call counts, 4927 in all, are:
-= -- 426
-> -- 105
-< -- 27
-+ -- 54
-- -- 24
-* -- 237
-:= -- 781
-add.period$ -- 15
-call.type$ -- 7
-change.case$ -- 33
-chr.to.int$ -- 69
-cite$ -- 7
-duplicate$ -- 325
-empty$ -- 402
-format.name$ -- 27
-if$ -- 1082
+            959 strings with 9989 characters,
+and the built_in function-call counts, 6126 in all, are:
+= -- 538
+> -- 135
+< -- 40
++ -- 71
+- -- 30
+* -- 305
+:= -- 961
+add.period$ -- 17
+call.type$ -- 8
+change.case$ -- 39
+chr.to.int$ -- 99
+cite$ -- 8
+duplicate$ -- 396
+empty$ -- 476
+format.name$ -- 34
+if$ -- 1351
 int.to.chr$ -- 0
-int.to.str$ -- 7
-missing$ -- 57
-newline$ -- 48
-num.names$ -- 14
-pop$ -- 161
+int.to.str$ -- 8
+missing$ -- 67
+newline$ -- 54
+num.names$ -- 16
+pop$ -- 180
 preamble$ -- 1
-purify$ -- 25
+purify$ -- 30
 quote$ -- 2
-skip$ -- 372
+skip$ -- 461
 stack$ -- 0
-substring$ -- 206
-swap$ -- 228
-text.length$ -- 4
+substring$ -- 282
+swap$ -- 298
+text.length$ -- 7
 text.prefix$ -- 0
 top$ -- 6
-type$ -- 55
+type$ -- 64
 warning$ -- 0
-while$ -- 25
-width$ -- 8
-write$ -- 87
+while$ -- 31
+width$ -- 9
+write$ -- 102
 (There were 2 warnings)

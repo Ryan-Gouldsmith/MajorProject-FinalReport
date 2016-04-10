@@ -33,7 +33,7 @@
 \bibitem{HannahsPaper}
 H.~M. Dee and D.~C. Hogg, ``Navigational strategies in behaviour modelling,''
   \emph{Artificial Intelligence}, vol. 173(2), pp. 329--342, 2009.
- \begin{quotation}\noindent This is my annotation. I should add in a
+ \begin{quotation}\noindent This is my annotation.s I should add in a
   description here. \end{quotation}
 
 \bibitem{kittenpic_ref}
@@ -57,6 +57,17 @@ W.~Press \emph{et~al.}, \emph{{Numerical recipes in C}}.\hskip 1em plus 0.5em
   minus 0.4em\relax Cambridge University Press Cambridge, 1992, pp. 349--361.
  \begin{quotation}\noindent This is my annotation. I can add in comments that
   are in \textbf{bold} and \em{italics} and then other content. \end{quotation}
+
+\bibitem{citeulike:13988059}
+\BIBentryALTinterwordspacing
+T.~J. Smoker, C.~E. Murphy, and A.~K. Rockwell, ``{Comparing Memory for
+  Handwriting versus Typing},'' \emph{Proceedings of the Human Factors and
+  Ergonomics Society Annual Meeting}, vol.~53, no.~22, pp. 1744--1747, Oct.
+  2009. [Online]. Available: \url{http://dx.doi.org/10.1177/154193120905302218}
+\BIBentrySTDinterwordspacing
+ \begin{quotation}\noindent Used to show that there handwriting is still an
+  important part of memory rentention with note taking, compared to digital
+  text \end{quotation}
 
 \bibitem{FailBlog}
 Various, ``Fail blog,'' \url{http://www.failblog.org/}, Aug. 2011, accessed

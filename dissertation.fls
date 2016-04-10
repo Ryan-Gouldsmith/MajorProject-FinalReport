@@ -74,6 +74,10 @@ INPUT abstract.aux
 INPUT abstract.aux
 INPUT Chapter1/chapter1.aux
 INPUT Chapter1/chapter1.aux
+INPUT ChapterImageProcessing/imagepreprocessing.aux
+INPUT ChapterImageProcessing/imagepreprocessing.aux
+INPUT ChapterHandwritingTraining/handwritingtraining.aux
+INPUT ChapterHandwritingTraining/handwritingtraining.aux
 INPUT Chapter2/chapter2.aux
 INPUT Chapter2/chapter2.aux
 INPUT Chapter3/chapter3.aux
@@ -191,6 +195,12 @@ INPUT /usr/local/texlive/2015/texmf-dist/fonts/vf/adobe/times/ptmb7t.vf
 INPUT /usr/local/texlive/2015/texmf-dist/fonts/tfm/adobe/times/ptmb8r.tfm
 INPUT /usr/local/texlive/2015/texmf-dist/fonts/vf/adobe/times/ptmb7t.vf
 INPUT /usr/local/texlive/2015/texmf-dist/fonts/tfm/adobe/times/ptmb8r.tfm
+OUTPUT ChapterImageProcessing/imagepreprocessing.aux
+INPUT ChapterImageProcessing/imagepreprocessing.tex
+INPUT ChapterImageProcessing/imagepreprocessing.tex
+OUTPUT ChapterHandwritingTraining/handwritingtraining.aux
+INPUT ChapterHandwritingTraining/handwritingtraining.tex
+INPUT ChapterHandwritingTraining/handwritingtraining.tex
 OUTPUT Chapter2/chapter2.aux
 INPUT Chapter2/chapter2.tex
 INPUT Chapter2/chapter2.tex
@@ -231,6 +241,10 @@ INPUT abstract.aux
 INPUT abstract.aux
 INPUT Chapter1/chapter1.aux
 INPUT Chapter1/chapter1.aux
+INPUT ChapterImageProcessing/imagepreprocessing.aux
+INPUT ChapterImageProcessing/imagepreprocessing.aux
+INPUT ChapterHandwritingTraining/handwritingtraining.aux
+INPUT ChapterHandwritingTraining/handwritingtraining.aux
 INPUT Chapter2/chapter2.aux
 INPUT Chapter2/chapter2.aux
 INPUT Chapter3/chapter3.aux

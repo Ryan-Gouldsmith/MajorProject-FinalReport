@@ -1,6 +1,7 @@
 \chapter{Background \& Objectives}
 
-%This section should discuss your preparation for the project, including background reading, your analysis of the problem and the process or method you have followed to help structure your work.  It is likely that you will reuse part of your outline project specification, but at this point in the project you should have more to talk about.
+%This section should discuss your preparation for the project, including background reading, your analysis of the problem and the process or method you have followed to help structure your work.  It is likely that you will reuse part of your outline project specification, but at this point in the project you should have more to talk about.
+
 %\textbf{Note}:
 
 %\begin{itemize}
@@ -12,9 +13,35 @@
 
 \section{Background}
 %What was your background preparation for the project? What similar systems did you assess? What was your motivation and interest in this project?
-Handwriting notes is still considered to be an important aspect of note taking. In [SMOKER CITE] a study was conducted and out of 61 adults 72.1\% prefered to take notes using pen and paper, rather than on a computer. Smoker et al [Cite]  concluded that recall rates for handwritten text was greater than that of typed text - prooving handwriting notes are viable.
+Handwriting notes is still considered to be an important aspect of note taking. Smoker et al \cite{citeulike:13988059} conducted a study comparing handwritten text against digital text for memory retention and out of 61 adults 72.1\% prefered to take notes using pen and paper, rather than on a computer. Smoker et al concluded that recall rates for handwritten text was greater than that of typed text proving that handwritten notes are better for a user's memory retention.
 
 However technology has advanced and we're moving into an era where we track and view everything digitally, from email to calendar entries. Therefore, there is a need to transfer the productivity from handwritten notes to digital notes - so they can be located easily.
+
+% Handwriting triaining ?
+
+% Taxonomy of notes 
+When a user creates a note they will often come in differing forms: some are semi-structured and some are back of the evenvelope kind of notes. When thinking about an application to analyse notes, first there has to be consideration for what a note will consist of. A taxonomy, by definition, is a biological term for a classification of similar sections, showing how things are linked together. 
+
+Notes can be throught of as a collection of similar classifications, whether this is the pure textual descriptions of a note or whether this is purely pictoral form or a mixture of both. However, the notes are normally split into three distinct categories: 
+\begin{enumerate}
+	\item Textual descriptions
+	\item Diagrams 
+	\item Graphs
+\end{enumerate}
+\begin{figure}[h!]
+\includegraphics[scale=0.5]{images/taxonomy}
+\centering
+\caption{A taxonomy showing the structure and classification of different types of notes and what is contained in a note.}
+ \label{fig:taxonomyofnotes}
+\end{figure}
+
+In figure \ref{fig:taxonomyofnotes}, it shows a taxonomy of the different aspects which may comprise to make a note. Textural descriptions form the core part of a note, this is essentially the important content that a note-taker is trying to remember and write down. Different note-takers form their notes in different ways, for example the headings may be underlined or hashed - if they were adopting a mark-down style approach. These sections helps to show that there's a break in the content, and should be sub-sectioned. Textural points that are short, but important, are often characterised by a colon or a bullet point; these are the most common form of concise note building, in the classisifcation. Coloured highlighting if often used for a variety of reasons: it stands out on the page and for some people colour retention is better. Finally, tables help to represent textual content in tabular form.  This is often good in notes for comparisons. 
+
+Graphs are great visual tools for user's in helping to convery textual information in a graphical form. Naturally, they have their limitations such as they come in different shapes and sizes, such as a line-graph, pie chart or a bar chart. Coupled with graphs, notes often consist of diagram drawings.  In figure \ref{fig:taxonomyofnotes}, there are different sections and classsifications of a diagram: boxed, arrow etc. Each one has its own purpose and arrowed and box can overlap; UML diagrams are a case of this. Spider diagrams are probably the hardest to represent, due to the varying sizes and whether the user draws circles or clouds. Furthermore, specific shape diagrams are conceptutally hard to think about as it depends on the domain in which the user is drawing the note. For example, a person in biology may draw a stick person, whereas someone in Computer Science may draw a PC. 
+
+Overall, identifying the taxonomy of notes is important as it gives context to which the application can potentially parse and identify these different classifications. Additionally, it acknowledges where there may need to be constraints due to the variations in notes and how it can deal with semi-structured documents.
+
+% Add some more from the stuff Hannah made us write about in the first week.
 
 
 
@@ -35,7 +62,11 @@ EverNote is a note-taking and note organisation app, it is both supported on the
 The author's motivation for this project is to provide a tool, which initially would be tailored to lecturer based note content. Often notes are written up, but discarded into a big pile and later they're hard to find. As a user, it would be good if the notes were all in one place that they could photograph in and it would automatically create meta-data for it and save it to their calendar. Often the modules that are undertaken are stored in my calendar as a reminder that there's a lecturer on that day - so providing a link to the event in the calendar would be a nice way to tie all these dispersed information together.
 
 \section{Analysis}
-%Taking into account the problem and what you learned from the background work, what was your analysis of the problem? How did your analysis help to decompose the problem into the main tasks that you would undertake? Were there alternative approaches? Why did you choose one approach compared to the alternatives?%There should be a clear statement of the objectives of the work, which you will evaluate at the end of the work.%In most cases, the agreed objectives or requirements will be the result of a compromise between what would ideally have been produced and what was felt to be possible in the time available. A discussion of the process of arriving at the final list is usually appropriate.
+%Taking into account the problem and what you learned from the background work, what was your analysis of the problem? How did your analysis help to decompose the problem into the main tasks that you would undertake? Were there alternative approaches? Why did you choose one approach compared to the alternatives?
+
+%There should be a clear statement of the objectives of the work, which you will evaluate at the end of the work.
+
+%In most cases, the agreed objectives or requirements will be the result of a compromise between what would ideally have been produced and what was felt to be possible in the time available. A discussion of the process of arriving at the final list is usually appropriate.
 By analysing the problem a taxonomy of notes was collated. This helped to breakdown exactly what was in a set of notes. This taxonomy gave a comprehensive analysis of what information would be available to parse from the test, as well as giving the information parsed semantic meaning. It was quickly brought up that I should potentially create a specific layout for the note so that the data can be parsed sensibly, to reduce the complexity.
 
 After identifying that handwriting recognition would be a part of the application then research began investigating what OCR (optical character recognition) tools are available. It was suggested that the open source tool Tesseract [cite] would be an appropriate tool. Instead of using an OCR tool then I could have focussed my dissertation on analysing notes and extracting user's handwriting from it - however, that is not within the aim of the project. As it is more of a tool to use, then using an OCR eases the complexity.
