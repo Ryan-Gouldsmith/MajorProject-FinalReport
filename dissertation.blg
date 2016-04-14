@@ -32,45 +32,45 @@ Warning--entry type for "apache_license" isn't style-file defined
 ** Sorting version - not for use with work to be submitted to the IEEE.
 
 Done.
-You've used 8 entries,
+You've used 9 entries,
             4538 wiz_defined-function locations,
-            959 strings with 9989 characters,
-and the built_in function-call counts, 6126 in all, are:
-= -- 538
-> -- 135
+            966 strings with 10363 characters,
+and the built_in function-call counts, 6617 in all, are:
+= -- 586
+> -- 142
 < -- 40
-+ -- 71
-- -- 30
-* -- 305
-:= -- 961
-add.period$ -- 17
-call.type$ -- 8
-change.case$ -- 39
++ -- 74
+- -- 32
+* -- 325
+:= -- 1051
+add.period$ -- 19
+call.type$ -- 9
+change.case$ -- 44
 chr.to.int$ -- 99
-cite$ -- 8
-duplicate$ -- 396
-empty$ -- 476
-format.name$ -- 34
-if$ -- 1351
+cite$ -- 9
+duplicate$ -- 432
+empty$ -- 518
+format.name$ -- 36
+if$ -- 1455
 int.to.chr$ -- 0
-int.to.str$ -- 8
-missing$ -- 67
-newline$ -- 54
-num.names$ -- 16
-pop$ -- 180
+int.to.str$ -- 9
+missing$ -- 75
+newline$ -- 58
+num.names$ -- 18
+pop$ -- 203
 preamble$ -- 1
-purify$ -- 30
+purify$ -- 33
 quote$ -- 2
-skip$ -- 461
+skip$ -- 499
 stack$ -- 0
-substring$ -- 282
-swap$ -- 298
+substring$ -- 290
+swap$ -- 318
 text.length$ -- 7
 text.prefix$ -- 0
 top$ -- 6
-type$ -- 64
+type$ -- 72
 warning$ -- 0
-while$ -- 31
-width$ -- 9
-write$ -- 102
+while$ -- 33
+width$ -- 10
+write$ -- 112
 (There were 2 warnings)

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.8.29)  11 APR 2016 00:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.8.29)  14 APR 2016 16:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -340,35 +340,38 @@ Underfull \hbox (badness 10000) in paragraph at lines 57--58
 ] (./dissertation.toc
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1.
-)
-\tf@toc=\write3
-\openout3 = `dissertation.toc'.
-
 
 [1
 
-] (./dissertation.lof)
+])
+\tf@toc=\write3
+\openout3 = `dissertation.toc'.
+
+ [2] (./dissertation.lof)
 \tf@lof=\write4
 \openout4 = `dissertation.lof'.
 
- [2] (./dissertation.lot)
+ [3] (./dissertation.lot)
 \tf@lot=\write5
 \openout5 = `dissertation.lot'.
 
- [3]
+ [4]
 \openout2 = `Chapter1/chapter1.aux'.
 
- (./Chapter1/chapter1.tex
+
+(./Chapter1/chapter1.tex
 Chapter 1.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <20.74> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <24.88> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1.
-<images/taxonomy.png, id=29, 715.67375pt x 735.74875pt>
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 23.
+<images/taxonomy.png, id=32, 715.67375pt x 735.74875pt>
 File: images/taxonomy.png Graphic file (type png)
 
 <use images/taxonomy.png>
-Package pdftex.def Info: images/taxonomy.png used on input line 32.
+Package pdftex.def Info: images/taxonomy.png used on input line 33.
 (pdftex.def)             Requested size: 357.836pt x 367.87347pt.
 
 
@@ -378,13 +381,14 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 ] [2 <./images/taxonomy.png>]
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 48.
- [3] [4]) [5]
+
+LaTeX Warning: Citation `citeulike:onenote' on page 3 undefined on input line 5
+8.
+
+[3] [4] [5] [6] [7]) [8]
 \openout2 = `ChapterImageProcessing/imagepreprocessing.aux'.
 
-
-(./ChapterImageProcessing/imagepreprocessing.tex
+ (./ChapterImageProcessing/imagepreprocessing.tex
 Chapter 2.
 
 Overfull \hbox (21.65617pt too wide) in paragraph at lines 6--7
@@ -392,11 +396,11 @@ Overfull \hbox (21.65617pt too wide) in paragraph at lines 6--7
  the im-age was con-verted to Monochrome.
  []
 
-[6
+[9
 
 
 
-]) [7]
+]) [10]
 \openout2 = `ChapterHandwritingTraining/handwritingtraining.aux'.
 
  (./ChapterHandwritingTraining/handwritingtraining.tex
@@ -407,7 +411,7 @@ Overfull \hbox (0.97029pt too wide) in paragraph at lines 7--8
 e, with com-mer-cial vs non-commercial
  []
 
-) [8
+) [11
 
 
 
@@ -416,16 +420,16 @@ e, with com-mer-cial vs non-commercial
 
  (./Chapter2/chapter2.tex
 Chapter 4.
-) [9
+) [12
 
 
 
-] [10]
+] [13]
 \openout2 = `Chapter3/chapter3.aux'.
 
  (./Chapter3/chapter3.tex
 Chapter 5.
-) [11
+) [14
 
 
 
@@ -436,7 +440,7 @@ Chapter 5.
 Chapter 6.
 Missing character: There is no Õ in font ptmr7t!
 Missing character: There is no Õ in font ptmr7t!
-) [12
+) [15
 
 
 
@@ -445,11 +449,11 @@ Missing character: There is no Õ in font ptmr7t!
 
  (./Chapter5/chapter5.tex
 Chapter 7.
-) [13
+) [16
 
 
 
-] [14
+] [17
 
 
 ]
@@ -459,7 +463,7 @@ Chapter 7.
 Appendix A.
 Missing character: There is no Ð in font ptmr7t!
 Missing character: There is no Õ in font ptmr7t!
-) [15
+) [18
 
 
 ]
@@ -467,7 +471,7 @@ Missing character: There is no Õ in font ptmr7t!
 
  (./Appendix2/appendix2.tex
 Appendix B.
-) [16
+) [19
 
 
 
@@ -479,48 +483,55 @@ Appendix C.
 LaTeX Font Info:    Try loading font information for OT1+pcr on input line 7.
 (/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
-) [17
+) [20
 
 
 
-] [18])
-[19] (./dissertation.bbl
+] [21])
+[22] (./dissertation.bbl
 Underfull \hbox (badness 1661) in paragraph at lines 22--24
 []\OT1/ptm/m/n/10.95 Apache Soft-ware Foun-da-tion, ``Apache Li-cense, Ver-sion
  2.0,'' $http : / / www . apache . org /
  []
 
-) 
+[23
+
+
+]) 
 AED: lastpage setting LastPage
-[20
-
-
-] (./dissertation.aux (./cover.aux) (./declaration.aux)
+[24] (./dissertation.aux (./cover.aux) (./declaration.aux)
 (./acknowledgements.aux) (./abstract.aux) (./Chapter1/chapter1.aux)
 (./ChapterImageProcessing/imagepreprocessing.aux)
 (./ChapterHandwritingTraining/handwritingtraining.aux) (./Chapter2/chapter2.aux
 ) (./Chapter3/chapter3.aux) (./Chapter4/chapter4.aux) (./Chapter5/chapter5.aux)
 (./Appendix1/appendix1.aux) (./Appendix2/appendix2.aux)
-(./Appendix3/appendix3.aux)) ) 
+(./Appendix3/appendix3.aux))
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
- 3307 strings out of 493089
- 44997 string characters out of 6134842
- 110474 words of memory out of 5000000
- 6592 multiletter control sequences out of 15000+600000
+ 3308 strings out of 493089
+ 45016 string characters out of 6134842
+ 111476 words of memory out of 5000000
+ 6593 multiletter control sequences out of 15000+600000
  26005 words of font info for 57 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,11n,45p,1024b,401s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvi
-ps/base/8r.enc}</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmsy10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/courier/ucrr8
-a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></us
-r/local/texlive/2015/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/te
-xlive/2015/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2015
-/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on dissertation.pdf (27 pages, 151371 bytes).
+ 38i,10n,45p,2389b,420s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
+exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/te
+xlive/2015/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/20
+15/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2015/texmf-d
+ist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/
+type1/urw/times/utmr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/
+times/utmri8a.pfb>
+Output written on dissertation.pdf (32 pages, 160674 bytes).
 PDF statistics:
- 119 PDF objects out of 1000 (max. 8388607)
- 81 compressed objects within 1 object stream
+ 135 PDF objects out of 1000 (max. 8388607)
+ 92 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 

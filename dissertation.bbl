@@ -44,6 +44,14 @@ S.~Duckworth, ``{A picture of a kitten at Hellifield Peel},''
  \begin{quotation}\noindent This is my annotation. I should add in a
   description here. \end{quotation}
 
+\bibitem{citeulike:onenote}
+Microsoft, ``{Microsoft OneNote | The digital note-taking app for your
+  devices},'' \url{https://www.onenote.com/}, 2016, last checked 13 April 2016.
+ \begin{quotation}\noindent Used to look at and compare how similar note taking
+  applications structure their application. Used the applicatation to test the
+  user interface and what functionality OneNote offered that may be usedful for
+  the application \end{quotation}
+
 \bibitem{MarksPaper}
 M.~Neal, J.~Feyereisl, R.~Rascun\`{a}, and X.~Wang, ``{Don't touch me, I'm
   fine: Robot autonomy using an artificial innate immune system},'' in
