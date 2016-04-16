@@ -8,10 +8,10 @@
 %Typically, for an object-oriented design, the discussion will focus on the choice of objects and classes and the allocation of methods to classes. The use made of reusable components should be described and their source referenced. Particularly important decisions concerning data structures usually affect the architecture of a system and so should be described here.
 
 %How much material you include on detailed design and implementation will depend very much on the nature of the project. It should not be padded out. Think about the significant aspects of your system. For example, describe the design of the user interface if it is a critical aspect of your system, or provide detail about methods and data structures that are not trivial. Do not spend time on long lists of trivial items and repetitive descriptions. If in doubt about what is appropriate, speak to your supervisor.
- 
+
 %You should also identify any support tools that you used. You should discuss your choice of implementation tools - programming language, compilers, database management system, program development environment, etc.
 
-%Some example sub-sections may be as follows, but the specific sections are for you to define. 
+%Some example sub-sections may be as follows, but the specific sections are for you to define.
 
 As the application was developed in an iterative manner, then no upfront formal class diagrams were conducted to design the system. Regardless, from the initial requirements it was clear that there was a set of design decisions that had to be made - these mainly were the implementation features. These would not change too significantly throughout the iterations.
 
@@ -20,15 +20,15 @@ The following discusses the design decision in the implementation tools that wer
 \subsection{Programming language}
 As the application was determined to be a web application then a design decision had to be made regarding the specific language to use for the server side. Normally for a server side application there would be a choice of languages to use such as: PHP, Ruby, Python, Java or more recently Node has increased popularity [CITE].
 
-It was quickly decided in the first few meetings that OpenCV [CITE] would be needed to be implemented in the application at some point. Having previously used OpenCV with Python bindings it was known that Python could successfully integrate with a Python based application. Research was conducted to see if PHP or Ruby had some form of OpenCV wrapper, but after a little research there was not a lot of wrappers out there that looked promising. 
+It was quickly decided in the first few meetings that OpenCV [CITE] would be needed to be implemented in the application at some point. Having previously used OpenCV with Python bindings it was known that Python could successfully integrate with a Python based application. Research was conducted to see if PHP or Ruby had some form of OpenCV wrapper, but after a little research there was not a lot of wrappers out there that looked promising.
 
 As a result it was quickly established I'd have to use either Python or Java's wrapper for the application. Java applications tend to be more useful for large commercial applications, using enterprise software systems like Java EE[CITE]. That level of complexity was considered to be overkill for this application, therefore Python was chosen for the main language implementation due to the lightweight abilities, the ability to create web applications and knowledge of integrating with OpenCV.
 \subsection{Database management system}
 When considering the database aspect, one has to consider the different types of management systems available. The general consensus falls in the NoSQL vs SQL category. SQL management systems by their very nature are suited to data which is structured and has little variations. Whereas NoSQL is more suited to applications where there may be different values from time to time between the data.
 
-After spending a long time evaluting the system and what could be achieved a SQL management system was selected. To do the basic tagging of meta-data would not warrant a NoSQL database structure, due to the information being structured and similar for every note. Couple this with the fact that there are a specific set of rules in which the notes must follow to tag this meta-data really suggested that the data will be nice and formulated, following the same structure for every note. 
+After spending a long time evaluting the system and what could be achieved a SQL management system was selected. To do the basic tagging of meta-data would not warrant a NoSQL database structure, due to the information being structured and similar for every note. Couple this with the fact that there are a specific set of rules in which the notes must follow to tag this meta-data really suggested that the data will be nice and formulated, following the same structure for every note.
 
-After determining that an SQL management system would be appropriate, a suitable technology would have to be chosen. When considering which technology to use, it tends to fall in the: SQLLite, PostgreSQL or MySQL. 
+After determining that an SQL management system would be appropriate, a suitable technology would have to be chosen. When considering which technology to use, it tends to fall in the: SQLLite, PostgreSQL or MySQL.
 
 \subsubsection{SQLLite}
 
@@ -39,38 +39,82 @@ After determining that an SQL management system would be appropriate, a suitable
 
 
 \begin{flushleft}
-After evaluating the possible relational database management systems (RDMS) it was decided that PostgreSQL qould be the most suitable for my application. 
+After evaluating the possible relational database management systems (RDMS) it was decided that PostgreSQL qould be the most suitable for my application.
 \end{flushleft}
 
 \subsection{Choice of Framework}
 
-Just to recall Python was chosen as the language of choice for the application. With this in mind a framework had to be chosen to help aid the development of the project. Frameworks can be interesting things, they are their to aid you but sometimes you're constrained to their rules and regulations. This can lead to many frameworks being bloated with additional options that you would never want or need to use. That said, choosing a framework was an important process. 
+Just to recall Python was chosen as the language of choice for the application. With this in mind a framework had to be chosen to help aid the development of the project. Frameworks can be interesting things, they are their to aid you but sometimes you're constrained to their rules and regulations. This can lead to many frameworks being bloated with additional options that you would never want or need to use. That said, choosing a framework was an important process.
 
-After analysing what Python web frameworks were available, I shortlisted three different ones: Django [CITE], Flask [CITE] and Bottle [CITE]. The latter two were classified as a  ``micro-framework'' whilst Django being the full blooded framework - like Ruby on Rails [CITE].  After establishing that maybe a heavyweight framework was probably too much for the application and I wanted to have freedom to include my own libraries and feeling as though there's more flexibility, I opted to rule out Django. 
+After analysing what Python web frameworks were available, I shortlisted three different ones: Django [CITE], Flask [CITE] and Bottle [CITE]. The latter two were classified as a  ``micro-framework'' whilst Django being the full blooded framework - like Ruby on Rails [CITE].  After establishing that maybe a heavyweight framework was probably too much for the application and I wanted to have freedom to include my own libraries and feeling as though there's more flexibility, I opted to rule out Django.
 
-This left Flask and Bottle frameworks. On the face value of things, Flask and Bottle look quite similar. They are both lightweight with similar syntax, however when delving a little deeper into the technologies I found that Flask had more of a support community compared to Bottle. As I was not familar with either framework then choosing one which provided a good level of community support in tangent with the documentation was important. On making the decision based on this factor then Flask seemed the more appropriate framework to choose for this application. 
+This left Flask and Bottle frameworks. On the face value of things, Flask and Bottle look quite similar. They are both lightweight with similar syntax, however when delving a little deeper into the technologies I found that Flask had more of a support community compared to Bottle. As I was not familar with either framework then choosing one which provided a good level of community support in tangent with the documentation was important. On making the decision based on this factor then Flask seemed the more appropriate framework to choose for this application.
 
 \subsection{Continuous Integration tool}
-Although Continuous Integration (CI) is normally used for development teams to ensure that all code is checked into the repository[cite], there was value in using it for a single person project. Prodomently for the build processes on the branches to ensure that the application builds in an isolated enviornment. 
+Although Continuous Integration (CI) is normally used for development teams to ensure that all code is checked into the repository[cite], there was value in using it for a single person project. Prodomently for the build processes on the branches to ensure that the application builds in an isolated enviornment.
 
-Having used Jenkins CI before [CITE] this was my immediate choice when considering what to use for a continous integration tool. However, whilst considering the posibilities on how to integrate this to the application I discovered the CI tool, Travis CI. This CI tool seemed easy to set up: you link it to the repository, add a travis.yml file (with configurations) and it will run and build the application. This then gives useful messages such as passing, errors or failing. 
+Having used Jenkins CI before [CITE] this was my immediate choice when considering what to use for a continous integration tool. However, whilst considering the posibilities on how to integrate this to the application I discovered the CI tool, Travis CI. This CI tool seemed easy to set up: you link it to the repository, add a travis.yml file (with configurations) and it will run and build the application. This then gives useful messages such as passing, errors or failing.
 
 One key decision whilst considering CI tools was to show be able to check the build process whereever I am. After finding out the Travis CI is in the cloud and links directly with the GitHub repo I opted to use Travis CI for the project.
 
 
 \section{Overall Architecture}
 
-\section{Some detailed design}
+\subsection{CRC cards}
+To recap, Extreme Programming uses the concept of CRC cards to help to aid the developer to think about the design of the application. Unlike UML, they are throw-away cards which can be edited and changed every time a new feature is implemented.  The CRC cards which have been drawn up in the application have been formalised, and a selection of the interesting design decisions and justifications are stated below.
 
-\subsection{Even more detail}
+\begin{itemize}
+  \item Use of service objects
+  \item Explain why sections are linked together and describe the behaviour of the application classes and why they would be used.
+  \item
+\end{itemize}
+
+
+
+%\section{Some detailed design}
+
+
+\subsection{MVC Structure}
+\begin{itemize}
+  \item Explain a little bit on MVC
+  \item Keen advocate of MVC
+  \item I wanted components such as the models to be reusable where possible
+  \item Had to change the way that Flask does the controllers to be blueprints to truely make this work.
+  \item Diagram to show how the MVC framework would work.
+  \item Why a package based system didn't work.
+
+\end{itemize}
+
+
+
+%\subsection{Even more detail}
 
 \section{User Interface}
-Although the application was developed in an itterative approach, wiremocks were completed when UI changes occurred so that I could reflect on them.
+Although the application was developed in an iterative approach, wiremocks were completed when UI changes occurred so that I could reflect on them.
 
-To begin with the user interface (UI) went through a few iterations of wiremocks to sketch out what it should look like.  This iterative approach was applied when actually designing the website. Firstly it was important that the application felt as thought it was an application, rather than a traditional website. Colours from Google Style guide [CITE] was used to keep with nice, clean and bold colours. Bootstrap[CITE] was considered to be used on the application and it did give a default responsive theme built in - however, keeping with the idea of minimalist and not over-bloated, then personally I feel that that bootstrap comes with a lot of the additional material which would not be needed. 
+To begin with the user interface (UI) went through a few iterations of wiremocks to sketch out what it should look like.  This iterative approach was applied when actually designing the website. Firstly it was important that the application felt as thought it was an application, rather than a traditional website. Colours from Google Style guide [CITE] was used to keep with nice, clean and bold colours. Bootstrap[CITE] was considered to be used on the application and it did give a default responsive theme built in - however, keeping with the idea of minimalist and not over-bloated, then personally I feel that that bootstrap comes with a lot of the additional material which would not be needed.
 
-With this being a web application, a responsive navigation was always important. A user may take a photo of their note and then upload this to the website off their mobile. This resulted in the web application having to be thought about from a responsive view. I should have done this better and considered this from the beginning and built up from the responsive to the desktop version. However, I did restrospective responsive design and performed media-queries when I needed to. 
+With this being a web application, a responsive navigation was always important. A user may take a photo of their note and then upload this to the website off their mobile. This resulted in the web application having to be thought about from a responsive view. I should have done this better and considered this from the beginning and built up from the responsive to the desktop version. However, I did retrospective responsive design and performed media-queries when I needed to.
 % add in code examples for media query\
+\begin{itemize}
+  \item Wiremock examples
+  \item Media query code examples.
+\end{itemize}
 % Include wiremocks
-
 \section{Other relevant sections}
+\begin{itemize}
+  \item Why did I use a Calendar Item class to story the class and then format the date from that instance.
+  \item Why Parsing the notes returned the first 3 lines. Why did this have to be done?
+  
+\end{itemize}
+\subsection{Optimising Tesseract}
+\begin{itemize}
+  \item Attempt at going to GrayScale.
+  \item Realised it wasnt good so redesigned it to custom lined paper Why did I do this instead of normal lined paper?
+  \item Why the colour blue ?
+\end{itemize}
+
+\subsection{Tesseract}
+\begin{itemize}
+  \item why Tesseract, what's different compared to other industry standard ones.
+\end{itemize}
