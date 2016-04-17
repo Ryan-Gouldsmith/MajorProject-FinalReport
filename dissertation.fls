@@ -169,9 +169,9 @@ INPUT abstract.tex
 INPUT dissertation.toc
 INPUT dissertation.toc
 INPUT /usr/local/texlive/2015/texmf-dist/fonts/tfm/adobe/times/ptmb7t.tfm
-OUTPUT dissertation.toc
 INPUT /usr/local/texlive/2015/texmf-dist/fonts/vf/adobe/times/ptmb7t.vf
 INPUT /usr/local/texlive/2015/texmf-dist/fonts/tfm/adobe/times/ptmb8r.tfm
+OUTPUT dissertation.toc
 INPUT dissertation.lof
 INPUT dissertation.lof
 OUTPUT dissertation.lof
@@ -186,6 +186,9 @@ INPUT /usr/local/texlive/2015/texmf-dist/fonts/tfm/adobe/times/ptmb7t.tfm
 INPUT /usr/local/texlive/2015/texmf-dist/fonts/tfm/adobe/times/ptmb7t.tfm
 INPUT /usr/local/texlive/2015/texmf-dist/fonts/tfm/adobe/times/ptmr7t.tfm
 INPUT /usr/local/texlive/2015/texmf-dist/fonts/tfm/adobe/times/ptmb7t.tfm
+INPUT images/taxonomy.png
+INPUT ./images/taxonomy.png
+INPUT ./images/taxonomy.png
 INPUT /usr/local/texlive/2015/texmf-dist/fonts/tfm/adobe/times/ptmro7t.tfm
 INPUT /usr/local/texlive/2015/texmf-dist/fonts/vf/adobe/times/ptmro7t.vf
 INPUT /usr/local/texlive/2015/texmf-dist/fonts/tfm/adobe/times/ptmro8r.tfm

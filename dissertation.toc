@@ -6,43 +6,61 @@
 \contentsline {subsubsection}{\numberline {1.1.2.2}EverNote}{3}
 \contentsline {subsubsection}{\numberline {1.1.2.3}Google Keep}{4}
 \contentsline {subsection}{\numberline {1.1.3}Personal Interest}{4}
-\contentsline {section}{\numberline {1.2}Analysis}{4}
-\contentsline {subsection}{\numberline {1.2.1}Objectives}{6}
-\contentsline {section}{\numberline {1.3}Process}{6}
-\contentsline {chapter}{\numberline {2}Image pre-processing for Tesseract}{9}
-\contentsline {section}{\numberline {2.1}ImageMagick}{9}
-\contentsline {section}{\numberline {2.2}OpenCV}{9}
-\contentsline {section}{\numberline {2.3}Line removal}{10}
-\contentsline {chapter}{\numberline {3}Handwriting training with Tesseract}{11}
-\contentsline {section}{\numberline {3.1}Training}{11}
-\contentsline {chapter}{\numberline {4}Design}{12}
-\contentsline {section}{\numberline {4.1}Implementation tools}{12}
-\contentsline {subsection}{\numberline {4.1.1}Programming language}{12}
-\contentsline {subsection}{\numberline {4.1.2}Database management system}{13}
-\contentsline {subsubsection}{\numberline {4.1.2.1}SQLLite}{13}
-\contentsline {subsubsection}{\numberline {4.1.2.2}PostgreSQL}{13}
-\contentsline {subsection}{\numberline {4.1.3}MySQL}{13}
-\contentsline {subsection}{\numberline {4.1.4}Choice of Framework}{13}
-\contentsline {subsection}{\numberline {4.1.5}Continuous Integration tool}{14}
-\contentsline {section}{\numberline {4.2}Overall Architecture}{14}
-\contentsline {section}{\numberline {4.3}Some detailed design}{14}
-\contentsline {subsection}{\numberline {4.3.1}Even more detail}{14}
-\contentsline {section}{\numberline {4.4}User Interface}{14}
-\contentsline {section}{\numberline {4.5}Other relevant sections}{14}
-\contentsline {chapter}{\numberline {5}Implementation}{15}
-\contentsline {chapter}{\numberline {6}Testing}{16}
-\contentsline {section}{\numberline {6.1}Overall Approach to Testing}{16}
-\contentsline {section}{\numberline {6.2}Automated Testing}{16}
-\contentsline {subsection}{\numberline {6.2.1}Unit Tests}{16}
-\contentsline {subsection}{\numberline {6.2.2}User Interface Testing}{16}
-\contentsline {subsection}{\numberline {6.2.3}Stress Testing}{16}
-\contentsline {subsection}{\numberline {6.2.4}Other types of testing}{16}
-\contentsline {section}{\numberline {6.3}Integration Testing}{16}
-\contentsline {section}{\numberline {6.4}User Testing}{16}
-\contentsline {chapter}{\numberline {7}Evaluation}{17}
-\contentsline {chapter}{Appendices}{18}
-\contentsline {chapter}{\numberline {A}Third-Party Code and Libraries}{19}
-\contentsline {chapter}{\numberline {B}Ethics Submission}{20}
-\contentsline {chapter}{\numberline {C}Code Examples}{21}
-\contentsline {section}{\numberline {3.1}Random Number Generator}{21}
-\contentsline {chapter}{Annotated Bibliography}{24}
+\contentsline {section}{\numberline {1.2}Analysis}{5}
+\contentsline {subsection}{\numberline {1.2.1}Parsing a note}{5}
+\contentsline {subsection}{\numberline {1.2.2}An OCR tool}{5}
+\contentsline {subsection}{\numberline {1.2.3}What to parse from the note}{5}
+\contentsline {subsection}{\numberline {1.2.4}Structuring of notes}{5}
+\contentsline {subsection}{\numberline {1.2.5}OCR for the authors handwriting}{6}
+\contentsline {subsection}{\numberline {1.2.6}What platform is most suitable}{6}
+\contentsline {subsection}{\numberline {1.2.7}What should the application do}{6}
+\contentsline {subsection}{\numberline {1.2.8}Calendar Integration}{6}
+\contentsline {subsection}{\numberline {1.2.9}Objectives}{7}
+\contentsline {subsection}{\numberline {1.2.10}Comprising with objectives}{7}
+\contentsline {section}{\numberline {1.3}Process}{7}
+\contentsline {subsection}{\numberline {1.3.1}Scrum overview}{8}
+\contentsline {subsection}{\numberline {1.3.2}Adapted Scrum}{8}
+\contentsline {subsection}{\numberline {1.3.3}Incorporated Extreme Programming}{8}
+\contentsline {subsubsection}{\numberline {1.3.3.1}Test-driven development}{9}
+\contentsline {subsubsection}{\numberline {1.3.3.2}Continuous Integration}{9}
+\contentsline {subsubsection}{\numberline {1.3.3.3}CRC cards}{9}
+\contentsline {chapter}{\numberline {2}Image pre-processing for Tesseract}{10}
+\contentsline {section}{\numberline {2.1}ImageMagick}{10}
+\contentsline {section}{\numberline {2.2}OpenCV}{10}
+\contentsline {section}{\numberline {2.3}Line removal}{11}
+\contentsline {chapter}{\numberline {3}Handwriting training with Tesseract}{12}
+\contentsline {section}{\numberline {3.1}Training}{12}
+\contentsline {chapter}{\numberline {4}Design}{13}
+\contentsline {section}{\numberline {4.1}Implementation tools}{13}
+\contentsline {subsection}{\numberline {4.1.1}Programming language}{13}
+\contentsline {subsection}{\numberline {4.1.2}Database management system}{14}
+\contentsline {subsubsection}{\numberline {4.1.2.1}SQLLite}{14}
+\contentsline {subsubsection}{\numberline {4.1.2.2}PostgreSQL}{14}
+\contentsline {subsection}{\numberline {4.1.3}MySQL}{14}
+\contentsline {subsection}{\numberline {4.1.4}Choice of Framework}{14}
+\contentsline {subsection}{\numberline {4.1.5}Continuous Integration tool}{15}
+\contentsline {section}{\numberline {4.2}Overall Architecture}{15}
+\contentsline {subsection}{\numberline {4.2.1}CRC cards}{15}
+\contentsline {subsection}{\numberline {4.2.2}MVC Structure}{15}
+\contentsline {section}{\numberline {4.3}User Interface}{16}
+\contentsline {section}{\numberline {4.4}Other relevant sections}{16}
+\contentsline {subsection}{\numberline {4.4.1}Optimising Tesseract}{16}
+\contentsline {subsection}{\numberline {4.4.2}Tesseract}{16}
+\contentsline {chapter}{\numberline {5}Implementation}{17}
+\contentsline {chapter}{\numberline {6}Testing}{18}
+\contentsline {section}{\numberline {6.1}Overall Approach to Testing}{18}
+\contentsline {section}{\numberline {6.2}Automated Testing}{18}
+\contentsline {section}{\numberline {6.3}Mocking Tests}{18}
+\contentsline {subsection}{\numberline {6.3.1}Unit Tests}{18}
+\contentsline {subsection}{\numberline {6.3.2}User Interface Testing}{18}
+\contentsline {subsection}{\numberline {6.3.3}Stress Testing}{18}
+\contentsline {subsection}{\numberline {6.3.4}Other types of testing}{18}
+\contentsline {section}{\numberline {6.4}Integration Testing}{18}
+\contentsline {section}{\numberline {6.5}User Testing}{18}
+\contentsline {chapter}{\numberline {7}Evaluation}{19}
+\contentsline {chapter}{Appendices}{20}
+\contentsline {chapter}{\numberline {A}Third-Party Code and Libraries}{21}
+\contentsline {chapter}{\numberline {B}Ethics Submission}{22}
+\contentsline {chapter}{\numberline {C}Code Examples}{23}
+\contentsline {section}{\numberline {3.1}Random Number Generator}{23}
+\contentsline {chapter}{Annotated Bibliography}{26}

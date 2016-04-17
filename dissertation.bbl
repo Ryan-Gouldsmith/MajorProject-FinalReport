@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 \providecommand{\url}[1]{#1}
 \csname url@rmstyle\endcsname
 \providecommand{\newblock}{\relax}
@@ -44,6 +44,17 @@ S.~Duckworth, ``{A picture of a kitten at Hellifield Peel},''
  \begin{quotation}\noindent This is my annotation. I should add in a
   description here. \end{quotation}
 
+\bibitem{citeulike:14014177}
+\BIBentryALTinterwordspacing
+M.~A.~A. Dzulkifli and M.~F.~F. Mustafar, ``{The influence of colour on memory
+  performance: a review.}'' \emph{The Malaysian journal of medical sciences :
+  MJMS}, vol.~20, no.~2, pp. 3--9, Mar. 2013. [Online]. Available:
+  \url{http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3743993/}
+\BIBentrySTDinterwordspacing
+ \begin{quotation}\noindent A paper reviewing whether colour helps with memory
+  retention. Used for the analysis and further confirmation in the taxonomy of
+  notes section. \end{quotation}
+
 \bibitem{citeulike:onenote}
 Microsoft, ``{Microsoft OneNote | The digital note-taking app for your
   devices},'' \url{https://www.onenote.com/}, 2016, last checked 13 April 2016.
@@ -59,6 +70,14 @@ M.~Neal, J.~Feyereisl, R.~Rascun\`{a}, and X.~Wang, ``{Don't touch me, I'm
   Systems}.\hskip 1em plus 0.5em minus 0.4em\relax Springer, 2006, pp.
   349--361.
  \begin{quotation}\noindent This paper... \end{quotation}
+
+\bibitem{Olurinola_Tayo_2015}
+O.~Olurinola and O.~Tayo, ``Colour in learning: Its effect on the retention
+  rate of graduate students,'' \emph{Journal of Education and Practice},
+  vol.~6, no.~14, p. 1–5, 2015.
+ \begin{quotation}\noindent Discusses a study which shows that coloured text is
+  better for the memory retention rates, than that of non-coloured text. Used
+  during the taxonomy of notes section. \end{quotation}
 
 \bibitem{NumericalRecipes}
 W.~Press \emph{et~al.}, \emph{{Numerical recipes in C}}.\hskip 1em plus 0.5em
@@ -82,5 +101,12 @@ Various, ``Fail blog,'' \url{http://www.failblog.org/}, Aug. 2011, accessed
   August 2011.
  \begin{quotation}\noindent This is my annotation. I should add in a
   description here. \end{quotation}
+
+\bibitem{citeulike:Taxonomy}
+M.~Webster, ``{Taxonomy | Definition of Taxonomy by Merriam-Webster},''
+  \url{http://www.merriam-webster.com/dictionary/taxonomy}, 2016, last checked
+  17th April 2016.
+ \begin{quotation}\noindent A definition of exactly what a teaxonomy is.
+  Clearly labelling it as a classification of a problem. \end{quotation}
 
 \end{thebibliography}
