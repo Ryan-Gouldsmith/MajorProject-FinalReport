@@ -18,31 +18,25 @@
 \fi
 #2}}
 
-\bibitem{apache_license}
-{Apache Software Foundation}, ``{Apache License, Version 2.0},''
-  \url{http://www.apache.org/licenses/LICENSE-2.0}, 2004.
- \begin{quotation}\noindent This is my annotation. I should add in a
-  description here. \end{quotation}
+\bibitem{citeulike:13988110}
+``{Evernote Tech Blog | The Care and Feeding of Elephants},''
+  \url{https://blog.evernote.com/tech/2013/07/18/how-evernotes-image-recognition-works/},
+  2013, last checked 25th March 2016.
+ \begin{quotation}\noindent An article explaining how Evernote does character
+  recognition on images \end{quotation}
 
-\bibitem{apache_poi}
-------, ``{Apache POI - the Java API for Microsoft Documents},''
-  \url{http://poi.apache.org}, 2014.
- \begin{quotation}\noindent This is my annotation. I should add in a
-  description here. \end{quotation}
-
-\bibitem{HannahsPaper}
-H.~M. Dee and D.~C. Hogg, ``Navigational strategies in behaviour modelling,''
-  \emph{Artificial Intelligence}, vol. 173(2), pp. 329--342, 2009.
- \begin{quotation}\noindent This is my annotation.s I should add in a
-  description here. \end{quotation}
-
-\bibitem{kittenpic_ref}
-S.~Duckworth, ``{A picture of a kitten at Hellifield Peel},''
-  \url{http://www.geograph.org.uk/photo/640959}, 2007, copyright Sylvia
-  Duckworth and licensed for reuse under a Creative Commons Attribution-Share
-  Alike 2.0 Generic Licence. Accessed August 2011.
- \begin{quotation}\noindent This is my annotation. I should add in a
-  description here. \end{quotation}
+\bibitem{citeulike:13915786}
+\BIBentryALTinterwordspacing
+R.~Agarwal and D.~Umphress, ``{Extreme Programming for a Single Person Team},''
+  in \emph{Proceedings of the 46th Annual Southeast Regional Conference on XX},
+  ser. ACM-SE 46.\hskip 1em plus 0.5em minus 0.4em\relax New York, NY, USA:
+  ACM, 2008, pp. 82--87. [Online]. Available:
+  \url{http://dx.doi.org/10.1145/1593105.1593127}
+\BIBentrySTDinterwordspacing
+ \begin{quotation}\noindent This paper was useful on how Extreme Programming
+  can be modified to a single person project. It provided thought on the
+  methodology which should be undertaken on the project and how different
+  aspects of Extreme Programming can be used. \end{quotation}
 
 \bibitem{citeulike:14014177}
 \BIBentryALTinterwordspacing
@@ -55,6 +49,35 @@ M.~A.~A. Dzulkifli and M.~F.~F. Mustafar, ``{The influence of colour on memory
   retention. Used for the analysis and further confirmation in the taxonomy of
   notes section. \end{quotation}
 
+\bibitem{citeulike:14014282}
+Evernote, ``{The note-taking space for your life's work | Evernote},''
+  \url{https://evernote.com/?var=c}, 2016, last checked 17th April 2016.
+ \begin{quotation}\noindent The Evernote application is an example of the
+  organisational and note-taking application that this project is looking at as
+  a similar system. \end{quotation}
+
+\bibitem{citeulike:14014320}
+Google, ``{Meet Google Keep, Save your thoughts, wherever you are - Keep
+  Google},'' \url{https://www.google.com/keep/}, 2016, last checked 17th April
+  2016.
+ \begin{quotation}\noindent Google keep is an organisational and note-taking
+  application, it is used as part of the evaluation and background analysis. It
+  was compared against what the application could do. \end{quotation}
+
+\bibitem{citeulike:14014367}
+R.~Gouldsmith, ``{Ryan Gouldsmith's Blog},'' \url{https://ryangouldsmith.uk/},
+  2016, last checked TODO.
+ \begin{quotation}\noindent A collection of blog posts which explain the
+  progress every week through a review and reflection post. \end{quotation}
+
+\bibitem{citeulike:14014361}
+C.~Maiden, ``{An Introduction to Test Driven Development | Code Enigma},''
+  \url{https://www.codeenigma.com/community/blog/introduction-test-driven-development},
+  2013, last checked 17th April 2016.
+ \begin{quotation}\noindent A blog post giving a detailed description of what
+  Test-driven development includes. Gives supportive detail to discussing that
+  tests can be viewed as documentation. \end{quotation}
+
 \bibitem{citeulike:onenote}
 Microsoft, ``{Microsoft OneNote | The digital note-taking app for your
   devices},'' \url{https://www.onenote.com/}, 2016, last checked 13 April 2016.
@@ -63,13 +86,21 @@ Microsoft, ``{Microsoft OneNote | The digital note-taking app for your
   user interface and what functionality OneNote offered that may be usedful for
   the application \end{quotation}
 
-\bibitem{MarksPaper}
-M.~Neal, J.~Feyereisl, R.~Rascun\`{a}, and X.~Wang, ``{Don't touch me, I'm
-  fine: Robot autonomy using an artificial innate immune system},'' in
-  \emph{Proceedings of the 5th International Conference on Artificial Immune
-  Systems}.\hskip 1em plus 0.5em minus 0.4em\relax Springer, 2006, pp.
-  349--361.
- \begin{quotation}\noindent This paper... \end{quotation}
+\bibitem{citeulike:14014272}
+------, ``{Office LensWindows Apps on Microsoft Store},''
+  \url{https://www.microsoft.com/en-gb/store/apps/office-lens/9wzdncrfj3t8},
+  2016, last checked 17th April 2016.
+ \begin{quotation}\noindent The Microsoft Lens application which would
+  automatically crop, resize and correctly orientate an image taken at an
+  angle. \end{quotation}
+
+\bibitem{citeulike:14014236}
+------, ``{Take handwritten notes in OneNote 2016 for Windows - OneNote},''
+  \url{https://support.office.com/en-us/article/Take-handwritten-notes-in-OneNote-2016-for-Windows-0ec88c54-05f3-4cac-b452-9ee62cebbd4c},
+  2016, last checked 17th April 2016.
+ \begin{quotation}\noindent An article on OneNote's use of handwriting
+  extraction from an image. Shows simply how to extract text from a given
+  image. \end{quotation}
 
 \bibitem{Olurinola_Tayo_2015}
 O.~Olurinola and O.~Tayo, ``Colour in learning: Its effect on the retention
@@ -79,11 +110,21 @@ O.~Olurinola and O.~Tayo, ``Colour in learning: Its effect on the retention
   better for the memory retention rates, than that of non-coloured text. Used
   during the taxonomy of notes section. \end{quotation}
 
-\bibitem{NumericalRecipes}
-W.~Press \emph{et~al.}, \emph{{Numerical recipes in C}}.\hskip 1em plus 0.5em
-  minus 0.4em\relax Cambridge University Press Cambridge, 1992, pp. 349--361.
- \begin{quotation}\noindent This is my annotation. I can add in comments that
-  are in \textbf{bold} and \em{italics} and then other content. \end{quotation}
+\bibitem{citeulike:14010520}
+A.~Pilon, ``{Calendar Apps Stats: Google Calendar Named Most Popular | AYTM},''
+  \url{https://aytm.com/blog/daily-survey-results/calendar-apps-survey/}, 2015,
+  last checked 13th April 2016.
+ \begin{quotation}\noindent A survery showing that Google calendar was ranked
+  the most used calendar people use. Added to the analysis stage to justfy why
+  Google calendar was chosen instead of other calendars available.
+  \end{quotation}
+
+\bibitem{citeulike:14014350}
+Scrum.org, ``{Resources | Scrum.org - The home of Scrum},''
+  \url{https://www.scrum.org/Resources}, 2016, last checked 17th April 2016.
+ \begin{quotation}\noindent The website for the scrum methodology principles.
+  The website was used to reference the process and methodology which was
+  adapted in the project \end{quotation}
 
 \bibitem{citeulike:13988059}
 \BIBentryALTinterwordspacing
@@ -96,11 +137,27 @@ T.~J. Smoker, C.~E. Murphy, and A.~K. Rockwell, ``{Comparing Memory for
   important part of memory rentention with note taking, compared to digital
   text \end{quotation}
 
-\bibitem{FailBlog}
-Various, ``Fail blog,'' \url{http://www.failblog.org/}, Aug. 2011, accessed
-  August 2011.
- \begin{quotation}\noindent This is my annotation. I should add in a
-  description here. \end{quotation}
+\bibitem{citeulike:14014357}
+M.~G. Software, ``{Planning Poker: Agile Estimating Made Easy},''
+  \url{https://www.mountaingoatsoftware.com/tools/planning-poker}, 2016, last
+  checked 17th April 2016.
+ \begin{quotation}\noindent Showing the use of planning poker with exactly how
+  it was implemented in the application using the scrum based approach.
+  \end{quotation}
+
+\bibitem{citeulike:14014368}
+Tesseract, ``{Tesseract Open Source OCR Engine},''
+  \url{https://github.com/tesseract-ocr/tesseract}, 2016, last checked 17th
+  April 2016.
+ \begin{quotation}\noindent The open source optical character recognition
+  engine which will be used in the application to analyse characters on a page.
+  \end{quotation}
+
+\bibitem{citeulike:14014360}
+Tiaga, ``{Taiga.io},'' \url{https://taiga.io/}, 2016, last checked TODO.
+ \begin{quotation}\noindent The project management toold which was utilised to
+  help to keep track of the project's progress throughout the process. Utilised
+  the Scrum tools available that the application gives. \end{quotation}
 
 \bibitem{citeulike:Taxonomy}
 M.~Webster, ``{Taxonomy | Definition of Taxonomy by Merriam-Webster},''
@@ -108,5 +165,14 @@ M.~Webster, ``{Taxonomy | Definition of Taxonomy by Merriam-Webster},''
   17th April 2016.
  \begin{quotation}\noindent A definition of exactly what a teaxonomy is.
   Clearly labelling it as a classification of a problem. \end{quotation}
+
+\bibitem{citeulike:13398676}
+D.~Wells, ``{CRC Cards},''
+  \url{http://www.extremeprogramming.org/rules/crccards.html}, 1999, last
+  checked 17th April 2016.
+ \begin{quotation}\noindent A description of what CRC cards are and why they're
+  useful when considering the design of an application. Used as a reference
+  material throughout the process, as well as during the chapter discussing the
+  process. \end{quotation}
 
 \end{thebibliography}

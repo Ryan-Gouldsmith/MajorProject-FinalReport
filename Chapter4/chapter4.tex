@@ -1,14 +1,58 @@
 \chapter{Testing}
 
-Detailed descriptions of every test case are definitely not what is required here. What is important is to show that you adopted a sensible strategy that was, in principle, capable of testing the system adequately even if you did not have the time to test the system fully.Have you tested your system on �real users�? For example, if your system is supposed to solve a problem for a business, then it would be appropriate to present your approach to involve the users in the testing process and to record the results that you obtained. Depending on the level of detail, it is likely that you would put any detailed results in an appendix.The following sections indicate some areas you might include. Other sections may be more appropriate to your project.
+%Detailed descriptions of every test case are definitely not what is required here. What is important is to show that you adopted a sensible strategy that was, in principle, capable of testing the system adequately even if you did not have the time to test the system fully.%Have you tested your system on �real users�? For example, if your system is supposed to solve a problem for a business, then it would be appropriate to present your approach to involve the users in the testing process and to record the results that you obtained. Depending on the level of detail, it is likely that you would put any detailed results in an appendix.%The following sections indicate some areas you might include. Other sections may be more appropriate to your project.
+
+Testing would form the core part of the application for \textit{MapMyNotes}. Due to it prodomently being a web application then testing was an important process. In conjunction, there needed to be a wide-range of testing included to cover all possible approaches.
 
 \section{Overall Approach to Testing}
+To recall an agile approach was adopted throughout the project. As a result, a test-driven development approach was conducted.
 
+\subsection{TDD}
+Test-driven development was adopted throughout all aspects of the application. A solution always had an associated test and all code in the application has a purpose with a test behind it. Figure \ref{fig:tdd} shows the TDD cycle.
+
+\begin{figure}
+  \includegraphics[scale=0.5]{images/tdd}
+  \centering
+  \caption{The cycle of TDD during the development stages of the application}
+  \label{fig:tdd}
+\end{figure}
+
+A sensible test was created and, following the cycle, this would fail when run. The following steps would be to ensure that the tests pass by adding the associated code needed to make sure that it passes - afterwards refactoring occurs to ensure that design is kept simple and as clean as possible for the current implementation.
+
+This approach could have been modified so that a group of tests were created for a feature and then implement a set of functions. This testing strategy was rejected and a pure one test for one bit of functionality was used. This was mainly to ensure that the design was not being over complicated.
+
+Reflecting on the testing strategy and the design, it really did help to think of the design through a test-driven-development way. It ensured that the domain was fully understood before creating a test. This left the codebase tested fully - through a variety of aspects.
 \section{Automated Testing}
+One thing to note is that Flasks testing documentation is very sparse and is of low quality.
+
+To begin with py.test was originally being used to run the test suite and tests were created with just unittest.TestCase.
 
 \section{Mocking Tests}
+During testing it would be established quickly that tests would need to integrate with the Google API as well as the Tesseract helper class.
+
+The need to for mocks vary between applications but thinking about the Google API example. [Cite] It is best practice not to hit a live production URL unless its in production. For testing Google's API's do not offer such luxury. After looking around they suggest that mocking would be a suitable idea.
+
+The Tesseract example it may first seem odd to mock the response of certain functions. However, consider the possibilty of training data and then testing the application, then training some more. The results are likely to change - therefore to ensure that the tests have consistency and will work, data has been mocked to return a sensible output. Personally, the test cases was complex and not exactly the most intuitive.
+
+During the first few iterations, whilst getting used to how it works, then working how to deal with mocks were conducted via annotations above the test function.
+
+\begin{lstlisting}[language=python]
+  @mock.object(GoogleOauthService, 'authorise')
+  @mock.object(GoogleCalendarService, 'execute_request')
+  def test_return_correct_response(self, authorise, calendar_response):
+    authorise.return_value = some_json
+    calendar_response.return_value = some_more_json
+\end{lstlisting}
+
+This style of the testing syntax causes the codebase to become far too messy and unreadable. Additionally, large chunks of functionality was being duplicated going against my DRY (do not repeat yourself) principle.
+
+Eventually, looking through the API docs for the mock object a patch object call was discovered. This allowed for a much cleaner test code base. These patches could be located in the setUp and tearDown function, replacing the annotations at the top of test functions.
+
+
 
 \subsection{Unit Tests}
+
+\subsection{Handling sessions}
 
 \subsection{User Interface Testing}
 
