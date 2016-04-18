@@ -71,6 +71,11 @@ The tests would extend the libraries TestCase class. This allows the application
 Unit tests were conducted for all the classes in the model directory. Model testing themselves was relatively easy and simple to implement.
 
 \subsection{Route Testing}
+As the application was using routes then tests were conducted to ensure that the routes could be hit. Whilst doing TDD these were often the first tests to be written. This allowed design considerations to be thought over regarding specific routes.
+
+Other aspects of testing the routes ensured that the correct response codes were returned, ensuring that the routes were working as intended from the very core of the application. Additional tests were added to check that any redirects worked correctly, to ensure flow between controllers were being executes where applicable.
+
+Finally, in some sections persistance testing occured where a test database was checked to make sure that code inside the controllers was being executed. For example, when adding a note the note route checks to make sure that a note was created in the test database.
 
 \subsection{Handling sessions}
 One of the tricker aspects regarding testing was the handling of sessions. In parts of the application sessions are used to handle specific states of the system, i.e user logged in.
@@ -102,7 +107,9 @@ Due to there being no code written for the Tesseract training process there were
 
 A test framework was produced which ran the training process on the image. As mentioned, it outputs a text file which is associated to the words identified. This file was then renamed to $eng.ryan.expx_stat.txt$ so that when the final part of the training process is ran it did not overwrite the file.
 
-A statistical analysis was collected on the outputted characters from each of the training examples.
+A statistical analysis was collected on the outputted characters from each of the training examples. Each of the characters were identified on each line of the text file, where each character represents a box which Tesseract has identified as a character.
+
+
 
 
 \section{Image thresholding Testing}
