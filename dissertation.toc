@@ -56,16 +56,18 @@
 \contentsline {section}{\numberline {6.2}Automated Testing}{19}
 \contentsline {section}{\numberline {6.3}Mocking Tests}{19}
 \contentsline {subsection}{\numberline {6.3.1}Unit Tests}{20}
-\contentsline {subsection}{\numberline {6.3.2}Handling sessions}{20}
-\contentsline {subsection}{\numberline {6.3.3}User Interface Testing}{20}
-\contentsline {subsection}{\numberline {6.3.4}Stress Testing}{20}
-\contentsline {subsection}{\numberline {6.3.5}Other types of testing}{20}
-\contentsline {section}{\numberline {6.4}Integration Testing}{20}
-\contentsline {section}{\numberline {6.5}User Testing}{20}
-\contentsline {chapter}{\numberline {7}Evaluation}{21}
-\contentsline {chapter}{Appendices}{22}
-\contentsline {chapter}{\numberline {A}Third-Party Code and Libraries}{23}
-\contentsline {chapter}{\numberline {B}Ethics Submission}{24}
-\contentsline {chapter}{\numberline {C}Code Examples}{25}
-\contentsline {section}{\numberline {3.1}Random Number Generator}{25}
-\contentsline {chapter}{Annotated Bibliography}{28}
+\contentsline {subsection}{\numberline {6.3.2}Route Testing}{20}
+\contentsline {subsection}{\numberline {6.3.3}Handling sessions}{20}
+\contentsline {subsection}{\numberline {6.3.4}User Interface Testing}{21}
+\contentsline {subsection}{\numberline {6.3.5}Stress Testing}{21}
+\contentsline {section}{\numberline {6.4}Integration Testing}{21}
+\contentsline {section}{\numberline {6.5}User Testing}{21}
+\contentsline {section}{\numberline {6.6}Tesseract Testing}{21}
+\contentsline {section}{\numberline {6.7}Image thresholding Testing}{21}
+\contentsline {chapter}{\numberline {7}Evaluation}{23}
+\contentsline {chapter}{Appendices}{24}
+\contentsline {chapter}{\numberline {A}Third-Party Code and Libraries}{25}
+\contentsline {chapter}{\numberline {B}Ethics Submission}{26}
+\contentsline {chapter}{\numberline {C}Code Examples}{27}
+\contentsline {section}{\numberline {3.1}Random Number Generator}{27}
+\contentsline {chapter}{Annotated Bibliography}{30}

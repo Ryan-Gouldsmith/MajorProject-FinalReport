@@ -48,18 +48,68 @@ This style of the testing syntax causes the codebase to become far too messy and
 
 Eventually, looking through the API docs for the mock object a patch object call was discovered. This allowed for a much cleaner test code base. These patches could be located in the setUp and tearDown function, replacing the annotations at the top of test functions.
 
+The following code makes the mocking a lot more succinct, keeping it in the setUp functions and reducing the duplication
 
+\begin{lstlisting}[language=python]
+    def setUp(self):
+      # some code
+      authorise_patch = mock.patch()
+      authorise_mock = authorise_patch.start()
+      authorise_mock.return_value = some_json
+
+    def teatDown(self):
+      mock.patch.stopAll()
+\end{lstlisting}
+
+Side effects....
 
 \subsection{Unit Tests}
+After refactoring the testing infrastructure to use Flask-testing fraamework instead of the default python unit test, then unit testing became event easier.
+
+The tests would extend the libraries TestCase class. This allows the application access to the application context (the current application) to test models.
+
+Unit tests were conducted for all the classes in the model directory. Model testing themselves was relatively easy and simple to implement.
+
+\subsection{Route Testing}
 
 \subsection{Handling sessions}
+One of the tricker aspects regarding testing was the handling of sessions. In parts of the application sessions are used to handle specific states of the system, i.e user logged in.
+
+During testing of routes then session handling would not be too complex. The flask documentation gives a clear breakdown of how to modify a session. To begin with you have to open a test client context - this mirrors what a normal client would look like. From there a session transaction context needs to be opened. Once this has been opened then it would allow for session modification.
+
+Issues arose during the acceptance tests where session modification would need to happen. Issues arose due to the fact that selenium would run on a different process to the application. As a result session modification could not occur during using selenium and acceptance test. This caused a lot of problems regarding testing. As a result, more mocking had to be used. This time the session helper would be then ended up mocking.
+
+Overall, session handling was one of the hardest aspects with testing to get around and find a suitable, yet clean solution.
 
 \subsection{User Interface Testing}
 
 \subsection{Stress Testing}
 
-\subsection{Other types of testing}
-
 \section{Integration Testing}
+Integration tests would aid in thinking about not just the backend models, but how the information would be presented to the end user.
 
+These tests were implemented in the form of using Python's selenium tool. As previously used before, selenium is a testing tool which allows you to integrate with the DOM and perform automated browser testing. These tests are important to ensure that the user interface is tested for input and ensuring values are correct.
+
+An example of a selenium test to ensure that when the user goes to the file upload page and they're entering information into the meta-data form that associated calendar events are correctlt displayed.
+
+Another useful test where selenium works well is when checking the background colour of the Tesseract output. By mocking the tesseract output the tests were able to test logic such as identifying the confidence score to the correct class name - and therefor the classname being identified with the correct background colour of the text.
 \section{User Testing}
+
+Due to the application aiming to solve a problem with a set of students then user studies were conducted and teh responses were analysed and evaluated.
+
+\section{Tesseract Testing}
+Due to there being no code written for the Tesseract training process there were no formal tests conducted for this section. However, what could be tested was how well the Tesseract learned as it was going through the learning process.
+
+A test framework was produced which ran the training process on the image. As mentioned, it outputs a text file which is associated to the words identified. This file was then renamed to $eng.ryan.expx_stat.txt$ so that when the final part of the training process is ran it did not overwrite the file.
+
+A statistical analysis was collected on the outputted characters from each of the training examples.
+
+
+\section{Image thresholding Testing}
+When writing my script for the image thresholding research it was soon discovered that the script would be very trial and error and very much like a protoyping.
+
+When testing the output from the image, then it would be a visual check rather than a specific image that was looking to be achieved. Looking at each itteration through the scripts improvement it would be evaluated as whether it was a worse or better binarisation script. Once a sufficient level of satisfaction from eye-judgement was achieved then the testing from that script was stopped.
+
+Once the spike work for the script had been completed, TDD performed on the image to turn the prototyped script into clean testable code. Using the outputted numpy arrays from open cv, they were compared against what was believed to be outputted.
+
+When the image converts the white image mask to black it performs checks for the image for any black value in the image.

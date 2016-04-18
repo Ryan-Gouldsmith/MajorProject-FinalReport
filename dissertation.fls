@@ -278,6 +278,8 @@ INPUT Appendix2/appendix2.aux
 INPUT Appendix3/appendix3.aux
 INPUT Appendix3/appendix3.aux
 INPUT /usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc
+INPUT /usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
+INPUT /usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb
 INPUT /usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
 INPUT /usr/local/texlive/2015/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb
 INPUT /usr/local/texlive/2015/texmf-dist/fonts/type1/urw/times/utmb8a.pfb
