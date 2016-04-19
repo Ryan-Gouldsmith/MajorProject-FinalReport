@@ -119,9 +119,23 @@ The results concluded by Patel et al is that Transym only yielded a 47\% accurac
 
 Analysing the outputs concluded that Tesseract would be the best performing on an image. Tesseract was chosen for its open source and it's highly commended recognition rate as well as my supervisor echoing the compliments of Tesseract and it should be considered.
 
-\subsection{Optimising Tesseract}
+\section{Optimising Tesseract}
+
+\subsection{ImageMagick}
+Once Tesseract was chosen as the OCR tool training was started promptly. Due to there not being a formal way images were supposed to be prepared for the tool then the first few iterations were converted to grayscale using ImageMagick [CITE]. This yielded a poor return rate and characters were not identified consistently.
+
+At this point in the design, the notes were being written on original lined paper. Research work was looked into to try and get the image as clean as it could be for the Tesseract engine. This resulted in monochrome from ImageMagick to be used; an increase in recognition rate was received, however the image was very messy with pixels from the lines obfuscating the response from Tesseract.
+
+\subsection{OpenCV}
+During a meeting with Dr Hannah Dee, it was suggested that OpenCV should be used. It was already a design consideration - as to why Python was chose - so it should be used to facilitate the binarisation script.
+
+OpenCV is an open source image processing library. Natively written in C++, but there are Python bindings available - so the Python version was selected, to fit into the web application.
+
+
+
+
+
 \begin{itemize}
-  \item Attempt at going to GrayScale.
   \item Realised it wasnt good so redesigned it to custom lined paper Why did I do this instead of normal lined paper?
   \item Why the colour blue ?
 \end{itemize}
