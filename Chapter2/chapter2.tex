@@ -16,7 +16,7 @@
 As the application was developed in an iterative manner, then no upfront formal class diagrams were conducted to design the system. Regardless, from the initial requirements it was clear that there was a set of design decisions that had to be made - these mainly were the implementation features. These would not change too significantly throughout the iterations.
 
 \section{Implementation tools}
-The following discusses the design decision in the implementation tools that were used during the project. This section provides rationale for key design decision which would impact the application.
+The following discusses the design decision regarding the implementation tools that were used during the project. This section provides rationale for key design decision which would impact the application.
 \subsection{Programming language}
 As the application was determined to be a web application then a design decision had to be made regarding the specific language to use for the server side. Normally for a server side application there would be a choice of languages to use such as: PHP, Ruby, Python, Java or more recently Node has increased popularity [CITE].
 
@@ -29,17 +29,18 @@ When considering the database aspect, one has to consider the different types of
 After spending a long time evaluting the system and what could be achieved a SQL management system was selected. To do the basic tagging of meta-data would not warrant a NoSQL database structure, due to the information being structured and similar for every note. Couple this with the fact that there are a specific set of rules in which the notes must follow to tag this meta-data really suggested that the data will be nice and formulated, following the same structure for every note.
 
 After determining that an SQL management system would be appropriate, a suitable technology would have to be chosen. When considering which technology to use, it tends to fall in the: SQLLite, PostgreSQL or MySQL.
-
+[CITE DIGITAL OCEAN LINK]
 \subsubsection{SQLLite}
-
+SQLLite was considered as a viable option; with most of the Flask documentation discussing implementing a database with SQLLite, it is intuitive to include in the application. However, considering the larger picture: would SQLLite scale well with multiple users using it. Testing and development would be perfectly fine, with a single person using it, but with more read and writes to the file, it probably wouldn't scale well.
 
 \subsubsection{PostgreSQL}
-
-\subsection{MySQL}
+PostgreSQL is the most advanced of the RDMS's available. The additional advanced, especially in the types give the developer more freedom to change their structure and implement more complex SQL queries if it were needed. For example its support for JSON means that Google responses could be asaved if needed.
+\subsubsection{MySQL}
+MySQL is a viable option as a RDMS for a web application development. It does offer a wide range of support. The documentation for MySQL is good, but compared to Postgresql there is better support [CITE THING.].
 
 
 \begin{flushleft}
-After evaluating the possible relational database management systems (RDMS) it was decided that PostgreSQL qould be the most suitable for my application.
+After evaluating the possible relational database management systems (RDMS) it was decided that there is not a lot of difference between PostgreSQL and MySQL - it probably would not yield a great difference in return. As a result, PostgreSQL was chosen due to being able to offer a wider support which may have been beneficial for future improvements to the application.
 \end{flushleft}
 
 \subsection{Choice of Framework}
@@ -62,6 +63,8 @@ One key decision whilst considering CI tools was to show be able to check the bu
 
 \subsection{CRC cards}
 To recap, Extreme Programming uses the concept of CRC cards to help to aid the developer to think about the design of the application. Unlike UML, they are throw-away cards which can be edited and changed every time a new feature is implemented.  The CRC cards which have been drawn up in the application have been formalised, and a selection of the interesting design decisions and justifications are stated below.
+
+
 
 \begin{itemize}
   \item Use of service objects
@@ -110,7 +113,7 @@ It is worth mentioning that Flask uses the Jinga templating engine[CITE]. By def
   \label{fig:extension}
 \end{figure}
 
-Each of the view file templates are separated into their own directories. Inside the directories, the HTML files extend the index.html root file. This overrides the block ``content'', dynamically generating a new content for every new URL. The advantages of this design is that meta-data, headers, stylesheets and navigation can be placed in the index.html page and all subpages will inherit these automatically, sticking to the principle of DRY. 
+Each of the view file templates are separated into their own directories. Inside the directories, the HTML files extend the index.html root file. This overrides the block ``content'', dynamically generating a new content for every new URL. The advantages of this design is that meta-data, headers, stylesheets and navigation can be placed in the index.html page and all subpages will inherit these automatically, sticking to the principle of DRY.
 
 \subsection{Application URLs}
 When considering the application URLs would form an integral part of helping the users to identify where they are, what the page is aiming to achieve and, where applicable, bookmarkable.
