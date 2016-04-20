@@ -217,6 +217,11 @@ INPUT ChapterHandwritingTraining/handwritingtraining.tex
 OUTPUT Chapter2/chapter2.aux
 INPUT Chapter2/chapter2.tex
 INPUT Chapter2/chapter2.tex
+INPUT images/MVC.png
+INPUT ./images/MVC.png
+INPUT ./images/MVC.png
+INPUT /usr/local/texlive/2015/texmf-dist/fonts/tfm/adobe/times/ptmr7t.tfm
+INPUT /usr/local/texlive/2015/texmf-dist/fonts/tfm/adobe/times/ptmr7t.tfm
 OUTPUT Chapter3/chapter3.aux
 INPUT Chapter3/chapter3.tex
 INPUT Chapter3/chapter3.tex
@@ -280,7 +285,9 @@ INPUT Appendix3/appendix3.aux
 INPUT /usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc
 INPUT /usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
 INPUT /usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb
+INPUT /usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb
 INPUT /usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
+INPUT /usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb
 INPUT /usr/local/texlive/2015/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb
 INPUT /usr/local/texlive/2015/texmf-dist/fonts/type1/urw/times/utmb8a.pfb
 INPUT /usr/local/texlive/2015/texmf-dist/fonts/type1/urw/times/utmr8a.pfb

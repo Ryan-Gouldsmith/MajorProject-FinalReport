@@ -77,17 +77,40 @@ To recap, Extreme Programming uses the concept of CRC cards to help to aid the d
 \subsection{MVC Structure}
 Early on in the process it was decided that an MVC approach would be approached. This was an upfront design decision, that would not likely to be changed.
 
-MVC is a design pattern where you split the logic into a Model View and controller.
+\subsubsection{About MVC}
+MVC is a design pattern where you split the logic into a Model View and controller. As displayed in figure \ref{fig:mvc} the MVC approach helps to decouple logic from the view file. Therefore all the information passed to the view is renderable content. The controllers do not integrate with the database directly. The primary job for the controllers is to interact with the model, any services and ask to render the view files.
 
-\begin{itemize}
-  \item Explain a little bit on MVC
-  \item Keen advocate of MVC
-  \item I wanted components such as the models to be reusable where possible
-  \item Had to change the way that Flask does the controllers to be blueprints to truely make this work.
-  \item Diagram to show how the MVC framework would work.
-  \item Why a package based system didn't work.
+The model in the MVC structure has no acknowledgement of the view file. Instead of rendering any form of HTML in the model it is purely data-driven. The sole purpose of the model is to interact with the database and perform any business logic that does not fit in the controller and the view file.
 
-\end{itemize}
+Finally, the view files contain HTML logic with dynamic content passed to the file from the controller. There may be specific logic which impact the HTML displayed, but no direct calls are made to the database layer or the controller. It uses the dynamic content passed in.
+\begin{figure}[h]
+  \centering
+  \includegraphics[scale=0.5]{images/MVC}
+  \caption{A example of how the model-view-controller(MVC) framework integrates.}
+  \label{fig:mvc}
+\end{figure}
+
+\subsubsection{Structuring the Web application}
+The application was chosen to follow the MVC approach so that there was a clear distinct design pattern used, which did not obfuscate where logic and presentation layers interact. With a well structured system it makes testing easier.
+
+In addition to the structuring, components can be reused again easily. Take for example service classes, these are reusable components in the system where they can be easily instantiated from inside any controller. If an MVC approach was suggested for the design then the reusability of code would decrease. This could only be achieved from a nice decoupled system where independent logic can be processed separately.
+
+Although the MVC approach was desired, Flask does not support an MVC structure out of the box. During a lot the documentation it expects all routes to be placed in a single file. This design approach was not considered for a number of reasons: it reduces the readability of the code - if there is more than one class per file, then readability begins to be impacted. Furthermore, when considering the design of the controller objects, as well as the models, then dependencies between the classes would become obfuscated. From identifying an architecture perspective, if the routes were on one file and models in another, it would be hard to explicitly identify corresponding links between different files.
+
+To overcome the Flask routing issue, in recent versions [FIND VERSION NUMBER] Blueprints [CITE] have been included. These blueprints, act almost as controller files, like Ruby, using the routing annotation to create a route. Therefore, similar routes can be place in the same file, but a different file can be created for unrelated routes. This offers a good controller feel to the application.
+
+The models consist of both persistence logic as well as service and helper objects. All the business logic is kept in side this group. Finally, all the views are allocated to the view directory.
+
+\subsubsection{Extending views}
+It is worth mentioning that Flask uses the Jinga templating engine[CITE]. By default Jinga would expect the DOM to be represented again in every view file. A design decision was made to extend the view files. Figure \ref{fig:extension} illustrates the view file design.
+\begin{figure}[h]
+  \centering
+  \includegraphics[scale=0.5]{images/view\_file\_extension}
+  \caption{A diagram illustrating how extension in Jinga html template engine works.}
+  \label{fig:extension}
+\end{figure}
+
+Each of the view file templates are separated into their own directories. Inside the directories, the HTML files extend the index.html root file. This overrides the block ``content'', dynamically generating a new content for every new URL. The advantages of this design is that meta-data, headers, stylesheets and navigation can be placed in the index.html page and all subpages will inherit these automatically, sticking to the principle of DRY. 
 
 \subsection{Application URLs}
 When considering the application URLs would form an integral part of helping the users to identify where they are, what the page is aiming to achieve and, where applicable, bookmarkable.
@@ -96,9 +119,9 @@ Therefore designs into the URL structure was performed. Typically there are two 
 
 Query strings aid in the creation of URLs such as: /search?name=foo. The query string is represented as a key value pairing of the searched criteria. This form of URL representation is acceptable for search criteria, but what if the user was editing a note - would a good structure contain all the contents of that note?
 
-For parts of the application to overcome this issue REST [CITE] URLs were considered. By exposing the URLs to RESTful interface, it is clear what the application is intending to do on that page. For example /show_note/1 compared to /show_note?note_id=1. Therefore, the URLS will follow a hierarchal structure, showing exactly where the notes are, in this case [CITE].
+For parts of the application to overcome this issue REST [CITE] URLs were considered. By exposing the URLs to RESTful interface, it is clear what the application is intending to do on that page. For example $/show_note/1$ compared to $/show_note?note_id=1$. Therefore, the URLS will follow a hierarchal structure, showing exactly where the notes are, in this case [CITE].
 
-It is worth noting that RESTful URLS are a good concept for external API usage. However, due to the application being a web application some modifications were taken place. For example, the URL: /view_notes/ would be a better RESTful url as /notes/. However, the design decision was to adopt the RESTful pattern to help make the URLs a bit more readable, but still keep the principles of REST.
+It is worth noting that RESTful URLS are a good concept for external API usage. However, due to the application being a web application some modifications were taken place. For example, the URL: $/view_notes/$ would be a better RESTful url as /notes/. However, the design decision was to adopt the RESTful pattern to help make the URLs a bit more readable, but still keep the principles of REST.
 
 \subsection{HTTP methods}
 Flask supports all the REST HTTP methods, such as delete, put and patch[CITE]. However, normal web browsers have this common issue where they do not support them and instead only support GET and POST.
@@ -110,7 +133,7 @@ Another layer of code could have been added in the form of posting everything to
 As a result, the design decision to use default POST and GET requests was decided. DELETE would not be used for deleting content from the database.
 
 \subsection{Interaction with the application}
-
+When decomposing a problem it is useful to identify how a user would intend to interact with the system.
 
 
 
