@@ -89,6 +89,30 @@ MVC is a design pattern where you split the logic into a Model View and controll
 
 \end{itemize}
 
+\subsection{Application URLs}
+When considering the application URLs would form an integral part of helping the users to identify where they are, what the page is aiming to achieve and, where applicable, bookmarkable.
+
+Therefore designs into the URL structure was performed. Typically there are two types of URL structures which websites take: query strings or REST URLs.
+
+Query strings aid in the creation of URLs such as: /search?name=foo. The query string is represented as a key value pairing of the searched criteria. This form of URL representation is acceptable for search criteria, but what if the user was editing a note - would a good structure contain all the contents of that note?
+
+For parts of the application to overcome this issue REST [CITE] URLs were considered. By exposing the URLs to RESTful interface, it is clear what the application is intending to do on that page. For example /show_note/1 compared to /show_note?note_id=1. Therefore, the URLS will follow a hierarchal structure, showing exactly where the notes are, in this case [CITE].
+
+It is worth noting that RESTful URLS are a good concept for external API usage. However, due to the application being a web application some modifications were taken place. For example, the URL: /view_notes/ would be a better RESTful url as /notes/. However, the design decision was to adopt the RESTful pattern to help make the URLs a bit more readable, but still keep the principles of REST.
+
+\subsection{HTTP methods}
+Flask supports all the REST HTTP methods, such as delete, put and patch[CITE]. However, normal web browsers have this common issue where they do not support them and instead only support GET and POST.
+
+As a comparison in Ruby, the templating language - embedded ruby - allows being able to fake certain methods on forms and submit buttons. Unlike Flask, who uses pure HTML templates, with the Jinga syntax added on top, then developers are restricted to the default GET and POST.
+
+Another layer of code could have been added in the form of posting everything to the URL routes on the server as AJAX requests - but that would first and foremost change the entire structure of the application. This would mean that a user would have to have Javascript enabled on the page to even interact with the application.
+
+As a result, the design decision to use default POST and GET requests was decided. DELETE would not be used for deleting content from the database.
+
+\subsection{Interaction with the application}
+
+
+
 
 
 %\subsection{Even more detail}
