@@ -62,17 +62,52 @@ One key decision whilst considering CI tools was to show be able to check the bu
 \section{Overall Architecture}
 
 \subsection{CRC cards}
-To recap, Extreme Programming uses the concept of CRC cards to help to aid the developer to think about the design of the application. Unlike UML, they are throw-away cards which can be edited and changed every time a new feature is implemented.  The CRC cards which have been drawn up in the application have been formalised, and a selection of the interesting design decisions and justifications are stated below.
+To recap, Extreme Programming uses the concept of CRC cards to help to aid the developer to think about the design of the application. Unlike UML, they are throw-away cards which can be edited and changed every time a new feature is implemented. The CRC cards which have been drawn up in the application have been formalised, and a selection of the interesting design decisions and justifications are stated below.
 
+\begin{figure}[h]
+  \centering
+  \includegraphics[scale=0.5]{images/CRC\_card}
+  \caption{An example from Sprint 3, showing a CRC card at the very beginning of creation.}
+  \label{fig:crc1}
+\end{figure}
 
+These little design diagram cards helped to consider the design of the system by decomposing the problem into more logical steps. For example, when creating the note CRC there could have been a time in which a separate class was made for the image link - however a simple design was ensured with a reflection on the card.
 
+\subsection{Class Diagram}
 \begin{itemize}
   \item Use of service objects
   \item Explain why sections are linked together and describe the behaviour of the application classes and why they would be used.
   \item
 \end{itemize}
 
+\subsection{Database diagram}
+Coupled with the CRC cards a database UML diagram has been produced which shows the implementation of the relations in the database.
 
+\begin{figure}[h]
+  \centering
+  \includegraphics[scale=0.5]{images/database\_diagram}
+  \caption{The final result of the database diagram. After a series of iterations.}
+  \label{fig:database}
+\end{figure}
+
+Figure \ref{fig:database}, shows the output from the result of continuous design on the database diagram through the iterations.
+
+\subsubsection{Justification of design}
+The design has been carefully considered. The reason the note is in its table is intuitive: a note needs to be persisted in the database. The attributes best collate a high-level representation of what a note consists of. First and foremost,  a note will consist of an image link - which is a relative path, this was stored to persist where the image on the file store is located for that image. A user id was added to the note, to link a note to a user; not originally in the scope of the application, but a design feature added so that it was more accessible.
+
+The calendar url was added to the database to persist which calendar event was associated with the note. As a note will only have one calendar event, then saving it in the database was an easier way to link to the event - rather than making an external API request to Google.
+
+Finally with the note relation, a note-meta-data foreign key id was added to link additional note-meta-data to a note.
+
+The Note-meta data relation is its own relation because of reducing data-redundancy, this is a key requirement in normalisation of databases [CITE]. The note Meta-data may be duplicated in a note if a user takes more than one note per lecturer - and wants to tag the same meta-data to the note. As a result a relation was created for this use-case.
+
+The meta-data consists of a lecturer, location, and title as variable characters up to 100 in length, which is a valid length as none of them realistically should be more than that length. A date field was added so the meta-data can be associated to a date and time - this aids in the calendar integration. Finally, the module code is identified as a foreign key constraint.
+
+The module code is its own relation, and therefore a foreign key in the meta-data relation is because of the same reasons as meta-data is it's own relation: data redundancy. A valid use-case is that a user would enter in multiple notes for any given module code. This module code does not need to be duplicated in the database - therefore a foreign key was suitable.
+
+Finally, a user relation was established after the application decided it would be expanded to involve users. An email address was created to parse the response from the oAuth log-in. Furthermore, this was added as a foreign key to notes, so that every user would be associated to a note.
+
+Overall, a succinct collection of relations have been developed, which follow a good normalization process to produce a design from a database side which has been well considered.
 
 %\section{Some detailed design}
 
