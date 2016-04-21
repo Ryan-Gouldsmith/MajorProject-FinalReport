@@ -13,15 +13,14 @@
 
 \section{Background}
 %What was your background preparation for the project? What similar systems did you assess? What was your motivation and interest in this project?
-Handwriting notes is still considered to be an important aspect of note taking. Smoker et al \cite{citeulike:13988059} conducted a study comparing handwritten text against digital text for memory retention and out of 61 adults 72.1\% preferred to take notes using pen and paper, rather than on a computer. Smoker et al concluded that recollection rates for handwritten text was greater than that of typed text proving that handwritten notes are better for a user's memory retention.
+Handwriting notes is still considered to be an important aspect of note taking. Smoker et al. \cite{citeulike:13988059} conducted a study comparing handwritten text against digital text for memory retention and out of 61 adults 72.1\% preferred to take notes using pen and paper, rather than on a computer. Smoker et al. concluded that recollection rates for handwritten text was greater than that of typed text proving that handwritten notes are better for a user's memory retention.
 
-Technology has advanced and people are being more connected with software in the cloud as well as tracking things in their life digitally; Google Calendar is an example of this. Therefore, there's a need to ensure that memory retention with handwritten notes is carried forward into the digital age.
+Technology has advanced and people are becoming more connected with distributed services through the cloud as well as tracking things in their life digitally; Google Calendar is an example of this. Therefore, there's a need to ensure that memory retention with handwritten notes is carried forward into the digital age.
 
-% Handwriting triaining ?
 
 % Taxonomy of notes
 \subsection{Taxonomy of notes}
-When notes are made they will often be very different from any other note. Some are semi-structured and some are back of the envelope kind of notes. When thinking about an application to analyse notes, first there has to be consideration for what a note will consist of. A taxonomy, by definition, is a biological term for a classification of similar sections, showing how things are linked together \cite{citeulike:Taxonomy}.
+When notes are made they will often be very different from any other note. Some are semi-structured and some are ``back of the envelope'' kind of notes. When thinking about an application to analyse notes, first there has to be consideration for what a note will consist of. A taxonomy, by definition, is a biological term for a classification of similar sections, showing how things are linked together \cite{citeulike:Taxonomy}.
 
 Notes can be thought of as a collection of similar classifications, whether this is the pure textual descriptions of a note or whether this is purely pictorial form or a mixture of both. However, the notes are normally split into three distinct categories:
 \begin{enumerate}
@@ -36,22 +35,30 @@ Notes can be thought of as a collection of similar classifications, whether this
  \label{fig:taxonomyofnotes}
 \end{figure}
 
-In figure \ref{fig:taxonomyofnotes}, it shows a taxonomy of the different aspects which may form a part of a note. Textural descriptions form the core content of a note, this is essentially the important aspect that a note-taker is trying to remember and write down. Different note-takers form their notes in different ways, for example the headings may be underlined or hashed - if they were adopting a mark-down style approach. These sections helps to show that there's a break in the content, and should be sub-sectioned. Textural points that are short, but important, are often characterised by a colon or a bullet point; these are the most common form of concise note building, in the classification.
+In Figure \ref{fig:taxonomyofnotes} it shows a taxonomy of the different aspects which may form a part of a note. Textural descriptions form the core content of a note, this is essentially the important aspect that a note-taker is trying to remember and write down. Different note-takers form their notes in different ways, for example the headings may be underlined or hashed - if they were adopting a mark-down style approach. These sections help to show that there's a break in the content, and should be sub-sectioned. Textural points that are short, but important, are often characterised by a colon or a bullet point; these are the most common form of concise note building, in the classification.
 
-Coloured text is often used for a variety of reasons: it stands out on the page and improves memory retention of that text \cite{citeulike:14014177}. Both congruent and incongruent  coloured text helped to increase memory retention of post-graduate learners \cite{Olurinola_Tayo_2015}. With congruent text Olurinola et al, on 20 students a 10.3 mean retention rate was achieved and 8.1 mean retention rate was achieved. The studies conducted show that coloured items would improve a user's retention rate in a lecture.
+Coloured text is often used for a variety of reasons: it stands out on the page and improves memory retention of that text \cite{citeulike:14014177}. Both congruent and incongruent  coloured text helped to increase memory retention of post-graduate learners \cite{Olurinola_Tayo_2015}. With congruent text, Olurinola et al. showed that for 30 students with a 20 word list, a 10.9 mean retention rate was achieved and a 8.1 mean retention rate was achieved for incongruent text. The studies conducted show that coloured items would improve a user's retention rate in a lecture.
 
 Finally, tables help to represent textual content in tabular form - this is often good in notes for comparisons.
 
-Graphs are great visual tools for users to help to convey important textural information easily. Naturally, they have their limitations such as they come in different shapes and sizes, such as a line-graph, pie chart or a bar chart. Coupled with graphs, notes often consist of diagram drawings.  In figure \ref{fig:taxonomyofnotes}, there are different sections and classifications of a diagram: boxed, arrow etc. Each one has its own purpose and arrowed and box can overlap; UML diagrams are a case of this. Spider diagrams are probably the hardest to represent, due to the varying sizes and whether the user draws circles or clouds. Furthermore, specific shape diagrams are conceptually hard to think about as it depends on the domain in which the user is drawing the note. For example, a person in biology may draw a stick person, whereas someone in Computer Science may draw a PC.
+Graphs are great visual tools for users to help to convey important textural information easily. Naturally, they have their limitations such as they come in different shapes and sizes, such as a line-graph, pie chart or a bar chart. Coupled with graphs, notes often consist of diagram drawings.  In Figure \ref{fig:taxonomyofnotes}, there are different sections and classifications of a diagram: boxed, arrow etc. Each one has its own purpose and arrowed and box can overlap; UML diagrams are a case of this. Spider diagrams are probably the hardest to represent, due to the varying sizes and whether the user draws circles or clouds. Furthermore, specific shape diagrams are conceptually hard to think about as it depends on the domain in which the user is drawing the note. For example, a person in biology may draw a stick person, whereas someone in Computer Science may draw a computer.
 
 Identifying a taxonomy of notes is imperative when considering what to parse from a note as it helps to define a domain of possible classifications. By identifying the classifications it will acknowledge what sections can be parsed by a specific technique. For example, textural information and bullet point lists can be parsed via text-recognition however, for diagram recognition that would involve image manipulation.
 
 % Add some more from the stuff Hannah made us write about in the first week.
 
+% Handwriting triaining ?
+\subsection{Handwriting recognition}
+Analysing a user's handwriting is a complex process and one which requires lots of research. Handwriting recognition has had successes in the past from Machine learning techniques, such as neural networks \cite{citeulike:13510433}. Knerr et al. yields a 10\% rejection rate and  a 1\% error rate, with the use of Neural Networks on the U.S. Postal service data collection, identifying that handwriting recognition is still very much a research oriented to produce a reliable system to extract and identify handwriting, generically.
 
+Another approach is to analyse handwriting via an OCR (optical character recognition) tool. In \cite{citeulike:13920972} the open-source tool, Tesseract \cite{citeulike:14014368} was used to analyse Roman scripts. The system was trained on handwriting identified from those scripts. Rakshit et al. recorded an 83.5\% accuracy on 1133 characters. It is noted in the paper that ``over-segmentation'' is a problem with the Tesseract engine.
 
-\subsection{Similar Systems}
-With note-taking on digital devices becoming more widely available, there has become an influx in note-taking and organisational applications available for users. These are predominately WYSIWYG (What you see is what you get) editors - which a great deal of flexibility. When evaluating existing systems three were commonly used and they were:
+Another issue to overcome when analysing handwriting is disjointed characters; this is where sections of the letter are split off from the main body of the character, for example, the letter i. Rakshit et al. concludes that this is an issue which is ever-present in the Tesseract engine, with around a 53\% misclassification on this character alone.
+
+The problem of handwriting recognition has not been solved - but tools such as Tesseract offers support for improvement in this field. Ask Rakshit et al., discusses training had to be conducted with Tesseract to ensure that it can identify handwriting successfully. As a result, every implementation of handwriting recognition needs significant amounts of data of varying quality, so that a system can succeed.
+
+\subsection{Similar systems}
+With note-taking on digital devices becoming more widely available, there has become an influx in note-taking and organisational applications available for users. These are predominately WYSIWYG (What you see is what you get) editors - which allow a great deal of flexibility. When evaluating existing systems three were predominantly used and they were:
 \begin{itemize}
   \item OneNote
   \item EverNote
@@ -59,39 +66,38 @@ With note-taking on digital devices becoming more widely available, there has be
 \end{itemize}
 
 \subsubsection{OneNote}
-OneNote is a note-taking and organisational application made by Microsoft  \cite{citeulike:onenote}, offering the functionality to to add text, photos, drag and drop photos to a plain canvas. In recent times, OneNote has developed functionality to analyse a user's handwriting, from say a stylus, and interpret the text they entered \cite{citeulike:14014236}. In OneNote you can insert a note into document and then it would interpret the text from the note.
+OneNote \cite{citeulike:onenote} is a note-taking and organisational application made by Microsoft, offering the functionality to add text, photos, drag and drop photos onto a plain canvas. In recent times, OneNote has developed functionality to analyse a user's handwriting, from say a stylus, and interpret the text they entered \cite{citeulike:14014236}. In OneNote you can insert a note into a document and then it would interpret the text from the note.
 
-There is a wide range of product support from mobile based applications to web versions of their software. Office Lens \cite{citeulike:14014272} can be used in conjunction with the OneNote to help to take photos and automatically crop the image and then save them to OneNote. This feature is important and should be considered for the \textit{MapMyNotes} application. The process requires you to have a Microsoft account, which you sign in with. When creating notes, OneNote formats collated notes into a series of ``notebooks''.
+There is a wide range of product support from mobile based applications to web versions of their software. Office Lens \cite{citeulike:14014272} can be used in conjunction with the OneNote to help to take photos and automatically crop the image and then save them to OneNote. This feature is important and should be considered for the \textit{MapMyNotes} application. The process requires the user to sign in with  a Microsoft account. When creating notes, OneNote formats collated notes into a series of ``notebooks''.
 
-One feature which was nice when analysing the system was noticing automatic saving of the note, reducing the need for a user to click save. Additionally, when using OneNote it feels very much like Microsoft Word - with the similar layout that gives most users a similar user experience feel with its intuitive WYSIWYG(What you see is what you get) editor.
+One feature which was noted when analysing the system is automatic saving of the note, reducing the need for a user to click save. Additionally, when using OneNote it feels very much like Microsoft Word - with the similar layout that gives most users a similar user experience feel with its intuitive WYSIWYG editor.
 
 \subsubsection{EverNote}
-EverNote \cite{citeulike:14014282} is a note-taking and organisional application, it is both supported as a web application, bespoke desktop application and mobile applications. EverNote is widely used and would provide a lot of the functionality a user would need to upload their note.
+EverNote \cite{citeulike:14014282} is a note-taking and organisional application, it is supported as a web application, bespoke desktop application and a mobile application. EverNote is widely used and provides a wide range of functionality a user would need to digitise their notes.
 
-They have released development articles \cite{citeulike:13988110} stating that they are able to do OCR recognition on images. This would allow the user to upload an image outputting a list of potential words for the image found. Like OneNote, the notes are collated into Notebooks, offering a WYSIWG editor, giving you full control of the content that you type in. When uploading an image, to the web version, it gives you the option to edit the PDF and images, however it seems as though you have to download another application, specific to your platform,  to do this functionality.
+EverNote have released development articles \cite{citeulike:13988110} stating that OCR recognition on images is possible. This would allow the user to upload an image outputting a list of potential words for the image found. Like OneNote, the notes are collated into Notebooks, offering a WYSIWG editor, giving the user full control of the content that is entered. When uploading an image to the web version it gives the option to edit the PDF and images, however it seems as though an additional application has to be downloaded, specific to the user's platform, to be able to utilise this functionality.
 
-According to the website, it does to OCR recognition, however whilst using the web application there was no information regarding extracting of text from the application. Additionally, there seemed to be no way to save the note to a calendar item - only the option to send via a link.
+According to the website, it does do OCR recognition, however whilst using the web application there was no information regarding extracting of text from the application. Additionally, there seemed to be no way to save the note to a calendar item - only the option to send via a link.
 
 \subsubsection{Google Keep}
-Google Keep \cite{citeulike:14014320} is a note taking application produced by Google with mobile and website support. Google Keep allows a user to attach an image to their note and attempt to extract the text from an image and save this in the body of the note. In addition, it allows you to tag a title, and add an associated body.
+Google Keep \cite{citeulike:14014320} is a note taking application produced by Google with mobile and website support. Google Keep allows a user to attach an image to their note, attempt to extract the text from an image and save this in the body of the note. In addition it allows the user to tag a title and add an associated body.
 
-An important design feature is that it does not offer the support of a WYSIWG editor, it is a default text box. They have the option of a ``remind me'' feature, which will get synced to their calendar as a reminder - but there's no easy way to add it to a calendar event.
+An important design feature that it does not offer is the support of a WYSIWG editor; a default text box has been preferred, offering a more raw feel to the application. They have the option of a ``remind me'' feature, which will get synced to their calendar as a reminder - but there's no easy way to add it to a calendar event.
 
-Google keep seems as though it's more suited for TODO lists and jotting down quick notes, rather than an archiving tool suitable for substantial note taking. Nevertheless, the tagging with labels is a nice feature and the filter by image is a smart tool; this only shows notes with specific images. The simplicity of the user interface and the ease in which text could be extract provides a great reference going forward.
+Google Keep seems as though it's more suited for TODO lists and jotting down quick notes, rather than an archiving tool suitable for substantial note taking. Nevertheless, the tagging with labels is a nice feature and the filter by image is a smart tool; this only shows notes with specific images. The simplicity of the user interface and the ease in which text can be extract provides a great reference going forward.
 
-\begin{flushleft}
-These three existing products are widely used by the every day note taker. They have been developed to a high quality and give the user a full control experience of what their notes can consist of. The automatically cropping of an image is an important process and should be considered when for the application going forward. \textit{MapMyNotes} aims to try and give the user full control of their lecture notes content, so that they can find their notes easily again.
+\subsubsection{Reflection on the systems}
+These three existing products are widely used by the every day note taker. They have been developed to a high quality and give the user full control of what their notes can consist of. The automatically cropping of an image is an important feature and should be considered when for the application going forward. \textit{MapMyNotes} aims to try and give the user full control of their lecture notes content, so that they can find their notes easily again.
 
-EverNote's text extraction may differ from \textit{MapMyNotes} as it will intend to give a one to one comparison of the text, rather than a list of potential words.
+\textit{MapMyNotes} intends to differ from EverNote's text extraction by providing a one to one comparison of the text, rather than a list of potential words.
 
 After the analysis of the existing products there are certain aspects which would be regarded as necessary: a simple way to view the notes, a way to filter the notes and a simple UI which feels more like an application rather than a website.
-\end{flushleft}
 
 
-\subsection{Personal Interest}
+\subsection{Motivation}
 The author handwrites his notes during lectures and often are discarded in crowded notebooks until they are needed for an assignment or examination.
 
-A calendar event is already stored for every lecture that the author goes to, so it would be nice if there was a way to associate each of the notes taken to that calendar event. This would ensure that all the information is located in one easy place that can be found again, instead of trawling through lots of paper and trying to find the content again. This would aid in reducing the chances of lost notes from paper slipping out of the notebook or pages being damaged due to rain or creases.
+A calendar event is already stored for every lecture that the author goes to, so it would be useful if there was a way to associate each of the notes taken to that calendar event. This would ensure that all the information is located in one easy place that can be found again, instead of trawling through lots of paper and trying to find the content again. This would aid in reducing the chances of lost notes from paper slipping out of the notebook or pages being damaged due to rain or creases.
 
 \section{Analysis}
 %Taking into account the problem and what you learned from the background work, what was your analysis of the problem? How did your analysis help to decompose the problem into the main tasks that you would undertake? Were there alternative approaches? Why did you choose one approach compared to the alternatives?
@@ -111,7 +117,7 @@ Therefore an OCR tool would have to be chosen to analyse the text. Choosing a se
 From research conducted into Google Keep it was clear that analysing the text would be a great aspect to include in the application. The real question is what should be parsed from the note? By looking at the overall structure of the application and what it entailed then it was agreed to just parse the note's associated meta-data: the title, lecturer, date and module code. Recalling that Google Keep parses all the text and EverNote gives a list of suggested words, it was decided that a tool would be developed to suggest the meta-data but it does not automatically tag the meta-data.
 
 \subsection{Structuring of notes}
-In conjunction with analysing what to parse a sensible structure would have to be applied to notes used in the application. A task to create and find a good set of rules would have to be collated to ensure that notes could be parsed confidently. This reduced the complexity of incorporating natural language processing in the application, which would be more than can be achieved in the timeframe.
+In conjunction with analysing what to parse, a sensible structure would have to be applied to notes used in the application. A task to create and find a good set of rules would have to be collated to ensure that notes could be parsed confidently. This reduced the complexity of incorporating natural language processing in the application, which would be more than can be achieved in the timeframe.
 
 
 \subsection{OCR for the authors handwriting}
@@ -119,15 +125,15 @@ After research into OCR technologies, such as Tesseract \cite{citeulike:14014368
 
 
 \subsection{What platform is most suitable}
-During the meeting with Dr Harry Strange one of the core features that was needed was for the application to be accessible regardless where the user is. After the research was conducted all the aforementioned software tools have web application version of their application. A mobile application was considered but only one version of the application would be made, either Android or iPhone, therefore preventing other phone users from using the application. A bespoke desktop application was considered for a long time, however, the user would have to run the application ensure that a lot of the infrastructure systems are set up correctly. As a result a web application was chosen - following research found; the next steps were to consider appropriate tools to use.
+During the meeting with Dr Harry Strange one of the core features that was needed was for the application to be accessible regardless of where the user is. After the research was conducted all the aforementioned software tools have web application version of their application. A mobile application was considered but only one version of the application would be made, either Android or iPhone, therefore preventing other phone users from using the application. A bespoke desktop application was considered for a long time, however, the user would have to ensure infrastructure decisions, such as databases, are correctly set up. As a result a web application was chosen - following research found; the next steps were to consider appropriate tools to use.
 
 \subsection{What should the application do}
-From analysing all three of the chosen research systems, it was clearly identifiable that they all have the ability the view all notes, searching, deleting and adding and editing a note. Taking the ideas on-board, these were set as a high-level task and something that the core system \textit{must} do.
+From analysing all three of the chosen research systems, it was clearly identifiable that they all have the ability the view all notes, searching, deleting, adding and editing a note. Taking these ideas on-board, they were set as a high-level task and something that the core system \textit{must} do.
 
 Reflecting on the premise of the application, that it was to aid the organisation lecture notes, it was concluded that the best way to search for notes would be by module code, as most University students would want to find specific module notes. This created the high level task that notes must be searchable by their module code.
 
-\subsection{Calendar Integration}
-From evaluating the systems it was noticed that there was not a clear way to integrate into a calendar. Reflecting on the conversations with Dr Harry Strange, integrating with the calendar was important for keeping the different systems together. From a survey \cite{citeulike:14010520} Google calendar is the most popular calendar application, therefore due to time constraints Google calendar was the choice of integration and other competitors such as Microsoft would not be implemented. This formulates the task of integrating the calendar into the application to save the url of the note to a specific event.
+\subsection{Calendar integration}
+From evaluating the systems it was noticed that there was not a clear way to integrate into a calendar. Reflecting on the conversations with Dr Harry Strange, integrating with the calendar was important for keeping the different systems together. From an AYTM survey, in December 2015, \cite{citeulike:14010520} Google calendar is the most popular calendar application, therefore due to time constraints Google calendar was the choice of integration and other competitors such as Microsoft would not be implemented. This formulates the task of integrating the calendar into the application to save the url of the note to a specific event.
 
 %There should be a clear statement of the objectives of the work, which you will evaluate at the end of the work.
 \subsection{Objectives}
@@ -142,7 +148,7 @@ As a result of the analysis of the problem, the following high-level requirement
 	\item The backend must integrate with a calendar to archive the notes away later to be found again.
 \end{enumerate}
 
-\subsection{Comprising with objectives}
+\subsection{Compromising with objectives}
 Some additional compromises were made in-light of the analysis due to the complexity of the tasks at hand.
 \begin{itemize}
 	\item It would be nice to have image extraction from a note and incorporating a WYSIWG editor into the application, like OneNote.
@@ -166,7 +172,7 @@ Scrum organises its work into user stories to ensure client valued work is being
 \subsection{Adapted Scrum}
 During the project this methodology was embraced and adapted. A one week long sprint was adopted which coincided with a weekly supervisor meeting. Epics (a high level version of a story) are the start of the project to reflect the work completed in the analysis phase.
 
-Each user story was formulated as: ``As a <role> I want to <feature> so that <resolution>''. This gave specific client value that was known to have a purpose. Each of these stories were estimated on their complexity and compared to a ``goldilock'' task (a task which all other tasks are evaluated against).
+Each user story was formulated as: ``As a \textless role \textgreater I want to \textless feature \textgreater so that \textless resolution \textgreater''. This gave specific client value that was known to have a purpose. Each of these stories were estimated on their complexity and compared to a ``goldilock'' task \footnote{A task which all other tasks are evaluated against.}.
 
 For planning a sprint, the planning poker \cite{citeulike:14014357} technique was adopted; user-stories are estimated on a scale of 1, 2, 3, 5, 8 etc. When a task was estimated about 15 story points, it would be reflected upon to ensure the scope was fully understood - this would be broken down to sub-stories where appropriate.
 
@@ -182,7 +188,7 @@ In tandem with Scrum, Extreme programming \cite{citeulike:13915786} principles w
 \subsubsection{Test-driven development}
 Test-driven development (TDD) is the process of writing tests prior to the implemented code. This allows the developer to think about the design prior to its implementation and can form part of the documentation \cite{citeulike:14014361}.
 
-TDD follows three cycles: red, green, refactor. Initially the test fails, then it passes then you refactor to keep the simplest system.
+TDD follows three cycles: red, green, refactor. Initially the test fails, then it passes then refactoring is performed to keep the simplest system.
 
 \subsubsection{Continuous Integration}
 Continuous Integration tools were a core part of the process in this project. Typically used to ensure that code is checked into a repository it was used to ensure that the application could be built in an isolated environment and pass all the tests.

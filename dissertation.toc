@@ -1,104 +1,104 @@
 \contentsline {chapter}{\numberline {1}Background \& Objectives}{1}
 \contentsline {section}{\numberline {1.1}Background}{1}
 \contentsline {subsection}{\numberline {1.1.1}Taxonomy of notes}{1}
-\contentsline {subsection}{\numberline {1.1.2}Similar Systems}{3}
+\contentsline {subsection}{\numberline {1.1.2}Similar systems}{3}
 \contentsline {subsubsection}{\numberline {1.1.2.1}OneNote}{3}
-\contentsline {subsubsection}{\numberline {1.1.2.2}EverNote}{3}
+\contentsline {subsubsection}{\numberline {1.1.2.2}EverNote}{4}
 \contentsline {subsubsection}{\numberline {1.1.2.3}Google Keep}{4}
-\contentsline {subsection}{\numberline {1.1.3}Personal Interest}{4}
+\contentsline {subsubsection}{\numberline {1.1.2.4}Reflection on the systems}{4}
+\contentsline {subsection}{\numberline {1.1.3}Motivation}{5}
 \contentsline {section}{\numberline {1.2}Analysis}{5}
 \contentsline {subsection}{\numberline {1.2.1}Parsing a note}{5}
 \contentsline {subsection}{\numberline {1.2.2}An OCR tool}{5}
 \contentsline {subsection}{\numberline {1.2.3}What to parse from the note}{5}
-\contentsline {subsection}{\numberline {1.2.4}Structuring of notes}{5}
+\contentsline {subsection}{\numberline {1.2.4}Structuring of notes}{6}
 \contentsline {subsection}{\numberline {1.2.5}OCR for the authors handwriting}{6}
 \contentsline {subsection}{\numberline {1.2.6}What platform is most suitable}{6}
 \contentsline {subsection}{\numberline {1.2.7}What should the application do}{6}
-\contentsline {subsection}{\numberline {1.2.8}Calendar Integration}{6}
+\contentsline {subsection}{\numberline {1.2.8}Calendar integration}{6}
 \contentsline {subsection}{\numberline {1.2.9}Objectives}{7}
-\contentsline {subsection}{\numberline {1.2.10}Comprising with objectives}{7}
+\contentsline {subsection}{\numberline {1.2.10}Compromising with objectives}{7}
 \contentsline {section}{\numberline {1.3}Process}{7}
 \contentsline {subsection}{\numberline {1.3.1}Scrum overview}{8}
 \contentsline {subsection}{\numberline {1.3.2}Adapted Scrum}{8}
-\contentsline {subsection}{\numberline {1.3.3}Incorporated Extreme Programming}{8}
+\contentsline {subsection}{\numberline {1.3.3}Incorporated Extreme Programming}{9}
 \contentsline {subsubsection}{\numberline {1.3.3.1}Test-driven development}{9}
 \contentsline {subsubsection}{\numberline {1.3.3.2}Continuous Integration}{9}
 \contentsline {subsubsection}{\numberline {1.3.3.3}CRC cards}{9}
-\contentsline {chapter}{\numberline {2}Image pre-processing for Tesseract}{10}
-\contentsline {section}{\numberline {2.1}OpenCV}{10}
-\contentsline {section}{\numberline {2.2}Line removal}{10}
-\contentsline {chapter}{\numberline {3}Handwriting training with Tesseract}{11}
-\contentsline {section}{\numberline {3.1}Training}{11}
-\contentsline {chapter}{\numberline {4}Design}{12}
-\contentsline {section}{\numberline {4.1}Implementation tools}{12}
-\contentsline {subsection}{\numberline {4.1.1}Programming language}{12}
-\contentsline {subsection}{\numberline {4.1.2}Database management system}{13}
-\contentsline {subsubsection}{\numberline {4.1.2.1}SQLLite}{13}
-\contentsline {subsubsection}{\numberline {4.1.2.2}PostgreSQL}{13}
-\contentsline {subsection}{\numberline {4.1.3}MySQL}{13}
-\contentsline {subsection}{\numberline {4.1.4}Choice of Framework}{13}
-\contentsline {subsection}{\numberline {4.1.5}Continuous Integration tool}{14}
-\contentsline {section}{\numberline {4.2}Overall Architecture}{14}
-\contentsline {subsection}{\numberline {4.2.1}CRC cards}{14}
-\contentsline {subsection}{\numberline {4.2.2}MVC Structure}{14}
-\contentsline {subsubsection}{\numberline {4.2.2.1}About MVC}{14}
-\contentsline {subsubsection}{\numberline {4.2.2.2}Structuring the Web application}{15}
-\contentsline {subsection}{\numberline {4.2.3}Application URLs}{16}
-\contentsline {subsection}{\numberline {4.2.4}HTTP methods}{16}
-\contentsline {subsection}{\numberline {4.2.5}Interaction with the application}{16}
-\contentsline {section}{\numberline {4.3}User Interface}{17}
-\contentsline {section}{\numberline {4.4}Other relevant sections}{17}
-\contentsline {subsection}{\numberline {4.4.1}Tesseract}{17}
-\contentsline {section}{\numberline {4.5}Optimising Tesseract}{18}
-\contentsline {subsection}{\numberline {4.5.1}ImageMagick}{18}
-\contentsline {subsection}{\numberline {4.5.2}OpenCV}{18}
-\contentsline {chapter}{\numberline {5}Implementation}{19}
-\contentsline {section}{\numberline {5.1}Image processing}{19}
-\contentsline {subsection}{\numberline {5.1.1}Optimising Tesseract}{19}
-\contentsline {subsubsection}{\numberline {5.1.1.1}OTSU}{19}
-\contentsline {subsubsection}{\numberline {5.1.1.2}Adaptive Threshold}{19}
-\contentsline {section}{\numberline {5.2}Lined paper}{20}
-\contentsline {subsection}{\numberline {5.2.1}Filtering the blue lines}{20}
-\contentsline {subsection}{\numberline {5.2.2}Only extracting the text}{20}
-\contentsline {section}{\numberline {5.3}Handwriting Training}{21}
-\contentsline {subsection}{\numberline {5.3.1}Training process}{21}
-\contentsline {section}{\numberline {5.4}Web application}{21}
-\contentsline {subsection}{\numberline {5.4.1}OAuth}{21}
-\contentsline {subsection}{\numberline {5.4.2}Reoccuring events}{21}
-\contentsline {subsection}{\numberline {5.4.3}Tesseract Confidence}{22}
-\contentsline {subsection}{\numberline {5.4.4}Displaying calendar events}{22}
-\contentsline {subsection}{\numberline {5.4.5}Parsing Exif data}{22}
-\contentsline {subsection}{\numberline {5.4.6}Editing calendar events}{22}
-\contentsline {section}{\numberline {5.5}Review against the requirements}{22}
-\contentsline {chapter}{\numberline {6}Testing}{23}
-\contentsline {section}{\numberline {6.1}Overall Approach to Testing}{23}
-\contentsline {subsection}{\numberline {6.1.1}TDD}{23}
-\contentsline {section}{\numberline {6.2}Automated Testing}{24}
-\contentsline {section}{\numberline {6.3}Mocking Tests}{24}
-\contentsline {subsection}{\numberline {6.3.1}Unit Tests}{25}
-\contentsline {subsection}{\numberline {6.3.2}Route Testing}{25}
-\contentsline {subsection}{\numberline {6.3.3}Handling sessions}{25}
-\contentsline {subsection}{\numberline {6.3.4}User Interface Testing}{26}
-\contentsline {subsection}{\numberline {6.3.5}Stress Testing}{26}
-\contentsline {section}{\numberline {6.4}Integration Testing}{26}
-\contentsline {section}{\numberline {6.5}User Testing}{26}
-\contentsline {section}{\numberline {6.6}Tesseract Testing}{26}
-\contentsline {section}{\numberline {6.7}Image thresholding Testing}{27}
-\contentsline {chapter}{\numberline {7}Evaluation}{28}
-\contentsline {section}{\numberline {7.1}Correctly identified requirements}{28}
-\contentsline {section}{\numberline {7.2}Design decisions}{29}
-\contentsline {section}{\numberline {7.3}Use of tools}{29}
-\contentsline {subsection}{\numberline {7.3.1}Flask}{29}
-\contentsline {subsection}{\numberline {7.3.2}OpenCV}{30}
-\contentsline {subsection}{\numberline {7.3.3}PostgreSQL}{30}
-\contentsline {subsection}{\numberline {7.3.4}Tesseract}{30}
-\contentsline {subsection}{\numberline {7.3.5}Google Calendar}{30}
-\contentsline {section}{\numberline {7.4}Meeting the users needs}{31}
-\contentsline {section}{\numberline {7.5}Additional project aims}{31}
-\contentsline {section}{\numberline {7.6}Starting again}{31}
-\contentsline {chapter}{Appendices}{32}
-\contentsline {chapter}{\numberline {A}Third-Party Code and Libraries}{33}
-\contentsline {chapter}{\numberline {B}Ethics Submission}{34}
-\contentsline {chapter}{\numberline {C}Code Examples}{35}
-\contentsline {section}{\numberline {3.1}Random Number Generator}{35}
-\contentsline {chapter}{Annotated Bibliography}{38}
+\contentsline {chapter}{\numberline {2}Design}{10}
+\contentsline {section}{\numberline {2.1}Implementation tools}{10}
+\contentsline {subsection}{\numberline {2.1.1}Programming language}{10}
+\contentsline {subsection}{\numberline {2.1.2}Database management system}{11}
+\contentsline {subsubsection}{\numberline {2.1.2.1}SQLLite}{11}
+\contentsline {subsubsection}{\numberline {2.1.2.2}PostgreSQL}{11}
+\contentsline {subsubsection}{\numberline {2.1.2.3}MySQL}{11}
+\contentsline {subsection}{\numberline {2.1.3}Choice of Framework}{12}
+\contentsline {subsection}{\numberline {2.1.4}Continuous Integration tool}{12}
+\contentsline {section}{\numberline {2.2}Overall Architecture}{12}
+\contentsline {subsection}{\numberline {2.2.1}CRC cards}{12}
+\contentsline {subsection}{\numberline {2.2.2}Class Diagram}{13}
+\contentsline {subsection}{\numberline {2.2.3}Database diagram}{13}
+\contentsline {subsubsection}{\numberline {2.2.3.1}Justification of design}{13}
+\contentsline {subsection}{\numberline {2.2.4}MVC Structure}{14}
+\contentsline {subsubsection}{\numberline {2.2.4.1}About MVC}{15}
+\contentsline {subsubsection}{\numberline {2.2.4.2}Structuring the Web application}{15}
+\contentsline {subsubsection}{\numberline {2.2.4.3}Extending views}{16}
+\contentsline {subsection}{\numberline {2.2.5}Application URLs}{16}
+\contentsline {subsection}{\numberline {2.2.6}HTTP methods}{17}
+\contentsline {subsection}{\numberline {2.2.7}Interaction with the application}{17}
+\contentsline {section}{\numberline {2.3}User Interface}{17}
+\contentsline {section}{\numberline {2.4}Other relevant sections}{18}
+\contentsline {subsection}{\numberline {2.4.1}Tesseract}{18}
+\contentsline {section}{\numberline {2.5}Optimising tesseract}{18}
+\contentsline {subsection}{\numberline {2.5.1}ImageMagick}{18}
+\contentsline {subsection}{\numberline {2.5.2}OpenCV}{19}
+\contentsline {chapter}{\numberline {3}Implementation}{20}
+\contentsline {section}{\numberline {3.1}Image processing}{20}
+\contentsline {subsection}{\numberline {3.1.1}Optimising Tesseract}{20}
+\contentsline {subsubsection}{\numberline {3.1.1.1}OTSU}{20}
+\contentsline {subsubsection}{\numberline {3.1.1.2}Adaptive Threshold}{20}
+\contentsline {section}{\numberline {3.2}Lined paper}{21}
+\contentsline {subsection}{\numberline {3.2.1}Filtering the blue lines}{21}
+\contentsline {subsection}{\numberline {3.2.2}Only extracting the text}{21}
+\contentsline {section}{\numberline {3.3}Handwriting Training}{22}
+\contentsline {subsection}{\numberline {3.3.1}Training process}{22}
+\contentsline {section}{\numberline {3.4}Web application}{22}
+\contentsline {subsection}{\numberline {3.4.1}OAuth}{22}
+\contentsline {subsection}{\numberline {3.4.2}Reoccuring events}{22}
+\contentsline {subsection}{\numberline {3.4.3}Tesseract Confidence}{23}
+\contentsline {subsection}{\numberline {3.4.4}Displaying calendar events}{23}
+\contentsline {subsection}{\numberline {3.4.5}Parsing Exif data}{23}
+\contentsline {subsection}{\numberline {3.4.6}Editing calendar events}{23}
+\contentsline {section}{\numberline {3.5}Review against the requirements}{23}
+\contentsline {chapter}{\numberline {4}Testing}{24}
+\contentsline {section}{\numberline {4.1}Overall Approach to Testing}{24}
+\contentsline {subsection}{\numberline {4.1.1}TDD}{24}
+\contentsline {section}{\numberline {4.2}Automated Testing}{25}
+\contentsline {section}{\numberline {4.3}Mocking Tests}{25}
+\contentsline {subsection}{\numberline {4.3.1}Unit Tests}{26}
+\contentsline {subsection}{\numberline {4.3.2}Route Testing}{26}
+\contentsline {subsection}{\numberline {4.3.3}Handling sessions}{26}
+\contentsline {subsection}{\numberline {4.3.4}User Interface Testing}{27}
+\contentsline {subsection}{\numberline {4.3.5}Stress Testing}{27}
+\contentsline {section}{\numberline {4.4}Integration Testing}{27}
+\contentsline {section}{\numberline {4.5}User Testing}{27}
+\contentsline {section}{\numberline {4.6}Tesseract Testing}{27}
+\contentsline {section}{\numberline {4.7}Image thresholding Testing}{28}
+\contentsline {chapter}{\numberline {5}Evaluation}{29}
+\contentsline {section}{\numberline {5.1}Correctly identified requirements}{29}
+\contentsline {section}{\numberline {5.2}Design decisions}{30}
+\contentsline {section}{\numberline {5.3}Use of tools}{30}
+\contentsline {subsection}{\numberline {5.3.1}Flask}{30}
+\contentsline {subsection}{\numberline {5.3.2}OpenCV}{31}
+\contentsline {subsection}{\numberline {5.3.3}PostgreSQL}{31}
+\contentsline {subsection}{\numberline {5.3.4}Tesseract}{31}
+\contentsline {subsection}{\numberline {5.3.5}Google Calendar}{31}
+\contentsline {section}{\numberline {5.4}Meeting the users needs}{32}
+\contentsline {section}{\numberline {5.5}Additional project aims}{32}
+\contentsline {section}{\numberline {5.6}Starting again}{32}
+\contentsline {chapter}{Appendices}{33}
+\contentsline {chapter}{\numberline {A}Third-Party Code and Libraries}{34}
+\contentsline {chapter}{\numberline {B}Ethics Submission}{35}
+\contentsline {chapter}{\numberline {C}Code Examples}{36}
+\contentsline {section}{\numberline {3.1}Random Number Generator}{36}
+\contentsline {chapter}{Annotated Bibliography}{39}

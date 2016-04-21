@@ -66,7 +66,7 @@ To recap, Extreme Programming uses the concept of CRC cards to help to aid the d
 
 \begin{figure}[h]
   \centering
-  \includegraphics[scale=0.5]{images/CRC\_card}
+  \includegraphics[scale=0.5]{images/CRC_card}
   \caption{An example from Sprint 3, showing a CRC card at the very beginning of creation.}
   \label{fig:crc1}
 \end{figure}
@@ -74,6 +74,7 @@ To recap, Extreme Programming uses the concept of CRC cards to help to aid the d
 These little design diagram cards helped to consider the design of the system by decomposing the problem into more logical steps. For example, when creating the note CRC there could have been a time in which a separate class was made for the image link - however a simple design was ensured with a reflection on the card.
 
 \subsection{Class Diagram}
+ 
 \begin{itemize}
   \item Use of service objects
   \item Explain why sections are linked together and describe the behaviour of the application classes and why they would be used.
@@ -85,7 +86,7 @@ Coupled with the CRC cards a database UML diagram has been produced which shows 
 
 \begin{figure}[h]
   \centering
-  \includegraphics[scale=0.5]{images/database\_diagram}
+  \includegraphics[scale=0.5]{images/database_diagram}
   \caption{The final result of the database diagram. After a series of iterations.}
   \label{fig:database}
 \end{figure}
@@ -143,7 +144,7 @@ The models consist of both persistence logic as well as service and helper objec
 It is worth mentioning that Flask uses the Jinga templating engine[CITE]. By default Jinga would expect the DOM to be represented again in every view file. A design decision was made to extend the view files. Figure \ref{fig:extension} illustrates the view file design.
 \begin{figure}[h]
   \centering
-  \includegraphics[scale=0.5]{images/view\_file\_extension}
+  \includegraphics[scale=0.5]{images/view_file_extension}
   \caption{A diagram illustrating how extension in Jinga html template engine works.}
   \label{fig:extension}
 \end{figure}
@@ -204,7 +205,7 @@ The results concluded by Patel et al is that Transym only yielded a 47\% accurac
 
 Analysing the outputs concluded that Tesseract would be the best performing on an image. Tesseract was chosen for its open source and it's highly commended recognition rate as well as my supervisor echoing the compliments of Tesseract and it should be considered.
 
-\section{Optimising Tesseract}
+\section{Optimising tesseract}
 
 \subsection{ImageMagick}
 Once Tesseract was chosen as the OCR tool training was started promptly. Due to there not being a formal way images were supposed to be prepared for the tool then the first few iterations were converted to grayscale using ImageMagick [CITE]. This yielded a poor return rate and characters were not identified consistently.

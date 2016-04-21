@@ -6,8 +6,6 @@ A level-1 auxiliary file: declaration.aux
 A level-1 auxiliary file: acknowledgements.aux
 A level-1 auxiliary file: abstract.aux
 A level-1 auxiliary file: Chapter1/chapter1.aux
-A level-1 auxiliary file: ChapterImageProcessing/imagepreprocessing.aux
-A level-1 auxiliary file: ChapterHandwritingTraining/handwritingtraining.aux
 A level-1 auxiliary file: Chapter2/chapter2.aux
 A level-1 auxiliary file: Chapter3/chapter3.aux
 A level-1 auxiliary file: Chapter4/chapter4.aux
@@ -34,7 +32,7 @@ Warning--to sort, need author, organization, or key in citeulike:13988110
 Done.
 You've used 19 entries,
             4538 wiz_defined-function locations,
-            1025 strings with 14270 characters,
+            1023 strings with 14175 characters,
 and the built_in function-call counts, 11220 in all, are:
 = -- 1079
 > -- 181
