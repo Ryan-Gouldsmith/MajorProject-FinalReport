@@ -30,45 +30,45 @@ Warning--I didn't find a database entry for "NumericalRecipes"
 Warning--to sort, need author, organization, or key in citeulike:13988110
 
 Done.
-You've used 19 entries,
+You've used 21 entries,
             4538 wiz_defined-function locations,
-            1023 strings with 14175 characters,
-and the built_in function-call counts, 11220 in all, are:
-= -- 1079
-> -- 181
-< -- 30
-+ -- 84
-- -- 46
-* -- 523
-:= -- 1964
-add.period$ -- 39
-call.type$ -- 19
-change.case$ -- 95
-chr.to.int$ -- 60
-cite$ -- 20
-duplicate$ -- 789
-empty$ -- 896
-format.name$ -- 50
-if$ -- 2410
+            1040 strings with 15002 characters,
+and the built_in function-call counts, 12855 in all, are:
+= -- 1230
+> -- 223
+< -- 41
++ -- 105
+- -- 56
+* -- 614
+:= -- 2228
+add.period$ -- 43
+call.type$ -- 21
+change.case$ -- 106
+chr.to.int$ -- 84
+cite$ -- 22
+duplicate$ -- 892
+empty$ -- 1008
+format.name$ -- 62
+if$ -- 2765
 int.to.chr$ -- 0
-int.to.str$ -- 19
-missing$ -- 158
-newline$ -- 102
-num.names$ -- 36
-pop$ -- 423
+int.to.str$ -- 21
+missing$ -- 176
+newline$ -- 114
+num.names$ -- 40
+pop$ -- 471
 preamble$ -- 1
-purify$ -- 61
+purify$ -- 70
 quote$ -- 2
-skip$ -- 861
+skip$ -- 978
 stack$ -- 0
-substring$ -- 294
-swap$ -- 511
-text.length$ -- 10
+substring$ -- 362
+swap$ -- 597
+text.length$ -- 13
 text.prefix$ -- 0
 top$ -- 6
-type$ -- 156
+type$ -- 173
 warning$ -- 1
-while$ -- 49
-width$ -- 21
-write$ -- 224
+while$ -- 57
+width$ -- 23
+write$ -- 250
 (There were 4 warnings)

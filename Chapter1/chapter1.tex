@@ -156,7 +156,7 @@ Some additional compromises were made in-light of the analysis due to the comple
 	\item Make the handwriting training generic enough to identify a wide range of users handwriting.
 \end{itemize}
 
-It is worth noting down that my supervisor Dr Hannah Dee felt as though the handwriting training would be too much for the dissertation and should be done as a ``maybe''. After much deliberation it was decided to include it, but as a background process.
+It is worth noting down that the project supervisor Dr Hannah Dee felt as though the handwriting training would be too much for the dissertation and should be done as a ``maybe''. After much deliberation it was decided to include it, but as a background process.
 
 \section{Process}
 %You need to describe briefly the life cycle model or research method that you used. You do not need to write about all of the different process models that you are aware of. Focus on the process model that you have used. It is possible that you needed to adapt an existing process model to suit your project; clearly identify what you used and how you adapted it for your needs.
@@ -170,23 +170,25 @@ Scrum \cite{citeulike:14014350} is a methodology used by teams to improve produc
 Scrum organises its work into user stories to ensure client valued work is being completed. They are normally collected at the start of the project and put into the backlog, which is a collection of client values work. At the start of each sprint user stories are selected from the backlog with an estimation on complexity performed. Finally, at the end of the sprint a review and retrospective is conducted to analyse the sprint, identifying what went well and what could be improved.
 
 \subsection{Adapted Scrum}
-During the project this methodology was embraced and adapted. A one week long sprint was adopted which coincided with a weekly supervisor meeting. Epics (a high level version of a story) are the start of the project to reflect the work completed in the analysis phase.
+During the project this methodology was embraced and adapted. A one week long sprint was adopted which coincided with a weekly supervisor meeting. Epics (a high level version of a story) were identified at the start of the project to reflect the work completed in the analysis phase.
 
-Each user story was formulated as: ``As a \textless role \textgreater I want to \textless feature \textgreater so that \textless resolution \textgreater''. This gave specific client value that was known to have a purpose. Each of these stories were estimated on their complexity and compared to a ``goldilock'' task \footnote{A task which all other tasks are evaluated against.}.
+The epic was then broken down into user stories. Each user story was formulated as: ``As a \textless role \textgreater I want to \textless feature \textgreater so that \textless resolution \textgreater''. This gave specific client value that was known to have a purpose. Each of these stories were estimated on their complexity and compared to a ``goldilock'' task \footnote{A task which all other tasks are evaluated against.}.
 
 For planning a sprint, the planning poker \cite{citeulike:14014357} technique was adopted; user-stories are estimated on a scale of 1, 2, 3, 5, 8 etc. When a task was estimated about 15 story points, it would be reflected upon to ensure the scope was fully understood - this would be broken down to sub-stories where appropriate.
 
 At the end of a sprint a review and retrospective was conducted in the form of a blog post \cite{citeulike:14014367}, instead of in a team. The retrospective was used to analyse what was achieved in the sprint, what went well and what needed to be improved upon. During this time, pre-planning was conducted to formulate a series of tasks to complete in the next sprint; this was agreed by the customer (Dr Hannah Dee).
 
-Communication between myself and my supervisor was key to determine what needed to be completed. It was discussed if what was suggested was achievable in the week sprint, based on the total story points completed in the previous sprint; if twenty story points were completed in sprint 3 then 20 story points were estimated for sprint 4 - associated user stories were brought forward.
+Communication with the project supervisor was key to determine what needed to be completed. It was discussed if what was suggested was achievable in that weeks sprint, based on the total story points completed in the previous sprint; if twenty story points were completed in sprint 3 then 20 story points were estimated for sprint 4 - associated user stories were brought forward.
 
-The project was managed on the open source management tool Taiga.io \cite{citeulike:14014360} which was invaluable, and provided built in functionality such as burndown charts per sprint. This shows how well story points are being completed and are used as an analytical tool.
+The project was managed on the open source management tool Taiga.io \cite{citeulike:14014360} which was invaluable, and provided built in functionality such as burndown charts per sprint. This shows how well story points are being completed and are used as an analytical tool for how well progression was being made.
+
+Daily stand-ups were informally conducted with a peer. Cut from the usual 15 minutes to around 5 minutes, the conversation helped to identify if there were any issues, what had been completed yesterday and what would be completed that day. This provided a good way to analyse what needed to be achieved and keep in perspective how the sprint was going.
 
 \subsection{Incorporated Extreme Programming}
 In tandem with Scrum, Extreme programming \cite{citeulike:13915786} principles were integrated into the development process; merciless refactoring, continuous integration and test-driven development were borrowed from its principles.
 
 \subsubsection{Test-driven development}
-Test-driven development (TDD) is the process of writing tests prior to the implemented code. This allows the developer to think about the design prior to its implementation and can form part of the documentation \cite{citeulike:14014361}.
+Test-driven development (TDD) is the process of writing tests prior to the implemented code. This allows the developer to think about the design prior to its implementation and can form part of the documentation \cite{citeulike:14014361}. This was implemented throughout the project, with both unit and acceptance tests being written before the code implementation.
 
 TDD follows three cycles: red, green, refactor. Initially the test fails, then it passes then refactoring is performed to keep the simplest system.
 

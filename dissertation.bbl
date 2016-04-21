@@ -70,6 +70,17 @@ R.~Gouldsmith, ``{Ryan Gouldsmith's Blog},'' \url{https://ryangouldsmith.uk/},
  \begin{quotation}\noindent A collection of blog posts which explain the
   progress every week through a review and reflection post. \end{quotation}
 
+\bibitem{citeulike:13510433}
+\BIBentryALTinterwordspacing
+S.~Knerr, L.~Personnaz, and G.~Dreyfus, ``{Handwritten digit recognition by
+  neural networks with single-layer training},'' \emph{IEEE Transactions on
+  Neural Networks}, vol.~3, no.~6, pp. 962--968, Nov. 1992. [Online].
+  Available: \url{http://dx.doi.org/10.1109/72.165597}
+\BIBentrySTDinterwordspacing
+ \begin{quotation}\noindent A paper describing how a Neural network was build
+  to identify handwritten characters on the European database and the U.S.
+  postal service database. \end{quotation}
+
 \bibitem{citeulike:14014361}
 C.~Maiden, ``{An Introduction to Test Driven Development | Code Enigma},''
   \url{https://www.codeenigma.com/community/blog/introduction-test-driven-development},
@@ -118,6 +129,17 @@ A.~Pilon, ``{Calendar Apps Stats: Google Calendar Named Most Popular | AYTM},''
   the most used calendar people use. Added to the analysis stage to justfy why
   Google calendar was chosen instead of other calendars available.
   \end{quotation}
+
+\bibitem{citeulike:13920972}
+\BIBentryALTinterwordspacing
+S.~Rakshit and S.~Basu, ``{Recognition of Handwritten Roman Script Using
+  Tesseract Open source OCR Engine},'' Mar. 2010. [Online]. Available:
+  \url{http://arxiv.org/abs/1003.5891}
+\BIBentrySTDinterwordspacing
+ \begin{quotation}\noindent The paper presents a case-study into the use of the
+  Tesseract OCR engine. It analyses how to use train the data on handwriting
+  based recognition, drawing conclusions on where it's useful - as well as it's
+  downfalls. \end{quotation}
 
 \bibitem{citeulike:14014350}
 Scrum.org, ``{Resources | Scrum.org - The home of Scrum},''
