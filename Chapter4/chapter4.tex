@@ -86,10 +86,6 @@ Issues arose during the acceptance tests where session modification would need t
 
 Overall, session handling was one of the hardest aspects with testing to get around and find a suitable, yet clean solution.
 
-\subsection{User Interface Testing}
-
-\subsection{Stress Testing}
-
 \section{Integration Testing}
 Integration tests would aid in thinking about not just the backend models, but how the information would be presented to the end user.
 
@@ -99,18 +95,25 @@ An example of a selenium test to ensure that when the user goes to the file uplo
 
 Another useful test where selenium works well is when checking the background colour of the Tesseract output. By mocking the tesseract output the tests were able to test logic such as identifying the confidence score to the correct class name - and therefor the classname being identified with the correct background colour of the text.
 \section{User Testing}
+Due to the application aiming to solve a problem with a set of students then user studies were conducted and teh responses were analysed and evaluated. Students partook in a usability study which the aim would be to show where the application was good and where it was not so good.
 
-Due to the application aiming to solve a problem with a set of students then user studies were conducted and teh responses were analysed and evaluated.
+Prior to the actual scheduled user-testing feedback was given regarding the Tesseract output confidence. This ``over the shoulder'' comments were along the lines of: ``It would be great if you could click the identified text and it would automatically populate the text boxes''. This was then implemented as a result from pre-user testing.
 
+Further issues which were identified during the user testing were:
+\begin{itemize}
+  \item Uploading a JPG image off a phone, which does not have the correct datetime exif key causes the application to fail.
+  \item Uploading an image with a previously uploaded filename caused the application to display the old file.
+\end{itemize}
+
+These issues were caught and modified thanks to extensive user-testing of the application.
+
+One interesting reflection of the user-case study was that people would not use the application. They were quick to defend the applications quality, but the use-case for them taking notes was not present. They much preferred to write up their notes from the lecture for memory retention.
 \section{Tesseract Testing}
 Due to there being no code written for the Tesseract training process there were no formal tests conducted for this section. However, what could be tested was how well the Tesseract learned as it was going through the learning process.
 
 A test framework was produced which ran the training process on the image. As mentioned, it outputs a text file which is associated to the words identified. This file was then renamed to $eng.ryan.expx_stat.txt$ so that when the final part of the training process is ran it did not overwrite the file.
 
 A statistical analysis was collected on the outputted characters from each of the training examples. Each of the characters were identified on each line of the text file, where each character represents a box which Tesseract has identified as a character.
-
-
-
 
 \section{Image thresholding Testing}
 When writing my script for the image thresholding research it was soon discovered that the script would be very trial and error and very much like a protoyping.
