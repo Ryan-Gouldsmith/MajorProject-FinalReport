@@ -5,7 +5,7 @@ A level-1 auxiliary file: cover.aux
 A level-1 auxiliary file: declaration.aux
 A level-1 auxiliary file: acknowledgements.aux
 A level-1 auxiliary file: abstract.aux
-A level-1 auxiliary file: Chapter1/chapter1.aux
+A level-1 auxiliary file: Chapter2/chapter2.aux
 A level-1 auxiliary file: Appendix1/appendix1.aux
 A level-1 auxiliary file: Appendix2/appendix2.aux
 A level-1 auxiliary file: Appendix3/appendix3.aux
@@ -26,45 +26,45 @@ Warning--I didn't find a database entry for "NumericalRecipes"
 Warning--to sort, need author, organization, or key in citeulike:13988110
 
 Done.
-You've used 21 entries,
+You've used 28 entries,
             4538 wiz_defined-function locations,
-            1036 strings with 14918 characters,
-and the built_in function-call counts, 12855 in all, are:
-= -- 1230
-> -- 223
+            1072 strings with 16978 characters,
+and the built_in function-call counts, 16075 in all, are:
+= -- 1524
+> -- 272
 < -- 41
-+ -- 105
-- -- 56
-* -- 614
-:= -- 2228
-add.period$ -- 43
-call.type$ -- 21
-change.case$ -- 106
++ -- 126
+- -- 70
+* -- 740
+:= -- 2795
+add.period$ -- 57
+call.type$ -- 28
+change.case$ -- 141
 chr.to.int$ -- 84
-cite$ -- 22
-duplicate$ -- 892
-empty$ -- 1008
-format.name$ -- 62
-if$ -- 2765
+cite$ -- 29
+duplicate$ -- 1137
+empty$ -- 1295
+format.name$ -- 76
+if$ -- 3444
 int.to.chr$ -- 0
-int.to.str$ -- 21
-missing$ -- 176
-newline$ -- 114
-num.names$ -- 40
-pop$ -- 471
+int.to.str$ -- 28
+missing$ -- 232
+newline$ -- 142
+num.names$ -- 54
+pop$ -- 653
 preamble$ -- 1
-purify$ -- 70
+purify$ -- 91
 quote$ -- 2
-skip$ -- 978
+skip$ -- 1209
 stack$ -- 0
-substring$ -- 362
-swap$ -- 597
+substring$ -- 418
+swap$ -- 723
 text.length$ -- 13
 text.prefix$ -- 0
 top$ -- 6
-type$ -- 173
+type$ -- 229
 warning$ -- 1
-while$ -- 57
-width$ -- 23
-write$ -- 250
+while$ -- 71
+width$ -- 30
+write$ -- 313
 (There were 4 warnings)

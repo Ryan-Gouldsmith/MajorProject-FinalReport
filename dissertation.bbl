@@ -38,6 +38,21 @@ R.~Agarwal and D.~Umphress, ``{Extreme Programming for a Single Person Team},''
   methodology which should be undertaken on the project and how different
   aspects of Extreme Programming can be used. \end{quotation}
 
+\bibitem{citeulike:14019792}
+Bottle, ``{Bottle: Python Web Framework â Bottle 0.13-dev
+  documentation},'' \url{http://bottlepy.org/docs/dev/index.html}, last checked
+  22nd April 2016.
+ \begin{quotation}\noindent The Python framework was used as a case-study of
+  potential frameworks to use for the application. Discussed in the design
+  section, but rejected as a choice. \end{quotation}
+
+\bibitem{citeulike:14019784}
+Django, ``{The Web framework for perfectionists with deadlines | Django},''
+  \url{https://www.djangoproject.com/}, last checked 22nd April 2016.
+ \begin{quotation}\noindent The Python framework was used as a case study,
+  looking at the different frameworks available. It was rejected for it being
+  too large for the project. \end{quotation}
+
 \bibitem{citeulike:14014177}
 \BIBentryALTinterwordspacing
 M.~A.~A. Dzulkifli and M.~F.~F. Mustafar, ``{The influence of colour on memory
@@ -55,6 +70,13 @@ Evernote, ``{The note-taking space for your life's work | Evernote},''
  \begin{quotation}\noindent The Evernote application is an example of the
   organisational and note-taking application that this project is looking at as
   a similar system. \end{quotation}
+
+\bibitem{citeulike:13160396}
+Flask, ``{Welcome | Flask (A Python Microframework)},''
+  \url{http://flask.pocoo.org/}, last checked 22nd April 2016.
+ \begin{quotation}\noindent The python framework used as an option. Was used in
+  the design section evaluating the decisions that were made. It was used as
+  the choice of framework. \end{quotation}
 
 \bibitem{citeulike:14014320}
 Google, ``{Meet Google Keep, Save your thoughts, wherever you are - Keep
@@ -113,6 +135,12 @@ Microsoft, ``{Microsoft OneNote | The digital note-taking app for your
   extraction from an image. Shows simply how to extract text from a given
   image. \end{quotation}
 
+\bibitem{citeulike:14019766}
+MongoDB, ``{MongoDB for GIANT Ideas | MongoDB},''
+  \url{https://www.mongodb.com/}, last checked 22nd April 2016.
+ \begin{quotation}\noindent The Mongo DB tool used as a comparison for
+  relational database systems and NoSQL ones. \end{quotation}
+
 \bibitem{Olurinola_Tayo_2015}
 O.~Olurinola and O.~Tayo, ``Colour in learning: Its effect on the retention
   rate of graduate students,'' \emph{Journal of Education and Practice},
@@ -120,6 +148,14 @@ O.~Olurinola and O.~Tayo, ``Colour in learning: Its effect on the retention
  \begin{quotation}\noindent Discusses a study which shows that coloured text is
   better for the memory retention rates, than that of non-coloured text. Used
   during the taxonomy of notes section. \end{quotation}
+
+\bibitem{citeulike:14019744}
+Oracle, ``{Overview - The Java EE 6 Tutorial},''
+  \url{https://docs.oracle.com/javaee/6/tutorial/doc/bnaaw.html}, last checked
+  22nd April 2016.
+ \begin{quotation}\noindent An article which discusses the use of Java as a web
+  application language. It reaffirms the point raised that it is good for
+  performance. \end{quotation}
 
 \bibitem{citeulike:14010520}
 A.~Pilon, ``{Calendar Apps Stats: Google Calendar Named Most Popular | AYTM},''
@@ -175,11 +211,30 @@ Tesseract, ``{Tesseract Open Source OCR Engine},''
   engine which will be used in the application to analyse characters on a page.
   \end{quotation}
 
+\bibitem{citeulike:14019772}
+O.~Tezer, ``{SQLite vs MySQL vs PostgreSQL: A Comparison Of Relational Database
+  Management Systems | DigitalOcean},''
+  \url{https://www.digitalocean.com/community/tutorials/sqlite-vs-mysql-vs-postgresql-a-comparison-of-relational-database-management-systems},
+  last checked 22nd April 2016.
+ \begin{quotation}\noindent Used as a comparison between what relational
+  management system should be used. Used in the design section for a
+  comparision between the different systems presented and evaluated.
+  \end{quotation}
+
 \bibitem{citeulike:14014360}
 Tiaga, ``{Taiga.io},'' \url{https://taiga.io/}, 2016, last checked TODO.
  \begin{quotation}\noindent The project management toold which was utilised to
   help to keep track of the project's progress throughout the process. Utilised
   the Scrum tools available that the application gives. \end{quotation}
+
+\bibitem{citeulike:14018462}
+w3Techs, ``{Usage Statistics and Market Share of JavaScript for Websites, April
+  2016},'' \url{http://w3techs.com/technologies/details/pl-js/all/all}, last
+  checked 22nd April 2016.
+ \begin{quotation}\noindent The website shows a graph of how Javascript has
+  increased its market share on recent web applications. Used as part of the
+  design consideration regarding the use of programming language
+  \end{quotation}
 
 \bibitem{citeulike:Taxonomy}
 M.~Webster, ``{Taxonomy | Definition of Taxonomy by Merriam-Webster},''

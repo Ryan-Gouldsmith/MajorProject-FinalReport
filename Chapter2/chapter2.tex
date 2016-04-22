@@ -20,7 +20,7 @@ The following discusses the design decisions regarding the implementation tools 
 \subsection{Programming language}
 With the programming language choice unlikely to change per sprint, then an upfront design decision was made. From the analysis it was concluded that the application would be implemented as a web application.  A consideration between different server side programming languages was considered in depth.
 
-Typically with server side applications the traditional language choices are: PHP, Ruby, Python, C#, Java and JavaScript, which has increased in popularity recently \cite{citeulike:14018462}.
+Typically with server side applications the traditional language choices are: PHP, Ruby, Python, C\#, Java and JavaScript, which has increased in popularity recently \cite{citeulike:14018462}.
 
 Evaluating the analysis decomposition in the meetings in the beginning sprints it was determined that OpenCV, would be needed to be utilised in the project. OpenCV's original source code is written in C++, however Python and Java bindings to OpenCV are available. Additional research was conducted to see if a reliable wrapper for either PHP or Ruby was available, and after a lot of investigation it was concluded there was not.
 
@@ -61,20 +61,22 @@ MySQL and PostgreSQL for most applications would be interchangeable. It offers a
 \noindent
 After evaluating the possible RDBMS's it was concluded that MySQL and PostgresSQL would be more preferable for scalability. Although there is not a great difference between the two, PostgreSQL was chosen for its advanced ability allowing for the application to become more advanced. This goes against the YAGNI (you ain't gonna need it) approach, but infrastructure decisions are harder to change, than code implementations.
 
+\subsection{Continuous integration tools}
+Continuous Integration (CI) is normally used in development teams to ensure that all code is checked into the repository. For the single person project it was adapted. The value was not to ensure all code was checked into the repository, but to build the project on each individual branch to ensure every commit passes associated tests written.
 
+Since CI was decided to be used in the analysis stage, a specific tool in aiding in CI would have to be chosen. Jenkins was an initial choice; it is a standalone Java application which a repository can be synced to.
 
-\subsection{Continuous Integration tool}
-Although Continuous Integration (CI) is normally used for development teams to ensure that all code is checked into the repository[cite], there was value in using it for a single person project. Prodomently for the build processes on the branches to ensure that the application builds in an isolated enviornment.
+Another option was Travis CI, a CI tool in the cloud which can be attached to a GitHub repository. It runs tests on every commit to a repository if there is a travis.yml file committed. Travis then build the application and reports whether it errors, passed all the tests or failed any tests.
 
-Having used Jenkins CI before [CITE] this was my immediate choice when considering what to use for a continous integration tool. However, whilst considering the posibilities on how to integrate this to the application I discovered the CI tool, Travis CI. This CI tool seemed easy to set up: you link it to the repository, add a travis.yml file (with configurations) and it will run and build the application. This then gives useful messages such as passing, errors or failing.
+A key design decision was to be able to check the build process quickly. With Travis it has a web interface clearly showing the output. Jenkins would require additional set up of specific build scripts for every branch in the application. Therefore, Travis was chosen for the ease of use and a nice integration with the repository.
 
-One key decision whilst considering CI tools was to show be able to check the build process whereever I am. After finding out the Travis CI is in the cloud and links directly with the GitHub repo I opted to use Travis CI for the project.
-
+\subsection{Version control}
+Version control was utilised on the project to ensure that code was continuously added, allowing the option to revert changes if necessary. The project was created on a private Git repository on GitHub. Git was chosen for its familiarity and GitHub is a well known place for handling versions of software. Github also tied in well with other tools such as Travis CI.
 
 \section{Overall Architecture}
-
+This section discusses the architecture of the web application as a whole. The process of the design with the web application was developed over a series of sprints, rather than an upfront design.
 \subsection{CRC cards}
-To recap, Extreme Programming uses the concept of CRC cards to help to aid the developer to think about the design of the application. Unlike UML, they are throw-away cards which can be edited and changed every time a new feature is implemented. The CRC cards which have been drawn up in the application have been formalised, and a selection of the interesting design decisions and justifications are stated below.
+To recap, Extreme Programming uses the concept of CRC cards to help to aid the developer to consider the design of the application. Unlike UML, they are throw-away cards which can be edited and changed every time a new feature is implemented. The CRC cards which have been drawn up in the application have been formalised.
 
 \begin{figure}[h]
   \centering
@@ -83,15 +85,53 @@ To recap, Extreme Programming uses the concept of CRC cards to help to aid the d
   \label{fig:crc1}
 \end{figure}
 
-These little design diagram cards helped to consider the design of the system by decomposing the problem into more logical steps. For example, when creating the note CRC there could have been a time in which a separate class was made for the image link - however a simple design was ensured with a reflection on the card.
+Figure \ref{fig:crc1} shows an example of a CRC card at the very beginning of the note class creation. The left hand side helped to think about methods and attributes that the system must do. The right hand side shows the responsibilities, where the note may interact with other class.
 
+These classes were then implemented into classes. This process was completed at every feature. The appendix X shows more CRC cards in the application.
 \subsection{Class Diagram}
+After CRC cards were produced, they can be easily transformed into formal UML in the form of a class diagram. The class diagram was collated as a retrospective of the CRC card design, and designed after the sprints. The CRC cards were used as an iterative design and now a class diagram is formalising that design decision.
 
-\begin{itemize}
-  \item Use of service objects
-  \item Explain why sections are linked together and describe the behaviour of the application classes and why they would be used.
-  \item
-\end{itemize}
+Figure x in appendix x shows the class diagram.
+
+\subsubsection{Justification of design}
+The following subsection will justify design decisions from the class diagram and the behviour it intended.
+\subsubsubsection{Google services}
+The $BaseGoogleService$ class is a super class which has the $GoogleCalendarService$ and $GooglePlusService$ extending as sub classes of the system. Common functionality was shared between the sub classes, where queries had to be built and then executed ($execute_request$). These were moved to the superclass to remove this duplicated functionality.
+
+Both the $GoogleCalendarService$ and $GooglePlusService$ classes have constant variables: $API$ and $VERSION$; these values are unlikely to change, but are identified as variables so they can be changed easily.
+
+With $GoogleCalendarService$ it is expected that the class controls all integration with data which involves direct access to the Google Calendar API. Important functions include getting a list of events, returning JSON event listings from the service and adding and removing description based content.
+
+The $GooglePlusService$ has a key function of parsing the user's email address from the response returned when they authorise with OAuth.
+
+The $OAuthService$ class allows the user to authenticate via oAuth with the Google services. When the class is called, the procedures go through exchanging tokens and eventually authorising with Google.
+
+\subsubsubsection{Helper classes}
+Helper classes are used to aid the application from reducing amount of repeated code. Often these helpers were implemented in various controllers, so reducing the code duplicated code helped with a readable system.
+
+The $TesseractHelper$ has a range of functions which aid with the interaction of Tesseract and the user's uploaded note. This class is instantiated when the user uploads an image.
+
+$GoogleServicesHelper$ class was created to purely deal with duplicated code. It stores no attributes in the class and all the methods are static - this decision was made due to the duplication of similar code in multiple controllers. This class was extracted out and groups similar GoogleService calls in a similar place.
+
+$SessionHelper$ class was created to deal and handle with the appropriate sessions in the application. Partly created to ease with testing and partly created to reduce unsemantic code in the controllers. The session helper is instantiated in every controller where sessions are being used.
+
+
+\subsubsubsection{Persistance model classes}
+Each of the model classes extend the SQLAlchemy model classes. The models mirror that of the database design, for the attributes, which more information can be found on sections TODO.
+
+In the $User$ table implements a static method: $find_user_by_email_address$. This was chosen to be a static, so that the method could be called without needing a user object to exist. This groups together relative information about the user to the user model, but without the need for another object to be created. This principle is also applied to the $NoteMetaData$ for the $find_meta_data$, $Note$ class and $find_id_by_module_code$ and $Note$ class and $find_note_by_module_code$. Overall these classes implement specific save functions to encapsulate database transactions in one place.
+
+\subsubsubsection{Other classes}
+The $CalendarItem$ is called from the view file when parsing a list of events it would display the date correctly.
+
+$InputValidator$ class is implemented to handle all the upload data from a user. It is there to check the data entered is valid from the user. It's instantiated from the add meta data routes and the edit meta-data routes. It helped to reduce the data redundancy.
+
+A $FileUploadService$ is used to ensure that when the user uploads their file that specific constraints were met. It also allows the user to save the image to the filestore.
+
+An $ExifParser$ was used to extract the EXIF data from an image when the user uploaded the item. A constant integer, which depicted the ``datetime'' field from the exif response was stored so that the date time from the image can be extracted.
+
+Finally the $BinariseImage$ class, constructs all the OpenCV code for binarising a user's uploaded image into black and white. The purpose of the classes purpose discussed in section X. The class eventually saves an image to the filestore and is called from the fileupload controller.
+
 
 \subsection{Database diagram}
 Coupled with the CRC cards a database UML diagram has been produced which shows the implementation of the relations in the database.
@@ -237,5 +277,3 @@ OpenCV is an open source image processing library. Natively written in C++, but 
   \item Realised it wasnt good so redesigned it to custom lined paper Why did I do this instead of normal lined paper?
   \item Why the colour blue ?
 \end{itemize}
-
-\section{Version control}

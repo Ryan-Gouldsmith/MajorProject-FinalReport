@@ -1,31 +1,32 @@
-\contentsline {chapter}{\numberline {1}Background \& Objectives}{1}
-\contentsline {section}{\numberline {1.1}Background}{1}
-\contentsline {subsection}{\numberline {1.1.1}Taxonomy of notes}{1}
-\contentsline {subsection}{\numberline {1.1.2}Handwriting recognition}{3}
-\contentsline {subsection}{\numberline {1.1.3}Similar systems}{3}
-\contentsline {subsubsection}{\numberline {1.1.3.1}OneNote}{4}
-\contentsline {subsubsection}{\numberline {1.1.3.2}EverNote}{4}
-\contentsline {subsubsection}{\numberline {1.1.3.3}Google Keep}{4}
-\contentsline {subsubsection}{\numberline {1.1.3.4}Reflection on the systems}{5}
-\contentsline {subsection}{\numberline {1.1.4}Motivation}{5}
-\contentsline {section}{\numberline {1.2}Analysis}{5}
-\contentsline {subsection}{\numberline {1.2.1}Parsing a note}{6}
-\contentsline {subsection}{\numberline {1.2.2}An OCR tool}{6}
-\contentsline {subsection}{\numberline {1.2.3}What to parse from the note}{6}
-\contentsline {subsection}{\numberline {1.2.4}Structuring of notes}{6}
-\contentsline {subsection}{\numberline {1.2.5}OCR for the authors handwriting}{6}
-\contentsline {subsection}{\numberline {1.2.6}What platform is most suitable}{7}
-\contentsline {subsection}{\numberline {1.2.7}What should the application do}{7}
-\contentsline {subsection}{\numberline {1.2.8}Calendar integration}{7}
-\contentsline {subsection}{\numberline {1.2.9}Objectives}{7}
-\contentsline {subsection}{\numberline {1.2.10}Compromising with objectives}{8}
-\contentsline {section}{\numberline {1.3}Process}{8}
-\contentsline {subsection}{\numberline {1.3.1}Scrum overview}{8}
-\contentsline {subsection}{\numberline {1.3.2}Adapted Scrum}{9}
-\contentsline {subsection}{\numberline {1.3.3}Incorporated Extreme Programming}{9}
-\contentsline {subsubsection}{\numberline {1.3.3.1}Test-driven development}{9}
-\contentsline {subsubsection}{\numberline {1.3.3.2}Continuous Integration}{10}
-\contentsline {subsubsection}{\numberline {1.3.3.3}CRC cards}{10}
+\contentsline {chapter}{\numberline {1}Design}{1}
+\contentsline {section}{\numberline {1.1}Implementation tools}{1}
+\contentsline {subsection}{\numberline {1.1.1}Programming language}{1}
+\contentsline {subsection}{\numberline {1.1.2}Choice of framework}{2}
+\contentsline {subsection}{\numberline {1.1.3}Database management system}{2}
+\contentsline {subsubsection}{\numberline {1.1.3.1}NoSQL or relational database management systems}{2}
+\contentsline {subsubsection}{\numberline {1.1.3.2}SQLLite}{3}
+\contentsline {subsubsection}{\numberline {1.1.3.3}PostgreSQL}{3}
+\contentsline {subsubsection}{\numberline {1.1.3.4}MySQL}{3}
+\contentsline {subsection}{\numberline {1.1.4}Continuous Integration tool}{3}
+\contentsline {section}{\numberline {1.2}Overall Architecture}{4}
+\contentsline {subsection}{\numberline {1.2.1}CRC cards}{4}
+\contentsline {subsection}{\numberline {1.2.2}Class Diagram}{4}
+\contentsline {subsection}{\numberline {1.2.3}Database diagram}{4}
+\contentsline {subsubsection}{\numberline {1.2.3.1}Justification of design}{5}
+\contentsline {subsection}{\numberline {1.2.4}MVC Structure}{6}
+\contentsline {subsubsection}{\numberline {1.2.4.1}About MVC}{6}
+\contentsline {subsubsection}{\numberline {1.2.4.2}Structuring the Web application}{7}
+\contentsline {subsubsection}{\numberline {1.2.4.3}Extending views}{7}
+\contentsline {subsection}{\numberline {1.2.5}Application URLs}{8}
+\contentsline {subsection}{\numberline {1.2.6}HTTP methods}{8}
+\contentsline {subsection}{\numberline {1.2.7}Interaction with the application}{8}
+\contentsline {section}{\numberline {1.3}User Interface}{9}
+\contentsline {section}{\numberline {1.4}Other relevant sections}{9}
+\contentsline {subsection}{\numberline {1.4.1}Tesseract}{9}
+\contentsline {section}{\numberline {1.5}Optimising tesseract}{10}
+\contentsline {subsection}{\numberline {1.5.1}ImageMagick}{10}
+\contentsline {subsection}{\numberline {1.5.2}OpenCV}{10}
+\contentsline {section}{\numberline {1.6}Version control}{10}
 \contentsline {chapter}{Appendices}{11}
 \contentsline {chapter}{\numberline {A}Third-Party Code and Libraries}{12}
 \contentsline {chapter}{\numberline {B}Ethics Submission}{13}
