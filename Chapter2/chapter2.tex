@@ -13,7 +13,7 @@
 
 %Some example sub-sections may be as follows, but the specific sections are for you to define.
 
-As the application was developed in an iterative manner, over a series of sprints, class diagrams and design diagrams were not created at the very start of the project. Over a series of sprints designs were iteratively developed regarding the system overview. However, some design decisions were decided at the start of the project. The chapter will clearly explain rationale for the decisions and state whether the design decisions were a result of iterative processes or upfront design decisions.
+As the application was developed in an iterative manner, over a series of sprints, class diagrams and design diagrams were not created at the very start of the project. Over a series of sprints designs were iteratively developed regarding the system overview. However, some design decisions were decided at the start of the project. The chapter will clearly explain rationale for the decisions and state whether the design decisions were a result of iterative processes or upfront design.
 
 \section{Implementation tools}
 The following discusses the design decisions regarding the implementation tools that were used during the project, providing rationale for the choice of tools.
@@ -29,14 +29,14 @@ C++ is not considered a standard web application development language, therefore
 By being constrained by design decision to use OpenCV coupled with the lack of reliable wrappers for other languages and a reluctance to use Java then Python was selected as the most suitable language. Python offers a lightweight and quick to learn syntax that produces readable code whilst allowing a object-oriented paradigm to be followed. Additionally, its support for OpenCV is sufficient for the application.
 
 
-\subsection{Choice of Framework}
+\subsection{Choice of framework}
+To recap, Python was chosen as the language of choice for the application. Frameworks aid in the development of a project, especially with web applications where routing is often required; often routing support is a key feature of frameworks. Exploratory work was completed in the early sprints to find a suitable tool. The frameworks Django \cite{citeulike:14019784}, Flask \cite{citeulike:13160396} and Bottle \cite{citeulike:14019792} were evaluated.
 
-Just to recall Python was chosen as the language of choice for the application. With this in mind a framework had to be chosen to help aid the development of the project. Frameworks can be interesting things, they are their to aid you but sometimes you're constrained to their rules and regulations. This can lead to many frameworks being bloated with additional options that you would never want or need to use. That said, choosing a framework was an important process.
+Some frameworks constrain the developer's to specific implementations through abstracted classes whereas some offer more flexibility. Whilst evaluating Django, a full framework, it was concluded that such a large framework was excessive for this application and rejected as a choice for the framework.
 
-After analysing what Python web frameworks were available, I shortlisted three different ones: Django [CITE], Flask [CITE] and Bottle [CITE]. The latter two were classified as a  ``micro-framework'' whilst Django being the full blooded framework - like Ruby on Rails [CITE].  After establishing that maybe a heavyweight framework was probably too much for the application and I wanted to have freedom to include my own libraries and feeling as though there's more flexibility, I opted to rule out Django.
+Flask and Bottle are classified as ``micro-frameworks'', offering a lot less restrictive structure and allowing the developers to have more control on how the applications are structured. On face value, Flask and Bottle appear to be very similar: they are both lightweight with a similar syntax. Evaluating both of the frameworks identified that Flask had a larger support community than Flask, coupled with better documentation, compared to Bottle. As neither framework had been used before then a support community was an important design decision.
 
-This left Flask and Bottle frameworks. On the face value of things, Flask and Bottle look quite similar. They are both lightweight with similar syntax, however when delving a little deeper into the technologies I found that Flask had more of a support community compared to Bottle. As I was not familar with either framework then choosing one which provided a good level of community support in tangent with the documentation was important. On making the decision based on this factor then Flask seemed the more appropriate framework to choose for this application.
-
+As a result, Flask was chosen as the framework which will be used throughout the application. Spike work was completed to see how simple it was to create a quick application, after discovering it was perfectly fine, Flask was agreed as the framework of choice.
 
 \subsection{Database management system}
 As the analysis suggested it should be a web application then data persistence should be an integral part of the application. Prior to choosing an appropriate tool, a rationalised decision had to be made on the different management systems available.
