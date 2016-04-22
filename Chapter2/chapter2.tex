@@ -13,35 +13,21 @@
 
 %Some example sub-sections may be as follows, but the specific sections are for you to define.
 
-As the application was developed in an iterative manner, then no upfront formal class diagrams were conducted to design the system. Regardless, from the initial requirements it was clear that there was a set of design decisions that had to be made - these mainly were the implementation features. These would not change too significantly throughout the iterations.
+As the application was developed in an iterative manner, over a series of sprints, class diagrams and design diagrams were not created at the very start of the project. Over a series of sprints designs were iteratively developed regarding the system overview. However, some design decisions were decided at the start of the project. The chapter will clearly explain rationale for the decisions and state whether the design decisions were a result of iterative processes or upfront design decisions.
 
 \section{Implementation tools}
-The following discusses the design decision regarding the implementation tools that were used during the project. This section provides rationale for key design decision which would impact the application.
+The following discusses the design decisions regarding the implementation tools that were used during the project, providing rationale for the choice of tools.
 \subsection{Programming language}
-As the application was determined to be a web application then a design decision had to be made regarding the specific language to use for the server side. Normally for a server side application there would be a choice of languages to use such as: PHP, Ruby, Python, Java or more recently Node has increased popularity [CITE].
+With the programming language choice unlikely to change per sprint, then an upfront design decision was made. From the analysis it was concluded that the application would be implemented as a web application.  A consideration between different server side programming languages was considered in depth.
 
-It was quickly decided in the first few meetings that OpenCV [CITE] would be needed to be implemented in the application at some point. Having previously used OpenCV with Python bindings it was known that Python could successfully integrate with a Python based application. Research was conducted to see if PHP or Ruby had some form of OpenCV wrapper, but after a little research there was not a lot of wrappers out there that looked promising.
+Typically with server side applications the traditional language choices are: PHP, Ruby, Python, C#, Java and JavaScript, which has increased in popularity recently \cite{citeulike:14018462}.
 
-As a result it was quickly established I'd have to use either Python or Java's wrapper for the application. Java applications tend to be more useful for large commercial applications, using enterprise software systems like Java EE[CITE]. That level of complexity was considered to be overkill for this application, therefore Python was chosen for the main language implementation due to the lightweight abilities, the ability to create web applications and knowledge of integrating with OpenCV.
-\subsection{Database management system}
-When considering the database aspect, one has to consider the different types of management systems available. The general consensus falls in the NoSQL vs SQL category. SQL management systems by their very nature are suited to data which is structured and has little variations. Whereas NoSQL is more suited to applications where there may be different values from time to time between the data.
+Evaluating the analysis decomposition in the meetings in the beginning sprints it was determined that OpenCV, would be needed to be utilised in the project. OpenCV's original source code is written in C++, however Python and Java bindings to OpenCV are available. Additional research was conducted to see if a reliable wrapper for either PHP or Ruby was available, and after a lot of investigation it was concluded there was not.
 
-After spending a long time evaluting the system and what could be achieved a SQL management system was selected. To do the basic tagging of meta-data would not warrant a NoSQL database structure, due to the information being structured and similar for every note. Couple this with the fact that there are a specific set of rules in which the notes must follow to tag this meta-data really suggested that the data will be nice and formulated, following the same structure for every note.
+C++ is not considered a standard web application development language, therefore reducing the opportunity for support during the project, it was dismissed as viable choice. Java applications are predominately large commercial applications, using a range of enterprise software - often renowned for their performance abilities \cite{citeulike:14019744}. This approach felt too cumbersome for a proposed light-weight application.
 
-After determining that an SQL management system would be appropriate, a suitable technology would have to be chosen. When considering which technology to use, it tends to fall in the: SQLLite, PostgreSQL or MySQL.
-[CITE DIGITAL OCEAN LINK]
-\subsubsection{SQLLite}
-SQLLite was considered as a viable option; with most of the Flask documentation discussing implementing a database with SQLLite, it is intuitive to include in the application. However, considering the larger picture: would SQLLite scale well with multiple users using it. Testing and development would be perfectly fine, with a single person using it, but with more read and writes to the file, it probably wouldn't scale well.
+By being constrained by design decision to use OpenCV coupled with the lack of reliable wrappers for other languages and a reluctance to use Java then Python was selected as the most suitable language. Python offers a lightweight and quick to learn syntax that produces readable code whilst allowing a object-oriented paradigm to be followed. Additionally, its support for OpenCV is sufficient for the application.
 
-\subsubsection{PostgreSQL}
-PostgreSQL is the most advanced of the RDMS's available. The additional advanced, especially in the types give the developer more freedom to change their structure and implement more complex SQL queries if it were needed. For example its support for JSON means that Google responses could be asaved if needed.
-\subsubsection{MySQL}
-MySQL is a viable option as a RDMS for a web application development. It does offer a wide range of support. The documentation for MySQL is good, but compared to Postgresql there is better support [CITE THING.].
-
-
-\begin{flushleft}
-After evaluating the possible relational database management systems (RDMS) it was decided that there is not a lot of difference between PostgreSQL and MySQL - it probably would not yield a great difference in return. As a result, PostgreSQL was chosen due to being able to offer a wider support which may have been beneficial for future improvements to the application.
-\end{flushleft}
 
 \subsection{Choice of Framework}
 
@@ -50,6 +36,32 @@ Just to recall Python was chosen as the language of choice for the application. 
 After analysing what Python web frameworks were available, I shortlisted three different ones: Django [CITE], Flask [CITE] and Bottle [CITE]. The latter two were classified as a  ``micro-framework'' whilst Django being the full blooded framework - like Ruby on Rails [CITE].  After establishing that maybe a heavyweight framework was probably too much for the application and I wanted to have freedom to include my own libraries and feeling as though there's more flexibility, I opted to rule out Django.
 
 This left Flask and Bottle frameworks. On the face value of things, Flask and Bottle look quite similar. They are both lightweight with similar syntax, however when delving a little deeper into the technologies I found that Flask had more of a support community compared to Bottle. As I was not familar with either framework then choosing one which provided a good level of community support in tangent with the documentation was important. On making the decision based on this factor then Flask seemed the more appropriate framework to choose for this application.
+
+
+\subsection{Database management system}
+As the analysis suggested it should be a web application then data persistence should be an integral part of the application. Prior to choosing an appropriate tool, a rationalised decision had to be made on the different management systems available.
+
+\subsubsection{NoSQL or relational database management systems}
+The choice of database management system was considered at length. Firstly, the decision of whether to use NoSQL or a relational database management system (RDBMS) had to be decided. This was decided during the early sprints, whilst the design was beginning to emerge.
+
+RDBMS's are suited to separating the data into logical relations which decouples through the process of normalisation. The data normally suited to a RDBMS is one which has a uniform structure and can be represented as a series of relations, with specific constraints.
+
+NoSQL provides a more flexible structure, allowing data to have no specific structure. In MongoDB \cite{citeulike:14019766} documents are equivalent to relations - structuring the data as key-valued pairs over specific column structures. This offers more flexibility in the data passed to the database.
+
+From previous design choices made in prior sprints regarding the database structure, both options were seriously considered. After the analysis of what the note meta data would consist of, it was decided that the structure for the data would not vary, each note will have an associated lecturer, title etc, then a relational database would be suitable for the application. In addition, the notes \textit{must} follow a specific layout structure, therefore affirming that data would be linked and structured.
+
+A specific choice of RDBMS had to be chosen as an appropriate tool to persist the data from a note; digital ocean offered a concise comparison aiding in the design \cite{citeulike:14019772}.
+\subsubsection{SQLLite}
+SQLLite was considered as a viable option; Flask provides documentation for its ease of use with the micro-framework. Considering the larger picture: would it scale well with multiple users interacting with it? Digital ocean state it would be a perfectly fine testing and development tool, but for production it may not scale well with multiple reads and writes.
+\subsubsection{PostgreSQL}
+Digital ocean describe PostgreSQL as the most advanced of the RDBMS's available. The additional support of more types an attribute can have allows for a greater control when creating a database. For example, the JSON type support would allow the application to save returned JSON from 3rd party services directly to the database.
+\subsubsection{MySQL}
+MySQL and PostgreSQL for most applications would be interchangeable. It offers a wide range of support along with comprehensive documentation. There are concerns over performance, however.
+
+\noindent
+After evaluating the possible RDBMS's it was concluded that MySQL and PostgresSQL would be more preferable for scalability. Although there is not a great difference between the two, PostgreSQL was chosen for its advanced ability allowing for the application to become more advanced. This goes against the YAGNI (you ain't gonna need it) approach, but infrastructure decisions are harder to change, than code implementations.
+
+
 
 \subsection{Continuous Integration tool}
 Although Continuous Integration (CI) is normally used for development teams to ensure that all code is checked into the repository[cite], there was value in using it for a single person project. Prodomently for the build processes on the branches to ensure that the application builds in an isolated enviornment.
