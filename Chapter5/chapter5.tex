@@ -78,8 +78,12 @@ In the end the choice between PostgreSQL and MySQL would not have mattered a gre
 \subsection{Tesseract}
 Tesseract itself has been a great tool during the creation of the product. The training process was a little tedious but the tool would not be swapped out for another form of OCR tool. Since Tesseract gave around a 75\% success rate, that was still rather high for an OCR.
 
-\subsection{Google Calendar}
+\subsection{Google calendar}
 Although Google Calendar exposed a lot of complexities along the way, the choice was a good decision in the end. After analysing the calendars choosing the most popular one appealed to more of the market. Furthermore, the support from Google was beneficial as information regarding API calls could easily be found.
+
+\subsection{Continuous integration tool}
+Travis was a superb tool used throughout the development of the application. It was imperative with catching testing errors in an isolated environment. The only disadvantage is that the build times are \textit{slow}. Having to compile OpenCV and Tesseract from source every time a push is committed meant that build times were around 25 minutes. This was far too long, but until the repositories are updated to the correct version this will be the same build time.
+
 
 \section{Meeting the users needs}
 One of the key premises that the application was worthwhile was that the user would need to digitise their notes easily. However, from the analysis given back from the user testing it seems as though that selection of users did not find the application useful for their note-taking style.
@@ -103,6 +107,17 @@ Extracting images would have been the next logical step for the application to b
 A core acknowledgement of the limitation that the system holds is that the handwriting recognition only works for the author's handwriting. To overcome this, it would have been preferable to develop a tool to dynamically train the user's handwriting in the application.
 
 From Figure \ref{fig:graph} it shows that all that would be needed would be three training examples to help the user to have a good recognition rate. The improvement by making it more generic would result in the application been accessible for a wide range of users.
+
+In conjunction with this, extending the popular words list that Tesseract has would have been a nice way to get a domain specific set of text on a note. For example, if the user had three notes of CS31310, then it would add that module code to the popular words lists, making it more likely to find it again.
+
+\section{Evaluating the process}
+The process followed on this application has been done with diligence and precision. The Scrum approach has been fully adopted and has aided significantly in the design, development and testing. The weekly sprints helped to decompose the tasks that were at hand, enforcing that the tasks for that sprint was the main priority. What was most useful was the burndown charts every sprint, this helped to analyse exactly what went wrong, or right, on specific days - as well as providing an easy way to view the velocity.
+
+The retrospectives were valuable in ensuring that the process could always looked to be improved upon.
+
+What was most valuable though was the use of TDD. The system has been fully tested and there are a wide range of tests which show a great precision in an attempt to develop a good bit of software. There were frustrating times, as described in the testing section, but overall the approach of TDD was one of the better decisions.
+
+Overall, the process was stuck to thoroughly and meticulously even when the times were tough. In the end the process aided with many aspects of the design and keeping the implementation simple. Therefore, Scrum was deservedly the right process to use.
 
 \section{Starting again}
 Although this project has been completed to a high standard, there are a few aspects which would be changed if this was to be started again.
