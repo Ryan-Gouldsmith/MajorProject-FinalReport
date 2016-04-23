@@ -46,6 +46,15 @@ Bottle, ``{Bottle: Python Web Framework â Bottle 0.13-dev
   potential frameworks to use for the application. Discussed in the design
   section, but rejected as a choice. \end{quotation}
 
+\bibitem{citeulike:14020141}
+P.~Developers, ``{PEP 8 -- Style Guide for Python Code | Python.org},''
+  \url{https://www.python.org/dev/peps/pep-0008/}, last checked 23rd April
+  2016.
+ \begin{quotation}\noindent The PEP8 standard was used throughout the codebase
+  as an implementation style guide. It is referenced in the evaluation to
+  discuss the design decision that should have been implemented from the start
+  of the project. \end{quotation}
+
 \bibitem{citeulike:14019784}
 Django, ``{The Web framework for perfectionists with deadlines | Django},''
   \url{https://www.djangoproject.com/}, last checked 22nd April 2016.
