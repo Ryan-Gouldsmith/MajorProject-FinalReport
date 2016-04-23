@@ -93,9 +93,9 @@ After CRC cards were produced, they can be easily transformed into formal UML in
 
 Figure x in appendix x shows the class diagram.
 
-\subsubsection{Justification of design}
+\subsection{Justification of design}
 The following subsection will justify design decisions from the class diagram and the behviour it intended.
-\subsubsubsection{Google services}
+\subsubsection{Google services}
 The $BaseGoogleService$ class is a super class which has the $GoogleCalendarService$ and $GooglePlusService$ extending as sub classes of the system. Common functionality was shared between the sub classes, where queries had to be built and then executed ($execute_request$). These were moved to the superclass to remove this duplicated functionality.
 
 Both the $GoogleCalendarService$ and $GooglePlusService$ classes have constant variables: $API$ and $VERSION$; these values are unlikely to change, but are identified as variables so they can be changed easily.
@@ -106,7 +106,7 @@ The $GooglePlusService$ has a key function of parsing the user's email address f
 
 The $OAuthService$ class allows the user to authenticate via oAuth with the Google services. When the class is called, the procedures go through exchanging tokens and eventually authorising with Google.
 
-\subsubsubsection{Helper classes}
+\subsubsection{Helper classes}
 Helper classes are used to aid the application from reducing amount of repeated code. Often these helpers were implemented in various controllers, so reducing the code duplicated code helped with a readable system.
 
 The $TesseractHelper$ has a range of functions which aid with the interaction of Tesseract and the user's uploaded note. This class is instantiated when the user uploads an image.
@@ -116,12 +116,12 @@ $GoogleServicesHelper$ class was created to purely deal with duplicated code. It
 $SessionHelper$ class was created to deal and handle with the appropriate sessions in the application. Partly created to ease with testing and partly created to reduce unsemantic code in the controllers. The session helper is instantiated in every controller where sessions are being used.
 
 
-\subsubsubsection{Persistance model classes}
+\subsubsection{Persistance model classes}
 Each of the model classes extend the SQLAlchemy model classes. The models mirror that of the database design, for the attributes, which more information can be found on sections TODO.
 
 In the $User$ table implements a static method: $find_user_by_email_address$. This was chosen to be a static, so that the method could be called without needing a user object to exist. This groups together relative information about the user to the user model, but without the need for another object to be created. This principle is also applied to the $NoteMetaData$ for the $find_meta_data$, $Note$ class and $find_id_by_module_code$ and $Note$ class and $find_note_by_module_code$. Overall these classes implement specific save functions to encapsulate database transactions in one place.
 
-\subsubsubsection{Other classes}
+\subsubsection{Other classes}
 The $CalendarItem$ is called from the view file when parsing a list of events it would display the date correctly.
 
 $InputValidator$ class is implemented to handle all the upload data from a user. It is there to check the data entered is valid from the user. It's instantiated from the add meta data routes and the edit meta-data routes. It helped to reduce the data redundancy.
