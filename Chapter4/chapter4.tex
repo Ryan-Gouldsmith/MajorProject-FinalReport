@@ -156,6 +156,8 @@ The above example shows that unlike other tests, which test the specific feature
 
 In Figure \ref{fig:acceptance_test_1} it shows that the time to run to run 5 tests increased to 16.09 seconds; one of the disadvantages is the time taken to run the test-suite. Due to the complexity with loading data correctly to the view file, then these tests are imperative to ensure the user expects to see the correct content. For full acceptance tests refer to Appendix \ref{appendix:test_results}, section \ref{appendix:acceptance}.
 
+With acceptance tests the classes all subclass the \lstinline[basicstyle=\normalsize\ttfamily]{LiveServerClass} from the Flask-Testing package. This is different than the Integration and Unit tests as they use \lstinline[basicstyle=\normalsize\ttfamily]{TestClass}. The LiveServerClass allows an instance of the application to be loaded alongside selenium, removing the need for an external selenium server or for the tests to be ran with the server running. It was at this time in the sprints which a large refactor of the system occurred, accommodating for the automatic application launch. 
+
 \section{User Testing}
 Due to the application aiming to solve a problem, a set of potential user's were asked to perform a user study of the application. Their responses were analysed and their opinions on whether the software met their aims was collated.
 
