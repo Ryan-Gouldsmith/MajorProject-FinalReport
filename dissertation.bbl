@@ -46,6 +46,14 @@ Bottle, ``{Bottle: Python Web Framework â Bottle 0.13-dev
   potential frameworks to use for the application. Discussed in the design
   section, but rejected as a choice. \end{quotation}
 
+\bibitem{citeulike:14020597}
+M.~Daly, ``{Mocking External Apis in Python - Matthew Daly's Blog},''
+  \url{http://matthewdaly.co.uk/blog/2016/01/26/mocking-external-apis-in-python/},
+  Jan. 2015, last checked 25th April 2016.
+ \begin{quotation}\noindent A nice simple blog post explaining why hitting an
+  external API is bad, and there should mocking objects instead.
+  \end{quotation}
+
 \bibitem{citeulike:14020141}
 P.~Developers, ``{PEP 8 -- Style Guide for Python Code | Python.org},''
   \url{https://www.python.org/dev/peps/pep-0008/}, last checked 23rd April
@@ -87,6 +95,30 @@ Flask, ``{Welcome | Flask (A Python Microframework)},''
   the design section evaluating the decisions that were made. It was used as
   the choice of framework. \end{quotation}
 
+\bibitem{citeulike:14020609}
+------, ``{Testing Flask Applications â Flask Documentation (0.10)},''
+  \url{http://flask.pocoo.org/docs/0.10/testing/\#accessing-and-modifying-sessions},
+  2016, last checked 24th April 2016.
+ \begin{quotation}\noindent The testing documentation for Flask which discusses
+  how session modifications should be handled. Used in the implementation and
+  the testing discussion. \end{quotation}
+
+\bibitem{citeulike:14020599}
+T.~P.~S. Foundation, ``{26.5. unittest.mock â mock object library},''
+  \url{https://docs.python.org/3/library/unittest.mock.html}, 2016, last
+  checked 24th April 2016.
+ \begin{quotation}\noindent The mocking library used throughout the
+  application. Although the documentation is for python 3, it works for python
+  2.7 \end{quotation}
+
+\bibitem{citeulike:14020596}
+M.~Fowler, ``{Mocks Aren't Stubs},''
+  \url{http://martinfowler.com/articles/mocksArentStubs.html}, last checked
+  25th April 2016.
+ \begin{quotation}\noindent When deciding whether mocks or stubs were used,
+  Martin Fowler gave a nice concise answer. It turns out all the tests are
+  mocking the behaviour from the external API. \end{quotation}
+
 \bibitem{citeulike:14014320}
 Google, ``{Meet Google Keep, Save your thoughts, wherever you are - Keep
   Google},'' \url{https://www.google.com/keep/}, 2016, last checked 17th April
@@ -100,6 +132,13 @@ R.~Gouldsmith, ``{Ryan Gouldsmith's Blog},'' \url{https://ryangouldsmith.uk/},
   2016, last checked TODO.
  \begin{quotation}\noindent A collection of blog posts which explain the
   progress every week through a review and reflection post. \end{quotation}
+
+\bibitem{citeulike:14020588}
+C.~Heer, ``{Flask-Testing  Flask-Testing 0.3 documentation},''
+  \url{http://pythonhosted.org/Flask-Testing/}, last checked 25th April 2016.
+ \begin{quotation}\noindent The documentation page for the testing library
+  Flask-Testing. It was used throughout the project after a refactor realising
+  it offered better support for testing Flask applications. \end{quotation}
 
 \bibitem{citeulike:13510433}
 \BIBentryALTinterwordspacing
@@ -150,6 +189,14 @@ MongoDB, ``{MongoDB for GIANT Ideas | MongoDB},''
  \begin{quotation}\noindent The Mongo DB tool used as a comparison for
   relational database systems and NoSQL ones. \end{quotation}
 
+\bibitem{citeulike:14020625}
+B.~Muthukadan, ``{Selenium with Python - Selenium Python Bindings 2
+  documentation},'' \url{https://selenium-python.readthedocs.org/}, 2014, last
+  checked 24th April 2016.
+ \begin{quotation}\noindent The selenium library used for the acceptance tests.
+  It gives good documentation on how to access elements and how to get specific
+  values from the text. \end{quotation}
+
 \bibitem{Olurinola_Tayo_2015}
 O.~Olurinola and O.~Tayo, ``Colour in learning: Its effect on the retention
   rate of graduate students,'' \emph{Journal of Education and Practice},
@@ -174,6 +221,22 @@ A.~Pilon, ``{Calendar Apps Stats: Google Calendar Named Most Popular | AYTM},''
   the most used calendar people use. Added to the analysis stage to justfy why
   Google calendar was chosen instead of other calendars available.
   \end{quotation}
+
+\bibitem{citeulike:14020583}
+pytest-dev team, ``{pytest: helps you write better programs},''
+  \url{http://pytest.org/latest/}, last checked 24th April 2016.
+ \begin{quotation}\noindent The library was used throughout the development for
+  reference on testing. It was especially useful for mocking test data.
+  \end{quotation}
+
+\bibitem{citeulike:13983611}
+R.~Python, ``{Headless Selenium Testing with Python and PhantomJS - Real
+  Python},''
+  \url{https://realpython.com/blog/python/headless-selenium-testing-with-python-and-phantomjs/},
+  Aug. 2014, last checked 24th April 2016.
+ \begin{quotation}\noindent A demonstration on how to use Selenium with the
+  Python examples. Additionally references the fact what phantomjs is, and it
+  is a headless browser. \end{quotation}
 
 \bibitem{citeulike:13920972}
 \BIBentryALTinterwordspacing

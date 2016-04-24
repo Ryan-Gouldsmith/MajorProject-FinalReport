@@ -6,6 +6,7 @@ A level-1 auxiliary file: declaration.aux
 A level-1 auxiliary file: acknowledgements.aux
 A level-1 auxiliary file: abstract.aux
 A level-1 auxiliary file: Chapter4/chapter4.aux
+A level-1 auxiliary file: Appendix3/appendix3.aux
 A level-1 auxiliary file: Appendix4/appendix4.aux
 The style file: IEEEannot.bst
 Reallocated singl_function (elt_size=4) to 100 items from 50.
@@ -21,45 +22,45 @@ Database file #1: References/references.bib
 Warning--to sort, need author, organization, or key in citeulike:13988110
 
 Done.
-You've used 29 entries,
+You've used 37 entries,
             4538 wiz_defined-function locations,
-            1072 strings with 17253 characters,
-and the built_in function-call counts, 16535 in all, are:
-= -- 1566
-> -- 279
+            1115 strings with 19641 characters,
+and the built_in function-call counts, 20380 in all, are:
+= -- 1932
+> -- 335
 < -- 41
-+ -- 129
-- -- 72
-* -- 758
-:= -- 2876
-add.period$ -- 59
-call.type$ -- 29
-change.case$ -- 146
++ -- 153
+- -- 88
+* -- 914
+:= -- 3568
+add.period$ -- 75
+call.type$ -- 37
+change.case$ -- 186
 chr.to.int$ -- 84
-cite$ -- 30
-duplicate$ -- 1172
-empty$ -- 1336
-format.name$ -- 78
-if$ -- 3541
+cite$ -- 38
+duplicate$ -- 1459
+empty$ -- 1671
+format.name$ -- 94
+if$ -- 4355
 int.to.chr$ -- 0
-int.to.str$ -- 29
-missing$ -- 240
-newline$ -- 146
-num.names$ -- 56
-pop$ -- 679
+int.to.str$ -- 37
+missing$ -- 304
+newline$ -- 178
+num.names$ -- 72
+pop$ -- 870
 preamble$ -- 1
-purify$ -- 94
+purify$ -- 118
 quote$ -- 2
-skip$ -- 1242
+skip$ -- 1529
 stack$ -- 0
-substring$ -- 426
-swap$ -- 741
+substring$ -- 490
+swap$ -- 901
 text.length$ -- 13
 text.prefix$ -- 0
 top$ -- 6
-type$ -- 237
+type$ -- 301
 warning$ -- 1
-while$ -- 73
-width$ -- 31
-write$ -- 322
+while$ -- 89
+width$ -- 39
+write$ -- 399
 (There was 1 warning)
