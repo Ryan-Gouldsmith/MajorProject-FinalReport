@@ -3,6 +3,5 @@
 \contentsline {figure}{\numberline {1.2}{\ignorespaces Example Unit test for the user class. Each of the tests pass}}{4}
 \contentsline {figure}{\numberline {1.3}{\ignorespaces An example of the acceptance tests running. It shows that the time to run the tests have increased considerably.}}{6}
 \contentsline {figure}{\numberline {1.4}{\ignorespaces A simple framework showing the steps of analysing each of the training examples for a statistical measure for how successful the training process was.}}{7}
-\addvspace {10\p@ }
-\addvspace {10\p@ }
+\contentsline {figure}{\numberline {1.5}{\ignorespaces A graph showing the success rate of the Tesseract training results over 12 examples.}}{8}
 \addvspace {10\p@ }

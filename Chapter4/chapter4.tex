@@ -225,7 +225,7 @@ Figure \ref{fig:tesseract_framework} shows a simple framework for analysing how 
 \label{fig:tesseract_graph}
 \end{figure}
 
-Figure \ref{fig:tesseract_graph} shows the output analysed from the Tesseract training. It shows each training example with an associated correct character recognition. The conclusions clearly show that there is no improvement from the Tesseract output after around the 3rd example. A horizontal linear regression line shows that it has peaked at around 72\% correct recognition rate.
+Figure \ref{fig:tesseract_graph} shows the output analysed from the Tesseract training. It shows each training example with an associated correct character recognition. The conclusions clearly show that there is no improvement from the Tesseract output after around the 3rd example. A horizontal linear regression line shows that it has peaked at around 72\% correct recognition rate. Refer to appendix \ref{appendix:tesseract_table} for the full statistics.
 
 \section{Image thresholding Testing}
 Due to the nature of the image processing scripts it was quickly realised a methodical approach to testing would not be beneficial, due to almost constant spike work.
@@ -233,3 +233,5 @@ Due to the nature of the image processing scripts it was quickly realised a meth
 TDD would not be performed before considering the design for the image bininarsation script. Instead the testing would consist of a more viaual check of the outputted image to see if the result was clear enough, with little noise. Once the script had been developed to a reasonable level of satisfaction the spike work would cease, and testing would ensue.
 
 The code was re-written and performed using TDD. It involved analysing numpy arrays returned from OpenCV and checking, for instance, if any of the array contained black values.
+
+ADD reference to appendix to show examples of output

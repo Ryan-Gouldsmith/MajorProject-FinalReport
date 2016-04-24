@@ -9,10 +9,8 @@
 \contentsline {section}{\numberline {1.4}Acceptance Testing}{5}
 \contentsline {section}{\numberline {1.5}User Testing}{6}
 \contentsline {section}{\numberline {1.6}Tesseract Testing}{7}
-\contentsline {section}{\numberline {1.7}Image thresholding Testing}{8}
+\contentsline {section}{\numberline {1.7}Image thresholding Testing}{7}
 \contentsline {chapter}{Appendices}{9}
-\contentsline {chapter}{\numberline {A}Third-Party Code and Libraries}{10}
-\contentsline {chapter}{\numberline {B}Ethics Submission}{11}
-\contentsline {chapter}{\numberline {C}Code Examples}{12}
-\contentsline {section}{\numberline {3.1}Random Number Generator}{12}
-\contentsline {chapter}{Annotated Bibliography}{15}
+\contentsline {chapter}{\numberline {A}Tesseract data results}{10}
+\contentsline {section}{\numberline {1.1}Table}{10}
+\contentsline {chapter}{Annotated Bibliography}{11}
