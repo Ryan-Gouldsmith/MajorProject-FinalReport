@@ -79,41 +79,85 @@ Figure \ref{lst:mock3} shows the use of the ``side effect''. It is essentially, 
 
 Overall, mocking produced a substantial amount of testing. It was not considered when designing the system that mocking would be needed, it was only when testing happened that it was realised it was needed. The tests were refactored to incorporate the mocking facilities.
 
-\subsection{Unit Tests}
-After refactoring the testing infrastructure to use Flask-testing fraamework instead of the default python unit test, then unit testing became event easier.
+\subsection{Unit Testing}
+A Unit test is used for models where functions can be tested in isolation to ensure that they perform the correct operations. In the application unit tests were created for every model.
 
-The tests would extend the libraries TestCase class. This allows the application access to the application context (the current application) to test models.
+Sometimes there was a cross over between database transactions and testing specific functions. In these cases, using the actual database would not be used for testing against. This is not considered the best design [CITE], so a test database was initialised.
 
-Unit tests were conducted for all the classes in the model directory. Model testing themselves was relatively easy and simple to implement.
+The config was overwritten to include $app.config['testing'] = True$ and $app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///test.sqlite'$. This ensured that a test database was used, which was cleared and created for every test - this ensured that the database did not influence other tests.
 
-\subsection{Route Testing}
-As the application was using routes then tests were conducted to ensure that the routes could be hit. Whilst doing TDD these were often the first tests to be written. This allowed design considerations to be thought over regarding specific routes.
+Very much like the function names of the classes, the test cases were as descriptive as possible. This formed part of the documentation of the application.
 
-Other aspects of testing the routes ensured that the correct response codes were returned, ensuring that the routes were working as intended from the very core of the application. Additional tests were added to check that any redirects worked correctly, to ensure flow between controllers were being executes where applicable.
+\begin{figure}[h]
+  \centering
+  \includegraphics{images/unit_test_user}
+  \caption{Example Unit test for the user class. Each of the tests pass}
+  \label{fig:unit_user}
+\end{figure}
 
-Finally, in some sections persistance testing occured where a test database was checked to make sure that code inside the controllers was being executed. For example, when adding a note the note route checks to make sure that a note was created in the test database.
+Figure \ref{fig:unit_user} shows an example of the unit tests for the user class. The functions were decomposed and tests were associated for each function. In cases both edge-cases and normal expected results were selected.
+
+Refer to appendix x for full unit test cases.
+
+\subsection{Integration Testing}
+Due to the application having external routes, then testing them to ensure the correct response codes was important. These were the first tests written for the routing sections, and implemented from the design considerations in X.
+
+The tests consisted of checking that the response code was correct, any that redirects were correctly redirected to test the flow of the application.
+
+Where there was integrations with the database in the routes, then tests were conducted to ensure the routes performed the correct persistance. For example, when posting to the meta-data URL, then checks were created to ensure that the module code was being persisted correctly.
 
 \subsection{Handling sessions}
-One of the tricker aspects regarding testing was the handling of sessions. In parts of the application sessions are used to handle specific states of the system, i.e user logged in.
+One of the tricker aspects of testing was the handling of sessions. In parts of the application sessions are used to handle specific states of the system, i.e when a user's logged in.
 
-During testing of routes then session handling would not be too complex. The flask documentation gives a clear breakdown of how to modify a session. To begin with you have to open a test client context - this mirrors what a normal client would look like. From there a session transaction context needs to be opened. Once this has been opened then it would allow for session modification.
+During testing, sections of the system are tested in isolated environments. If the route to show all the notes was tested, it would require the user to be logged in - therefore stored in the session. However, when testing this there will be no session set when running the test. Flask had a solution to testing the session handling [CITE].
 
-Issues arose during the acceptance tests where session modification would need to happen. Issues arose due to the fact that selenium would run on a different process to the application. As a result session modification could not occur during using selenium and acceptance test. This caused a lot of problems regarding testing. As a result, more mocking had to be used. This time the session helper would be then ended up mocking.
+\begin{lstlisting}[language=python, label={lst:session}, breaklines, columns=fullflexible, keywordstyle=\color{blue}]
+  with self.client.session_transaction() as session:
+          session['user_id'] = self.user_id
+\end{lstlisting}
 
-Overall, session handling was one of the hardest aspects with testing to get around and find a suitable, yet clean solution.
+Figure \ref{lst:session}, displays an example on how the session had to be modified in route testing. After the session transaction context has exited then the session has been modified for the test.
 
-\section{Integration Testing}
-Integration tests would aid in thinking about not just the backend models, but how the information would be presented to the end user.
+However, issues arose during acceptance testing, where session modification was more cumbersome.  When running selenium tests, the webdriver runs on a different process to the Flask applicaton [cite]. Therefore, session modification as shown in Figure \ref{lst:session}, would not modify the session. After a lot of problems, it was confirmed that the session helper would have to be mocked, in the $create_app$ function, which is initialised when a test is created.
 
-These tests were implemented in the form of using Python's selenium tool. As previously used before, selenium is a testing tool which allows you to integrate with the DOM and perform automated browser testing. These tests are important to ensure that the user interface is tested for input and ensuring values are correct.
+Overall, session handling was one of the hardest aspects with testing to get around and find a concise solution.
 
-An example of a selenium test to ensure that when the user goes to the file upload page and they're entering information into the meta-data form that associated calendar events are correctlt displayed.
+\section{Acceptance Testing}
+Acceptance tests tests the system as a whole. This includes testing to ensure that the front-end functionality is what is expected when the user views the webpage.
 
-Another useful test where selenium works well is when checking the background colour of the Tesseract output. By mocking the tesseract output the tests were able to test logic such as identifying the confidence score to the correct class name - and therefor the classname being identified with the correct background colour of the text.
+To implement these tests a tool would be needed to check what the application looked like on a webpage, the tool selected was selenium for Python [CITE]. It can integrate with the DOM (document object model), and perform automated browser testing.
+
+When testing with selenium there is the option to test with a standard browser, Chrome, Firefox etc, or it can be tested on a headless browser (via PhantomJS). A headless browser can access a webpage the same as Chrome, but it does not display a graphical user-interface [CITE].
+
+An example of an acceptance test may follow a pattern like:
+\begin{enumerate}
+  \item Go to page /search.
+  \item Find the search field.
+  \item Enter the text ``CS31310''
+  \item Click submit
+  \item Find ``searched-item'' from the DOM.
+  \item Return whether it equals ``CS31310''
+\end{enumerate}
+
+The above example shows that unlike other tests, which test the specific feature or functionality, this test checks what is displayed to the user via interactions with the web browser. The test then passes or fails based on assertions.
+
+Another capability when testing was to check the output from the text colour from Tesseract. As there's logic to determine the colour in the application, then the test would help to determine if the correct colour was identified.
+
+One disadvantage to this testing strategy is that it increases the time it takes to run the test-suite.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics{images/acceptance_test_1}
+  \caption{An example of the acceptance tests running. It shows that the time to run the tests have increased considerably.}
+  \label{fig:acceptance_test_1}
+\end{figure}
+
+In Figure \ref{fig:acceptance_test_1} it shows that the time to run to run 5 tests increased to 16.09 seconds. These tests are costly on time to run, but they ensure that the logic in the view files displays the correct dynamic content.
+
 \section{User Testing}
-Due to the application aiming to solve a problem with a set of students then user studies were conducted and teh responses were analysed and evaluated. Students partook in a usability study which the aim would be to show where the application was good and where it was not so good.
+Due to the application aiming to solve a problem, a set of likely user's were asked to perform a user study of the application. Their responses were analysed and their optinions on whether the software met their aims was collated.
 
-Prior to the actual scheduled user-testing feedback was given regarding the Tesseract output confidence. This ``over the shoulder'' comments were along the lines of: ``It would be great if you could click the identified text and it would automatically populate the text boxes''. This was then implemented as a result from pre-user testing.
+Prior to the actual scheduled user-testing, feedback was given regarding the displaying of the Tesseract output confidence. These ``over the shoulder'' comments were along the lines of: ``It would be great if you could click the identified text and it would automatically populate the text boxes''. This was then implemented as a result from pre-user testing.
 
 Further issues which were identified during the user testing were:
 \begin{itemize}
@@ -124,18 +168,68 @@ Further issues which were identified during the user testing were:
 These issues were caught and modified thanks to extensive user-testing of the application.
 
 One interesting reflection of the user-case study was that people would not use the application. They were quick to defend the applications quality, but the use-case for them taking notes was not present. They much preferred to write up their notes from the lecture for memory retention.
+
 \section{Tesseract Testing}
-Due to there being no code written for the Tesseract training process there were no formal tests conducted for this section. However, what could be tested was how well the Tesseract learned as it was going through the learning process.
+Due to there being no code written for the Tesseract training process there were no formal tests conducted for this section. However, what could be tested was how well the Tesseract learned as it progressed through the training processes.
 
-A test framework was produced which ran the training process on the image. As mentioned, it outputs a text file which is associated to the words identified. This file was then renamed to $eng.ryan.expx_stat.txt$ so that when the final part of the training process is ran it did not overwrite the file.
+\begin{figure}[h]
+  \centering
+  \includegraphics{images/tesseract_testing}
+  \caption{A simple framework showing the steps of analysing each of the training examples for a statistical measure for how successful the training process was.}
+  \label{fig:tesseract_framework}
+\end{figure}
 
-A statistical analysis was collected on the outputted characters from each of the training examples. Each of the characters were identified on each line of the text file, where each character represents a box which Tesseract has identified as a character.
+Figure \ref{fig:tesseract_framework} shows a simple framework for analysing how well Tesseract trained the data. After the statistics has been collated then a graph was constructed to show the trends.
+\begin{figure}[h]
+  \centering
+\begin{tikzpicture}
+\begin{axis}[
+    title={Tesseract Training examples compared to their success rate of characters identified vs correct characters},
+    xlabel={Training example},
+    ylabel={Success rate (\%) },
+    xmin=0, xmax=100,
+    ymin=0, xmax = 100,
+    ytick={0,20,40,60,80,100},
+    xtick={0, 9,18,27,36,45,54,63, 72, 81 , 90 , 99},
+    xticklabels={1, 2, 3, 4, 5, 6, 7, 8, 9 , 10 , 11 ,12 },
+    legend pos=north west,
+    ymajorgrids=true,
+    grid style=dashed,
+]
+
+\addplot[
+    color=black,
+    mark=square,
+    ]
+    coordinates {
+    (0, 61.4035087719298)(9, 72.2222222222222)(18, 81.1594202898551) (27, 79.1044776119403)(36, 69.7916666666667)(45, 74.6376811594203) (54, 78.5276073619632)(63, 69.75)(72, 78.7878787878788)(81, 66.3341645885287)(90, 65.5737704918033)(99, 75.414364640884)
+    };
+
+\addplot [thick, red] table[y={create col/linear regression}]{
+    0 61.4035087719298
+    9 72.2222222222222
+    18 81.1594202898551
+    27 79.1044776119403
+    36 69.7916666666667
+    45 74.6376811594203
+    54 78.5276073619632
+    63 69.75
+    72 78.7878787878788
+    81 66.3341645885287
+    90 65.5737704918033
+    99 75.414364640884
+    };
+\end{axis}
+\end{tikzpicture}
+\caption{A graph showing the success rate of the Tesseract training results over 12 examples.}
+\label{fig:tesseract_graph}
+\end{figure}
+
+Figure \ref{fig:tesseract_graph} shows the output analysed from the Tesseract training. It shows each training example with an associated correct character recognition. The conclusions clearly show that there is no improvement from the Tesseract output after around the 3rd example. A horizontal linear regression line shows that it has peaked at around 72\% correct recognition rate.
 
 \section{Image thresholding Testing}
-When writing my script for the image thresholding research it was soon discovered that the script would be very trial and error and very much like a protoyping.
+Due to the nature of the image processing scripts it was quickly realised a methodical approach to testing would not be beneficial, due to almost constant spike work.
 
-When testing the output from the image, then it would be a visual check rather than a specific image that was looking to be achieved. Looking at each itteration through the scripts improvement it would be evaluated as whether it was a worse or better binarisation script. Once a sufficient level of satisfaction from eye-judgement was achieved then the testing from that script was stopped.
+TDD would not be performed before considering the design for the image bininarsation script. Instead the testing would consist of a more viaual check of the outputted image to see if the result was clear enough, with little noise. Once the script had been developed to a reasonable level of satisfaction the spike work would cease, and testing would ensue.
 
-Once the spike work for the script had been completed, TDD performed on the image to turn the prototyped script into clean testable code. Using the outputted numpy arrays from open cv, they were compared against what was believed to be outputted.
-
-When the image converts the white image mask to black it performs checks for the image for any black value in the image.
+The code was re-written and performed using TDD. It involved analysing numpy arrays returned from OpenCV and checking, for instance, if any of the array contained black values.
