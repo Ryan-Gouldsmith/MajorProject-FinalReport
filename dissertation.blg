@@ -5,9 +5,10 @@ A level-1 auxiliary file: cover.aux
 A level-1 auxiliary file: declaration.aux
 A level-1 auxiliary file: acknowledgements.aux
 A level-1 auxiliary file: abstract.aux
-A level-1 auxiliary file: Chapter4/chapter4.aux
+A level-1 auxiliary file: Chapter3/chapter3.aux
 A level-1 auxiliary file: Appendix3/appendix3.aux
 A level-1 auxiliary file: Appendix4/appendix4.aux
+A level-1 auxiliary file: Appendix5/appendix5.aux
 The style file: IEEEannot.bst
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
@@ -15,6 +16,8 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: References/references.bib
+Warning--I didn't find a database entry for "appendix:image_processing"
+Warning--I didn't find a database entry for "processing:pre-line"
 -- IEEEtranS.bst version 1.11 (2003/04/02) by Michael Shell.
 -- http://www.ctan.org/tex-archive/macros/latex/contrib/supported/IEEEtran/
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
@@ -24,7 +27,7 @@ Warning--to sort, need author, organization, or key in citeulike:13988110
 Done.
 You've used 37 entries,
             4538 wiz_defined-function locations,
-            1115 strings with 19641 characters,
+            1118 strings with 19708 characters,
 and the built_in function-call counts, 20380 in all, are:
 = -- 1932
 > -- 335
@@ -63,4 +66,4 @@ warning$ -- 1
 while$ -- 89
 width$ -- 39
 write$ -- 399
-(There was 1 warning)
+(There were 3 warnings)

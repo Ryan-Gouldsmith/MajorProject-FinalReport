@@ -1,40 +1,48 @@
-\contentsline {chapter}{\numberline {1}Testing}{1}
-\contentsline {section}{\numberline {1.1}Overall approach to testing}{1}
-\contentsline {subsection}{\numberline {1.1.1}Test-driven-development}{1}
-\contentsline {section}{\numberline {1.2}Automated testing}{2}
-\contentsline {section}{\numberline {1.3}Mocking tests}{2}
-\contentsline {subsection}{\numberline {1.3.1}Unit testing}{3}
-\contentsline {subsection}{\numberline {1.3.2}Integration testing}{4}
-\contentsline {subsection}{\numberline {1.3.3}Handling sessions}{4}
-\contentsline {section}{\numberline {1.4}Acceptance testing}{5}
-\contentsline {section}{\numberline {1.5}User Testing}{6}
-\contentsline {section}{\numberline {1.6}Tesseract Testing}{7}
-\contentsline {section}{\numberline {1.7}Image threshold Testing}{8}
-\contentsline {chapter}{Appendices}{9}
-\contentsline {chapter}{\numberline {A}Testing Results}{10}
-\contentsline {section}{\numberline {1.1}Unit tests}{10}
-\contentsline {subsection}{\numberline {1.1.1}Binarise image}{10}
-\contentsline {subsection}{\numberline {1.1.2}Calendar item}{10}
-\contentsline {subsection}{\numberline {1.1.3}DateTimeHelper}{10}
-\contentsline {section}{\numberline {1.2}Integration tests}{10}
-\contentsline {section}{\numberline {1.3}Acceptance tests}{10}
-\contentsline {subsection}{\numberline {1.3.1}Homepage}{10}
-\contentsline {subsection}{\numberline {1.3.2}Add meta-data}{11}
-\contentsline {subsection}{\numberline {1.3.3}Edit meta-data}{11}
-\contentsline {subsection}{\numberline {1.3.4}Search}{11}
-\contentsline {subsection}{\numberline {1.3.5}Viewing all the notes}{11}
-\contentsline {subsection}{\numberline {1.3.6}Show a note}{12}
-\contentsline {section}{\numberline {1.4}Integration tests}{12}
-\contentsline {subsection}{\numberline {1.4.1}Add and edit meta data}{12}
-\contentsline {subsection}{\numberline {1.4.2}Homepage}{12}
-\contentsline {subsection}{\numberline {1.4.3}Logout}{12}
-\contentsline {subsection}{\numberline {1.4.4}Oauth}{13}
-\contentsline {subsection}{\numberline {1.4.5}Search}{13}
-\contentsline {subsection}{\numberline {1.4.6}Show note}{13}
-\contentsline {section}{\numberline {1.5}Upload}{13}
-\contentsline {section}{\numberline {1.6}User}{14}
-\contentsline {section}{\numberline {1.7}View all notes}{14}
-\contentsline {section}{\numberline {1.8}User tests}{14}
-\contentsline {chapter}{\numberline {B}Tesseract data results}{15}
-\contentsline {section}{\numberline {2.1}Table}{15}
-\contentsline {chapter}{Annotated Bibliography}{16}
+\contentsline {chapter}{\numberline {1}Implementation}{1}
+\contentsline {section}{\numberline {1.1}Image processing}{1}
+\contentsline {subsection}{\numberline {1.1.1}Optimising Tesseract}{1}
+\contentsline {subsubsection}{\numberline {1.1.1.1}OTSU}{1}
+\contentsline {subsubsection}{\numberline {1.1.1.2}Adaptive Threshold}{2}
+\contentsline {section}{\numberline {1.2}Lined paper}{6}
+\contentsline {subsection}{\numberline {1.2.1}Filtering the blue lines}{6}
+\contentsline {subsection}{\numberline {1.2.2}Only extracting the text}{6}
+\contentsline {section}{\numberline {1.3}Handwriting Training}{7}
+\contentsline {subsection}{\numberline {1.3.1}Training process}{7}
+\contentsline {section}{\numberline {1.4}Web application}{7}
+\contentsline {subsection}{\numberline {1.4.1}OAuth}{7}
+\contentsline {subsection}{\numberline {1.4.2}Reoccuring events}{8}
+\contentsline {subsection}{\numberline {1.4.3}Tesseract Confidence}{8}
+\contentsline {subsection}{\numberline {1.4.4}Displaying calendar events}{9}
+\contentsline {subsection}{\numberline {1.4.5}Parsing Exif data}{9}
+\contentsline {subsection}{\numberline {1.4.6}Editing calendar events}{9}
+\contentsline {section}{\numberline {1.5}Review against the requirements}{9}
+\contentsline {chapter}{Appendices}{10}
+\contentsline {chapter}{\numberline {A}Testing Results}{11}
+\contentsline {section}{\numberline {1.1}Unit tests}{11}
+\contentsline {subsection}{\numberline {1.1.1}Binarise image}{11}
+\contentsline {subsection}{\numberline {1.1.2}Calendar item}{11}
+\contentsline {subsection}{\numberline {1.1.3}DateTimeHelper}{11}
+\contentsline {section}{\numberline {1.2}Acceptance tests}{11}
+\contentsline {subsection}{\numberline {1.2.1}Homepage}{12}
+\contentsline {subsection}{\numberline {1.2.2}Add meta-data}{12}
+\contentsline {subsection}{\numberline {1.2.3}Edit meta-data}{12}
+\contentsline {subsection}{\numberline {1.2.4}Search}{12}
+\contentsline {subsection}{\numberline {1.2.5}Viewing all the notes}{13}
+\contentsline {subsection}{\numberline {1.2.6}Show a note}{13}
+\contentsline {section}{\numberline {1.3}Integration tests}{13}
+\contentsline {subsection}{\numberline {1.3.1}Add and edit meta data}{13}
+\contentsline {subsection}{\numberline {1.3.2}Homepage}{13}
+\contentsline {subsection}{\numberline {1.3.3}Logout}{14}
+\contentsline {subsection}{\numberline {1.3.4}Oauth}{14}
+\contentsline {subsection}{\numberline {1.3.5}Search}{14}
+\contentsline {subsection}{\numberline {1.3.6}Show note}{14}
+\contentsline {section}{\numberline {1.4}Upload}{14}
+\contentsline {section}{\numberline {1.5}User}{15}
+\contentsline {section}{\numberline {1.6}View all notes}{15}
+\contentsline {section}{\numberline {1.7}User tests}{15}
+\contentsline {chapter}{\numberline {B}Tesseract data results}{16}
+\contentsline {section}{\numberline {2.1}Table}{16}
+\contentsline {chapter}{\numberline {C}Example test data}{17}
+\contentsline {section}{\numberline {3.1}Calendar week response mock}{17}
+\contentsline {section}{\numberline {3.2}Google plus response mock}{18}
+\contentsline {chapter}{Annotated Bibliography}{19}
