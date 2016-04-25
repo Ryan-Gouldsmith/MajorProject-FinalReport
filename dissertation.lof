@@ -3,22 +3,24 @@
 \contentsline {figure}{\numberline {1.2}{\ignorespaces Adaptive mean threshold algorithm on a note, showing binarisation but there is still noise in the image.}}{3}
 \contentsline {figure}{\numberline {1.3}{\ignorespaces Adaptive Gaussian used over the image, showing a lot smoother of an image}}{4}
 \contentsline {figure}{\numberline {1.4}{\ignorespaces A variety of thresholding techniques used on the same note, showing adaptive threshold resulting in the best}}{5}
+\contentsline {figure}{\numberline {1.5}{\ignorespaces An example of the above algorithm. There is still significant amounts of noise in the image.}}{7}
+\contentsline {figure}{\numberline {1.6}{\ignorespaces A poor quality image has been binarised successfully with little noise.}}{9}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {A.1}{\ignorespaces Acceptance test being conducted for the homepage, to ensure that the homepage displays the correct content.}}{11}
-\contentsline {figure}{\numberline {A.2}{\ignorespaces Acceptance test being conducted for the homepage, to ensure that the homepage displays the correct content.}}{12}
-\contentsline {figure}{\numberline {A.3}{\ignorespaces Acceptance test being performed to ensure that meta-data can be added to the correct note.}}{12}
-\contentsline {figure}{\numberline {A.4}{\ignorespaces Acceptance test being conducted so that a note's meta-data can be edited successfully.}}{12}
-\contentsline {figure}{\numberline {A.5}{\ignorespaces Acceptance test to ensure that a user can search for a module code and it displays their notes.}}{12}
-\contentsline {figure}{\numberline {A.6}{\ignorespaces Acceptance test being conducted to ensure that all the notes can be viewed.}}{13}
-\contentsline {figure}{\numberline {A.7}{\ignorespaces Acceptance test being conducted to make sure that a singular note can be viewed correctly.}}{13}
-\contentsline {figure}{\numberline {A.8}{\ignorespaces Integration tests carried on the add and edit meta url to ensure the system worked well together.}}{13}
-\contentsline {figure}{\numberline {A.9}{\ignorespaces Integration tests conducted on the homepage to ensure that the routes were accessible.}}{13}
-\contentsline {figure}{\numberline {A.10}{\ignorespaces Integration tests conducted for the logout route ensuring the routes are logged out.}}{14}
-\contentsline {figure}{\numberline {A.11}{\ignorespaces Integration tests conducted for the oAuth route which interacts with the Google API.}}{14}
-\contentsline {figure}{\numberline {A.12}{\ignorespaces Integration tests conducted for the search URL to ensure searching works correctly.}}{14}
-\contentsline {figure}{\numberline {A.13}{\ignorespaces Integration tests implemented to ensure that the note can be displayed properly. }}{14}
-\contentsline {figure}{\numberline {A.14}{\ignorespaces Integration tests implemented to ensure that a user can upload their images to the application. }}{14}
-\contentsline {figure}{\numberline {A.15}{\ignorespaces Integration tests implemented the user route is working correctly and a the user gets added to the database.}}{15}
-\contentsline {figure}{\numberline {A.16}{\ignorespaces Integration tests to make sure the view all notes url is working and getting the appropriate notes from the database.}}{15}
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Acceptance test being conducted for the homepage, to ensure that the homepage displays the correct content.}}{14}
+\contentsline {figure}{\numberline {A.2}{\ignorespaces Acceptance test being conducted for the homepage, to ensure that the homepage displays the correct content.}}{15}
+\contentsline {figure}{\numberline {A.3}{\ignorespaces Acceptance test being performed to ensure that meta-data can be added to the correct note.}}{15}
+\contentsline {figure}{\numberline {A.4}{\ignorespaces Acceptance test being conducted so that a note's meta-data can be edited successfully.}}{15}
+\contentsline {figure}{\numberline {A.5}{\ignorespaces Acceptance test to ensure that a user can search for a module code and it displays their notes.}}{15}
+\contentsline {figure}{\numberline {A.6}{\ignorespaces Acceptance test being conducted to ensure that all the notes can be viewed.}}{16}
+\contentsline {figure}{\numberline {A.7}{\ignorespaces Acceptance test being conducted to make sure that a singular note can be viewed correctly.}}{16}
+\contentsline {figure}{\numberline {A.8}{\ignorespaces Integration tests carried on the add and edit meta url to ensure the system worked well together.}}{16}
+\contentsline {figure}{\numberline {A.9}{\ignorespaces Integration tests conducted on the homepage to ensure that the routes were accessible.}}{16}
+\contentsline {figure}{\numberline {A.10}{\ignorespaces Integration tests conducted for the logout route ensuring the routes are logged out.}}{17}
+\contentsline {figure}{\numberline {A.11}{\ignorespaces Integration tests conducted for the oAuth route which interacts with the Google API.}}{17}
+\contentsline {figure}{\numberline {A.12}{\ignorespaces Integration tests conducted for the search URL to ensure searching works correctly.}}{17}
+\contentsline {figure}{\numberline {A.13}{\ignorespaces Integration tests implemented to ensure that the note can be displayed properly. }}{17}
+\contentsline {figure}{\numberline {A.14}{\ignorespaces Integration tests implemented to ensure that a user can upload their images to the application. }}{17}
+\contentsline {figure}{\numberline {A.15}{\ignorespaces Integration tests implemented the user route is working correctly and a the user gets added to the database.}}{18}
+\contentsline {figure}{\numberline {A.16}{\ignorespaces Integration tests to make sure the view all notes url is working and getting the appropriate notes from the database.}}{18}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
