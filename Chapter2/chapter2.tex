@@ -15,6 +15,75 @@
 
 As the application was developed in an iterative manner, over a series of sprints, class diagrams and design diagrams were not created at the very start of the project. Over a series of sprints designs were iteratively developed regarding the system overview. However, some design decisions were decided at the start of the project. The chapter will clearly explain rationale for the decisions and state whether the design decisions were a result of iterative processes or upfront design.
 
+\section{Overall Architecture}
+This section discusses the architecture of the web application as a whole. The process of the design with the web application was developed over a series of sprints, rather than an upfront design.
+
+\subsection{Class Diagram}
+Presented is an overview of the class diagram presented, with rationale for the decisions and how an iterative development was reached to conclude the design.
+
+Refer to appendix \ref{appendix:design}, section \ref{design:class_diagram} for the class diagram.
+
+\subsection{Justification of design}
+The following subsection will justify design decisions from the class diagram and the behviour it intended.
+\subsubsection{Google services}
+The $BaseGoogleService$ class is a super class which has the $GoogleCalendarService$ and $GooglePlusService$ extending as sub classes of the system. Common functionality was shared between the sub classes, where queries had to be built and then executed ($execute_request$). These were moved to the superclass to remove this duplicated functionality.
+
+Both the $GoogleCalendarService$ and $GooglePlusService$ classes have constant variables: $API$ and $VERSION$; these values are unlikely to change, but are identified as variables so they can be changed easily.
+
+With $GoogleCalendarService$ it is expected that the class controls all integration with data which involves direct access to the Google Calendar API. Important functions include getting a list of events, returning JSON event listings from the service and adding and removing description based content.
+
+The $GooglePlusService$ has a key function of parsing the user's email address from the response returned when they authorise with OAuth.
+
+The $OAuthService$ class allows the user to authenticate via oAuth with the Google services. When the class is called, the procedures go through exchanging tokens and eventually authorising with Google.
+
+\subsubsection{Helper classes}
+Helper classes are used to aid the application from reducing amount of repeated code. Often these helpers were implemented in various controllers, so reducing the code duplicated code helped with a readable system.
+
+The $TesseractHelper$ has a range of functions which aid with the interaction of Tesseract and the user's uploaded note. This class is instantiated when the user uploads an image.
+
+$GoogleServicesHelper$ class was created to purely deal with duplicated code. It stores no attributes in the class and all the methods are static - this decision was made due to the duplication of similar code in multiple controllers. This class was extracted out and groups similar GoogleService calls in a similar place.
+
+$SessionHelper$ class was created to deal and handle with the appropriate sessions in the application. Partly created to ease with testing and partly created to reduce unsemantic code in the controllers. The session helper is instantiated in every controller where sessions are being used.
+
+
+\subsubsection{Persistance model classes}
+Each of the model classes extend the SQLAlchemy model classes. The models mirror that of the database design, for the attributes, which more information can be found on sections TODO.
+
+In the $User$ table implements a static method: $find_user_by_email_address$. This was chosen to be a static, so that the method could be called without needing a user object to exist. This groups together relative information about the user to the user model, but without the need for another object to be created. This principle is also applied to the $NoteMetaData$ for the $find_meta_data$, $Note$ class and $find_id_by_module_code$ and $Note$ class and $find_note_by_module_code$. Overall these classes implement specific save functions to encapsulate database transactions in one place.
+
+\subsubsection{Other classes}
+The $CalendarItem$ is called from the view file when parsing a list of events it would display the date correctly.
+
+$InputValidator$ class is implemented to handle all the upload data from a user. It is there to check the data entered is valid from the user. It's instantiated from the add meta data routes and the edit meta-data routes. It helped to reduce the data redundancy.
+
+A $FileUploadService$ is used to ensure that when the user uploads their file that specific constraints were met. It also allows the user to save the image to the filestore.
+
+An $ExifParser$ was used to extract the EXIF data from an image when the user uploaded the item. A constant integer, which depicted the ``datetime'' field from the exif response was stored so that the date time from the image can be extracted.
+
+Finally the $BinariseImage$ class, constructs all the OpenCV code for binarising a user's uploaded image into black and white. The purpose of the classes purpose discussed in section X. The class eventually saves an image to the filestore and is called from the fileupload controller.
+
+
+\subsection{CRC cards}
+To recap, Extreme Programming uses the concept of CRC cards to help to aid the developer to consider the design of the application. Unlike UML, they are throw-away cards which can be edited and changed every time a new feature is implemented. The CRC cards which have been drawn up in the application have been formalised.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[scale=0.5]{images/CRC_card}
+  \caption{An example from Sprint 3, showing a CRC card at the very beginning of creation.}
+  \label{fig:crc1}
+\end{figure}
+
+Figure \ref{fig:crc1} shows an example of a CRC card at the very beginning of the note class creation. The left hand side helped to think about methods and attributes that the system must do. The right hand side shows the responsibilities, where the note may interact with other class.
+
+These classes were then implemented into classes. This process was completed at every feature. The appendix X shows more CRC cards in the application.
+
+
+
+
+
+
+
+
 \section{Implementation tools}
 The following discusses the design decisions regarding the implementation tools that were used during the project, providing rationale for the choice of tools.
 \subsection{Programming language}
@@ -73,64 +142,7 @@ A key design decision was to be able to check the build process quickly. With Tr
 \subsection{Version control}
 Version control was utilised on the project to ensure that code was continuously added, allowing the option to revert changes if necessary. The project was created on a private Git repository on GitHub. Git was chosen for its familiarity and GitHub is a well known place for handling versions of software. Github also tied in well with other tools such as Travis CI.
 
-\section{Overall Architecture}
-This section discusses the architecture of the web application as a whole. The process of the design with the web application was developed over a series of sprints, rather than an upfront design.
-\subsection{CRC cards}
-To recap, Extreme Programming uses the concept of CRC cards to help to aid the developer to consider the design of the application. Unlike UML, they are throw-away cards which can be edited and changed every time a new feature is implemented. The CRC cards which have been drawn up in the application have been formalised.
 
-\begin{figure}[h]
-  \centering
-  \includegraphics[scale=0.5]{images/CRC_card}
-  \caption{An example from Sprint 3, showing a CRC card at the very beginning of creation.}
-  \label{fig:crc1}
-\end{figure}
-
-Figure \ref{fig:crc1} shows an example of a CRC card at the very beginning of the note class creation. The left hand side helped to think about methods and attributes that the system must do. The right hand side shows the responsibilities, where the note may interact with other class.
-
-These classes were then implemented into classes. This process was completed at every feature. The appendix X shows more CRC cards in the application.
-\subsection{Class Diagram}
-After CRC cards were produced, they can be easily transformed into formal UML in the form of a class diagram. The class diagram was collated as a retrospective of the CRC card design, and designed after the sprints. The CRC cards were used as an iterative design and now a class diagram is formalising that design decision.
-
-Figure x in appendix x shows the class diagram.
-
-\subsection{Justification of design}
-The following subsection will justify design decisions from the class diagram and the behviour it intended.
-\subsubsection{Google services}
-The $BaseGoogleService$ class is a super class which has the $GoogleCalendarService$ and $GooglePlusService$ extending as sub classes of the system. Common functionality was shared between the sub classes, where queries had to be built and then executed ($execute_request$). These were moved to the superclass to remove this duplicated functionality.
-
-Both the $GoogleCalendarService$ and $GooglePlusService$ classes have constant variables: $API$ and $VERSION$; these values are unlikely to change, but are identified as variables so they can be changed easily.
-
-With $GoogleCalendarService$ it is expected that the class controls all integration with data which involves direct access to the Google Calendar API. Important functions include getting a list of events, returning JSON event listings from the service and adding and removing description based content.
-
-The $GooglePlusService$ has a key function of parsing the user's email address from the response returned when they authorise with OAuth.
-
-The $OAuthService$ class allows the user to authenticate via oAuth with the Google services. When the class is called, the procedures go through exchanging tokens and eventually authorising with Google.
-
-\subsubsection{Helper classes}
-Helper classes are used to aid the application from reducing amount of repeated code. Often these helpers were implemented in various controllers, so reducing the code duplicated code helped with a readable system.
-
-The $TesseractHelper$ has a range of functions which aid with the interaction of Tesseract and the user's uploaded note. This class is instantiated when the user uploads an image.
-
-$GoogleServicesHelper$ class was created to purely deal with duplicated code. It stores no attributes in the class and all the methods are static - this decision was made due to the duplication of similar code in multiple controllers. This class was extracted out and groups similar GoogleService calls in a similar place.
-
-$SessionHelper$ class was created to deal and handle with the appropriate sessions in the application. Partly created to ease with testing and partly created to reduce unsemantic code in the controllers. The session helper is instantiated in every controller where sessions are being used.
-
-
-\subsubsection{Persistance model classes}
-Each of the model classes extend the SQLAlchemy model classes. The models mirror that of the database design, for the attributes, which more information can be found on sections TODO.
-
-In the $User$ table implements a static method: $find_user_by_email_address$. This was chosen to be a static, so that the method could be called without needing a user object to exist. This groups together relative information about the user to the user model, but without the need for another object to be created. This principle is also applied to the $NoteMetaData$ for the $find_meta_data$, $Note$ class and $find_id_by_module_code$ and $Note$ class and $find_note_by_module_code$. Overall these classes implement specific save functions to encapsulate database transactions in one place.
-
-\subsubsection{Other classes}
-The $CalendarItem$ is called from the view file when parsing a list of events it would display the date correctly.
-
-$InputValidator$ class is implemented to handle all the upload data from a user. It is there to check the data entered is valid from the user. It's instantiated from the add meta data routes and the edit meta-data routes. It helped to reduce the data redundancy.
-
-A $FileUploadService$ is used to ensure that when the user uploads their file that specific constraints were met. It also allows the user to save the image to the filestore.
-
-An $ExifParser$ was used to extract the EXIF data from an image when the user uploaded the item. A constant integer, which depicted the ``datetime'' field from the exif response was stored so that the date time from the image can be extracted.
-
-Finally the $BinariseImage$ class, constructs all the OpenCV code for binarising a user's uploaded image into black and white. The purpose of the classes purpose discussed in section X. The class eventually saves an image to the filestore and is called from the fileupload controller.
 
 
 \subsection{Database diagram}
