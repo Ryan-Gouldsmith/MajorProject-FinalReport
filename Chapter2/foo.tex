@@ -126,6 +126,18 @@ It is worth considering the view files. The view files were the only section of 
 \end{figure}
 
 Figure \ref{fig:extension} shows the result after the sprint which the design was improved upon. All template files now extend ``root.html'', overriding the ``content'' block. This ensures that the do not repeat yourself (DRY) principle is adhered to and HTML, such as the navigation, are only declared once.
+
+\subsubsection{Constructing URLs}
+Often overlooked when considering a design is the URL structure. The design not only aids the developer, but the user using the page to clearly know the intention of that page. Typically there are two types of URLs RESTful-like and query strings.
+
+During the iterations, especially when new functionality was being considered, specific routes were thought about carefully. In the search user-story, standard procedure was followed. Query strings create URLs such as: \texttt{/search?module_code=cs31310}; representing the query string as key-value pairs. During the search feature, it was decided that this approach would be adopted so that the user can easily bookmark the page - as well as creating a common URL structure.
+
+RESTful urls help to show the a hierarchy of content. Exposing a user to such URL helps them to clearly identify their content. In iteration for displaying a note \texttt{/show_note/1}, was decided for the URL; it is easier to read than  \texttt{$/show_note?note_id=1$} - instantly showing to the user the point of the page.
+
+For the user task viewing notes, it was worth noting that traditional RESTful URL's would be changed for readability. \texttt{$/view_notes/$} was used, when a proper RESTful url may be \texttt{/notes/}. This offered more semantic meaning to the URL structure.
+
+It was worth considering the URL structure and way in which the application displays the content to a user, without it a user may be left confused at what the page is trying to convey.
+
 \section{Image processing}
 In the very early sprints, the image processing design went through several substantial iterations. Each of the tasks relating to the user story to binarise an image, had design implications.
 
