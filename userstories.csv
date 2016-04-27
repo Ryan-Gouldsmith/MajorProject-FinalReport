@@ -1,0 +1,27 @@
+ref;subject;milestone;total-points
+1;As a user I want to be able to upload an image of a set of notes so that I can see my note in the application;Sprint-2;10
+2;As a user I want to be able to tag my notes so that  all my notes are under the correct module;Sprint-4;5
+3;As a user I want to be able to add information about the notes so that I can reference them in the future;Sprint-4;15
+4;As a user I want to be able to save a note, so that I can find it again later;Sprint-3;10
+5;As a user I want to be able to search for a given module, so that I can find all notes for that module;Sprint-7;8
+6;As a user I want to be able to sign in via google sign in;Sprint-5;15
+7;As a user I want to use Tesseract OCR so that I can identify characters;Sprint-1;15
+8;As a user I want to be able to view the application on a website;Sprint-2;5
+9;As the customer I want to see the image being binarised properly;Sprint-2;10
+10;As a developer I need to train my handwriting, so that Tesseract can recognise my handwriting;Sprint-10;n/a
+11;As a user I want to be able to edit the meta data, so that I can update it in light of a change;Sprint-5;5
+12;As a user I want to be able to remove a note incase I do not want it to appear;Sprint-5;5
+13;As a developer I want to the website to have good styling;Sprint-4;8
+14;As a developer I want to integrate tesseract into the application, so it can read information from a note;Sprint-8;8
+15;As a user I want to be able to view all the notes I have as a user so I can easily find all of them again;Sprint-6;3
+16;As a user I want to view a list of events on the homepage from my calendar, so I can see recent events;Sprint-6;15
+17;As a user I want to be able to save the URL in the calendars event;Sprint-7;10
+18;As a user I want to be able to tag the title of the lecture, so that I can know which one it is.;Sprint-6;5
+19;As a user, when I authorise I want to show my email address and remove the authorise button, so I know I have signed in;Sprint-6;3
+20;As a developer I want to be able to get the date taken from EXIF data, to show informaiton about a note;Sprint-7;8
+21;As a user I want to be able to edit the date and update my calendar;Sprint-9;8
+22;As a developer I want to be able to associate a note with a user;Sprint-7;5
+23;As a user, I want to be able to have automated suggestion of meta data from the image, so that I can know what to tag.;Sprint-8;5
+24;As a user, I want to be able to logout, so that I can close my session;Sprint-8;5
+25;As a user I want to be able to click Tesseract Items, so that it's easier for me to put in the fields.;Sprint-9;10
+26;As a user I want to be able to edit and save to reoccurring events;Sprint-10;10

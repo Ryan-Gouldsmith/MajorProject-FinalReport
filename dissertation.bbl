@@ -18,12 +18,44 @@
 \fi
 #2}}
 
+\bibitem{citeulike:14021437}
+\BIBentryALTinterwordspacing
+``{sirfz/tesserocr: A Python wrapper for the tesseract-ocr API},'' last checked
+  25th April 2016. [Online]. Available:
+  \url{https://github.com/sirfz/tesserocr}
+\BIBentrySTDinterwordspacing
+ \begin{quotation}\noindent The Tesseract wrapper which was used to extract the
+  data from the image. It gives the confidences and all the words associated to
+  the lines. \end{quotation}
+
+\bibitem{citeulike:2917492}
+\BIBentryALTinterwordspacing
+``{A Threshold Selection Method from Gray-Level Histograms},'' \emph{IEEE
+  Transactions on Systems, Man, and Cybernetics}, vol.~9, no.~1, pp. 62--66,
+  Jan. 1979. [Online]. Available:
+  \url{http://dx.doi.org/10.1109/tsmc.1979.4310076}
+\BIBentrySTDinterwordspacing
+ \begin{quotation}\noindent The original paper which OTSU is represented.
+  Although a bit mathematical, some bits were good for reference material on
+  how the algorithm works. \end{quotation}
+
 \bibitem{citeulike:13988110}
 ``{Evernote Tech Blog | The Care and Feeding of Elephants},''
   \url{https://blog.evernote.com/tech/2013/07/18/how-evernotes-image-recognition-works/},
   2013, last checked 25th March 2016.
  \begin{quotation}\noindent An article explaining how Evernote does character
   recognition on images \end{quotation}
+
+\bibitem{citeulike:14006256}
+\BIBentryALTinterwordspacing
+``{OpenCV: Extract horizontal and vertical lines by using morphological
+  operations},'' 2015, last checked 25th April 2016. [Online]. Available:
+  \url{http://docs.opencv.org/3.1.0/d1/dee/tutorial\_moprh\_lines\_detection.html\#gsc.tab=0}
+\BIBentrySTDinterwordspacing
+ \begin{quotation}\noindent A great reference on how to use different
+  morphological operations and adaptive threshold techniques to extract and
+  binarise an image. Used extensively with the image segmentation script.
+  \end{quotation}
 
 \bibitem{citeulike:13915786}
 \BIBentryALTinterwordspacing
@@ -45,6 +77,14 @@ Bottle, ``{Bottle: Python Web Framework â Bottle 0.13-dev
  \begin{quotation}\noindent The Python framework was used as a case-study of
   potential frameworks to use for the application. Discussed in the design
   section, but rejected as a choice. \end{quotation}
+
+\bibitem{bradski2008learning}
+G.~Bradski and A.~Kaehler, \emph{Learning OpenCV: Computer vision with the
+  OpenCV library}.\hskip 1em plus 0.5em minus 0.4em\relax " O'Reilly Media,
+  Inc.", 2008, pp. 138--139.
+ \begin{quotation}\noindent A book which explains how the Gaussian function for
+  the adaptive threshold with OpenCV works. It gives a simple description, one
+  which is easy to follow. \end{quotation}
 
 \bibitem{citeulike:14020597}
 M.~Daly, ``{Mocking External Apis in Python - Matthew Daly's Blog},''
@@ -88,6 +128,16 @@ Evernote, ``{The note-taking space for your life's work | Evernote},''
   organisational and note-taking application that this project is looking at as
   a similar system. \end{quotation}
 
+\bibitem{citeulike:14021401}
+\BIBentryALTinterwordspacing
+Fisher, ``{Point Operations - Adaptive Thresholding},'' 2003, last checked 25th
+  April 2016. [Online]. Available:
+  \url{http://homepages.inf.ed.ac.uk/rbf/HIPR2/adpthrsh.htm}
+\BIBentrySTDinterwordspacing
+ \begin{quotation}\noindent An article explaining clearly and simply how the
+  adaptive thresholding algorithm works. It gives a good level of detail and is
+  concise in its points. \end{quotation}
+
 \bibitem{citeulike:13160396}
 Flask, ``{Welcome | Flask (A Python Microframework)},''
   \url{http://flask.pocoo.org/}, last checked 22nd April 2016.
@@ -127,11 +177,27 @@ Google, ``{Meet Google Keep, Save your thoughts, wherever you are - Keep
   application, it is used as part of the evaluation and background analysis. It
   was compared against what the application could do. \end{quotation}
 
+\bibitem{citeulike:14021433}
+R.~Gouldsmith, ``{build throws KeyError: 'rootUrl' error on Google Calendar API
+  Â· Issue \#208 Â· google/google-api-python-client},''
+  \url{https://github.com/google/google-api-python-client/issues/208}, 2016,
+  last checked 25th April 2016.
+ \begin{quotation}\noindent A issue which was raised by the author, regarding
+  an issue experienced with a 3rd party library. \end{quotation}
+
 \bibitem{citeulike:14014367}
-R.~Gouldsmith, ``{Ryan Gouldsmith's Blog},'' \url{https://ryangouldsmith.uk/},
-  2016, last checked TODO.
+------, ``{Ryan Gouldsmith's Blog},'' \url{https://ryangouldsmith.uk/}, 2016,
+  last checked TODO.
  \begin{quotation}\noindent A collection of blog posts which explain the
   progress every week through a review and reflection post. \end{quotation}
+
+\bibitem{citeulike:14021372}
+A.~Greensted, ``{Otsu Thresholding - The Lab Book Pages},''
+  \url{http://www.labbookpages.co.uk/software/imgProc/otsuThreshold.html}, June
+  2010, last checked 25th April 2016.
+ \begin{quotation}\noindent A great reference tutorial aiding to identify what
+  OTSU threshold is and how it works in a simple to understand manner, with
+  plenty of example. \end{quotation}
 
 \bibitem{citeulike:14020588}
 C.~Heer, ``{Flask-Testing  Flask-Testing 0.3 documentation},''
@@ -197,6 +263,14 @@ B.~Muthukadan, ``{Selenium with Python - Selenium Python Bindings 2
   It gives good documentation on how to access elements and how to get specific
   values from the text. \end{quotation}
 
+\bibitem{citeulike:6044081}
+H.-F. Ng, ``{Automatic thresholding for defect detection},'' \emph{Pattern
+  Recognition Letters}, vol.~27, no.~14, pp. 1644--1649, Oct. 2006, last
+  checked 25th April 2016.
+ \begin{quotation}\noindent This paper was interesting as it aided in the
+  dicussion of the different thresholding algorithms. It was good to reaffirm
+  some knowledge gained during the development process. \end{quotation}
+
 \bibitem{Olurinola_Tayo_2015}
 O.~Olurinola and O.~Tayo, ``Colour in learning: Its effect on the retention
   rate of graduate students,'' \emph{Journal of Education and Practice},
@@ -204,6 +278,16 @@ O.~Olurinola and O.~Tayo, ``Colour in learning: Its effect on the retention
  \begin{quotation}\noindent Discusses a study which shows that coloured text is
   better for the memory retention rates, than that of non-coloured text. Used
   during the taxonomy of notes section. \end{quotation}
+
+\bibitem{citeulike:14021409}
+\BIBentryALTinterwordspacing
+Opencv, ``{Miscellaneous Image Transformations â OpenCV 2.4.13.0
+  documentation},'' 2016, last Checked 25th April 2016. [Online]. Available:
+  \url{http://docs.opencv.org/2.4/modules/imgproc/doc/miscellaneous\_transformations.html}
+\BIBentrySTDinterwordspacing
+ \begin{quotation}\noindent A description of the adaptive threshold function,
+  which shows that there are two different functionc can be used.
+  \end{quotation}
 
 \bibitem{citeulike:14019744}
 Oracle, ``{Overview - The Java EE 6 Tutorial},''
@@ -275,6 +359,18 @@ M.~G. Software, ``{Planning Poker: Agile Estimating Made Easy},''
   it was implemented in the application using the scrum based approach.
   \end{quotation}
 
+\bibitem{citeulike:13931186}
+\BIBentryALTinterwordspacing
+M.~Sturgill and S.~J. Simske, ``{An Optical Character Recognition Approach to
+  Qualifying Thresholding Algorithms},'' in \emph{Proceedings of the Eighth ACM
+  Symposium on Document Engineering}, ser. DocEng '08.\hskip 1em plus 0.5em
+  minus 0.4em\relax New York, NY, USA: ACM, 2008, pp. 263--266. [Online].
+  Available: \url{http://dx.doi.org/10.1145/1410140.1410197}
+\BIBentrySTDinterwordspacing
+ \begin{quotation}\noindent A great paper which discusses the Tesseract engine
+  by HP researchers. It is used to discuss the idea that OTSU is used as its
+  pre-processing step. \end{quotation}
+
 \bibitem{citeulike:14014368}
 Tesseract, ``{Tesseract Open Source OCR Engine},''
   \url{https://github.com/tesseract-ocr/tesseract}, 2016, last checked 17th
@@ -298,6 +394,15 @@ Tiaga, ``{Taiga.io},'' \url{https://taiga.io/}, 2016, last checked TODO.
  \begin{quotation}\noindent The project management toold which was utilised to
   help to keep track of the project's progress throughout the process. Utilised
   the Scrum tools available that the application gives. \end{quotation}
+
+\bibitem{citeulike:13926798}
+\BIBentryALTinterwordspacing
+R.~Viet~OC, ``{jTessBoxEditor - Tesseract box editor \& trainer},'' last
+  Accessed 6th February 2016. [Online]. Available:
+  \url{http://vietocr.sourceforge.net/training.html}
+\BIBentrySTDinterwordspacing
+ \begin{quotation}\noindent An excellent software package which allows the user
+  to train the box files with a great graphical user-interface. \end{quotation}
 
 \bibitem{citeulike:14018462}
 w3Techs, ``{Usage Statistics and Market Share of JavaScript for Websites, April

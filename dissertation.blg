@@ -5,10 +5,13 @@ A level-1 auxiliary file: cover.aux
 A level-1 auxiliary file: declaration.aux
 A level-1 auxiliary file: acknowledgements.aux
 A level-1 auxiliary file: abstract.aux
-A level-1 auxiliary file: Chapter3/chapter3.aux
 A level-1 auxiliary file: Appendix3/appendix3.aux
 A level-1 auxiliary file: Appendix4/appendix4.aux
 A level-1 auxiliary file: Appendix5/appendix5.aux
+A level-1 auxiliary file: Appendix6/appendix6.aux
+A level-1 auxiliary file: Appendix7/appendix7.aux
+A level-1 auxiliary file: Appendix8/appendix8.aux
+A level-1 auxiliary file: Appendix9/appendix9.aux
 The style file: IEEEannot.bst
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
@@ -16,54 +19,56 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: References/references.bib
-Warning--I didn't find a database entry for "appendix:image_processing"
-Warning--I didn't find a database entry for "processing:pre-line"
 -- IEEEtranS.bst version 1.11 (2003/04/02) by Michael Shell.
 -- http://www.ctan.org/tex-archive/macros/latex/contrib/supported/IEEEtran/
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
 ** Sorting version - not for use with work to be submitted to the IEEE.
 Warning--to sort, need author, organization, or key in citeulike:13988110
+Warning--to sort, need author or key in citeulike:2917492
+Warning--to sort, need author, organization, or key in citeulike:14006256
+Warning--to sort, need author, organization, or key in citeulike:14021437
+Warning--empty author in citeulike:2917492
 
 Done.
-You've used 37 entries,
+You've used 48 entries,
             4538 wiz_defined-function locations,
-            1118 strings with 19708 characters,
-and the built_in function-call counts, 20380 in all, are:
-= -- 1932
-> -- 335
-< -- 41
-+ -- 153
-- -- 88
-* -- 914
-:= -- 3568
-add.period$ -- 75
-call.type$ -- 37
-change.case$ -- 186
-chr.to.int$ -- 84
-cite$ -- 38
-duplicate$ -- 1459
-empty$ -- 1671
-format.name$ -- 94
-if$ -- 4355
+            1189 strings with 23276 characters,
+and the built_in function-call counts, 27535 in all, are:
+= -- 2587
+> -- 439
+< -- 80
++ -- 210
+- -- 108
+* -- 1266
+:= -- 4731
+add.period$ -- 98
+call.type$ -- 48
+change.case$ -- 236
+chr.to.int$ -- 177
+cite$ -- 53
+duplicate$ -- 1949
+empty$ -- 2256
+format.name$ -- 116
+if$ -- 5931
 int.to.chr$ -- 0
-int.to.str$ -- 37
-missing$ -- 304
-newline$ -- 178
-num.names$ -- 72
-pop$ -- 870
+int.to.str$ -- 48
+missing$ -- 392
+newline$ -- 236
+num.names$ -- 88
+pop$ -- 1115
 preamble$ -- 1
-purify$ -- 118
+purify$ -- 150
 quote$ -- 2
-skip$ -- 1529
+skip$ -- 2071
 stack$ -- 0
-substring$ -- 490
-swap$ -- 901
-text.length$ -- 13
+substring$ -- 788
+swap$ -- 1245
+text.length$ -- 21
 text.prefix$ -- 0
 top$ -- 6
-type$ -- 301
-warning$ -- 1
-while$ -- 89
-width$ -- 39
-write$ -- 399
-(There were 3 warnings)
+type$ -- 387
+warning$ -- 5
+while$ -- 120
+width$ -- 50
+write$ -- 525
+(There were 5 warnings)
