@@ -19,272 +19,248 @@ As the application was developed in an iterative manner, over a series of sprint
 This section discusses the architecture of the web application as a whole. The process of the design with the web application was developed over a series of sprints, rather than an upfront design.
 
 \subsection{Class Diagram}
+\label{architecture:class}
 Presented is an overview of the class diagram presented, with rationale for the decisions and how an iterative development was reached to conclude the design.
 
 Refer to appendix \ref{appendix:design}, section \ref{design:class_diagram} for the class diagram.
 
-\subsection{Justification of design}
-The following subsection will justify design decisions from the class diagram and the behviour it intended.
-\subsubsection{Google services}
-The $BaseGoogleService$ class is a super class which has the $GoogleCalendarService$ and $GooglePlusService$ extending as sub classes of the system. Common functionality was shared between the sub classes, where queries had to be built and then executed ($execute_request$). These were moved to the superclass to remove this duplicated functionality.
+The design clearly shows the object oriented principle of low coupling high cohesion.
 
-Both the $GoogleCalendarService$ and $GooglePlusService$ classes have constant variables: $API$ and $VERSION$; these values are unlikely to change, but are identified as variables so they can be changed easily.
+\subsubsection{Justification of design}
+The following section discussing the appropriateness of the design and justification, as well as exploring the evolutionary design.
 
-With $GoogleCalendarService$ it is expected that the class controls all integration with data which involves direct access to the Google Calendar API. Important functions include getting a list of events, returning JSON event listings from the service and adding and removing description based content.
+\textbf{Google Services}
+During the first iterations, the Google Calendar API was only going to be used to parse the calendar events. Therefore, the class \texttt{GoogleCalendarService} was created, to extract the code away from the controllers. The version number and API was unlikely to change, but they were formed as constants for the ease of changing if in the future they did. This class needed to perform key operations to extract the events, such as \texttt{get\_events\_based\_on\_date}. The functions themselves were iteratively developed, initially only using the \texttt{execute\_request} and \texttt{get\_list\_of\_events}. Due to the scope changing with complexity, in the latter sprints  further methods were added.
 
-The $GooglePlusService$ has a key function of parsing the user's email address from the response returned when they authorise with OAuth.
+Initially user's were not a part of the system. However, after implementing the associated user story it was clear that another class to integrate with the Google Plus API would be needed. This followed the similar structure as the calendar class, except for parsing a user's email to persist in the database.
 
-The $OAuthService$ class allows the user to authenticate via oAuth with the Google services. When the class is called, the procedures go through exchanging tokens and eventually authorising with Google.
+Eventually, it was seen that this design was repeating functionality in places. In both of the classes the \texttt{build} and \texttt{execute\_request} were duplicated, without having class specific content. As a result, the extract class refactoring technique was used to create a super class \texttt{BaseGoogleService}. This class encapsulates the logic for building queries and executing them. With both the google plus and calendar classes sub-classing this, it extracts the final aspect of querying to the super class leaving logic and query manipulation to the sub-classes.
 
-\subsubsection{Helper classes}
-Helper classes are used to aid the application from reducing amount of repeated code. Often these helpers were implemented in various controllers, so reducing the code duplicated code helped with a readable system.
+\textbf{Helper classes}
+Helper classes, in the design, are independent classes that help to modularise the system - whilst collecting related functionality into a single class. Helper classes were developed iteratively, encapsulating similar functionality into one place.
 
-The $TesseractHelper$ has a range of functions which aid with the interaction of Tesseract and the user's uploaded note. This class is instantiated when the user uploads an image.
+For example the \texttt{SessionHelper} class was developed in such a way, that during the first few iterations of design it was only used to ensure that the credentials were appended correctly to the session. This functionality was duplicated, so an additional class was extracted. Over the course of adding user management and storing errors the method's grew.
 
-$GoogleServicesHelper$ class was created to purely deal with duplicated code. It stores no attributes in the class and all the methods are static - this decision was made due to the duplication of similar code in multiple controllers. This class was extracted out and groups similar GoogleService calls in a similar place.
+As noticed, most of the helper classes do not interact with the other classes in any class. There is an exception with the \texttt{GoogleServicesHelper} class. In this class majority of the function are static.  They're static because they do not interact with any class variables. Prior to the implementation of editing a calendar event, the code was dispersed throughout the controllers. In an effort to reduce the code this helper class was created - but it was quickly decided that it would just be a proxy for calling specific function in each of the services classes. Therefore the functions were converted to static as true OO principles were not needed with these.
 
-$SessionHelper$ class was created to deal and handle with the appropriate sessions in the application. Partly created to ease with testing and partly created to reduce unsemantic code in the controllers. The session helper is instantiated in every controller where sessions are being used.
+\textbf{Persistence classes}
+The relationships between the persistence classes are not discussed in this section, see section \ref{}. It is worth noting that designing the persistence classes was again an iterative process through the sprints. For example, for majority of the sprints the title attribute in the \texttt{NoteMetaData} class was not added. It wasn't until the design changed and this field needed to be added a reflection was added.
 
+There are a series of \texttt{save} functions in the application, these were added to the design when the controllers were constantly adding it to the database session. There needed to be a succinct way to save that specific instance. Therefore, database session code was extracted to this method, allowing each instance object to be saved.
 
-\subsubsection{Persistance model classes}
-Each of the model classes extend the SQLAlchemy model classes. The models mirror that of the database design, for the attributes, which more information can be found on sections TODO.
+In parts of the application, there needed to be a way to extract information from the database. To aid in readability, static methods such as \texttt{find\_meta\_data} was created to keep domain related functionality together, but without having the need to create a specific instance.
 
-In the $User$ table implements a static method: $find_user_by_email_address$. This was chosen to be a static, so that the method could be called without needing a user object to exist. This groups together relative information about the user to the user model, but without the need for another object to be created. This principle is also applied to the $NoteMetaData$ for the $find_meta_data$, $Note$ class and $find_id_by_module_code$ and $Note$ class and $find_note_by_module_code$. Overall these classes implement specific save functions to encapsulate database transactions in one place.
-
-\subsubsection{Other classes}
-The $CalendarItem$ is called from the view file when parsing a list of events it would display the date correctly.
-
-$InputValidator$ class is implemented to handle all the upload data from a user. It is there to check the data entered is valid from the user. It's instantiated from the add meta data routes and the edit meta-data routes. It helped to reduce the data redundancy.
-
-A $FileUploadService$ is used to ensure that when the user uploads their file that specific constraints were met. It also allows the user to save the image to the filestore.
-
-An $ExifParser$ was used to extract the EXIF data from an image when the user uploaded the item. A constant integer, which depicted the ``datetime'' field from the exif response was stored so that the date time from the image can be extracted.
-
-Finally the $BinariseImage$ class, constructs all the OpenCV code for binarising a user's uploaded image into black and white. The purpose of the classes purpose discussed in section X. The class eventually saves an image to the filestore and is called from the fileupload controller.
-
+\textbf{Binarisation}
+The \texttt{BinariseImage} class is the model version of the image segmentation script see section \ref{}. The class would interact with the controllers and be called when a user uploads their file. It was important to have this as a model, due to the core functionality it offers to the system.
 
 \subsection{CRC cards}
-To recap, Extreme Programming uses the concept of CRC cards to help to aid the developer to consider the design of the application. Unlike UML, they are throw-away cards which can be edited and changed every time a new feature is implemented. The CRC cards which have been drawn up in the application have been formalised.
+To aid with the design, class collaboration cards (CRC) was drawn up for each feature. The user-story was decomposed into tasks and each of the tasks had associated CRC cards. This helped to think about the design.  The overall design shown in section \ref{architecture:class} is a result of the diligent planning with the CRC cards.
 
-\begin{figure}[h]
+\begin{figure}[H]
   \centering
   \includegraphics[scale=0.5]{images/CRC_card}
   \caption{An example from Sprint 3, showing a CRC card at the very beginning of creation.}
   \label{fig:crc1}
 \end{figure}
 
-Figure \ref{fig:crc1} shows an example of a CRC card at the very beginning of the note class creation. The left hand side helped to think about methods and attributes that the system must do. The right hand side shows the responsibilities, where the note may interact with other class.
+Figure \ref{fig:crc1} shows an example of a CRC card at the very beginning of the note class creation. The left hand side helped to think about methods and attributes for the class. The right hand side shows the responsibilities, where the note may interact with other classes.
 
-These classes were then implemented into classes. This process was completed at every feature. The appendix X shows more CRC cards in the application.
+These classes were evaluated and considered throughout each feature from a user-story. There were times during the design that these helped to keep a simple design, adopting YAGNI. For example, the note has an image path attribute, this was going to be extracted into its own relation, but after evaluating at the time a one-to-one relationship would not add any benefits to a system. Therefore the CRC card enabled a concise clear design, which allowed reflection and evaluation.
 
-
-
-
+Appendix \ref{} section \ref{} shows a range of CRC cards used iteratively on the application.
 
 
+\subsection{User interaction}
+After decomposing the problem that a user would need to be able to add a note, edit and save to a calendar. A activity diagram was thought about to consider the flow of the application.
 
-
-\section{Implementation tools}
-The following discusses the design decisions regarding the implementation tools that were used during the project, providing rationale for the choice of tools.
-\subsection{Programming language}
-With the programming language choice unlikely to change per sprint, then an upfront design decision was made. From the analysis it was concluded that the application would be implemented as a web application.  A consideration between different server side programming languages was considered in depth.
-
-Typically with server side applications the traditional language choices are: PHP, Ruby, Python, C\#, Java and JavaScript, which has increased in popularity recently \cite{citeulike:14018462}.
-
-Evaluating the analysis decomposition in the meetings in the beginning sprints it was determined that OpenCV, would be needed to be utilised in the project. OpenCV's original source code is written in C++, however Python and Java bindings to OpenCV are available. Additional research was conducted to see if a reliable wrapper for either PHP or Ruby was available, and after a lot of investigation it was concluded there was not.
-
-C++ is not considered a standard web application development language, therefore reducing the opportunity for support during the project, it was dismissed as viable choice. Java applications are predominately large commercial applications, using a range of enterprise software - often renowned for their performance abilities \cite{citeulike:14019744}. This approach felt too cumbersome for a proposed light-weight application.
-
-By being constrained by design decision to use OpenCV coupled with the lack of reliable wrappers for other languages and a reluctance to use Java then Python was selected as the most suitable language. Python offers a lightweight and quick to learn syntax that produces readable code whilst allowing a object-oriented paradigm to be followed. Additionally, its support for OpenCV is sufficient for the application.
-
-
-\subsection{Choice of framework}
-To recap, Python was chosen as the language of choice for the application. Frameworks aid in the development of a project, especially with web applications where routing is often required; often routing support is a key feature of frameworks. Exploratory work was completed in the early sprints to find a suitable tool. The frameworks Django \cite{citeulike:14019784}, Flask \cite{citeulike:13160396} and Bottle \cite{citeulike:14019792} were evaluated.
-
-Some frameworks constrain the developer's to specific implementations through abstracted classes whereas some offer more flexibility. Whilst evaluating Django, a full framework, it was concluded that such a large framework was excessive for this application and rejected as a choice for the framework.
-
-Flask and Bottle are classified as ``micro-frameworks'', offering a lot less restrictive structure and allowing the developers to have more control on how the applications are structured. On face value, Flask and Bottle appear to be very similar: they are both lightweight with a similar syntax. Evaluating both of the frameworks identified that Flask had a larger support community than Flask, coupled with better documentation, compared to Bottle. As neither framework had been used before then a support community was an important design decision.
-
-As a result, Flask was chosen as the framework which will be used throughout the application. Spike work was completed to see how simple it was to create a quick application, after discovering it was perfectly fine, Flask was agreed as the framework of choice.
-
-\subsection{Database management system}
-As the analysis suggested it should be a web application then data persistence should be an integral part of the application. Prior to choosing an appropriate tool, a rationalised decision had to be made on the different management systems available.
-
-\subsubsection{NoSQL or relational database management systems}
-The choice of database management system was considered at length. Firstly, the decision of whether to use NoSQL or a relational database management system (RDBMS) had to be decided. This was decided during the early sprints, whilst the design was beginning to emerge.
-
-RDBMS's are suited to separating the data into logical relations which decouples through the process of normalisation. The data normally suited to a RDBMS is one which has a uniform structure and can be represented as a series of relations, with specific constraints.
-
-NoSQL provides a more flexible structure, allowing data to have no specific structure. In MongoDB \cite{citeulike:14019766} documents are equivalent to relations - structuring the data as key-valued pairs over specific column structures. This offers more flexibility in the data passed to the database.
-
-From previous design choices made in prior sprints regarding the database structure, both options were seriously considered. After the analysis of what the note meta data would consist of, it was decided that the structure for the data would not vary, each note will have an associated lecturer, title etc, then a relational database would be suitable for the application. In addition, the notes \textit{must} follow a specific layout structure, therefore affirming that data would be linked and structured.
-
-A specific choice of RDBMS had to be chosen as an appropriate tool to persist the data from a note; digital ocean offered a concise comparison aiding in the design \cite{citeulike:14019772}.
-\subsubsection{SQLLite}
-SQLLite was considered as a viable option; Flask provides documentation for its ease of use with the micro-framework. Considering the larger picture: would it scale well with multiple users interacting with it? Digital ocean state it would be a perfectly fine testing and development tool, but for production it may not scale well with multiple reads and writes.
-\subsubsection{PostgreSQL}
-Digital ocean describe PostgreSQL as the most advanced of the RDBMS's available. The additional support of more types an attribute can have allows for a greater control when creating a database. For example, the JSON type support would allow the application to save returned JSON from 3rd party services directly to the database.
-\subsubsection{MySQL}
-MySQL and PostgreSQL for most applications would be interchangeable. It offers a wide range of support along with comprehensive documentation. There are concerns over performance, however.
-
-\noindent
-After evaluating the possible RDBMS's it was concluded that MySQL and PostgresSQL would be more preferable for scalability. Although there is not a great difference between the two, PostgreSQL was chosen for its advanced ability allowing for the application to become more advanced. This goes against the YAGNI (you ain't gonna need it) approach, but infrastructure decisions are harder to change, than code implementations.
-
-\subsection{Continuous integration tools}
-Continuous Integration (CI) is normally used in development teams to ensure that all code is checked into the repository. For the single person project it was adapted. The value was not to ensure all code was checked into the repository, but to build the project on each individual branch to ensure every commit passes associated tests written.
-
-Since CI was decided to be used in the analysis stage, a specific tool in aiding in CI would have to be chosen. Jenkins was an initial choice; it is a standalone Java application which a repository can be synced to.
-
-Another option was Travis CI, a CI tool in the cloud which can be attached to a GitHub repository. It runs tests on every commit to a repository if there is a travis.yml file committed. Travis then build the application and reports whether it errors, passed all the tests or failed any tests.
-
-A key design decision was to be able to check the build process quickly. With Travis it has a web interface clearly showing the output. Jenkins would require additional set up of specific build scripts for every branch in the application. Therefore, Travis was chosen for the ease of use and a nice integration with the repository.
-
-\subsection{Version control}
-Version control was utilised on the project to ensure that code was continuously added, allowing the option to revert changes if necessary. The project was created on a private Git repository on GitHub. Git was chosen for its familiarity and GitHub is a well known place for handling versions of software. Github also tied in well with other tools such as Travis CI.
-
-
-
-
-\subsection{Database diagram}
-Coupled with the CRC cards a database UML diagram has been produced which shows the implementation of the relations in the database.
-
-\begin{figure}[h]
+\begin{figure}[H]
   \centering
-  \includegraphics[scale=0.5]{images/database_diagram}
-  \caption{The final result of the database diagram. After a series of iterations.}
-  \label{fig:database}
+  \includegraphics[scale=0.5]{images/saving_note_activity}
+  \caption{An activity diagram to show how to save a note and the integrations with the calendar too.}
+  \label{fig:activity_show_note}
 \end{figure}
 
-Figure \ref{fig:database}, shows the output from the result of continuous design on the database diagram through the iterations.
+Over the series of sprints, the design for the activity diagram expanded and grew. The resultant is depicted in Figure \ref{fig:activity_show_note}. To begin with the user activity where the user logs in was not incorporated until the thought of expanding the application for further users was considered.
 
-\subsubsection{Justification of design}
-The design has been carefully considered. The reason the note is in its table is intuitive: a note needs to be persisted in the database. The attributes best collate a high-level representation of what a note consists of. First and foremost,  a note will consist of an image link - which is a relative path, this was stored to persist where the image on the file store is located for that image. A user id was added to the note, to link a note to a user; not originally in the scope of the application, but a design feature added so that it was more accessible.
+Additionally the conditional check to see if there was meta-data suggested, from which the user could click on the meta-data to auto-populate the field content, has been developed into the final design. Instead, of the conditional check just an activity was selected to enter in the meta-data.
 
-The calendar url was added to the database to persist which calendar event was associated with the note. As a note will only have one calendar event, then saving it in the database was an easier way to link to the event - rather than making an external API request to Google.
+Overall, the activity diagram shown shows the final output of how a note is added into the system. This design has been meticulously developed incrementally to show the final output. Each of the iterations would increase the functionality, and as a result show the final output.
 
-Finally with the note relation, a note-meta-data foreign key id was added to link additional note-meta-data to a note.
-
-The Note-meta data relation is its own relation because of reducing data-redundancy, this is a key requirement in normalisation of databases [CITE]. The note Meta-data may be duplicated in a note if a user takes more than one note per lecturer - and wants to tag the same meta-data to the note. As a result a relation was created for this use-case.
-
-The meta-data consists of a lecturer, location, and title as variable characters up to 100 in length, which is a valid length as none of them realistically should be more than that length. A date field was added so the meta-data can be associated to a date and time - this aids in the calendar integration. Finally, the module code is identified as a foreign key constraint.
-
-The module code is its own relation, and therefore a foreign key in the meta-data relation is because of the same reasons as meta-data is it's own relation: data redundancy. A valid use-case is that a user would enter in multiple notes for any given module code. This module code does not need to be duplicated in the database - therefore a foreign key was suitable.
-
-Finally, a user relation was established after the application decided it would be expanded to involve users. An email address was created to parse the response from the oAuth log-in. Furthermore, this was added as a foreign key to notes, so that every user would be associated to a note.
-
-Overall, a succinct collection of relations have been developed, which follow a good normalization process to produce a design from a database side which has been well considered.
-
-%\section{Some detailed design}
-
-
-\subsection{MVC Structure}
-Early on in the process it was decided that an MVC approach would be approached. This was an upfront design decision, that would not likely to be changed.
+\subsection{Model-view-controller}
+The application would be designed in an model-view-controller (MVC) approach, so it would be beneficial to show the designs which would show how the system interacted with different components.
 
 \subsubsection{About MVC}
-MVC is a design pattern where you split the logic into a Model View and controller. As displayed in figure \ref{fig:mvc} the MVC approach helps to decouple logic from the view file. Therefore all the information passed to the view is renderable content. The controllers do not integrate with the database directly. The primary job for the controllers is to interact with the model, any services and ask to render the view files.
+MVC is a design pattern where logic is differentiated from presentation layers, as shown in Figure \ref{fig:mvc}.
+
+The controllers aim is to not directly integrate with database and business logic, instead it interacts with a series of models and services. Finally, the controllers will help to request to render specific view files with dynamic content.
 
 The model in the MVC structure has no acknowledgement of the view file. Instead of rendering any form of HTML in the model it is purely data-driven. The sole purpose of the model is to interact with the database and perform any business logic that does not fit in the controller and the view file.
 
 Finally, the view files contain HTML logic with dynamic content passed to the file from the controller. There may be specific logic which impact the HTML displayed, but no direct calls are made to the database layer or the controller. It uses the dynamic content passed in.
-\begin{figure}[h]
+
+\begin{figure}[H]
   \centering
   \includegraphics[scale=0.5]{images/MVC}
   \caption{A example of how the model-view-controller(MVC) framework integrates.}
   \label{fig:mvc}
 \end{figure}
 
-\subsubsection{Structuring the Web application}
-The application was chosen to follow the MVC approach so that there was a clear distinct design pattern used, which did not obfuscate where logic and presentation layers interact. With a well structured system it makes testing easier.
+\subsubsection{Structuring the web application}
+Although all the files could not be identified in the design section, the overall structure of the application has been considered.
 
-In addition to the structuring, components can be reused again easily. Take for example service classes, these are reusable components in the system where they can be easily instantiated from inside any controller. If an MVC approach was suggested for the design then the reusability of code would decrease. This could only be achieved from a nice decoupled system where independent logic can be processed separately.
+The primary aim for considering the design of the application would allow the application to reuse aspects of the codebase where appropriate. A module based design was considered, where each section of functionality was its own module - but this was rejected as it felt like the codebase became obfuscated. Therefore the MVC approach was adopted.
 
-Although the MVC approach was desired, Flask does not support an MVC structure out of the box. During a lot the documentation it expects all routes to be placed in a single file. This design approach was not considered for a number of reasons: it reduces the readability of the code - if there is more than one class per file, then readability begins to be impacted. Furthermore, when considering the design of the controller objects, as well as the models, then dependencies between the classes would become obfuscated. From identifying an architecture perspective, if the routes were on one file and models in another, it would be hard to explicitly identify corresponding links between different files.
+The framework chosen, see section \ref{}, does not support MVC structures out of the box. Routes are expected to be placed in a singular file; this philosophy is carried through to the models. This was not chosen as the structure of the application as it reduces the clarity of what the code was supposed to do by over-complexing where dependencies between different classes are supported.
 
-To overcome the Flask routing issue, in recent versions [FIND VERSION NUMBER] Blueprints [CITE] have been included. These blueprints, act almost as controller files, like Ruby, using the routing annotation to create a route. Therefore, similar routes can be place in the same file, but a different file can be created for unrelated routes. This offers a good controller feel to the application.
+To overcome this, Blueprints were used. These are essentially controllers, like those found in Ruby on Rails. Annotations were used to define a route and a blueprint was associated to one file.
 
-The models consist of both persistence logic as well as service and helper objects. All the business logic is kept in side this group. Finally, all the views are allocated to the view directory.
+Models were separated into their own directory, and a one-class per file was adopted to keep the design clean and simple. This ensured the design of the classes was considered before creating such files.
 
-\subsubsection{Extending views}
-It is worth mentioning that Flask uses the Jinga templating engine[CITE]. By default Jinga would expect the DOM to be represented again in every view file. A design decision was made to extend the view files. Figure \ref{fig:extension} illustrates the view file design.
-\begin{figure}[h]
+It is worth considering the view files. The view files were the only section of the web application structure which underwent and iterative process. Initially, the view files would represent the entire DOM tree in a singular file (duplicating headers, scripts etc). However, this is not optimal.
+
+\begin{figure}[H]
   \centering
   \includegraphics[scale=0.5]{images/view_file_extension}
   \caption{A diagram illustrating how extension in Jinga html template engine works.}
   \label{fig:extension}
 \end{figure}
 
-Each of the view file templates are separated into their own directories. Inside the directories, the HTML files extend the index.html root file. This overrides the block ``content'', dynamically generating a new content for every new URL. The advantages of this design is that meta-data, headers, stylesheets and navigation can be placed in the index.html page and all subpages will inherit these automatically, sticking to the principle of DRY.
+Figure \ref{fig:extension} shows the result after the sprint which the design was improved upon. All template files now extend ``root.html'', overriding the ``content'' block. This ensures that the do not repeat yourself (DRY) principle is adhered to and HTML, such as the navigation, are only declared once.
 
-\subsection{Application URLs}
-When considering the application URLs would form an integral part of helping the users to identify where they are, what the page is aiming to achieve and, where applicable, bookmarkable.
+\subsubsection{Constructing URLs}
+Often overlooked when considering a design is the URL structure. The design not only aids the developer, but the user using the page to clearly know the intention of that page. Typically there are two types of URLs RESTful-like and query strings.
 
-Therefore designs into the URL structure was performed. Typically there are two types of URL structures which websites take: query strings or REST URLs.
+During the iterations, especially when new functionality was being considered, specific routes were thought about carefully. In the search user-story, standard procedure was followed. Query strings create URLs such as: \texttt{/search?module\_code=cs31310}; representing the query string as key-value pairs. During the search feature, it was decided that this approach would be adopted so that the user can easily bookmark the page - as well as creating a common URL structure.
 
-Query strings aid in the creation of URLs such as: /search?name=foo. The query string is represented as a key value pairing of the searched criteria. This form of URL representation is acceptable for search criteria, but what if the user was editing a note - would a good structure contain all the contents of that note?
+RESTful urls help to show the a hierarchy of content. Exposing a user to such URL helps them to clearly identify their content. In iteration for displaying a note \texttt{/show\_note/1}, was decided for the URL; it is easier to read than  \texttt{$/show\_note?note_id=1$} - instantly showing to the user the point of the page.
 
-For parts of the application to overcome this issue REST [CITE] URLs were considered. By exposing the URLs to RESTful interface, it is clear what the application is intending to do on that page. For example $/show_note/1$ compared to $/show_note?note_id=1$. Therefore, the URLS will follow a hierarchal structure, showing exactly where the notes are, in this case [CITE].
+For the user task viewing notes, it was worth noting that traditional RESTful URL's would be changed for readability. \texttt{$/view\_notes/$} was used, when a proper RESTful url may be \texttt{/notes/}. This offered more semantic meaning to the URL structure.
 
-It is worth noting that RESTful URLS are a good concept for external API usage. However, due to the application being a web application some modifications were taken place. For example, the URL: $/view_notes/$ would be a better RESTful url as /notes/. However, the design decision was to adopt the RESTful pattern to help make the URLs a bit more readable, but still keep the principles of REST.
+It was worth considering the URL structure and way in which the application displays the content to a user, without it a user may be left confused at what the page is trying to convey.
 
-\subsection{HTTP methods}
-Flask supports all the REST HTTP methods, such as delete, put and patch[CITE]. However, normal web browsers have this common issue where they do not support them and instead only support GET and POST.
+\section{Image processing}
+In the very early sprints, the image processing design went through several substantial iterations. Each of the tasks relating to the user story to binarise an image, had design implications.
 
-As a comparison in Ruby, the templating language - embedded ruby - allows being able to fake certain methods on forms and submit buttons. Unlike Flask, who uses pure HTML templates, with the Jinga syntax added on top, then developers are restricted to the default GET and POST.
+Early work was conducted to investigate how to prepare images for the Tesseract engine. Imagemagick was initially used by converting the image to grayscale - but this yielded poor results. After further design decisions were made to convert the image to Monochrome it was decided that the next iteration produced a better image segmentation pipeline.
 
-Another layer of code could have been added in the form of posting everything to the URL routes on the server as AJAX requests - but that would first and foremost change the entire structure of the application. This would mean that a user would have to have Javascript enabled on the page to even interact with the application.
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale=0.2]{images/image_binarisation_activity.pdf}
+  \caption{An activity diagram to depict the design of the algorithm for the image segmentation.}
+  \label{fig:activity_binarise}
+\end{figure}
 
-As a result, the design decision to use default POST and GET requests was decided. DELETE would not be used for deleting content from the database.
+Figure \ref{fig:activity_binarise} shows the overall activity of how the image processing will be intended to be implemented, after early design work showed binarisation was more complex. Further descriptions of specific implementation can be found in the implementation section.
 
-\subsection{Interaction with the application}
-When decomposing a problem it is useful to identify how a user would intend to interact with the system.
+This high-level activity diagram was the result of continuous design in the first few sprints. Initially a design was drawn up to just binarise the whole image, but due to implementation issues, this caused too much noise. Therefore, a new algorithm had to be established.
 
+The blue-lined paper was one way to overcome that. Filtering the lines from a solid lined paper, would ensure less noise was on the image, creating a better binarised image. Overall, the activity diagram depicts the algorithm of taking a mobile phone photo, filtering the lines, binarising the image and extracting a tiff image. The tiff was selected as a design decision, as Tesseract input requires a tiff file.
 
+This design initially considered blue to be important, but it was produced too much noise in the implementation. As a result, instead of trying to extract the lines, it was decided that the lines should be filtered and we should only extract the text. This was the final iteration of development on the binarisation script.
 
-
-
-\section{User Interface}
-Although the application was developed in an iterative approach, wiremocks were completed when UI changes occurred so that I could reflect on them.
-
-To begin with the user interface (UI) went through a few iterations of wiremocks to sketch out what it should look like.  This iterative approach was applied when actually designing the website. Firstly it was important that the application felt as thought it was an application, rather than a traditional website. Colours from Google Style guide [CITE] was used to keep with nice, clean and bold colours. Bootstrap[CITE] was considered to be used on the application and it did give a default responsive theme built in - however, keeping with the idea of minimalist and not over-bloated, then personally I feel that that bootstrap comes with a lot of the additional material which would not be needed.
-
-With this being a web application, a responsive navigation was always important. A user may take a photo of their note and then upload this to the website off their mobile. This resulted in the web application having to be thought about from a responsive view. I should have done this better and considered this from the beginning and built up from the responsive to the desktop version. However, I did retrospective responsive design and performed media-queries when I needed to.
-% add in code examples for media query\
-\begin{itemize}
-  \item Wiremock examples
-  \item Media query code examples.
-\end{itemize}
-% Include wiremocks
-\section{Other relevant sections}
-
-\begin{itemize}
-  \item Why Parsing the notes returned the first 3 lines. Why did this have to be done?
-
-\end{itemize}
-
-\subsection{Tesseract}
-Comparisons between different OCR tools was researched. Evaluations into systems which would be a suitable aid was undertaken. [CITE - Case study] performs a case study using Tesseract as their OCR tool to analyse printed text in an image. Patel et al, also discuss the comparison against a proprietary OCR tool, Transym [CITE].
+\section{Tesseract}
+Early on in the sprints Tesseract was identified as the OCR tool of choice. Evaluations into the different tools available: [CITE - Case study] performs a case study using Tesseract as their OCR tool to analyse printed text in an image. Patel et al, also discuss the comparison against a proprietary OCR tool, Transym [CITE].
 
 The results concluded by Patel et al is that Transym only yielded a 47\% accuracy on 20 images compared to 70\% accuracy using the Tesseract engine.
 
-Analysing the outputs concluded that Tesseract would be the best performing on an image. Tesseract was chosen for its open source and it's highly commended recognition rate as well as my supervisor echoing the compliments of Tesseract and it should be considered.
+The first few iterations gave a concrete overview that the first three lines of the text would be parsed, forming the information for the meta-data. Appendix \ref{} shows the layout of the three lines.
 
-\section{Optimising tesseract}
+It is worth acknowledging that the test-data used for the Tesseract training had a design element attached to it. When considering what the test data should consist of, there had to be a variety in the data. Panagram's, the quick brown fox is the most common, is a good way to represent text as it contains all alphabetical characters. [CITE website used]. This would give Tesseract the best possible chance at learning different characters - due to there being an abundance of each letter.
 
-\subsection{ImageMagick}
-Once Tesseract was chosen as the OCR tool training was started promptly. Due to there not being a formal way images were supposed to be prepared for the tool then the first few iterations were converted to grayscale using ImageMagick [CITE]. This yielded a poor return rate and characters were not identified consistently.
+\section{Entity-relation design}
+Whilst creating the CRC cards, it allowed considerations to be made about the relations and how they are connected. Through each user-story analysed it was reflected upon if that would affect the entity-relation design.
 
-At this point in the design, the notes were being written on original lined paper. Research work was looked into to try and get the image as clean as it could be for the Tesseract engine. This resulted in monochrome from ImageMagick to be used; an increase in recognition rate was received, however the image was very messy with pixels from the lines obfuscating the response from Tesseract.
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale=0.5]{images/database_diagram}
+  \caption{The final result of the entity-relation diagram. After a series of iterations.}
+  \label{fig:database}
+\end{figure}
 
-\subsection{OpenCV}
-During a meeting with Dr Hannah Dee, it was suggested that OpenCV should be used. It was already a design consideration - as to why Python was chose - so it should be used to facilitate the binarisation script.
+Figure \ref{fig:database}, shows the output from the result of continuous design on the database diagram through the iterations. The design per iteration matched that of the story. For example, although Meta-Data was known to be added into the system, this was not added until that story was brought into the sprint - instead just a Note relation was created.
 
-OpenCV is an open source image processing library. Natively written in C++, but there are Python bindings available - so the Python version was selected, to fit into the web application.
+\subsection{Justification of design}
+Below is a justification of the designs through the iterations.
+\subsubsection{Note}
+During design persisting the note was one of the first entity-relation design decisions which was made. The attributes selected for the \texttt{Note} relation best justify what a note consists of. Firstly, the note contains an image link, which is a relative path to the image. This was persisted to ensure that it could be found easily. When the story for implementing user's was actioned, an additional field containing the user's id was added to the relation.
+
+During the implementation of adding a URL to a calendar event, the calendar URL was persisted to the database of the associated note. The event ID could have be saved, but the URL was decided to stored so additional queries were not made to the external service. Furthermore, a note will only have one URL.
+
+When implementing the note's meta-data, a relation was created and the foreign key was added to the note relation. This was created to ensure that a note must have associated meta-data.
+
+\subsubsection{Note\_meta\_data}
+The \texttt{note\_meta\_data} relation was created in its own relation to reduce data-redundancy, following the principle of normalisation in relational databases. The content could be duplicated for multiple notes, if a user tags the same meta-data to more than one note. As denoted from the relationships: a note will have a singular meta-data item, but the meta-data item could have many notes.
+
+With attributes lecturer location and datetime - these were the initial design decisions made to be included in the meta-data. However, in a later iteration it was decided a title would be preferable; this was added to the relation. The date field is a date-time instead of a string due to integration with the calendar requires specific date-time strings, making it easier to parse.
+
+Initially developed with the module code in this relation, in subsequent iterations the module code was extracted and a foreign key was used.
+
+\subsubsection{Module code}
+The module code was developed into its own relation to prevent data-redundancy. A user may enter multiple notes for the same module code - as a result the database would only need to include one reference of that module code. The relationship between the meta data and the module code is explicit: the meta data must contain one module code but the module code can have more than one meta-data item.
+
+\subsubsection{User}
+This was not added to the application until around sprint 5. Details regarding oAuth can be found in \ref{}. However, the user will have an email address and that would be stored. It is in its own relation from a logic perspective: every time a user signs up to the system they are not creating a note instantly, therefore a relation was created to separate this logic. The foreign key was added to a note, so that a note can only have one user - and a user can have multiple notes.
 
 
+\noindent
+Overall, a succinct collection of relations have been developed which aim to solve the issues of the data-redundancy, by providing solid rationale for the resulting design.
 
 
+\section{Sprints}
 
-\begin{itemize}
-  \item Realised it wasnt good so redesigned it to custom lined paper Why did I do this instead of normal lined paper?
-  \item Why the colour blue ?
-\end{itemize}
+\section{User interface}
+With the web application being a core part a series of user interfaces (UI) was collated at the start of each breakdown of the story - if there was a significant change in the UI.
+
+The user interface had make the web application feel like an application, rather than a traditional website. This was identified from the background analysis where many systems felt like an application. The colour scheme was aiming to be simplistic, using the Google colour style guide. An alternative of bootstrap was considered, instead of designing bespoke CSS. Although it has a built-in responsive theme, due to the over-kill of the additional files a simpler approach was adopted.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale=0.2]{images/homepage_wiremock.pdf}
+  \label{fig:homepage_wiremock}
+  \caption{From left to right, the homepage wiremock through the different iterations and the change of requirements}
+\end{figure}
+
+Figure \ref{fig:homepage_wiremock} shows the exploratory wiremock design completed prior to the UI interface. From the early iterations it was just an authorise button, then as a requirement was added to show the user events from the last seven days it was mocked up to reflect this.
+
+
+Further mockups available in Appendix \ref{}.
+
+
+\section{Implementation tools}
+The following sections discuss the implementation tools and their purpose within the application.
+\subsection{Programming language}
+The programming language would not change per sprint or over an iterative process - as a result this was identified in sprint 0, where additional spike work was completed.
+
+As a web application was being developed investigatory work was completed into the analysis of suitable server-side languages. Typically traditional server-side applications language are: PHP, Ruby, Python, C\#, Java and JavaScript, which has increased in popularity \cite{citeulike:14018462}.
+
+Decomposing the analysis in the early sprints determined that OpenCV would be utilised on the project. OpenCV's source code is written in C++, however Python and Java bindings are available. Additional research was conducted to see if a reliable wrapper for either PHP or Ruby was available, and after a lot of investigation it was concluded there was not.
+
+C++ is not considered a standard web application development language removing it as a viable option for the web application. Java applications are predominately large commercial applications, using a range of enterprise software - often renowned for their performance abilities \cite{citeulike:14019744}. This approach felt too cumbersome for a proposed light-weight application.
+
+By being constrained by design decisions to use OpenCV and a reluctance to use Java, then Python was selected as the most suitable language. Python offers a lightweight and an easy to learn syntax that produces readable code, allowing a object-oriented paradigm to be followed. Additionally, its support for OpenCV is sufficient for the application.
+
+\subsection{Framework}
+As Python was being used as the language of choice, this narrowed down the frameworks available. Frameworks are useful for handling more complex features like routing and session handling - leaving the developer to focus on more domain specific issues.   Exploratory work was completed in the early sprints to find a suitable tool. The frameworks Django \cite{citeulike:14019784}, Flask \cite{citeulike:13160396} and Bottle \cite{citeulike:14019792} were evaluated.
+
+Some frameworks constrain the developer's to specific implementations through abstracted classes whereas some offer more flexibility. Whilst evaluating Django, a full framework, it was concluded that such a large framework was excessive for this application and rejected as a choice for the framework.
+
+Flask and Bottle are classified as ``micro-frameworks'', offering a lightweight structure, allowing developers to have more control on the structure. On face value, Flask and Bottle appear to be very similar; they are both lightweight with a similar syntax. After evaluation both frameworks it was concluded that Flask has a larger support community compared to Bottle - along with more reliable documentation.
+
+As a result, Flask was chosen as the framework which will be used throughout the application. Spike work was completed into evaluating Flask's viability for the application and was decided to be a good choice.
+
+\subsection{Continuous integration tools}
+Continuous Integration (CI) is normally used in development teams to ensure that all code is checked into the repository. As it was changed for a single person project, so did the point of using it; it was used to ensure every commit passed all tests when pushing to the repository.
+
+After identifying CI would be used in the analysis stage, an appropriate tool would have to be chosen. Jenkins was an initial choice; it is a standalone Java application which a repository can be synced to.
+
+Travis CI, is a CI tool in the cloud which can be synced to a GitHub repository. Tests can be run during every commit of the application and details regarding if it errors, passes or fails is available.
+
+A key design decision was to be able to check the build process quickly. With Travis it has a web interface clearly showing the output. Jenkins would require additional set up of specific build scripts for every branch in the application. Travis would be easier to set up and would easily integrate with the application.
+
+\subsection{Version control}
+Version control was used on the project to ensure that code was under specific versions. The project was created on a private Git repository on GitHub. Git was chosen for its familiarity and GitHub is a well known place for handling Git based solutions; Travis CI integrated well with GitHub.
+
+It is worth making a mention on the Git flow which was used. As each story was implemented a branch would be created in the form of: \texttt{feature/<summary\_of\_story>}, such as \texttt{feature/logout}. Branches were created from the development branch. All code was pushed to its own separate branches, and only when Travis CI passed a pull request was created on GitHub.  Once Travis had successfully passed all the pull request tests, and it was safe to merge then the branches were merges into development.
+
+\subsection{Development environment}
+The text-editor, Atom, was used for the majority of the project. It was a lightweight tool which accommodated for Python syntax. However later in the project, when refactoring became more cumbersome due to the increase in code base - PyCharm community edition was used as it offered better refactoring functionality.
