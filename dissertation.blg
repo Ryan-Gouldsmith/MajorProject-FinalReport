@@ -28,6 +28,8 @@ Warning--I didn't find a database entry for "apache_license"
 -- http://www.ctan.org/tex-archive/macros/latex/contrib/supported/IEEEtran/
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
 ** Sorting version - not for use with work to be submitted to the IEEE.
+Warning--to sort, need author, organization, or key in citeulike:13983911
+Warning--to sort, need author, organization, or key in citeulike:13995818
 Warning--to sort, need author, organization, or key in citeulike:13988110
 Warning--to sort, need author or key in citeulike:2917492
 Warning--to sort, need author, organization, or key in citeulike:14006256
@@ -35,45 +37,45 @@ Warning--to sort, need author, organization, or key in citeulike:14021437
 Warning--empty author in citeulike:2917492
 
 Done.
-You've used 48 entries,
+You've used 63 entries,
             4538 wiz_defined-function locations,
-            1194 strings with 23367 characters,
-and the built_in function-call counts, 27535 in all, are:
-= -- 2587
-> -- 439
-< -- 80
-+ -- 210
-- -- 108
-* -- 1266
-:= -- 4731
-add.period$ -- 98
-call.type$ -- 48
-change.case$ -- 236
-chr.to.int$ -- 177
-cite$ -- 53
-duplicate$ -- 1949
-empty$ -- 2256
-format.name$ -- 116
-if$ -- 5931
+            1271 strings with 26629 characters,
+and the built_in function-call counts, 35333 in all, are:
+= -- 3322
+> -- 551
+< -- 89
++ -- 261
+- -- 138
+* -- 1640
+:= -- 6150
+add.period$ -- 128
+call.type$ -- 63
+change.case$ -- 311
+chr.to.int$ -- 195
+cite$ -- 70
+duplicate$ -- 2498
+empty$ -- 2892
+format.name$ -- 147
+if$ -- 7560
 int.to.chr$ -- 0
-int.to.str$ -- 48
-missing$ -- 392
-newline$ -- 236
-num.names$ -- 88
-pop$ -- 1115
+int.to.str$ -- 63
+missing$ -- 513
+newline$ -- 326
+num.names$ -- 114
+pop$ -- 1493
 preamble$ -- 1
-purify$ -- 150
+purify$ -- 195
 quote$ -- 2
-skip$ -- 2071
+skip$ -- 2637
 stack$ -- 0
-substring$ -- 788
-swap$ -- 1245
-text.length$ -- 21
+substring$ -- 950
+swap$ -- 1561
+text.length$ -- 24
 text.prefix$ -- 0
 top$ -- 6
-type$ -- 387
-warning$ -- 5
-while$ -- 120
-width$ -- 50
-write$ -- 525
-(There were 7 warnings)
+type$ -- 508
+warning$ -- 7
+while$ -- 150
+width$ -- 65
+write$ -- 703
+(There were 9 warnings)

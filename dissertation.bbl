@@ -18,6 +18,24 @@
 \fi
 #2}}
 
+\bibitem{citeulike:13995818}
+\BIBentryALTinterwordspacing
+``{CSS Bootstrap},'' last checked 3rd April 2016. [Online]. Available:
+  \url{http://getbootstrap.com/css/}
+\BIBentrySTDinterwordspacing
+ \begin{quotation}\noindent Bootstrap library was considered when thinking
+  about the styling using CSS. \end{quotation}
+
+\bibitem{citeulike:13983911}
+\BIBentryALTinterwordspacing
+``{Modular Applications with Blueprints â Flask Documentation (0.10)},''
+  last checked 28th April 2016. [Online]. Available:
+  \url{http://flask.pocoo.org/docs/0.10/blueprints/}
+\BIBentrySTDinterwordspacing
+ \begin{quotation}\noindent Blueprints were used to modularise the code and
+  expand it for a larger project. They were implemented to attempt to decouple
+  specific routing. \end{quotation}
+
 \bibitem{citeulike:14021437}
 \BIBentryALTinterwordspacing
 ``{sirfz/tesserocr: A Python wrapper for the tesseract-ocr API},'' last checked
@@ -169,8 +187,43 @@ M.~Fowler, ``{Mocks Aren't Stubs},''
   Martin Fowler gave a nice concise answer. It turns out all the tests are
   mocking the behaviour from the external API. \end{quotation}
 
+\bibitem{citeulike:14023810}
+\BIBentryALTinterwordspacing
+------, ``{Extract Class},'' Oct. 1999, last checked 28th April 2016. [Online].
+  Available: \url{http://refactoring.com/catalog/extractClass.html}
+\BIBentrySTDinterwordspacing
+ \begin{quotation}\noindent The description of what the extract class
+  refactoring technique, which was used extensively on the project.
+  \end{quotation}
+
+\bibitem{citeulike:14023852}
+\BIBentryALTinterwordspacing
+GitHub, ``{Atom},'' 2016, last checked 28th April 2016. [Online]. Available:
+  \url{https://atom.io/}
+\BIBentrySTDinterwordspacing
+ \begin{quotation}\noindent The text editor which was used for the majority of
+  the project. It lacks refactoring tools, and the application grew too much
+  for a find and search. \end{quotation}
+
+\bibitem{citeulike:13269771}
+\BIBentryALTinterwordspacing
+------, ``{GitHub},'' 2016, last checked TODO. [Online]. Available:
+  \url{http://www.github.com}
+\BIBentrySTDinterwordspacing
+ \begin{quotation}\noindent The hosting service for the priavte git repository
+  for the application. \end{quotation}
+
+\bibitem{citeulike:14023831}
+\BIBentryALTinterwordspacing
+Google, ``{Color - Style - Google design guidelines},'' 2016, last checked 28th
+  April 2016. [Online]. Available:
+  \url{https://www.google.com/design/spec/style/color.html}
+\BIBentrySTDinterwordspacing
+ \begin{quotation}\noindent The colour guide was used for the CSS colours used
+  throughout the application. \end{quotation}
+
 \bibitem{citeulike:14014320}
-Google, ``{Meet Google Keep, Save your thoughts, wherever you are - Keep
+------, ``{Meet Google Keep, Save your thoughts, wherever you are - Keep
   Google},'' \url{https://www.google.com/keep/}, 2016, last checked 17th April
   2016.
  \begin{quotation}\noindent Google keep is an organisational and note-taking
@@ -205,6 +258,34 @@ C.~Heer, ``{Flask-Testing  Flask-Testing 0.3 documentation},''
  \begin{quotation}\noindent The documentation page for the testing library
   Flask-Testing. It was used throughout the project after a refactor realising
   it offered better support for testing Flask applications. \end{quotation}
+
+\bibitem{citeulike:14023816}
+\BIBentryALTinterwordspacing
+ImageMagick, ``{ImageMagick: Convert, Edit, Or Compose Bitmap Images},'' last
+  checked 28th April 2016. [Online]. Available:
+  \url{http://www.imagemagick.org/script/index.php}
+\BIBentrySTDinterwordspacing
+ \begin{quotation}\noindent ImageMagick is a library which was used for the
+  image binarisation but was not used in the end, due to OpenCV providing
+  better support. \end{quotation}
+
+\bibitem{citeulike:13206865}
+\BIBentryALTinterwordspacing
+Itseez, ``{OpenCV | OpenCV},'' 2016, last checked 28th April 2016. [Online].
+  Available: \url{http://opencv.org/}
+\BIBentrySTDinterwordspacing
+ \begin{quotation}\noindent The image processing library used for the image
+  binarisation and the various morphological tools. One of the best tools used
+  on the project. \end{quotation}
+
+\bibitem{citeulike:14023855}
+\BIBentryALTinterwordspacing
+JetBrains, ``{PyCharm :: Download Latest Version of PyCharm},'' 2016, last
+  checked 28th April 2016. [Online]. Available:
+  \url{https://www.jetbrains.com/pycharm/download/}
+\BIBentrySTDinterwordspacing
+ \begin{quotation}\noindent An IDE used later on in the project to aid in more
+  comprehensive refactoring tools. \end{quotation}
 
 \bibitem{citeulike:13510433}
 \BIBentryALTinterwordspacing
@@ -296,6 +377,18 @@ Oracle, ``{Overview - The Java EE 6 Tutorial},''
  \begin{quotation}\noindent An article which discusses the use of Java as a web
   application language. It reaffirms the point raised that it is good for
   performance. \end{quotation}
+
+\bibitem{citeulike:13920892}
+\BIBentryALTinterwordspacing
+C.~{Patel}, A.~{Patel}, and D.~{Patel}, ``{Optical Character Recognition by
+  Open source OCR Tool Tesseract: A Case Study},'' \emph{International Journal
+  of Computer Applications}, vol.~55, no.~10, pp. 50--56, Oct. 2012, last
+  checked 28th January 2016. [Online]. Available:
+  \url{http://dx.doi.org/10.5120/8794-2784}
+\BIBentrySTDinterwordspacing
+ \begin{quotation}\noindent A great paper on a Tesseract case study tool. It
+  was used as a good comparsion for other OCR technologies as well as providing
+  statistical results for the use of Tesseract. \end{quotation}
 
 \bibitem{citeulike:14010520}
 A.~Pilon, ``{Calendar Apps Stats: Google Calendar Named Most Popular | AYTM},''
@@ -395,6 +488,41 @@ Tiaga, ``{Taiga.io},'' \url{https://taiga.io/}, 2016, last checked TODO.
   help to keep track of the project's progress throughout the process. Utilised
   the Scrum tools available that the application gives. \end{quotation}
 
+\bibitem{citeulike:14023846}
+\BIBentryALTinterwordspacing
+L.~Torvalds, ``{Git},'' 2016, last checked 28th April 2016. [Online].
+  Available: \url{https://git-scm.com/}
+\BIBentrySTDinterwordspacing
+ \begin{quotation}\noindent The version control management system used on the
+  project, to manage workflows \end{quotation}
+
+\bibitem{citeulike:14023819}
+\BIBentryALTinterwordspacing
+Transym, ``{Transym - OCR software for Integrators | Transym Computer
+  Services},'' 2016, last checked 28th April 2016. [Online]. Available:
+  \url{http://www.transym.com/}
+\BIBentrySTDinterwordspacing
+ \begin{quotation}\noindent A comparison tool to the Tesseract OCR that is
+  proprietary. \end{quotation}
+
+\bibitem{citeulike:14023840}
+\BIBentryALTinterwordspacing
+Travis, ``{Travis CI - Test and Deploy Your Code with Confidence},'' 2016, last
+  checked 28th April 2016. [Online]. Available: \url{https://travis-ci.org/}
+\BIBentrySTDinterwordspacing
+ \begin{quotation}\noindent The Travis CI tool which was used during the
+  process. Would be reliably, used and a great tool to aid in the development
+  process. \end{quotation}
+
+\bibitem{citeulike:14023837}
+\BIBentryALTinterwordspacing
+Various, ``{Jenkins},'' 2016, last checked 28th April 2016. [Online].
+  Available: \url{https://jenkins.io/index.html}
+\BIBentrySTDinterwordspacing
+ \begin{quotation}\noindent The Jenkins CI tool was considered when analysing
+  which CI tool to use and integrate. Eventually was not chosen because of it
+  being a standalone application. \end{quotation}
+
 \bibitem{citeulike:13926798}
 \BIBentryALTinterwordspacing
 R.~Viet~OC, ``{jTessBoxEditor - Tesseract box editor \& trainer},'' last
@@ -428,5 +556,14 @@ D.~Wells, ``{CRC Cards},''
   useful when considering the design of an application. Used as a reference
   material throughout the process, as well as during the chapter discussing the
   process. \end{quotation}
+
+\bibitem{citeulike:14023830}
+\BIBentryALTinterwordspacing
+F.~Words, ``{Pangrams},'' last checked 28th April 2016. [Online]. Available:
+  \url{http://www.fun-with-words.com/pangrams.html}
+\BIBentrySTDinterwordspacing
+ \begin{quotation}\noindent A tool which describes what panagrams are as well
+  as using this tool as inspiration for some section of the training data to
+  ensure that there was a good spread of data. \end{quotation}
 
 \end{thebibliography}

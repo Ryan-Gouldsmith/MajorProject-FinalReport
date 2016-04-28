@@ -394,9 +394,9 @@ INPUT ./images/view_file_extension.png
 INPUT images/image_binarisation_activity.pdf
 INPUT ./images/image_binarisation_activity.pdf
 INPUT ./images/image_binarisation_activity.pdf
-INPUT images/database_diagram.png
-INPUT ./images/database_diagram.png
-INPUT ./images/database_diagram.png
+INPUT images/database_diagram.pdf
+INPUT ./images/database_diagram.pdf
+INPUT ./images/database_diagram.pdf
 INPUT images/homepage_wiremock.pdf
 INPUT ./images/homepage_wiremock.pdf
 INPUT ./images/homepage_wiremock.pdf

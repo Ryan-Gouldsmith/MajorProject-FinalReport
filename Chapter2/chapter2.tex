@@ -25,7 +25,7 @@ An overview of the resultant design of the class diagram is presented, with rati
 \subsubsection{Justification of design}
 The following section discusses the appropriateness of the design and any justifications needed. Overall, the design clearly shows the object oriented principle of low coupling high cohesion being used on the project.
 
-\noident
+\noindent
 \textbf{Google Services}
 \newline
 During early iterations, the Google Calendar API was only going to be utilised to parse the user's calendar events. As a result, the class \texttt{GoogleCalendarService} was created - this would ensure that the logic encapsulating the Google calendar was centralised into one class. With the version number and API unlikely to change, constants were chosen as the best identifier; if the URLs and version number was to change in the future it would be easy to change this once. This class needed to perform key operations to extract the events, such as \texttt{get\_events\_based\_on\_date}. The functions themselves were iteratively developed, initially only using the \texttt{execute\_request} and \texttt{get\_list\_of\_events}. Due to the scope changing with complexity, in the latter sprints  further functions were added.
@@ -193,6 +193,7 @@ Figure \ref{fig:database}, shows the output from the result of final resultant d
 
 \subsection{Justification of design}
 Below is a justification of the designs through various stories which affected the entity-relation design.
+
 \noindent
 \textbf{Note}
 \newline
@@ -226,8 +227,6 @@ This was not added to the application until around sprint 5. However, the user w
 Overall, a succinct collection of relations have been developed which aim to solve the issues of the data-redundancy, by providing solid rationale for the resulting design.
 
 
-\section{Sprints}
-
 \section{User interface}
 With the web application being a core part, a series of user interface (UI) designs were collated at the start of each breakdown of the story.
 
@@ -235,12 +234,12 @@ The user interface had to make the web application feel like an application, rat
 
 \begin{figure}[H]
   \centering
-  \includegraphics[scale=0.25]{images/homepage_wiremock.pdf}
+  \includegraphics[scale=0.22]{images/homepage_wiremock.pdf}
   \label{fig:homepage_wiremock}
   \caption{From left to right, the homepage wiremock through the different iterations and the change of requirements}
 \end{figure}
 
-Figure \ref{fig:homepage_wiremock} shows the exploratory wiremock design completed prior to the UI interface. From the early iterations it was just an authorise button, then as a requirement was added to show the user events from the last seven days it was mocked up to reflect this.
+Figure \ref{fig:homepage_wiremock} shows the exploratory wireframe design completed prior to the UI interface. From the early iterations it was just an authorise button, then as a requirement was added to show the user events from the last seven days it was mocked up to reflect this. This process was completed over the stories. If the story reflected a change in the content displayed on the screen a conceptual design was mocked up to ensure there was an idea of how it would intend to look.
 
 
 Further mockups available in Appendix \ref{appendix:sup_design}, section \ref{sup:wireframe}.
