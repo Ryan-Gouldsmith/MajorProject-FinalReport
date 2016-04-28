@@ -13,45 +13,50 @@
 
 %Some example sub-sections may be as follows, but the specific sections are for you to define.
 
-As the application was developed in an iterative manner, over a series of sprints, class diagrams and design diagrams were not created at the very start of the project. Over a series of sprints designs were iteratively developed regarding the system overview. However, some design decisions were decided at the start of the project. The chapter will clearly explain rationale for the decisions and state whether the design decisions were a result of iterative processes or upfront design.
+As the application was developed in an iterative manner, over a series of sprints, class diagrams and design diagrams were not created at the very start of the project. Instead adopting an iterative approach to design was preferred. Regardless, some important design decisions were decided at the start of the project. The chapter will clearly explain rationale for the decisions and state whether they were the result of an iterative processes or an upfront design.
 
-\section{Overall Architecture}
-This section discusses the architecture of the web application as a whole. The process of the design with the web application was developed over a series of sprints, rather than an upfront design.
+\section{Overall architecture}
+This section discusses the architecture of the web application. The design for the web application was developed over a series of sprints, iteratively increase with each user story, therefore no upfront design was conducted at the start of the process.
 
 \subsection{Class Diagram}
 \label{architecture:class}
-Presented is an overview of the class diagram presented, with rationale for the decisions and how an iterative development was reached to conclude the design.
-
-Refer to appendix \ref{appendix:design}, section \ref{design:class_diagram} for the class diagram.
-
-The design clearly shows the object oriented principle of low coupling high cohesion.
+An overview of the resultant design of the class diagram is presented, with rationale for decisions made and how an iterative approach was used to reach the concluded design. The class diagram can be found in appendix \ref{appendix:design}, section \ref{design:class_diagram}.
 
 \subsubsection{Justification of design}
-The following section discussing the appropriateness of the design and justification, as well as exploring the evolutionary design.
+The following section discusses the appropriateness of the design and any justifications needed. Overall, the design clearly shows the object oriented principle of low coupling high cohesion being used on the project.
 
+\noident
 \textbf{Google Services}
-During the first iterations, the Google Calendar API was only going to be used to parse the calendar events. Therefore, the class \texttt{GoogleCalendarService} was created, to extract the code away from the controllers. The version number and API was unlikely to change, but they were formed as constants for the ease of changing if in the future they did. This class needed to perform key operations to extract the events, such as \texttt{get\_events\_based\_on\_date}. The functions themselves were iteratively developed, initially only using the \texttt{execute\_request} and \texttt{get\_list\_of\_events}. Due to the scope changing with complexity, in the latter sprints  further methods were added.
+\newline
+During early iterations, the Google Calendar API was only going to be utilised to parse the user's calendar events. As a result, the class \texttt{GoogleCalendarService} was created - this would ensure that the logic encapsulating the Google calendar was centralised into one class. With the version number and API unlikely to change, constants were chosen as the best identifier; if the URLs and version number was to change in the future it would be easy to change this once. This class needed to perform key operations to extract the events, such as \texttt{get\_events\_based\_on\_date}. The functions themselves were iteratively developed, initially only using the \texttt{execute\_request} and \texttt{get\_list\_of\_events}. Due to the scope changing with complexity, in the latter sprints  further functions were added.
 
-Initially user's were not a part of the system. However, after implementing the associated user story it was clear that another class to integrate with the Google Plus API would be needed. This followed the similar structure as the calendar class, except for parsing a user's email to persist in the database.
+Initially users were not considered a core part of the system. However, the user story to incorporate users into the system was created, it was clear that another class to integrate with the Google Plus API would be required. This class followed a similar structure to the calendar class, except for parsing a user's email, so it can be persisted in the database.
 
-Eventually, it was seen that this design was repeating functionality in places. In both of the classes the \texttt{build} and \texttt{execute\_request} were duplicated, without having class specific content. As a result, the extract class refactoring technique was used to create a super class \texttt{BaseGoogleService}. This class encapsulates the logic for building queries and executing them. With both the google plus and calendar classes sub-classing this, it extracts the final aspect of querying to the super class leaving logic and query manipulation to the sub-classes.
+Eventually, the design was evaluated and duplicated functionality amongst the methods was discovered. In both of the classes the \texttt{build} and \texttt{execute\_request} functions were duplicated, without having class specific content. As a result, the extract class refactoring technique [CITE], was used to create a super class \texttt{BaseGoogleService}. This class encapsulates logic for building  and executing queries. Extracting these functions to a super class ensured that pure logic for data and query manipulation can be moved to the \texttt{GoogleCalendarService} and \texttt{GooglePlusService} classes.
 
+
+\noindent
 \textbf{Helper classes}
-Helper classes, in the design, are independent classes that help to modularise the system - whilst collecting related functionality into a single class. Helper classes were developed iteratively, encapsulating similar functionality into one place.
+\newline
+Helper classes, in the design, are independent classes that help to modularise the system - whilst grouping related functionality into a single class. As the system grew the duplication of code was beginning to become apparent, so helper classes aid in keeping a design simple.
 
-For example the \texttt{SessionHelper} class was developed in such a way, that during the first few iterations of design it was only used to ensure that the credentials were appended correctly to the session. This functionality was duplicated, so an additional class was extracted. Over the course of adding user management and storing errors the method's grew.
+For example the \texttt{SessionHelper} class was developed to initially store credentials after the oAuth log in had been completed and had successfully being appended to the session. The classes functions expanded as further duplication of the session handling was developed into the system.  This level of abstraction gave a semantic meaning to the interactions with the session.
 
-As noticed, most of the helper classes do not interact with the other classes in any class. There is an exception with the \texttt{GoogleServicesHelper} class. In this class majority of the function are static.  They're static because they do not interact with any class variables. Prior to the implementation of editing a calendar event, the code was dispersed throughout the controllers. In an effort to reduce the code this helper class was created - but it was quickly decided that it would just be a proxy for calling specific function in each of the services classes. Therefore the functions were converted to static as true OO principles were not needed with these.
+As noticed, most of the helper classes do not interact with the other classes in the system. There is an exception with the \texttt{GoogleServicesHelper} class. In this class majority of the functions are static. This design decision was induced due to the class not interacting with any specific class level attributes. Furthermore, prior to the implementation of editing a calendar event, the code was dispersed throughout the controllers. In an effort to reduce code duplication this helper class was created - but it was quickly decided that it would just be a proxy for calling specific functions in each of the services classes. Although ideally they should be class level functions, it is appropriate to use static functions.
 
+\noindent
 \textbf{Persistence classes}
-The relationships between the persistence classes are not discussed in this section, see section \ref{}. It is worth noting that designing the persistence classes was again an iterative process through the sprints. For example, for majority of the sprints the title attribute in the \texttt{NoteMetaData} class was not added. It wasn't until the design changed and this field needed to be added a reflection was added.
+\newline
+The relationships between the persistence classes are not discussed in this section, see section \ref{section:er_diagram}. It is worth noting that designing the persistence classes was again an iterative process through the sprints. For example, for majority of the sprints the title attribute in the \texttt{NoteMetaData} class was not added. It wasn't until the a reflection on the content of a note was conduct that the design changed making this field a required attribute.
 
-There are a series of \texttt{save} functions in the application, these were added to the design when the controllers were constantly adding it to the database session. There needed to be a succinct way to save that specific instance. Therefore, database session code was extracted to this method, allowing each instance object to be saved.
+There are a series of \texttt{save} functions in the application, these were added to the design when the controllers were constantly adding it to the database session - this needed to be extracted to provide readability. There needed to be a succinct way to save that specific instance, and a save function did not need additional clarity.
 
-In parts of the application, there needed to be a way to extract information from the database. To aid in readability, static methods such as \texttt{find\_meta\_data} was created to keep domain related functionality together, but without having the need to create a specific instance.
+In parts of the application, there needed to be a way to extract information from the database. To aid in readability, static methods such as \texttt{find\_meta\_data} were created to keep domain related functionality together, but without having the need to create a specific instance.
 
+\noindent
 \textbf{Binarisation}
-The \texttt{BinariseImage} class is the model version of the image segmentation script see section \ref{}. The class would interact with the controllers and be called when a user uploads their file. It was important to have this as a model, due to the core functionality it offers to the system.
+\newline
+The \texttt{BinariseImage} class is the model representation of the image segmentation script see section \ref{imp:image_proces}. The class is called from the controller when a user uploads their image. The output from the class methods is a binarised image. There are a series of functions which integrate with OpenCV API's, manipulating an image and performing morphological operations. The class has been constructed so most of the functions are modular.
 
 \subsection{CRC cards}
 To aid with the design, class collaboration cards (CRC) was drawn up for each feature. The user-story was decomposed into tasks and each of the tasks had associated CRC cards. This helped to think about the design.  The overall design shown in section \ref{architecture:class} is a result of the diligent planning with the CRC cards.
@@ -100,7 +105,7 @@ Finally, the view files contain HTML logic with dynamic content passed to the fi
 
 \begin{figure}[H]
   \centering
-  \includegraphics[scale=0.5]{images/MVC}
+  \includegraphics[scale=0.4]{images/MVC}
   \caption{A example of how the model-view-controller(MVC) framework integrates.}
   \label{fig:mvc}
 \end{figure}
@@ -132,9 +137,9 @@ Often overlooked when considering a design is the URL structure. The design not 
 
 During the iterations, especially when new functionality was being considered, specific routes were thought about carefully. In the search user-story, standard procedure was followed. Query strings create URLs such as: \texttt{/search?module\_code=cs31310}; representing the query string as key-value pairs. During the search feature, it was decided that this approach would be adopted so that the user can easily bookmark the page - as well as creating a common URL structure.
 
-RESTful urls help to show the a hierarchy of content. Exposing a user to such URL helps them to clearly identify their content. In iteration for displaying a note \texttt{/show\_note/1}, was decided for the URL; it is easier to read than  \texttt{$/show\_note?note_id=1$} - instantly showing to the user the point of the page.
+RESTful urls help to show the a hierarchy of content. Exposing a user to such URL helps them to clearly identify their content. In iteration for displaying a note \texttt{/show\_note/1}, was decided for the URL; it is easier to read than  \texttt{/show\_note?note\_id=1} - instantly showing to the user the point of the page.
 
-For the user task viewing notes, it was worth noting that traditional RESTful URL's would be changed for readability. \texttt{$/view\_notes/$} was used, when a proper RESTful url may be \texttt{/notes/}. This offered more semantic meaning to the URL structure.
+For the user task viewing notes, it was worth noting that traditional RESTful URL's would be changed for readability. \texttt{/view\_notes/} was used, when a proper RESTful url may be \texttt{/notes/}. This offered more semantic meaning to the URL structure.
 
 It was worth considering the URL structure and way in which the application displays the content to a user, without it a user may be left confused at what the page is trying to convey.
 
@@ -145,7 +150,7 @@ Early work was conducted to investigate how to prepare images for the Tesseract 
 
 \begin{figure}[H]
   \centering
-  \includegraphics[scale=0.2]{images/image_binarisation_activity.pdf}
+  \includegraphics[scale=0.4]{images/image_binarisation_activity.pdf}
   \caption{An activity diagram to depict the design of the algorithm for the image segmentation.}
   \label{fig:activity_binarise}
 \end{figure}
@@ -167,7 +172,7 @@ The first few iterations gave a concrete overview that the first three lines of 
 
 It is worth acknowledging that the test-data used for the Tesseract training had a design element attached to it. When considering what the test data should consist of, there had to be a variety in the data. Panagram's, the quick brown fox is the most common, is a good way to represent text as it contains all alphabetical characters. [CITE website used]. This would give Tesseract the best possible chance at learning different characters - due to there being an abundance of each letter.
 
-\section{Entity-relation design}
+\section{Entity-relation design}\label{section:er_diagram}
 Whilst creating the CRC cards, it allowed considerations to be made about the relations and how they are connected. Through each user-story analysed it was reflected upon if that would affect the entity-relation design.
 
 \begin{figure}[H]
@@ -215,7 +220,7 @@ The user interface had make the web application feel like an application, rather
 
 \begin{figure}[H]
   \centering
-  \includegraphics[scale=0.2]{images/homepage_wiremock.pdf}
+  \includegraphics[scale=0.3]{images/homepage_wiremock.pdf}
   \label{fig:homepage_wiremock}
   \caption{From left to right, the homepage wiremock through the different iterations and the change of requirements}
 \end{figure}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.8.29)  28 APR 2016 00:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.8.29)  28 APR 2016 14:00
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -568,11 +568,18 @@ Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 LaTeX Info: Redefining \cite on input line 302.
 LaTeX Info: Redefining \nocite on input line 332.
 Package: cite 2015/02/27  v 5.5
-) (./dissertation.aux (./cover.aux) (./declaration.aux) (./acknowledgements.aux) (./abstract.aux) (./Chapter1/chapter1.aux) (./Chapter2/chapter2.aux) (./Chapter3/chapter3.aux
+) (./dissertation.aux (./cover.aux) (./declaration.aux) (./acknowledgements.aux) (./abstract.aux) (./Chapter2/chapter2.aux) (./Appendix1/appendix1.aux) (./Appendix2/appendix2.aux) (./Appendix3/appendix3.aux
 
-LaTeX Warning: Label `algorithm:threshold1' multiply defined.
+LaTeX Warning: Label `fig:acceptance_homepage' multiply defined.
 
-) (./Chapter4/chapter4.aux) (./Chapter5/chapter5.aux))
+
+LaTeX Warning: Label `fig:acceptance_homepage' multiply defined.
+
+) (./Appendix4/appendix4.aux) (./Appendix5/appendix5.aux) (./Appendix6/appendix6.aux
+
+LaTeX Warning: Label `fig:thresholding_options' multiply defined.
+
+) (./Appendix7/appendix7.aux) (./Appendix8/appendix8.aux) (./Appendix9/appendix9.aux))
 \openout1 = `dissertation.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 45.
@@ -715,11 +722,11 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1.
  [1
 
-] [2])
+])
 \tf@toc=\write4
 \openout4 = `dissertation.toc'.
 
- [3] (./dissertation.lof)
+ [2] (./dissertation.lof [3])
 \tf@lof=\write5
 \openout5 = `dissertation.lof'.
 
@@ -728,351 +735,372 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
 \openout6 = `dissertation.lot'.
 
  [5]
-\openout2 = `Chapter1/chapter1.aux'.
-
- (./Chapter1/chapter1.tex
-Chapter 1.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <20.74> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <24.88> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 22.
-<images/taxonomy.png, id=38, 715.67375pt x 735.74875pt>
-File: images/taxonomy.png Graphic file (type png)
- <use images/taxonomy.png>
-Package pdftex.def Info: images/taxonomy.png used on input line 32.
-(pdftex.def)             Requested size: 357.836pt x 367.87347pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[1
-
-
-] [2 <./images/taxonomy.png>] [3] [4] [5] [6] [7] [8]
-LaTeX Font Info:    Try loading font information for OML+ptm on input line 188.
- (/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/omlptm.fd
-File: omlptm.fd 
-)
-LaTeX Font Info:    Font shape `OML/ptm/m/n' in size <10.95> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 188.
- [9]) [10]
 \openout2 = `Chapter2/chapter2.aux'.
 
  (./Chapter2/chapter2.tex
-Chapter 2.
-
-LaTeX Warning: Reference `appendix:design' on page 11 undefined on input line 25.
-
-
-LaTeX Warning: Reference `design:class_diagram' on page 11 undefined on input line 25.
-
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 33.
+Chapter 1.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <20.74> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 2.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <24.88> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 2.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 21.
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 30.
 (/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
-) [11
-
+) [1
 
 
 ]
 
-LaTeX Warning: Reference `' on page 12 undefined on input line 47.
+LaTeX Warning: Reference `' on page 2 undefined on input line 46.
 
 
-LaTeX Warning: Reference `' on page 12 undefined on input line 54.
+LaTeX Warning: Reference `' on page 2 undefined on input line 54.
 
-[12] <images/CRC_card.png, id=82, 387.4475pt x 235.88126pt>
+[2] <images/CRC_card.png, id=46, 387.4475pt x 235.88126pt>
 File: images/CRC_card.png Graphic file (type png)
  <use images/CRC_card.png>
 Package pdftex.def Info: images/CRC_card.png used on input line 61.
 (pdftex.def)             Requested size: 193.72327pt x 117.94034pt.
 
 
-LaTeX Warning: Reference `' on page 13 undefined on input line 70.
+LaTeX Warning: Reference `' on page 3 undefined on input line 70.
 
 
-LaTeX Warning: Reference `' on page 13 undefined on input line 70.
+LaTeX Warning: Reference `' on page 3 undefined on input line 70.
 
-<images/saving_note_activity.png, id=83, 786.94pt x 1046.91125pt>
+<images/saving_note_activity.png, id=48, 786.94pt x 1046.91125pt>
 File: images/saving_note_activity.png Graphic file (type png)
  <use images/saving_note_activity.png>
 Package pdftex.def Info: images/saving_note_activity.png used on input line 78.
 (pdftex.def)             Requested size: 393.46904pt x 523.45435pt.
- [13 <./images/CRC_card.png>] [14 <./images/saving_note_activity.png>] <images/MVC.png, id=92, 524.96124pt x 454.69875pt>
+ [3 <./images/CRC_card.png>] [4 <./images/saving_note_activity.png>] <images/MVC.png, id=58, 524.96124pt x 454.69875pt>
 File: images/MVC.png Graphic file (type png)
  <use images/MVC.png>
 Package pdftex.def Info: images/MVC.png used on input line 103.
-(pdftex.def)             Requested size: 262.47998pt x 227.34882pt.
- [15]
+(pdftex.def)             Requested size: 209.98077pt x 181.87627pt.
+ [5 <./images/MVC.png>]
 
-LaTeX Warning: Reference `' on page 16 undefined on input line 113.
+LaTeX Warning: Reference `' on page 6 undefined on input line 113.
 
-<images/view_file_extension.png, id=96, 502.87875pt x 233.87375pt>
+<images/view_file_extension.png, id=63, 502.87875pt x 233.87375pt>
 File: images/view_file_extension.png Graphic file (type png)
  <use images/view_file_extension.png>
 Package pdftex.def Info: images/view_file_extension.png used on input line 123.
 (pdftex.def)             Requested size: 251.43875pt x 116.93657pt.
- [16 <./images/MVC.png>]
+
 Overfull \hbox (2.06187pt too wide) in paragraph at lines 133--134
 \OT1/ptm/m/n/10.95 strings cre-ate URLs such as: \OT1/pcr/m/n/10.95 /search?module[]code=cs31310\OT1/ptm/m/n/10.95 ; rep-re-sent-ing the query string
  []
 
-<images/image_binarisation_activity.pdf, id=102, 604.2575pt x 283.0575pt>
+[6 <./images/view_file_extension.png>] <images/image_binarisation_activity.pdf, id=68, 604.2575pt x 283.0575pt>
 File: images/image_binarisation_activity.pdf Graphic file (type pdf)
  <use images/image_binarisation_activity.pdf>
 Package pdftex.def Info: images/image_binarisation_activity.pdf used on input line 148.
-(pdftex.def)             Requested size: 120.84935pt x 56.61049pt.
- [17 <./images/view_file_extension.png>]
+(pdftex.def)             Requested size: 241.69872pt x 113.22098pt.
+ [7 <./images/image_binarisation_activity.pdf>]
 
-LaTeX Warning: Reference `' on page 18 undefined on input line 166.
+LaTeX Warning: Reference `' on page 8 undefined on input line 166.
 
-[18 <./images/image_binarisation_activity.pdf>] <images/database_diagram.png, id=115, 725.71124pt x 418.56375pt>
+<images/database_diagram.png, id=75, 725.71124pt x 418.56375pt>
 File: images/database_diagram.png Graphic file (type png)
  <use images/database_diagram.png>
 Package pdftex.def Info: images/database_diagram.png used on input line 175.
 (pdftex.def)             Requested size: 362.85474pt x 209.28136pt.
- [19 <./images/database_diagram.png>]
+ [8] [9 <./images/database_diagram.png>]
 
-LaTeX Warning: Reference `' on page 20 undefined on input line 202.
+LaTeX Warning: Reference `' on page 10 undefined on input line 202.
 
-[20] <images/homepage_wiremock.pdf, id=123, 1820.8025pt x 513.92pt>
+<images/homepage_wiremock.pdf, id=83, 1820.8025pt x 513.92pt>
 File: images/homepage_wiremock.pdf Graphic file (type pdf)
  <use images/homepage_wiremock.pdf>
 Package pdftex.def Info: images/homepage_wiremock.pdf used on input line 218.
-(pdftex.def)             Requested size: 364.15405pt x 102.78217pt.
+(pdftex.def)             Requested size: 546.24498pt x 154.17719pt.
 
-
-LaTeX Warning: Reference `' on page 21 undefined on input line 226.
-
-[21 <./images/homepage_wiremock.pdf>] [22]) [23]
-\openout2 = `Chapter3/chapter3.aux'.
-
- (./Chapter3/chapter3.tex
-Chapter 3.
-<images/OTSU.png, id=137, 194.22563pt x 291.58937pt>
-File: images/OTSU.png Graphic file (type png)
- <use images/OTSU.png>
-Package pdftex.def Info: images/OTSU.png used on input line 21.
-(pdftex.def)             Requested size: 194.22514pt x 291.58865pt.
- [24
-
-
-
-] [25 <./images/OTSU.png>]
-
-LaTeX Warning: Citation `citeulike:1402140' on page 26 undefined on input line 39.
-
-<images/adaptive_mean.png, id=145, 179.67125pt x 292.59312pt>
-File: images/adaptive_mean.png Graphic file (type png)
- <use images/adaptive_mean.png>
-Package pdftex.def Info: images/adaptive_mean.png used on input line 47.
-(pdftex.def)             Requested size: 179.67079pt x 292.59239pt.
-
-
-LaTeX Warning: Citation `citeulike:1402140' on page 26 undefined on input line 54.
-
-<images/adaptive_gaussian.png, id=146, 191.71625pt x 298.11375pt>
-File: images/adaptive_gaussian.png Graphic file (type png)
- <use images/adaptive_gaussian.png>
-Package pdftex.def Info: images/adaptive_gaussian.png used on input line 59.
-(pdftex.def)             Requested size: 191.71577pt x 298.11302pt.
- [26 <./images/adaptive_mean.png>] <images/thresholding_options.png, id=151, 1246.6575pt x 711.65875pt>
-File: images/thresholding_options.png Graphic file (type png)
- <use images/thresholding_options.png>
-Package pdftex.def Info: images/thresholding_options.png used on input line 68.
-(pdftex.def)             Requested size: 374.00014pt x 213.49927pt.
-
-
-LaTeX Warning: Reference `fig:threshold_options' on page 27 undefined on input line 73.
-
-[27 <./images/adaptive_gaussian.png> <./images/thresholding_options.png>]
-
-LaTeX Warning: Citation `appendix:image_processing' on page 28 undefined on input line 76.
-
-
-LaTeX Warning: Citation `processing:pre-line' on page 28 undefined on input line 76.
-
-
-LaTeX Warning: Reference `' on page 28 undefined on input line 79.
-
-<images/removed_lines_still_noise.png, id=157, 409.53pt x 604.2575pt>
-File: images/removed_lines_still_noise.png Graphic file (type png)
- <use images/removed_lines_still_noise.png>
-Package pdftex.def Info: images/removed_lines_still_noise.png used on input line 100.
-(pdftex.def)             Requested size: 409.52899pt x 604.25603pt.
- [28] [29 <./images/removed_lines_still_noise.png>] <images/hard_image.png, id=166, 1201.48875pt x 747.79375pt>
-File: images/hard_image.png Graphic file (type png)
- <use images/hard_image.png>
-Package pdftex.def Info: images/hard_image.png used on input line 120.
-(pdftex.def)             Requested size: 360.44942pt x 224.33984pt.
-
-
-LaTeX Warning: Reference `appendix:image_processing' on page 30 undefined on input line 125.
-
-[30 <./images/hard_image.png>]
-Overfull \hbox (127.12636pt too wide) in paragraph at lines 133--134
-[]\OT1/ptm/m/n/10.95 Specific files for-mats were re-quired dur-ing the train-ing pro-cess with Tesser-act; \OT1/pcr/m/n/10.95 <lang>.<font>.exp<number>.tiff
- []
-
-
-LaTeX Warning: Reference `' on page 31 undefined on input line 135.
-
-<images/box_editor.png, id=171, 1273.75874pt x 710.655pt>
-File: images/box_editor.png Graphic file (type png)
- <use images/box_editor.png>
-Package pdftex.def Info: images/box_editor.png used on input line 139.
-(pdftex.def)             Requested size: 426.79134pt x 238.10614pt.
- [31 <./images/box_editor.png>]
-Overfull \hbox (19.62633pt too wide) in paragraph at lines 150--152
-\OT1/ptm/m/n/10.95 im-age was trained on a new lan-guage, \OT1/pcr/m/n/10.95 eng.ryan.exp2a \OT1/ptm/m/n/10.95 along with the com-mand \OT1/pcr/m/n/10.95 batch.nochop
- []
-
-
-Overfull \hbox (33.8273pt too wide) in paragraph at lines 155--156
-\OT1/ptm/m/n/10.95 from the new ex-am-ples. To aid in the iden-ti-fi-ca-tion of the pos-si-ble char-ac-ters \OT1/pcr/m/n/10.95 unicharset[]extractor
- []
-
-[32]
-
-LaTeX Warning: Reference `' on page 33 undefined on input line 171.
-
-[33]
-
-LaTeX Warning: Reference `fig:tesseract_initial' on page 34 undefined on input line 187.
-
-<images/tesseract_first.png, id=182, 260.975pt x 181.67876pt>
-File: images/tesseract_first.png Graphic file (type png)
- <use images/tesseract_first.png>
-Package pdftex.def Info: images/tesseract_first.png used on input line 191.
-(pdftex.def)             Requested size: 260.97437pt x 181.6783pt.
- <images/tesseract_colour.png, id=183, 268.00125pt x 328.22626pt>
-File: images/tesseract_colour.png Graphic file (type png)
- <use images/tesseract_colour.png>
-Package pdftex.def Info: images/tesseract_colour.png used on input line 203.
-(pdftex.def)             Requested size: 268.00058pt x 328.22545pt.
- [34 <./images/tesseract_first.png>] [35 <./images/tesseract_colour.png>] <images/saved_to_calendar.png, id=193, 671.50874pt x 365.365pt>
-File: images/saved_to_calendar.png Graphic file (type png)
- <use images/saved_to_calendar.png>
-Package pdftex.def Info: images/saved_to_calendar.png used on input line 247.
-(pdftex.def)             Requested size: 201.45418pt x 109.61034pt.
- [36] [37 <./images/saved_to_calendar.png>]) [38]
-\openout2 = `Chapter4/chapter4.aux'.
-
- (./Chapter4/chapter4.tex
-Chapter 4.
-<images/tdd.png, id=205, 447.6725pt x 269.005pt>
-File: images/tdd.png Graphic file (type png)
- <use images/tdd.png>
-Package pdftex.def Info: images/tdd.png used on input line 18.
-(pdftex.def)             Requested size: 223.8357pt x 134.50217pt.
- [39
-
-
-
- <./images/tdd.png>] (/usr/local/texlive/2015/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2014/09/06 1.5e listings language file
-) [40]
-LaTeX Font Info:    Font shape `OT1/pcr/m/it' in size <10.95> not available
-(Font)              Font shape `OT1/pcr/m/sl' tried instead on input line 57.
-
-
-LaTeX Warning: Reference `lst:mock2' on page 41 undefined on input line 66.
-
-
-LaTeX Warning: Reference `appendix:test_data' on page 41 undefined on input line 82.
-
-[41] <images/unit_test_user.png, id=218, 740.7675pt x 105.39375pt>
-File: images/unit_test_user.png Graphic file (type png)
- <use images/unit_test_user.png>
-Package pdftex.def Info: images/unit_test_user.png used on input line 97.
-(pdftex.def)             Requested size: 426.79134pt x 60.72314pt.
-
-
-LaTeX Warning: Reference `section:design' on page 42 undefined on input line 107.
-
-
-LaTeX Warning: Reference `appendix:test_results' on page 42 undefined on input line 113.
-
-
-LaTeX Warning: Reference `appendix:integration_tests' on page 42 undefined on input line 113.
-
-[42 <./images/unit_test_user.png>] <images/acceptance_test_1.png, id=223, 1165.35374pt x 98.3675pt>
-File: images/acceptance_test_1.png Graphic file (type png)
- <use images/acceptance_test_1.png>
-Package pdftex.def Info: images/acceptance_test_1.png used on input line 152.
-(pdftex.def)             Requested size: 426.79134pt x 36.02464pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-LaTeX Warning: Reference `appendix:test_results' on page 43 undefined on input line 157.
-
-
-LaTeX Warning: Reference `appendix:acceptance' on page 43 undefined on input line 157.
-
-[43] <images/user_response.png, id=227, 572.1375pt x 296.10625pt>
-File: images/user_response.png Graphic file (type png)
- <use images/user_response.png>
-Package pdftex.def Info: images/user_response.png used on input line 176.
-(pdftex.def)             Requested size: 286.06804pt x 148.05275pt.
- [44 <./images/acceptance_test_1.png> <./images/user_response.png>] <images/tesseract_testing.png, id=233, 414.54875pt x 243.91125pt>
-File: images/tesseract_testing.png Graphic file (type png)
- <use images/tesseract_testing.png>
-Package pdftex.def Info: images/tesseract_testing.png used on input line 188.
-(pdftex.def)             Requested size: 248.73116pt x 146.34787pt.
-
-Overfull \hbox (7.29918pt too wide) in paragraph at lines 236--237
+Overfull \hbox (119.45364pt too wide) in paragraph at lines 218--220
  [][] 
  []
 
+[10]
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+LaTeX Warning: Reference `' on page 11 undefined on input line 226.
+
+[11 <./images/homepage_wiremock.pdf>] [12]) [13] [14
 
 
-LaTeX Warning: Reference `appendix:tesseract' on page 45 undefined on input line 241.
+]
+\openout2 = `Appendix1/appendix1.aux'.
+
+ (./Appendix1/appendix1.tex
+Appendix A.
+Missing character: There is no Ð in font ptmr7t!
+Missing character: There is no Õ in font ptmr7t!
+
+LaTeX Warning: Citation `apache_poi' on page 15 undefined on input line 12.
 
 
-LaTeX Warning: Reference `appendix:tesseract_table' on page 45 undefined on input line 241.
+LaTeX Warning: Citation `apache_license' on page 15 undefined on input line 13.
 
-) [45 <./images/tesseract_testing.png>] [46]
-\openout2 = `Chapter5/chapter5.aux'.
+) [15
 
- (./Chapter5/chapter5.tex
-Chapter 5.
-[47
+
+]
+\openout2 = `Appendix2/appendix2.aux'.
+
+ (./Appendix2/appendix2.tex
+Appendix B.
+) [16
 
 
 
 ]
+\openout2 = `Appendix3/appendix3.aux'.
 
-LaTeX Warning: Citation `citeulike:1402014' on page 48 undefined on input line 59.
+ (./Appendix3/appendix3.tex
+Appendix C.
+<images/test_acceptance_homepage.png, id=110, 837.1275pt x 77.28876pt>
+File: images/test_acceptance_homepage.png Graphic file (type png)
+ <use images/test_acceptance_homepage.png>
+Package pdftex.def Info: images/test_acceptance_homepage.png used on input line 16.
+(pdftex.def)             Requested size: 426.79134pt x 39.40376pt.
+File: images/test_acceptance_homepage.png Graphic file (type png)
+ <use images/test_acceptance_homepage.png>
+Package pdftex.def Info: images/test_acceptance_homepage.png used on input line 33.
+(pdftex.def)             Requested size: 426.79134pt x 39.40376pt.
+ [17
 
-[48]
-Overfull \hbox (8.59723pt too wide) in paragraph at lines 64--65
-\OT1/ptm/m/n/10.95 During the project there were times in which there were feel-ings that the Flask, the micro-framework,
+
+
+ <./images/test_acceptance_homepage.png>] <images/test_acceptance_meta_data_form.png, id=115, 1121.18875pt x 340.27126pt>
+File: images/test_acceptance_meta_data_form.png Graphic file (type png)
+ <use images/test_acceptance_meta_data_form.png>
+Package pdftex.def Info: images/test_acceptance_meta_data_form.png used on input line 42.
+(pdftex.def)             Requested size: 426.79134pt x 129.52768pt.
+ <images/test_acceptance_edit_meta_data.png, id=116, 1153.30875pt x 103.38625pt>
+File: images/test_acceptance_edit_meta_data.png Graphic file (type png)
+ <use images/test_acceptance_edit_meta_data.png>
+Package pdftex.def Info: images/test_acceptance_edit_meta_data.png used on input line 50.
+(pdftex.def)             Requested size: 426.79134pt x 38.2586pt.
+ <images/test_acceptance_search.png, id=117, 891.33pt x 128.48pt>
+File: images/test_acceptance_search.png Graphic file (type png)
+ <use images/test_acceptance_search.png>
+Package pdftex.def Info: images/test_acceptance_search.png used on input line 58.
+(pdftex.def)             Requested size: 426.79134pt x 61.51874pt.
+ <images/test_acceptance_view_notes.png, id=118, 736.7525pt x 49.18375pt>
+File: images/test_acceptance_view_notes.png Graphic file (type png)
+ <use images/test_acceptance_view_notes.png>
+Package pdftex.def Info: images/test_acceptance_view_notes.png used on input line 67.
+(pdftex.def)             Requested size: 426.79134pt x 28.4913pt.
+ [18 <./images/test_acceptance_meta_data_form.png> <./images/test_acceptance_edit_meta_data.png> <./images/test_acceptance_search.png>] <images/test_acceptance_show_note.png, id=125, 989.6975pt x 155.58125pt>
+File: images/test_acceptance_show_note.png Graphic file (type png)
+ <use images/test_acceptance_show_note.png>
+Package pdftex.def Info: images/test_acceptance_show_note.png used on input line 75.
+(pdftex.def)             Requested size: 426.79134pt x 67.09091pt.
+
+<images/test_integration_add_edit_meta_data.png, id=126, 1056.94875pt x 297.11pt>
+File: images/test_integration_add_edit_meta_data.png Graphic file (type png)
+ <use images/test_integration_add_edit_meta_data.png>
+Package pdftex.def Info: images/test_integration_add_edit_meta_data.png used on input line 86.
+(pdftex.def)             Requested size: 426.79134pt x 119.97073pt.
+ <images/test_integration_homepage.png, id=127, 892.33376pt x 107.40125pt>
+File: images/test_integration_homepage.png Graphic file (type png)
+ <use images/test_integration_homepage.png>
+Package pdftex.def Info: images/test_integration_homepage.png used on input line 94.
+(pdftex.def)             Requested size: 426.79134pt x 51.36845pt.
+ <images/test_integration_logout.png, id=128, 854.19125pt x 87.32625pt>
+File: images/test_integration_logout.png Graphic file (type png)
+ <use images/test_integration_logout.png>
+Package pdftex.def Info: images/test_integration_logout.png used on input line 102.
+(pdftex.def)             Requested size: 426.79134pt x 43.63103pt.
+ [19 <./images/test_acceptance_view_notes.png> <./images/test_acceptance_show_note.png> <./images/test_integration_add_edit_meta_data.png> <./images/test_integration_homepage.png>] <images/test_integration_oauth.png, id=136, 788.9475pt x 49.18375pt>
+File: images/test_integration_oauth.png Graphic file (type png)
+ <use images/test_integration_oauth.png>
+Package pdftex.def Info: images/test_integration_oauth.png used on input line 110.
+(pdftex.def)             Requested size: 426.79134pt x 26.6061pt.
+ <images/test_integration_search.png, id=137, 883.3pt x 99.37125pt>
+File: images/test_integration_search.png Graphic file (type png)
+ <use images/test_integration_search.png>
+Package pdftex.def Info: images/test_integration_search.png used on input line 118.
+(pdftex.def)             Requested size: 426.79134pt x 48.01456pt.
+ <images/test_integration_show_note.png, id=138, 858.20625pt x 73.27374pt>
+File: images/test_integration_show_note.png Graphic file (type png)
+ <use images/test_integration_show_note.png>
+Package pdftex.def Info: images/test_integration_show_note.png used on input line 126.
+(pdftex.def)             Requested size: 426.79134pt x 36.43999pt.
+ <images/test_integration_upload.png, id=139, 874.26625pt x 211.79124pt>
+File: images/test_integration_upload.png Graphic file (type png)
+ <use images/test_integration_upload.png>
+Package pdftex.def Info: images/test_integration_upload.png used on input line 134.
+(pdftex.def)             Requested size: 426.79134pt x 103.39081pt.
+
+<images/test_integration_user.png, id=140, 764.8575pt x 43.16125pt>
+File: images/test_integration_user.png Graphic file (type png)
+ <use images/test_integration_user.png>
+Package pdftex.def Info: images/test_integration_user.png used on input line 142.
+(pdftex.def)             Requested size: 426.79134pt x 24.08385pt.
+ [20 <./images/test_integration_logout.png> <./images/test_integration_oauth.png> <./images/test_integration_search.png> <./images/test_integration_show_note.png> <./images/test_integration_upload.png>] <images/test_integration_view_all_notes.png, id=149, 931.48pt x 56.21pt>
+File: images/test_integration_view_all_notes.png Graphic file (type png)
+ <use images/test_integration_view_all_notes.png>
+Package pdftex.def Info: images/test_integration_view_all_notes.png used on input line 150.
+(pdftex.def)             Requested size: 426.79134pt x 25.75484pt.
+) [21 <./images/test_integration_user.png> <./images/test_integration_view_all_notes.png>]
+\openout2 = `Appendix4/appendix4.aux'.
+
+ (./Appendix4/appendix4.tex
+Appendix D.
+) [22
+
+
+
+]
+\openout2 = `Appendix5/appendix5.aux'.
+
+ (./Appendix5/appendix5.tex
+Appendix E.
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 6.
+(/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/omsptm.fd
+File: omsptm.fd 
+)
+LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 6.
+
+Overfull \hbox (13.40222pt too wide) in paragraph at lines 25--26
+[][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-[49]
-LaTeX Font Info:    Try loading font information for TS1+ptm on input line 99.
- (/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/ts1ptm.fd
-File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
-) [50]
-
-LaTeX Warning: Reference `fig:graph' on page 51 undefined on input line 109.
-
-[51] [52]) [53] [54
+[23
 
 
-] (./dissertation.bbl
+
+]) [24]
+\openout2 = `Appendix6/appendix6.aux'.
+
+ (./Appendix6/appendix6.tex
+Appendix F.
+<images/pre-line-editing.png, id=165, 362.35374pt x 407.5225pt>
+File: images/pre-line-editing.png Graphic file (type png)
+ <use images/pre-line-editing.png>
+Package pdftex.def Info: images/pre-line-editing.png used on input line 8.
+(pdftex.def)             Requested size: 362.35286pt x 407.5215pt.
+ [25
+
+
+
+]
+Overfull \vbox (32.78749pt too high) has occurred while \output is active []
+
+ [26 <./images/pre-line-editing.png>] <images/blue_identified.png, id=173, 312.16624pt x 550.055pt>
+File: images/blue_identified.png Graphic file (type png)
+ <use images/blue_identified.png>
+Package pdftex.def Info: images/blue_identified.png used on input line 17.
+(pdftex.def)             Requested size: 312.16548pt x 550.05365pt.
+) [27 <./images/blue_identified.png>]
+\openout2 = `Appendix7/appendix7.aux'.
+
+ (./Appendix7/appendix7.tex
+Appendix G.
+<images/class_diagram.png, id=178, 2374.8725pt x 1519.6775pt>
+File: images/class_diagram.png Graphic file (type png)
+ <use images/class_diagram.png>
+Package pdftex.def Info: images/class_diagram.png used on input line 8.
+(pdftex.def)             Requested size: 2374.86673pt x 1519.67381pt.
+
+Overfull \hbox (1948.0754pt too wide) in paragraph at lines 8--10
+ [][] 
+ []
+
+) [28
+
+
+
+]
+Overfull \vbox (1144.9398pt too high) has occurred while \output is active []
+
+ [29 <./images/class_diagram.png>]
+\openout2 = `Appendix8/appendix8.aux'.
+
+ (./Appendix8/appendix8.tex
+Appendix H.
+<images/google_calendar_service.pdf, id=187, 793.96625pt x 1358.07375pt>
+File: images/google_calendar_service.pdf Graphic file (type pdf)
+ <use images/google_calendar_service.pdf>
+Package pdftex.def Info: images/google_calendar_service.pdf used on input line 8.
+(pdftex.def)             Requested size: 793.96431pt x 1358.07043pt.
+
+Overfull \hbox (367.17297pt too wide) in paragraph at lines 8--10
+ [][] 
+ []
+
+[30
+
+
+
+]
+Overfull \vbox (759.67293pt too high) has occurred while \output is active []
+
+ [31 <./images/google_calendar_service.pdf>] <images/upload_note_wire_frame.pdf, id=197, 1163.34625pt x 1404.24625pt>
+File: images/upload_note_wire_frame.pdf Graphic file (type pdf)
+ <use images/upload_note_wire_frame.pdf>
+Package pdftex.def Info: images/upload_note_wire_frame.pdf used on input line 16.
+(pdftex.def)             Requested size: 1163.34343pt x 1404.24283pt.
+
+Overfull \hbox (736.5521pt too wide) in paragraph at lines 16--18
+ [][] 
+ []
+
+)
+Overfull \vbox (839.38008pt too high) has occurred while \output is active []
+
+ [32 <./images/upload_note_wire_frame.pdf>]
+\openout2 = `Appendix9/appendix9.aux'.
+
+ (./Appendix9/appendix9.tex
+Appendix I.
+
+Underfull \hbox (badness 10000) in paragraph at lines 9--9
+[]|\OT1/ptm/m/n/10.95 Story
+ []
+
+
+LaTeX Warning: Float too large for page by 14.53384pt on input line 40.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<images/sprint-5-burndownchart.png, id=204, 2340.745pt x 481.8pt>
+File: images/sprint-5-burndownchart.png Graphic file (type png)
+ <use images/sprint-5-burndownchart.png>
+Package pdftex.def Info: images/sprint-5-burndownchart.png used on input line 45.
+(pdftex.def)             Requested size: 2340.7393pt x 481.79881pt.
+
+Overfull \hbox (1913.94797pt too wide) in paragraph at lines 45--47
+ [][] 
+ []
+
+[33
+
+
+
+] <images/overall-burndown.png, id=208, 1698.345pt x 283.0575pt>
+File: images/overall-burndown.png Graphic file (type png)
+ <use images/overall-burndown.png>
+Package pdftex.def Info: images/overall-burndown.png used on input line 53.
+(pdftex.def)             Requested size: 1698.34087pt x 283.0568pt.
+
+Overfull \hbox (1271.54953pt too wide) in paragraph at lines 53--55
+ [][] 
+ []
+
+) [34 <./images/sprint-5-burndownchart.png>] [35 <./images/overall-burndown.png>] [36] (./dissertation.bbl
 Missing character: There is no Ã in font ptmr7t!
 Missing character: There is no ¢ in font ptmr7t!
 Missing character: There is no Â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no Â in font ptmr7t!
 Missing character: There is no ” in font ptmr7t!
- [55
+ [37
+
 
 ]
 Underfull \hbox (badness 1112) in paragraph at lines 142--144
@@ -1091,7 +1119,7 @@ Missing character: There is no Â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no Â in font ptmr7t!
 Missing character: There is no ” in font ptmr7t!
-[56]
+[38]
 Missing character: There is no Â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no Â in font ptmr7t!
@@ -1116,7 +1144,7 @@ Underfull \hbox (badness 2418) in paragraph at lines 203--205
 []\OT1/ptm/m/n/10.95 C. Heer, ``Flask-Testing  Flask-Testing 0.3 doc-u-men-ta-tion,'' $http : / / pythonhosted . org /
  []
 
-[57]
+[39]
 Underfull \hbox (badness 10000) in paragraph at lines 245--248
 []\OT1/ptm/m/n/10.95 ------, ``Take hand-writ-ten notes in OneNote 2016 for Win-
  []
@@ -1140,12 +1168,12 @@ Missing character: There is no Â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no Â in font ptmr7t!
 Missing character: There is no ” in font ptmr7t!
-[58]
+[40]
 Underfull \hbox (badness 4036) in paragraph at lines 355--358
 []\OT1/ptm/m/n/10.95 M. G. Soft-ware, ``Plan-ning Poker: Ag-ile Es-ti-mat-ing Made Easy,'' $https : / / www .
  []
 
-[59]
+[41]
 Underfull \hbox (badness 1237) in paragraph at lines 383--387
 \OT1/ptm/m/n/10.95 age-ment Sys-tems | Dig-i-talO-cean,'' $https : / / www . digitalocean . com / community / tutorials /
  []
@@ -1155,9 +1183,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 383--387
 \OT1/ptm/m/n/10.95 sqlite-[]vs-[]mysql-[]vs-[]postgresql-[]a-[]comparison-[]of-[]relational-[]database-[]management-[]systems$,
  []
 
-[60]) 
+[42]) 
 AED: lastpage setting LastPage
-[61] (./dissertation.aux (./cover.aux) (./declaration.aux) (./acknowledgements.aux) (./abstract.aux) (./Chapter1/chapter1.aux) (./Chapter2/chapter2.aux) (./Chapter3/chapter3.aux) (./Chapter4/chapter4.aux) (./Chapter5/chapter5.aux))
+[43] (./dissertation.aux (./cover.aux) (./declaration.aux) (./acknowledgements.aux) (./abstract.aux) (./Chapter2/chapter2.aux) (./Appendix1/appendix1.aux) (./Appendix2/appendix2.aux) (./Appendix3/appendix3.aux) (./Appendix4/appendix4.aux) (./Appendix5/appendix5.aux) (./Appendix6/appendix6.aux) (./Appendix7/appendix7.aux) (./Appendix8/appendix8.aux) (./Appendix9/appendix9.aux))
 
 LaTeX Warning: There were undefined references.
 
@@ -1166,18 +1194,18 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 25743 strings out of 493089
- 626642 string characters out of 6134842
- 786841 words of memory out of 5000000
- 28621 multiletter control sequences out of 15000+600000
- 36037 words of font info for 79 fonts, out of 8000000 for 9000
+ 24994 strings out of 493089
+ 610079 string characters out of 6134842
+ 749236 words of memory out of 5000000
+ 27847 multiletter control sequences out of 15000+600000
+ 27019 words of font info for 59 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,12n,102p,959b,1870s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/courier/ucrro8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on dissertation.pdf (70 pages, 4041037 bytes).
+ 62i,12n,77p,827b,1565s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on dissertation.pdf (52 pages, 2947486 bytes).
 PDF statistics:
- 325 PDF objects out of 1000 (max. 8388607)
- 197 compressed objects within 2 object streams
+ 268 PDF objects out of 1000 (max. 8388607)
+ 152 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 128 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 158 words of extra memory for PDF output out of 10000 (max. 10000000)
 

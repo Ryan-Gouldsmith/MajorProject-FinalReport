@@ -1,29 +1,40 @@
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1.1}{\ignorespaces A taxonomy showing the structure and classification of different types of notes and what is contained in a note.}}{2}
+\contentsline {figure}{\numberline {1.1}{\ignorespaces An example from Sprint 3, showing a CRC card at the very beginning of creation.}}{3}
+\contentsline {figure}{\numberline {1.2}{\ignorespaces An activity diagram to show how to save a note and the integrations with the calendar too.}}{4}
+\contentsline {figure}{\numberline {1.3}{\ignorespaces A example of how the model-view-controller(MVC) framework integrates.}}{5}
+\contentsline {figure}{\numberline {1.4}{\ignorespaces A diagram illustrating how extension in Jinga html template engine works.}}{6}
+\contentsline {figure}{\numberline {1.5}{\ignorespaces An activity diagram to depict the design of the algorithm for the image segmentation.}}{7}
+\contentsline {figure}{\numberline {1.6}{\ignorespaces The final result of the entity-relation diagram. After a series of iterations.}}{9}
+\contentsline {figure}{\numberline {1.7}{\ignorespaces From left to right, the homepage wiremock through the different iterations and the change of requirements}}{11}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces An example from Sprint 3, showing a CRC card at the very beginning of creation.}}{13}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces An activity diagram to show how to save a note and the integrations with the calendar too.}}{14}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces A example of how the model-view-controller(MVC) framework integrates.}}{16}
-\contentsline {figure}{\numberline {2.4}{\ignorespaces A diagram illustrating how extension in Jinga html template engine works.}}{17}
-\contentsline {figure}{\numberline {2.5}{\ignorespaces An activity diagram to depict the design of the algorithm for the image segmentation.}}{18}
-\contentsline {figure}{\numberline {2.6}{\ignorespaces The final result of the entity-relation diagram. After a series of iterations.}}{19}
-\contentsline {figure}{\numberline {2.7}{\ignorespaces From left to right, the homepage wiremock through the different iterations and the change of requirements}}{21}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces The use of OTSU binarisation technique on an image with a little shadow across the image}}{25}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Adaptive mean threshold algorithm on a note, showing binarisation but there is still noise in the image.}}{26}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Adaptive Gaussian used over the image, showing a lot smoother of an image}}{27}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces A variety of thresholding techniques used on the same note, showing adaptive threshold resulting in the best}}{27}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces An example of the above algorithm. There is still significant amounts of noise in the image.}}{29}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces A poor quality image has been binarised successfully with little noise.}}{30}
-\contentsline {figure}{\numberline {3.7}{\ignorespaces A example of the jTessBoxEditor being used identify characters in the tiff box file.}}{31}
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Tesseract being integrated into the application at a very basic level}}{34}
-\contentsline {figure}{\numberline {3.9}{\ignorespaces Coloured representation of the confidence of the words from the handwriting.}}{35}
-\contentsline {figure}{\numberline {3.10}{\ignorespaces Saving a note correctly to a calendar event item}}{37}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces The cycle of TDD during the development stages of the application}}{39}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Example Unit test for the user class. Each of the tests pass}}{42}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces An example of the acceptance tests running. It shows that the time to run the tests have increased considerably.}}{44}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces A pie chart from the Google forms questionnaire that the users conducted showing that they would not use the application for archiving their notes.}}{44}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces A simple framework showing the steps of analysing each of the training examples for a statistical measure for how successful the training process was.}}{45}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces A line-graph showing the success rate of the Tesseract training results over 12 examples.}}{46}
+\contentsline {figure}{\numberline {C.1}{\ignorespaces Acceptance test being conducted for the homepage, to ensure that the homepage displays the correct content.}}{17}
+\contentsline {figure}{\numberline {C.2}{\ignorespaces Acceptance test being conducted for the homepage, to ensure that the homepage displays the correct content.}}{18}
+\contentsline {figure}{\numberline {C.3}{\ignorespaces Acceptance test being performed to ensure that meta-data can be added to the correct note.}}{18}
+\contentsline {figure}{\numberline {C.4}{\ignorespaces Acceptance test being conducted so that a note's meta-data can be edited successfully.}}{18}
+\contentsline {figure}{\numberline {C.5}{\ignorespaces Acceptance test to ensure that a user can search for a module code and it displays their notes.}}{18}
+\contentsline {figure}{\numberline {C.6}{\ignorespaces Acceptance test being conducted to ensure that all the notes can be viewed.}}{19}
+\contentsline {figure}{\numberline {C.7}{\ignorespaces Acceptance test being conducted to make sure that a singular note can be viewed correctly.}}{19}
+\contentsline {figure}{\numberline {C.8}{\ignorespaces Integration tests carried on the add and edit meta url to ensure the system worked well together.}}{19}
+\contentsline {figure}{\numberline {C.9}{\ignorespaces Integration tests conducted on the homepage to ensure that the routes were accessible.}}{19}
+\contentsline {figure}{\numberline {C.10}{\ignorespaces Integration tests conducted for the logout route ensuring the routes are logged out.}}{20}
+\contentsline {figure}{\numberline {C.11}{\ignorespaces Integration tests conducted for the oAuth route which interacts with the Google API.}}{20}
+\contentsline {figure}{\numberline {C.12}{\ignorespaces Integration tests conducted for the search URL to ensure searching works correctly.}}{20}
+\contentsline {figure}{\numberline {C.13}{\ignorespaces Integration tests implemented to ensure that the note can be displayed properly. }}{20}
+\contentsline {figure}{\numberline {C.14}{\ignorespaces Integration tests implemented to ensure that a user can upload their images to the application. }}{20}
+\contentsline {figure}{\numberline {C.15}{\ignorespaces Integration tests implemented the user route is working correctly and a the user gets added to the database.}}{21}
+\contentsline {figure}{\numberline {C.16}{\ignorespaces Integration tests to make sure the view all notes url is working and getting the appropriate notes from the database.}}{21}
 \addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {F.1}{\ignorespaces The adaptive threshold on normal lined paper caused too much noise to be interfered with the Tesseract engine}}{26}
+\contentsline {figure}{\numberline {F.2}{\ignorespaces Blue lines in the adaptive threshold have been identified and removed to be a white colour.}}{27}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {G.1}{\ignorespaces The overall class diagram of the models directory, not including the controllers}}{29}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {H.1}{\ignorespaces An iterative approach to the CRC cards, used in the design of the Google calendar service. Each now card represents a new state in which the system has evolved.}}{31}
+\contentsline {figure}{\numberline {H.2}{\ignorespaces An example of progressive wireframes for the note upload leading to an overall design which could be implemented for the end user. }}{32}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {I.1}{\ignorespaces An example of the burndown chart for a sprint, showing areas where there may have been difficulty.}}{34}
+\contentsline {figure}{\numberline {I.2}{\ignorespaces The overall burndown of the sprints during the development period. This clearly shows a consistent work flow up until more knowledge of the project was achieved, going below the expectation line.}}{35}
