@@ -101,6 +101,10 @@ Very much like the function names of the classes, the test cases were as descrip
 
 Figure \ref{fig:unit_user} shows an example of the unit tests for the user class. The functions were decomposed and tests were associated for each function. In cases both edge-cases and normal expected results were selected.
 
+Unit tests were almost considered part of the design, after the story had been decided, more often than not it required an interaction with a model class. This lead to a breakdown from the tasks required to complete the user story. The breakdown of the CRC cards, helps to define roughly what functions needed to be included. This gave a better indication of what to test for each model. Incrementally, the tests for each function was added with edge-cases for specific functions implemented.
+
+Naturally, the design of the system evolved over time and needed to be refactored, but so did the model tests. Often changed would need to be made to the model tests to reflect the updated functions. Therefore, the tests proved as living documentation.
+
 Refer to appendix x for full unit test cases.
 
 \subsection{Integration testing}
@@ -156,7 +160,7 @@ The above example shows that unlike other tests, which test the specific feature
 
 In Figure \ref{fig:acceptance_test_1} it shows that the time to run to run 5 tests increased to 16.09 seconds; one of the disadvantages is the time taken to run the test-suite. Due to the complexity with loading data correctly to the view file, then these tests are imperative to ensure the user expects to see the correct content. For full acceptance tests refer to Appendix \ref{appendix:test_results}, section \ref{appendix:acceptance}.
 
-With acceptance tests the classes all subclass the \lstinline[basicstyle=\normalsize\ttfamily]{LiveServerClass} from the Flask-Testing package. This is different than the Integration and Unit tests as they use \lstinline[basicstyle=\normalsize\ttfamily]{TestClass}. The LiveServerClass allows an instance of the application to be loaded alongside selenium, removing the need for an external selenium server or for the tests to be ran with the server running. It was at this time in the sprints which a large refactor of the system occurred, accommodating for the automatic application launch. 
+With acceptance tests the classes all subclass the \lstinline[basicstyle=\normalsize\ttfamily]{LiveServerClass} from the Flask-Testing package. This is different than the Integration and Unit tests as they use \lstinline[basicstyle=\normalsize\ttfamily]{TestClass}. The LiveServerClass allows an instance of the application to be loaded alongside selenium, removing the need for an external selenium server or for the tests to be ran with the server running. It was at this time in the sprints which a large refactor of the system occurred, accommodating for the automatic application launch.
 
 \section{User Testing}
 Due to the application aiming to solve a problem, a set of potential user's were asked to perform a user study of the application. Their responses were analysed and their opinions on whether the software met their aims was collated.
