@@ -58,7 +58,7 @@ In parts of the application, information needed to be extracted from the databas
 \newline
 The \texttt{BinariseImage} class is the model representation of the image segmentation script, as seen in section \ref{imp:image_proces}. The class is called from the controller when a user uploads their image. The output from the class methods is a binarised image. There are a series of functions which integrate with OpenCV API's \cite{citeulike:13206865}, manipulating an image and performing morphological operations. The class has been constructed so most of the functions are modular.
 
-\subsection{CRC cards}
+\subsection{CRC cards} \label{design:CRC}
 To aid with the design, class collaboration cards (CRC) were drawn up for each feature. The user-story was decomposed into tasks and each of the tasks had associated CRC cards. This aided in thinking about the design for the class, as well as other classes it interacts with.  The overall design discussed in section \ref{architecture:class} is a result of the diligent planning with the CRC cards.
 
 \begin{figure}[H]
@@ -266,7 +266,7 @@ Flask and Bottle are classified as ``micro-frameworks'', offering a lightweight 
 
 As a result, Flask was chosen as the framework which will be used throughout the application. Spike work was completed into evaluating Flask's viability for the application quickly showing that it was a suitable tool to use.
 
-\subsection{Continuous integration tools}
+\subsection{Continuous integration tools} \label{tools:CI}
 Continuous Integration (CI) is normally used in development teams to ensure that all code is checked into the repository. As it was changed for a single person project, so did the point of using it; it was used to ensure every commit passed all tests when pushing to the repository.
 
 After identifying CI would be used in the analysis stage, an appropriate tool would have to be chosen. Jenkins \cite{citeulike:14023837} was an initial choice; it is a standalone Java application which a repository can be synced to.

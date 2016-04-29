@@ -20,9 +20,9 @@ Technology has advanced and people are becoming more connected with distributed 
 
 % Taxonomy of notes
 \subsection{Taxonomy of notes}
-When notes are made they will often be very different from any other note. Some are semi-structured and some are ``back of the envelope'' kind of notes. When thinking about an application to analyse notes, first there has to be consideration for what a note will consist of. A taxonomy, by definition, is a biological term for a classification of similar sections, showing how things are linked together \cite{citeulike:Taxonomy}.
+When notes are made they will often vary in structure from note to note. Some are semi-structured and some are ``back of the envelope'' kind of notes. When thinking about an application to analyse notes, first there has to be consideration for what a note will consist of. A taxonomy, by definition, is a biological term for a classification of similar sections, showing how things are linked together \cite{citeulike:Taxonomy}.
 
-Notes can be thought of as a collection of similar classifications, whether this is the pure textual descriptions of a note or whether this is purely pictorial form or a mixture of both. However, the notes are normally split into three distinct categories:
+As an initial step in this project an informal survey of note-takers was conducted. It was concluded that notes can be thought of as a collection of similar classifications, whether this is the pure textual descriptions of a note or whether this is purely pictorial form or a mixture of both. However, the notes are normally split into three distinct categories:
 \begin{enumerate}
 	\item Textual descriptions
 	\item Diagrams
@@ -35,7 +35,7 @@ Notes can be thought of as a collection of similar classifications, whether this
  \label{fig:taxonomyofnotes}
 \end{figure}
 
-In Figure \ref{fig:taxonomyofnotes} it shows a taxonomy of the different aspects which may form a part of a note. Textural descriptions form the core content of a note, this is essentially the important aspect that a note-taker is trying to remember and write down. Different note-takers form their notes in different ways, for example the headings may be underlined or hashed - if they were adopting a mark-down style approach. These sections help to show that there's a break in the content, and should be sub-sectioned. Textural points that are short, but important, are often characterised by a colon or a bullet point; these are the most common form of concise note building, in the classification.
+Figure \ref{fig:taxonomyofnotes} shows a taxonomy of the different aspects which may form a part of a note. Textural descriptions form the core content of a note, this is essentially the important aspect that a note-taker is trying to remember and write down. Different note-takers form their notes in different ways, for example the headings may be underlined or hashed - if they were adopting a mark-down style approach. These sections help to show that there's a break in the content, and should be sub-sectioned. Text points that are short, but important, are often characterised by a colon or a bullet point; these are the most common form of concise note building, in the classification.
 
 Coloured text is often used for a variety of reasons: it stands out on the page and improves memory retention of that text \cite{citeulike:14014177}. Both congruent and incongruent  coloured text helped to increase memory retention of post-graduate learners \cite{Olurinola_Tayo_2015}. With congruent text, Olurinola et al. showed that for 30 students with a 20 word list, a 10.9 mean retention rate was achieved and a 8.1 mean retention rate was achieved for incongruent text. The studies conducted show that coloured items would improve a user's retention rate in a lecture.
 
@@ -53,11 +53,11 @@ Analysing a user's handwriting is a complex process and one which requires lots 
 
 Another approach is to analyse handwriting via an OCR (optical character recognition) tool. Rakshit et al. \cite{citeulike:13920972} used the open-source tool, Tesseract \cite{citeulike:14014368} to analyse Roman scripts. The system was trained on handwriting identified from those scripts. Rakshit et al. recorded an 83.5\% accuracy on 1133 characters. It is noted in the paper that ``over-segmentation'' is a problem with the Tesseract engine.
 
-Another issue to overcome when analysing handwriting is disjointed characters; this is where sections of the letter are split off from the main body of the character, for example, the letter i. Rakshit et al. concludes that this is an issue which is ever-present in the Tesseract engine, with around a 53\% misclassification on this character alone.
+Another issue to overcome when analysing handwriting is disjointed characters; this is where sections of the letter are split off from the main body of the character, for example, the letter i. Rakshit et al. concludes that this is an issue which is ever-present in the Tesseract engine, with around a 53\% misclassification rate on this character alone.
 
-The problem of handwriting recognition has not been solved - but tools such as Tesseract offers support for improvement in this field. As Rakshit et al., discusses training had to be conducted with Tesseract to ensure that it can identify handwriting successfully. As a result, every implementation of handwriting recognition needs significant amounts of data of varying quality, so that a system can succeed. However, considering Tesseract's high recognition rate of 83.5\% experienced by Rakshit et al., it is a viable option to use for handwriting recognition.
+The problem of handwriting recognition has not been solved - but tools such as Tesseract offer support for improvement in this field. As Rakshit et al., discussed training had to be conducted with Tesseract to ensure that it can identify handwriting successfully. As a result, every implementation of handwriting recognition needs significant amounts of data of varying quality, so that a system can succeed. However, considering Tesseract's high text identification rate of 83.5\% experienced by Rakshit et al., it is a viable option to use for handwriting recognition.
 
-\subsubsection{Tesseract operations}
+\subsubsection{How Tesseract works}
 Tesseract was initially developed by HP, but has now been made into an open-source tool. Ray Smith gives an excellent overview of the Tesseract engine, the following section summaries how Tesseract works. Tesseract uses connected components to identify the outline of characters, these are then collated into blobs. These blobs are then collected into text lines, which are deconstructed into individual words.
 
 The process then goes through a two stage process, of identifying the words first - and the second identifies words which are not well known. Tesseract has the ability to identify textlines from skewed images. Therefore, as long as the image is text, a slight skewing of the image would not affect the ability to identify text. Textlines are found from the blobs, filtered and then sorted aided for tracking. Blobs are then processed in order checking for overlapping coordinates - from which they're either added to a new line, or appended to an existing line.
@@ -97,10 +97,10 @@ Google Keep \cite{citeulike:14014320} is a note taking application produced by G
 
 An important design feature that it does not offer is the support of a WYSIWG editor; a default text box has been preferred, offering a more raw feel to the application. They have the option of a ``remind me'' feature, which will get synced to their calendar as a reminder - but there's no easy way to add it to a calendar event.
 
-Google Keep seems as though it's more suited for TODO lists and jotting down quick notes, rather than an archiving tool suitable for substantial note taking. Nevertheless, the tagging with labels is a nice feature and the filter by image is a smart tool; this only shows notes with specific images. The simplicity of the user interface and the ease in which text can be extract provides a great reference going forward.
+Google Keep seems as though it's more suited for TODO lists and jotting down quick notes, rather than an archiving tool suitable for substantial note taking. Nevertheless, the tagging with labels is a nice feature and the filter by image is a smart tool; this only shows notes with specific images. The simplicity of the User Interface (UI) and the ease in which text can be extract provides a great reference.
 
 \subsubsection{Reflection on the systems}
-These three existing products are widely used by the every day note-taker. They have been developed to a high quality and give the user full control of what their notes can consist of. The automatically cropping of an image is an important feature and should be considered  for the application going forward. \textit{MapMyNotes} aims to try and give the user full control of their lecture notes content, so that they can find their notes easily.
+These three existing products are widely used by the every day note-taker. They have been developed to a high quality and give the user full control of what their notes can consist of. The automatically cropping of an image is an important feature and should be considered  for the application in the future. \textit{MapMyNotes} aims to try and give the user full control of their lecture notes content, so that they can find their notes easily.
 
 \textit{MapMyNotes} intends to differ from EverNote's text extraction by providing a one to one comparison of the text, rather than a list of potential words.
 
@@ -108,9 +108,9 @@ After the analysis of the existing products there are certain aspects which woul
 
 
 \subsection{Motivation}
-The author handwrites his notes during lectures and often are discarded in crowded notebooks until they are needed for an assignment or examination.
+The author handwrites his notes during lectures and these are often stored in notebooks, with no structure ,until they are needed for an assignment or examination.
 
-A calendar event is already stored for every lecture that the author goes to, so it would be useful if there was a way to associate each of the notes taken to that calendar event. This would ensure that all the information is located in one easy place that can be found again, instead of trawling through lots of paper and trying to find the content again. This would aid in reducing the chances of lost notes from paper slipping out of the notebook or pages being damaged due to rain or creases.
+A calendar event is already stored for every lecture that the author goes to, so it would be useful if there was a way to associate each of the notes taken to that calendar event. This would ensure that all the information is located in one easy place that can be found, instead of trawling through lots of paper and trying to find the content. This would aid in reducing the chances of lost notes from paper slipping out of the notebook or pages being damaged due to rain or creases.
 
 \section{Analysis}
 %Taking into account the problem and what you learned from the background work, what was your analysis of the problem? How did your analysis help to decompose the problem into the main tasks that you would undertake? Were there alternative approaches? Why did you choose one approach compared to the alternatives?
@@ -118,34 +118,57 @@ A calendar event is already stored for every lecture that the author goes to, so
 %In most cases, the agreed objectives or requirements will be the result of a compromise between what would ideally have been produced and what was felt to be possible in the time available. A discussion of the process of arriving at the final list is usually appropriate.
 As the project was originally proposed by Dr Harry Strange, a meeting was arranged to discuss the initial ideas that he wished the application would follow. It was here that it was highlighted that Dr Harry Strange wants to take a photo of his notes, archive them with specific data, make them searchable and integrate them with existing calendar entries he had for a given date.
 
-\subsection{Parsing a note}
-In conjunction with the information gathered a taxonomy of notes was collated, helping to deconstruct what a note consists of. Analysing the taxonomy produced a comprehensive breakdown of what could be parsed as text. After seeing that text formed a main component of a note the key efforts of the application would focus on parsing the text. Diagrams, graphs and images were considered when thinking of what should be extracted from an image, however this was placed as a task for the future. This required a task to investigate how to reliably extract the text from an image.
+\noindent
+\textbf{Parsing a note}
 
-\subsection{An OCR tool}
+
+In conjunction with the information gathered a taxonomy of notes was collated, helping to deconstruct what a note consists of. Analysing the taxonomy produced a comprehensive breakdown of what could be parsed as text. After seeing that text formed the main component of the note the primary efforts of the application would be focussed on parsing the text. Diagrams, graphs and image would be future work - due to time constraints.
+
+\noindent
+\textbf{An OCR tool}
+
+
 Handwriting recognition has been an active research project for a while. There could have been the possibility of creating a bespoke handwriting recognition tool, using machine learning techniques, but that would distract from the actual problem which is this available tool to archive notes.
 
 Therefore an OCR tool would have to be chosen to analyse the text. Choosing a sensible OCR tool with good recognition rates would be important - so a task was created to explore and look at possible solutions.
 
-\subsection{What to parse from the note}
-From research conducted into Google Keep it was clear that analysing the text would be a great aspect to include in the application. The real question is what should be parsed from the note? By looking at the overall structure of the application and what it entailed then it was agreed to just parse the note's associated meta-data: the title, lecturer, date and module code. Recalling that Google Keep parses all the text and EverNote gives a list of suggested words, it was decided that a tool would be developed to suggest the meta-data but it does not automatically tag the meta-data.
+\noindent
+\textbf{What to parse from the note}
 
-\subsection{Structuring of notes}
+
+From research conducted into Google Keep it was clear that analysing the text would be a great aspect to include in the application. The real question is what should be parsed from the note? By looking at the overall structure of the application and what it entailed then it was agreed to just parse the note's associated metadata: the title, lecturer, date and module code. Recalling that Google Keep parses all the text and EverNote gives a list of suggested words, it was decided that a tool would be developed to suggest the metadata but not automatically tag the metadata.
+
+\noindent
+\textbf{Structuring of notes}
+
+
 In conjunction with analysing what to parse, a sensible structure would have to be applied to notes used in the application. A task to create and find a good set of rules would have to be collated to ensure that notes could be parsed confidently. This reduced the complexity of incorporating natural language processing in the application, which would be implausible to be completed within the timeframe.
 
+\noindent
+\textbf{OCR for the authors handwriting}
 
-\subsection{OCR for the authors handwriting}
+
 After research into OCR technologies, such as Tesseract \cite{citeulike:14014368}, it was established that analysing handwriting is a complicated process. Instead of trying to train it on a lot of dummy data, it would be trained to recognise the author's handwriting. A task was created to train the user's handwriting data and this would run throughout the duration of the project.
 
 
-\subsection{What platform is most suitable}
+\noindent
+\textbf{What platform is most suitable}
+
+
 During the meeting with Dr Harry Strange one of the core features that was needed was for the application to be accessible regardless of where the user is. After the research was conducted all the aforementioned software tools have a web application version of their system. A mobile application was considered but only one version of the application would be made, either Android or iPhone, therefore preventing other phone users from using the application. A bespoke desktop application was considered for a long time, however, the user would have to ensure infrastructure decisions, such as databases, are correctly set up. As a result a web application was chosen - following research found; the next steps were to consider appropriate tools to use.
 
-\subsection{What should the application do}
+\noindent
+\textbf{What should the application do}
+
+
 From analysing all three of the chosen research systems, it was clearly identifiable that they all have the ability the view all notes, searching, deleting, adding and editing a note. Taking these ideas on-board, they were set as a high-level task and something that the core system \textit{must} do.
 
 Reflecting on the premise of the application, that it was to aid the organisation of lecture notes, it was concluded that the best way to search for notes would be by module code, as most University students would want to find specific module notes. This created the high level task that notes must be searchable by their module code.
 
-\subsection{Calendar integration}
+\noindent
+\textbf{Calendar integration}
+
+
 From evaluating the systems it was noticed that there was not a clear way to integrate into a calendar. Reflecting on the conversations with Dr Harry Strange, integrating with the calendar was important for keeping the different systems together. From an AYTM survey, in December 2015, \cite{citeulike:14010520} Google calendar is the most popular calendar application, therefore due to time constraints Google calendar was the choice of integration and other competitors such as Microsoft would not be implemented. This formulates the task of integrating the calendar into the application to save the url of the note to a specific event.
 
 %There should be a clear statement of the objectives of the work, which you will evaluate at the end of the work.
@@ -162,7 +185,7 @@ As a result of the analysis of the problem, the following high-level requirement
 \end{enumerate}
 
 \subsection{Compromising with objectives}
-Some additional compromises were made in-light of the analysis due to the complexity of the tasks at hand.
+Some additional compromises were made separate of the analysis due to the complexity of the tasks at hand.
 \begin{itemize}
 	\item It would be nice to have image extraction from a note and incorporating a WYSIWG editor into the application, like OneNote.
 	\item Full OCR on all the characters. This would then output the text to a blank canvas.
@@ -173,19 +196,19 @@ It is worth noting down that the project supervisor Dr Hannah Dee felt as though
 
 \section{Process}
 %You need to describe briefly the life cycle model or research method that you used. You do not need to write about all of the different process models that you are aware of. Focus on the process model that you have used. It is possible that you needed to adapt an existing process model to suit your project; clearly identify what you used and how you adapted it for your needs.
-Software projects often have a degree of uncertainty with requirements at the beginning, these projects lend themselves to an Agile approach. Whereas more structured applications with requirements which are well known are suited to a plan-driven approach.
+Software projects often have a degree of uncertainty with requirements at the beginning, these projects lend themselves to an Agile approach. More structured applications with requirements which are well known are suited to a plan-driven approach.
 
 For this project there are a lot of tasks which are not 100\% definable at the start of the project. In addition to this certain tasks, such as training the author's handwriting data, can not be truly estimated down to a fixed time. Often new requirements would emerge from weekly meetings and only high level requirements were in-place from the start of the project. As a result, a plan-driven approach such as the Waterfall model would not be appropriate, and an Agile methodology was implemented.
 
 \subsection{Scrum overview}
 Scrum \cite{citeulike:14014350} is a methodology used by teams to improve productivity where possible. Due to this being a single person project, a Scrum approach has to be modified. Sprints are set time-boxes where tasks are completed. These vary from one to four weeks in length but a shorter sprint means the developer can act on quicker feedback.
 
-Scrum organises its work into user stories to ensure client valued work is being completed. They are normally collected at the start of the project and put into the backlog, which is a collection of client valued work. At the start of each sprint user stories are selected from the backlog with an estimation on complexity performed. Finally, at the end of the sprint a review and retrospective is conducted to analyse the sprint, identifying what went well and what could be improved.
+Scrum organises its work into ``user stories'' to ensure client valued work is being completed. They are normally collected at the start of the project and put into the backlog, which is a collection of client valued work. At the start of each sprint user stories are selected from the backlog with an estimation on complexity performed. Finally, at the end of the sprint a review and retrospective is conducted to analyse the sprint, identifying what went well and what could be improved.
 
 \subsection{Adapted Scrum}
 During the project this methodology was embraced and adapted. A one week long sprint was adopted which coincided with a weekly supervisor meeting. Epics (a high level version of a story) were identified at the start of the project to reflect the work completed in the analysis phase.
 
-The epic was then broken down into user stories. Each user story was formulated as: ``As a \textless role\textgreater I want to \textless feature\textgreater so that \textless resolution\textgreater''. This gave specific client value that was known to have a purpose. Each of these stories were estimated on their complexity and compared to a ``goldilock'' task \footnote{A task which all other tasks are evaluated against.}.
+The epic was then broken down into user stories. Each user story was formulated as: ``As a \textless role\textgreater I want to \textless feature\textgreater so that \textless resolution\textgreater''. This gave specific client value that was known to have a purpose. Each of these stories were estimated on their complexity and compared to a ``goldilocks'' task \footnote{A task which all other tasks are evaluated against.}.
 
 For planning a sprint, the planning poker \cite{citeulike:14014357} technique was adopted; user-stories are estimated on a scale of 1, 2, 3, 5, 8 etc. When a task was estimated about 15 story points, it would be reflected upon to ensure the scope was fully understood - this would be broken down to sub-stories where appropriate.
 
@@ -195,7 +218,7 @@ Communication with the project supervisor was key to determine what needed to be
 
 The project was managed on the open source management tool Taiga.io \cite{citeulike:14014360} which was invaluable, and provided built in functionality such as burndown charts per sprint. This shows how well story points are being completed, in the form of velocity, and are used as an analytical tool for how well progression was being made.
 
-Daily stand-ups were informally conducted with a peer. Cut from the usual 15 minutes to around 5 minutes, the conversation helped to identify if there were any issues, what had been completed yesterday and what would be completed that day. This provided a good way to analyse what needed to be achieved and keep in perspective how the sprint was going.
+Daily stand-ups were informally conducted with a peer. Cut from the usual 15 minutes to around 5 minutes, the conversation helped to identify if there were any issues, what had been completed yesterday and what would be completed that day. Peers aided to listen to This provided a good way to analyse what needed to be achieved and keep in perspective how the sprint was going. This was reciprocated from both sides where both Major Projects were discussed. The primary aim was to identify the main tasks which needed to be completed that day to keep the project moving forward.
 
 \subsection{Incorporated Extreme Programming}
 In tandem with Scrum, Extreme programming \cite{citeulike:13915786} principles were integrated into the development process; merciless refactoring, continuous integration and test-driven development were borrowed from its principles.
@@ -206,7 +229,7 @@ Test-driven development (TDD) is the process of writing tests prior to the imple
 TDD follows three cycles: red, green, refactor. Initially the test fails, then it passes then refactoring is performed to keep the simplest system.
 
 \subsubsection{Continuous Integration}
-Continuous Integration tools were a core part of the process in this project. Typically used to ensure that code is checked into a repository it was used to ensure that the application could be built in an isolated environment and pass all the tests.
+Continuous Integration tools were a core part of the process in this project. Typically used to ensure that code is checked into a repository it was used to ensure that the application could be built in an isolated environment and pass all the tests. This would result in ensuring that new features were created from all code committed into the repository. See Section \ref{tools:CI} for further reference on how CI was used in the project.
 
 \subsubsection{CRC cards}
-Class, responsibilities and collaboration (CRC) cards \cite{citeulike:13398676} were used during the design section to consider how different classes were to be created and the responsibilities they share. This principle from Extreme Programming helped to keep the design simple and not convoluted.
+Class, responsibilities and collaboration (CRC) cards \cite{citeulike:13398676} were used during the design section to consider how different classes were to be created and the responsibilities they share. This principle from Extreme Programming helped to keep the design simple and not convoluted. See Section \ref{design:CRC} for further reference on how CRC cards were utilised.
