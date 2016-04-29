@@ -205,6 +205,10 @@ INPUT /usr/local/texlive/2015/texmf-dist/tex/latex/algorithmicx/algpseudocode.st
 INPUT /usr/local/texlive/2015/texmf-dist/tex/latex/algorithmicx/algpseudocode.sty
 INPUT /usr/local/texlive/2015/texmf-dist/tex/latex/algorithmicx/algorithmicx.sty
 INPUT /usr/local/texlive/2015/texmf-dist/tex/latex/algorithmicx/algorithmicx.sty
+INPUT /usr/local/texlive/2015/texmf-dist/tex/latex/caption/caption.sty
+INPUT /usr/local/texlive/2015/texmf-dist/tex/latex/caption/caption.sty
+INPUT /usr/local/texlive/2015/texmf-dist/tex/latex/caption/caption3.sty
+INPUT /usr/local/texlive/2015/texmf-dist/tex/latex/caption/caption3.sty
 INPUT mmp.sty
 INPUT mmp.sty
 INPUT /usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/palatino.sty
@@ -385,9 +389,9 @@ INPUT ./images/CRC_card.png
 INPUT images/saving_note_activity.png
 INPUT ./images/saving_note_activity.png
 INPUT ./images/saving_note_activity.png
-INPUT images/MVC.png
-INPUT ./images/MVC.png
-INPUT ./images/MVC.png
+INPUT images/MVC.pdf
+INPUT ./images/MVC.pdf
+INPUT ./images/MVC.pdf
 INPUT images/view_file_extension.png
 INPUT ./images/view_file_extension.png
 INPUT ./images/view_file_extension.png
