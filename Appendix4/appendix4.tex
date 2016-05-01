@@ -1,8 +1,8 @@
-\chapter{Tesseract data results}
+\chapter{Tesseract}
 \label{appendix:tesseract}
 This chapter shows the table outputting the results from the Tesseract training phase.
 
-\section{Table}
+\section{Tesseract data results}
 \label{appendix:tesseract_table}
 
 \begin{table}[h!]
@@ -26,4 +26,62 @@ This chapter shows the table outputting the results from the Tesseract training 
  \hline
  \end{tabular}
  \caption{A table which shows the statistics from the correctly identified characters during the training process.}
+\end{table}
+
+\section{Training examples} \label{tesseract:training}
+This section displays some of the training examples which are used in the image training process. Further examples can be found under the \texttt{tesseract\_training\_data/adaptive\_threshold\_training\_data}.
+\begin{figure}[H]
+  \centering
+  \begin{subfigure}[h]{0.35\textwidth}
+    \includegraphics[scale=0.35]{images/training_data_1}
+    \caption{}
+    \label{fig:first_tesseract}
+  \end{subfigure}
+
+  \hspace{1em}
+
+  \begin{subfigure}[h]{0.35\textwidth}
+    \includegraphics[scale=0.3]{images/training_data_2}
+    \caption{}
+    \label{fig:second_tesseract}
+  \end{subfigure}
+
+  \caption{An example of the binarised images used as part of the training data for the Tesseract engine.}
+  \label{fig:tesseract_training data}
+
+\end{figure}
+
+\section{Pre-adaptive threshold results} \label{tesseract:spike_results}
+\begin{table}[H]
+\centering
+\begin{tabular}{ ||p{3cm}||p{3cm}|p{3cm}|p{3cm}||  }
+ \hline
+ \multicolumn{4}{||c||}{Image pre-processing Spike work - Correctly identified characters} \\
+ \hline
+      Paper type & Greyscale & Original & Threshold\\
+ \hline
+  Blue-Lined & 18 &  36 & 75 \\
+  Lined & 0 & 67 & 36   \\
+  Plain & 0 & 0 & 63 \\
+ \hline
+\end{tabular}
+\caption{Table showing the results of correctly identified characters in an image over different paper styles and different image processing steps.}
+\label{table:pre-training}
+\end{table}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{ ||p{3cm}||p{3cm}|p{3cm}|p{3cm}||  }
+ \hline
+ \multicolumn{4}{||c||}{Image pre-processing Spike work - Detected Characters} \\
+ \hline
+      Paper type & Greyscale & Original & Threshold\\
+ \hline
+  Blue-Lined &  85  & 119 &  157 \\
+  Lined & 19 & 261 & 1186 \\
+  Plain & 18 &  15 & 169 \\
+ \hline
+\end{tabular}
+\caption{Table showing the results of the detected characters in an image over different paper styles and different image processing steps.}
+\label{table:pre-training}
 \end{table}

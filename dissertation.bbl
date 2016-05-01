@@ -213,14 +213,44 @@ GitHub, ``{Atom},'' 2016, last checked 28th April 2016. [Online]. Available:
  \begin{quotation}\noindent The hosting service for the priavte git repository
   for the application. \end{quotation}
 
+\bibitem{citeulike:13920943}
+\BIBentryALTinterwordspacing
+B.~M. Gonzalez, ``{Iris : a solution for executing handwritten code},''
+  Master's thesis, University of Agder, 2012. [Online]. Available:
+  \url{http://brage.bibsys.no/xmlui/handle/11250/137557}
+\BIBentrySTDinterwordspacing
+ \begin{quotation}\noindent A great reference material for creating an
+  application which would parse the text on the page using Tesseract. Used
+  prodominentely for understanding how to train Tesseract on handwritten text.s
+  \end{quotation}
+
+\bibitem{citeulike:14024993}
+\BIBentryALTinterwordspacing
+Google, ``{API Client Library for Python | Google Developers},'' 2016, last
+  checked 30th April 2016. [Online]. Available:
+  \url{https://developers.google.com/api-client-library/python/}
+\BIBentrySTDinterwordspacing
+ \begin{quotation}\noindent The client library which is used to interact with
+  the oAuth services and the queries to the external API's. \end{quotation}
+
 \bibitem{citeulike:14023831}
 \BIBentryALTinterwordspacing
-Google, ``{Color - Style - Google design guidelines},'' 2016, last checked 28th
+------, ``{Color - Style - Google design guidelines},'' 2016, last checked 28th
   April 2016. [Online]. Available:
   \url{https://www.google.com/design/spec/style/color.html}
 \BIBentrySTDinterwordspacing
  \begin{quotation}\noindent The colour guide was used for the CSS colours used
   throughout the application. \end{quotation}
+
+\bibitem{citeulike:14025272}
+\BIBentryALTinterwordspacing
+------, ``{Map My Notes Usability Questionnaire - Google Forms},'' 2016, last
+  checked 30th April 2016. [Online]. Available:
+  \url{https://docs.google.com/forms/d/10noZA1Jrq0H_ffLeGd1q8cf2le-m6uJGVSKhqWvNWoY}
+\BIBentrySTDinterwordspacing
+ \begin{quotation}\noindent The questionnaire which was created for part of a
+  usability study which participants would attempt to use the application.
+  \end{quotation}
 
 \bibitem{citeulike:14014320}
 ------, ``{Meet Google Keep, Save your thoughts, wherever you are - Keep
@@ -298,6 +328,15 @@ S.~Knerr, L.~Personnaz, and G.~Dreyfus, ``{Handwritten digit recognition by
   to identify handwritten characters on the European database and the U.S.
   postal service database. \end{quotation}
 
+\bibitem{citeulike:14024992}
+\BIBentryALTinterwordspacing
+F.~Lundh and Contributors, ``{Pillow - Pillow (PIL Fork) 3.2.0
+  documentation},'' 2016, last checked 30th April 2016. [Online]. Available:
+  \url{http://pillow.readthedocs.io/en/3.2.x/}
+\BIBentrySTDinterwordspacing
+ \begin{quotation}\noindent The Python image library which was used for the
+  EXIF data parsing. \end{quotation}
+
 \bibitem{citeulike:14014361}
 C.~Maiden, ``{An Introduction to Test Driven Development | Code Enigma},''
   \url{https://www.codeenigma.com/community/blog/introduction-test-driven-development},
@@ -360,9 +399,19 @@ O.~Olurinola and O.~Tayo, ``Colour in learning: Its effect on the retention
   better for the memory retention rates, than that of non-coloured text. Used
   during the taxonomy of notes section. \end{quotation}
 
+\bibitem{citeulike:14024957}
+\BIBentryALTinterwordspacing
+OpenCV., ``{Eroding and Dilating â OpenCV 2.4.13.0 documentation},'' 2016,
+  last checked 30th April 2016. [Online]. Available:
+  \url{http://docs.opencv.org/2.4/doc/tutorials/imgproc/erosion\_dilatation/erosion\_dilatation.html}
+\BIBentrySTDinterwordspacing
+ \begin{quotation}\noindent A reference for how dilation and errosion works in
+  the OpenCV, used for reference throughout the development and implementation.
+  \end{quotation}
+
 \bibitem{citeulike:14021409}
 \BIBentryALTinterwordspacing
-Opencv, ``{Miscellaneous Image Transformations â OpenCV 2.4.13.0
+Opencv, ``{Miscellaneous Image Transformations - OpenCV 2.4.13.0
   documentation},'' 2016, last Checked 25th April 2016. [Online]. Available:
   \url{http://docs.opencv.org/2.4/modules/imgproc/doc/miscellaneous\_transformations.html}
 \BIBentrySTDinterwordspacing
@@ -389,6 +438,15 @@ C.~{Patel}, A.~{Patel}, and D.~{Patel}, ``{Optical Character Recognition by
  \begin{quotation}\noindent A great paper on a Tesseract case study tool. It
   was used as a good comparsion for other OCR technologies as well as providing
   statistical results for the use of Tesseract. \end{quotation}
+
+\bibitem{citeulike:14024991}
+\BIBentryALTinterwordspacing
+D.~Peterson, ``{What is EXIF? :: Digital Photo Secrets},'' last checked 30th
+  April 2016. [Online]. Available:
+  \url{http://www.digital-photo-secrets.com/tip/38/what-is-exif/}
+\BIBentrySTDinterwordspacing
+ \begin{quotation}\noindent A good reference for explaining simple what EXIF
+  data is and the purpose of it. \end{quotation}
 
 \bibitem{citeulike:14010520}
 A.~Pilon, ``{Calendar Apps Stats: Google Calendar Named Most Popular | AYTM},''
@@ -432,6 +490,26 @@ Scrum.org, ``{Resources | Scrum.org - The home of Scrum},''
  \begin{quotation}\noindent The website for the scrum methodology principles.
   The website was used to reference the process and methodology which was
   adapted in the project \end{quotation}
+
+\bibitem{citeulike:14024253}
+\BIBentryALTinterwordspacing
+R.~Smith, ``{A simple and efficient skew detection algorithm via text row
+  accumulation},'' in \emph{Document Analysis and Recognition, 1995.,
+  Proceedings of the Third International Conference on}, vol.~2.\hskip 1em plus
+  0.5em minus 0.4em\relax IEEE, Aug. 1995, pp. 1145--1148 vol.2, last checked
+  29th April 2016. [Online]. Available:
+  \url{http://dx.doi.org/10.1109/icdar.1995.602124}
+\BIBentrySTDinterwordspacing
+ \begin{quotation}\noindent An excellent paper which describes how text lines
+  are extracted from an image in Tesseract. \end{quotation}
+
+\bibitem{33418}
+------, ``An overview of the tesseract ocr engine,'' in \emph{Proc. Ninth Int.
+  Conference on Document Analysis and Recognition (ICDAR)}, 2007, pp. 629--633,
+  last checked 29th April 2016.
+ \begin{quotation}\noindent An excellent paper which discusses how Tesseract
+  works with a comprehensive description of the details of Tesseract.
+  \end{quotation}
 
 \bibitem{citeulike:13988059}
 \BIBentryALTinterwordspacing
@@ -556,6 +634,15 @@ D.~Wells, ``{CRC Cards},''
   useful when considering the design of an application. Used as a reference
   material throughout the process, as well as during the chapter discussing the
   process. \end{quotation}
+
+\bibitem{citeulike:13926796}
+\BIBentryALTinterwordspacing
+T.-O. Wiki, ``{TrainingTesseract Â· tesseract-ocr/tesseract Wiki},'' last
+  Accessed 6th February 2016. [Online]. Available:
+  \url{https://github.com/tesseract-ocr/tesseract/wiki/TrainingTesseract}
+\BIBentrySTDinterwordspacing
+ \begin{quotation}\noindent A reference for how to train the different user
+  languages with Tesseract. \end{quotation}
 
 \bibitem{citeulike:14023830}
 \BIBentryALTinterwordspacing

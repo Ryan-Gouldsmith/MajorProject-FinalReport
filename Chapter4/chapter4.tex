@@ -6,41 +6,43 @@
 
 %The following sections indicate some areas you might include. Other sections may be more appropriate to your project.
 
-This chapter discusses the testing strategy which has been implemented on the project. This includes unit, acceptance and user testing utilised throughout various parts of the application.
+This chapter discusses the testing strategy which has been implemented on the project. This includes unit, integration acceptance and user testing utilised throughout the application. Additional testing strategies for the image segmentation and Tesseract training will be discussed.
 
 \section{Overall approach to testing}
-To recap, an agile approach was adopted throughout the project. From the process, test-driven-development was used throughout the application for almost all aspects of testing.
+To recap, an agile approach was adopted throughout the project. Therefore, test-driven-development (TDD) was used throughout the application for almost all aspects of testing.
 
 \subsection{Test-driven-development}
-Test-driven-development (TDD) aims to produce tests prior to the implementation of features. As a result, all implementation code is supported by a series of tests. Figure \ref{fig:tdd} shows the TDD cycle.
+TDD aims to ensure that tests are considered prior to the implementation of features. As a result, all implementation code is supported by a series of tests. Figure \ref{fig:tdd} shows the TDD cycle.
 
 \begin{figure}
   \includegraphics[scale=0.5]{images/tdd}
   \centering
-  \caption{The cycle of TDD during the development stages of the application}
+  \caption{The cycle of TDD during the development stages of the application.}
   \label{fig:tdd}
 \end{figure}
 
-Initially a test is created, this would then fail due to no implementation code. The following steps would be to ensure that the tests pass by adding the associated code needed to make sure that it passes. Afterwards refactoring occurs to ensure that design is kept simple and as clean as possible for the current implementation.
+Initially a test is created, this would then fail due to there being no implementation code to pass the test. The following steps would be to ensure that the tests pass by adding the associated code. After the test passes refactoring is conducted to ensure that design is kept as simple and as clean as possible for the current implementation.
 
-With TDD it could have gone one of two ways: a group of tests were created for a feature, or one test for one bit of functionality. The latter approach was chosen, ensuring that the design was carefully considered.
+Whilst adopting the TDD process there were two methods which could have been adopted:  a group of tests were created for a feature, or one test for one singular bit of functionality and tests are iteratively created. The latter approach was used to ensure that focus was only kept on the smallest aspect of the system.
 
-Using TDD allows for the domain of the problem to be considered before implementing code to solve the issue. The user-stories were deconstructed into a series of tasks. There tasks were then formulated into different tests (unit, integration and acceptance). The cycle was then repeated.
+
+TDD allows for the domain of the problem to be considered before implementing code to solve the issue. The user-stories were deconstructed into a series of tasks. There tasks were then formulated into different tests (unit, integration and acceptance). The cycle was repeated per feature.
+
 \section{Automated testing}
-One thing to note is that Flask's testing documentation is very sparse and is of low quality.
+It is worth noting that Flask's testing documentation is very sparse and not comprehensive on how to test a system fully.
 
-During the first few sprints of testing, pytest \cite{citeulike:14020583} was originally being used to create test classes, with test classes sub-classing  \lstinline[basicstyle=\normalsize\ttfamily]{unittest.TestCase}.
+During the first few sprints of testing, pytest \cite{citeulike:14020583} was originally being used to create test classes, with test classes sub-classing  \texttt{unittest.TestCase}.
 
-Flask tests were refactored mid-way through a series of sprints to use Flask-testing \cite{citeulike:14020588}. This offers better testing support for Flask application, allowing the creation of a fake application and providing the functionality to run a live server for testing, which would be needed for acceptance tests.
+Flask tests were refactored midway through the sprints to use Flask-testing \cite{citeulike:14020588}. This offered better testing support for Flask applications, allowing the creation of a fake application and providing the functionality to run a live server for testing. This live server would be needed for the acceptance testing.
 
 \section{Mocking tests}
-The purpose of mocking is to change the output of a function to a value which is returned every time \cite{citeulike:14020596}. It was established that certain tests would need to be mocked, because some data would change from test to test. It was identified that \textit{all} interactions with Google API's, any interactions with Tesseract and the Session would need to be mocked.
+The purpose of mocking is to change the output of a function to a value which is returned every time the test is called \cite{citeulike:14020596}. It was established that certain tests would need to be mocked, as the data returned would alter after every call. It was identified that \textit{all} interactions with Google API's, any interactions with Tesseract and the Session would need to be mocked.
 
-As discussed by Mathew Dale \cite{citeulike:14020597} when writing tests, mocks are needed because of external factors out of a developer's control. As the Google API does not support specific environment API's, such as production or development, then all URLs would be to a production URL. The issue this raises when testing is ensuring that the tests are isolated and pass every time. For example, the test could query the API once and pass the test, however on the next query it may fail due to a different return value; this requires  mocks to be used. The mock would return a specific value every time, ensuring consistency among tests.
+Dale \cite{citeulike:14020597} discusses writing tests and the need for mocks when external factors are out of the developer's control. As the Google API does not support specific environment API's, such as production or development, then all URLs are linking directly a production URL. Each test should be tested in isolation and each test should be independent of these external factors. For example, the test may query the API once and pass the test, however on the next query it may fail due to a different response; this case requires mocks to be used. The mock would return a specific value every time, ensuring consistency among tests.
 
-The principle is the same for testing Tesseract in the web application. If more training was conducted then the results from the test on the image would change, therefore the data was mocked from the returned text functions to provide consistency.
+The principle is the same for testing Tesseract in the web application. If more training was conducted, Tesseract would output a different response for a test image. This meant that the functions which interact with the image would need to be mocked, to return consistent results for every test.
 
-During the first few sprints, whilst understanding how mocks work with Python, there was a lot of duplication with the mocking services. The library mock \cite{citeulike:14020599} uses annotations above test functions to signal a mock value.
+Whilst establishing how mocks worked in Python there was a lot of duplication when mocking different classes. The library mock \cite{citeulike:14020599} was used for annotations, proving an annotation style syntax above test functions.
 
 \begin{lstlisting}[language=python, caption={An example of using mocks, following the annotation pattern}, label={lst:mock1}, breaklines, columns=fullflexible, keywordstyle=\color{blue}, basicstyle=\normalsize\ttfamily]
   @mock.object(GoogleOauthService, 'authorise')
@@ -50,9 +52,9 @@ During the first few sprints, whilst understanding how mocks work with Python, t
     calendar_response.return_value = some_more_json
 \end{lstlisting}
 
-In code example \ref{lst:mock1} shows the syntax which was initially used in the tests, for mocking. This would result in many of the tests becoming unreadable obfuscated. Additionally the do not repeat yourself (DRY) principle was violated, by duplicating much of the codebase.
+Listings \ref{lst:mock1} shows the syntax which was initially used during the mocking tests. This would result in many of the tests becoming unreadable and obfuscated. Additionally the Do not Repeat Yourself (DRY) principle was violated by duplicating large amounts of the testing codebase.
 
-\begin{lstlisting}[language=python, label={lst:mock2}, breaklines, columns=fullflexible, keywordstyle=\color{blue}, label={Mocks using the patch and start. It stops in the dear downs}, basicstyle=\normalsize\ttfamily]
+\begin{lstlisting}[language=python, label={lst:mock2}, breaklines, columns=fullflexible, keywordstyle=\color{blue}, caption={Mocks using the patch and start. It stops in the dear downs}, basicstyle=\normalsize\ttfamily]
     def setUp(self):
         # some code
         authorise_patch = mock.patch()
@@ -63,10 +65,10 @@ In code example \ref{lst:mock1} shows the syntax which was initially used in the
     def tearDown(self):
         mock.patch.stopAll()
 \end{lstlisting}
-Investigating the mock API documentation, patching object calls was discovered. Implementing this solution reduced the amount of code for mocking specific functions. The annotations were removed from the top of function tests. Initially it was not entirely clear how to implement these patch functions. Eventually the patch was included in the \lstinline[basicstyle=\normalsize\ttfamily]{setUp} and \lstinline[basicstyle=\normalsize\ttfamily]{tearDown} functions, as shown in example \ref{lst:mock2}.
 
+Looking for a more succinct solution in the mock API uncovered the option to patch object calls.By refactoring the test codebase to use patch calls, instead of annotations, the duplication on-top of every test function was eradicated. Initially, it was not entirely clear how to implement the patch calls into the testing system. It was eventually discovered that they were included in the \texttt{setUp} \footnote{A function which is run before each test has been run.} and \texttt{tearDown} \footnote{A function is run after each test has completed.}. An example is shown in \ref{lst:mock2}.
 
-Often when testing there needed to be way to alternate the output of a function. In the Python mock library side effects allowed the mock object to return different values.
+As the development increased, so did the need for further mocking enhancements. During integration testing especially, multiple functions were called most than once. In order to mock a series of return values then the ``side effects'' were implemented from the mock library.
 
 \begin{lstlisting}[language=python, label={lst:mock3}, breaklines, columns=fullflexible, keywordstyle=\color{blue}, basicstyle=\normalsize\ttfamily]
     def setUp(self):
@@ -79,18 +81,18 @@ Often when testing there needed to be way to alternate the output of a function.
         mock.patch.stopAll()
 \end{lstlisting}
 
-Figure \ref{lst:mock3} shows the use of the ``side effect'' API. From the above example, it outputs Google response first, then when \lstinline[basicstyle=\normalsize\ttfamily]{execute_request} is called for a second time \lstinline[basicstyle=\normalsize\ttfamily]{new_event} response is fired and so on. Examples of mocking data can be found in Appendix \ref{appendix:test_data}. An example usage of this would be for when the Google Calendar needed to get a user's events. Firstly, in the controller it would get a list of events and then it would get a singular event. Since the same function call was used, a test needed to be added to check the return values were indeed correct.
+Listings \ref{lst:mock3} displays an example use of the ``side effect'' API. In the example if first outputs a google response, then when \texttt{execute\_request} is called for a second time a new event response is returned and so on.
 
-Overall, mocking produced a substantial amount of the testing. It was not considered when designing the system that mocking would be needed, it was only when testing happened that it was realised it was needed. The tests were refactored to incorporate the mocking facilities.
+Another example of where ``side effects'' were used was with the Google Calendar. During the integration tests, there were times which getting events from the calendar were called more than once; it would first get a list of events and a singular event. As the same function was called multiple times to execute the request the ``side effects'' were needed; multiple JSON files were returned from the functions in the test. Examples of mocking data used for the Google integration can be found in Appendix \ref{appendix:test_data}.
+
+Mocking was heavily featured in the testing. As it was not considered during the initial design phase it took longer than expected to overcome the issues. Most of the testing codebase was massively refactored in the light of the change of mocking style.
 
 \subsection{Unit testing}
-A unit test is used for models where functions can be tested in isolation to ensure that they perform the correct operations. In the application unit tests were created for every model.
+Unit testing aims to isolate other interactions with the class and focus the testing on a specific function to ensure that the correct data value or operation is being performed. During the testing stage this was one of the core testing strategies.
 
-Sometimes there was a cross over between database transactions and testing specific functions. In these cases, using the actual database would not be used for testing as this would interfere with the actual data in the system.
+When testing the individual functions, there was often database transactions being tested. A live database would not be ideal to test against, therefore there needed to be a test database. In each of the tests \texttt{setUp} functions, the configuration was overwritten to use a test SQLite database. To fully ensure that previous tests were truly independently tested then the database was dropped and created before every test.
 
-The config was overwritten to include a test SQLite database. This ensured that a test database was used, which was cleared and created for every test. This allowed each test to be tested independently of one another.
-
-Very much like the function names of the classes, the test cases were as descriptive as possible. This formed part of the documentation of the application.
+Descriptive test names were the aim, to help to show a high-level of documentation in the system. With a well tested system, and detailed tests then it is easy to see what the system does and does not do.
 
 \begin{figure}[h!]
   \centering
@@ -99,27 +101,27 @@ Very much like the function names of the classes, the test cases were as descrip
   \label{fig:unit_user}
 \end{figure}
 
-Figure \ref{fig:unit_user} shows an example of the unit tests for the user class. The functions were decomposed and tests were associated for each function. In cases both edge-cases and normal expected results were selected.
+Figure \ref{fig:unit_user} shows an example of a selection of unit tests for the user class. Each of the tests considered one function in the user class to implement, whilst edge-case tests were considered too.
 
-Unit tests were almost considered part of the design, after the story had been decided, more often than not it required an interaction with a model class. This lead to a breakdown from the tasks required to complete the user story. The breakdown of the CRC cards, helps to define roughly what functions needed to be included. This gave a better indication of what to test for each model. Incrementally, the tests for each function was added with edge-cases for specific functions implemented.
+The testing as a whole could be considered part of the design of the application: after the story was broken down into a series of tasks, and the analysis of CRC cards was completed each function was written as a test. Whilst doing the unit tests, the core design decisions on what would be returned and what is expected of a function was decided - as well as descriptive function names. Each test would compare the output of the function with the expectation of the output.
 
-Naturally, the design of the system evolved over time and needed to be refactored, but so did the model tests. Often changed would need to be made to the model tests to reflect the updated functions. Therefore, the tests proved as living documentation.
+Over the course of the project, the unit tests evolved and so did the model classes. The unit tests were the core foundations for the application to be built upon. With adopting this approach, there are times which the unit tests need to be refactored to reflect the new design. Therefore, by keeping up to date with the design it would act as a form documentation for the system.
 
-Refer to appendix x for full unit test cases.
+An excerpt of unit tests can be found in Appendix \ref{appendix:test_results}, Section \ref{test:unit}.
 
 \subsection{Integration testing}
-Due to the application having external routes, then testing them to ensure the correct response codes was important. When breaking down the story, it was identified if there needed to be new routes tested or if the controller would change the purpose. If so these were the first tests written for the routing sections, and implemented from the design considerations in section \ref{section:design}.
+As the application made use of routing then tests to ensure the correct response codes were being returned was important. When breaking down the story, it was identified if there needed to be new routes tested or if the controller would change its functionality. If so these were the first tests written for the routing sections, and implemented from the design considerations in Section \ref{design:urls}.
 
-The tests consisted of checking that the response codes were correct, any redirects were correctly redirected; this tested to ensure the application flow was implemented correctly.
+The integration tests were important as it was testing the model components and data being brought together. The tests ensured that the different systems were compatible and performed the correct operations. Routing tests consisted of checking that the response codes were correct, any redirects were correctly redirected.
 
-Where there was interactions with the database in the routes, then tests were conducted to ensure the routes performed the correct persistence. For example, when posting to the meta-data URL, then checks were created to ensure that the module code was being persisted correctly.
+An example integration test from the activity diagram shown in Section \ref{design:user_interaction}, would be: once a POST request has been made to add note URL did the note correctly get saved with the associated metadata. This test would check for the persistence of the note, and that both data can be sent to the route and it had a specific outcome.
 
-Appendix \ref{appendix:test_results} section \ref{appendix:integration_tests} depicts the integration tests in the system.
+Appendix \ref{appendix:test_results} Section \ref{appendix:integration_tests} shows a selection of integration tests.
 
 \subsection{Handling sessions}
-One of the trickier aspects of testing was the handling of sessions. In parts of the application sessions are used to handle specific states of the system, i.e when a user's logged in.
+Session handling was a lot more complex than first anticipated. Throughout the application sessions are used to handle server-side states of the system: i.e, is the user logged in.
 
-During testing, sections of the system are tested in isolated environments. If the route to show all the notes was tested, it would require the user to be logged in - therefore storing data in the session. However, when testing this there will be no session set when running the test. Flask had a solution to testing the session handling \cite{citeulike:14020609}.
+When testing the session it would attempt to be tested in an isolated environment, like the unit tests. Integration tests threw a lot of errors when testing with sessions. For example, if a route was accessed but the session was not set then the test would error. To overcome this, sessions needed to be modified in the tests. As the integration tests were using Flask's \texttt{test\_client} context, then modifying the sessions was a little easier. Flask had a solution to testing the session handling \cite{citeulike:14020609}.
 
 \begin{lstlisting}[language=python, label={lst:session}, breaklines, columns=fullflexible, keywordstyle=\color{blue}, basicstyle=\normalsize\ttfamily, caption= {An example of how sessions were handled and modified in the tests.}]
   with self.client.session_transaction() as session:
@@ -128,18 +130,17 @@ During testing, sections of the system are tested in isolated environments. If t
 
 Figure \ref{lst:session}, displays an example on how the session had to be modified in the integration tests. After the session transaction context has exited then the session has been modified for that test.
 
-Acceptance testing initially proved to be problematic. When testing with the sessions, the selenium tests would not acknowledge that a session had been set, like in Figure \ref{lst:session}, causing the tests to fail. After a lot of problems, it was confirmed that the session helper would have to be mocked, in the \lstinline[basicstyle=\normalsize\ttfamily]{create_app} function, which is initialised when a test is created.
-
-Overall, session handling was one of the hardest aspects with testing to overcome to provide working tests.
-
+Acceptance testing initially proved to be problematic. The acceptance tests would not acknowledge that the session had been modified, like in Figure \ref{lst:session}, causing the tests to error. As there was a lack of documentation it was decided that the session helper would be mocked. By mocking the responses in the \texttt{create\_app} function, it enabled the sessions to be modified, allowing the acceptance tests to be run.
 \section{Acceptance testing}
-Acceptance tests evaluate the system as a whole. This includes testing to ensure that the front-end functionality is what is expected when the user views the web-page.
+Acceptance tests were created to check that the correct output was displayed for using the system. These tests ensured that the system integrated together, rendering the correct content and executing the correct operations.
 
-To implement these tests a tool would be needed to check what the application looked like on a web-page, the tool selected was selenium for Python \cite{citeulike:14020625}. It can integrate with the DOM (document object model), and perform automated browser testing.
+Each user story was broken down and throughout the testing process the acceptance tests would be the final tests added to check that the functionality was completely integrated. Selenium for Python \cite{citeulike:14020625} was used as the acceptance tool for interacting with the web page. By interacting with the document object model (DOM) it was able to test any dynamic HTML rendered.
 
-When testing with selenium there is the option to test with a standard browser, Chrome, Firefox etc, or it can be tested on a headless browser (via PhantomJS). A headless browser can access a webpage the same as Chrome, but it does not display a graphical user-interface \cite{citeulike:13983611}.
+Before the tests were written a browser type was selected for Selenium; Chrome, Firefox, or a headless browser (via phantomJS) could be selected. The headless browser was selected as it can perform the same interactions but it does not display a graphical UI, and is a little quicker \cite{citeulike:13983611}.
 
-An example of an acceptance test may follow a pattern like:
+Acceptance tests were created to extend the \texttt{LiveServerClass} from the Flask-Testing package. This differs from the Integration and Unit tests as those tests subclass \texttt{TestClass}. Using the \texttt{LiveServerClass} creates a server instance so Selenium can access it easily. This removes the need for an external Selenium sever.
+
+After the unit tests were written for a feature, the acceptance tests were added to ensure the systems combined together successfully. An example of an acceptance test from the user-story, search for a note is as follows:
 \begin{enumerate}
   \item Go to page /search.
   \item Find the search field.
@@ -149,7 +150,9 @@ An example of an acceptance test may follow a pattern like:
   \item Return whether it equals ``CS31310''
 \end{enumerate}
 
-The above example shows that unlike other tests, which test the specific feature or functionality, this test checks what is displayed to the user via interactions with the web browser. The test then passes or fails based on assertions. Another example of the selenium tests being useful was checking the output colour from Tesseract. The logic in the view file determined the colour and Selenium was able to confirm the logic was correct.
+Acceptance are unlike any of the other testing techniques used in the application; rather than testing for underlying functionality the principle is to test the content to the user is displayed correctly. The tests are evaluated against the content displayed.
+
+Another example of Selenium tests being beneficial was checking the output colour from Tesseract's confidence. The logic in the view file determined the colour and Selenium was able to confirm the logic was correct.
 
 \begin{figure}[h!]
   \centering
@@ -158,14 +161,14 @@ The above example shows that unlike other tests, which test the specific feature
   \label{fig:acceptance_test_1}
 \end{figure}
 
-In Figure \ref{fig:acceptance_test_1} it shows that the time to run to run 5 tests increased to 16.09 seconds; one of the disadvantages is the time taken to run the test-suite. Due to the complexity with loading data correctly to the view file, then these tests are imperative to ensure the user expects to see the correct content. For full acceptance tests refer to Appendix \ref{appendix:test_results}, section \ref{appendix:acceptance}.
+In Figure \ref{fig:acceptance_test_1} it shows that the time to run to five tests increased to 16.09 seconds; one of the disadvantages is the time taken to run the test-suite. Due to the complexity with loading data correctly to the view file, then these tests are imperative to ensure the user expects to see the correct content. For a selection of acceptance tests refer to Appendix \ref{appendix:test_results}, Section \ref{appendix:acceptance}.
 
-With acceptance tests the classes all subclass the \lstinline[basicstyle=\normalsize\ttfamily]{LiveServerClass} from the Flask-Testing package. This is different than the Integration and Unit tests as they use \lstinline[basicstyle=\normalsize\ttfamily]{TestClass}. The LiveServerClass allows an instance of the application to be loaded alongside selenium, removing the need for an external selenium server or for the tests to be ran with the server running. It was at this time in the sprints which a large refactor of the system occurred, accommodating for the automatic application launch.
+Overall, the acceptance tests were incrementally developed helping to aid the design of the frond-end through a series of tests and they proved an important tool when testing.
 
 \section{User Testing}
-Due to the application aiming to solve a problem, a set of potential user's were asked to perform a user study of the application. Their responses were analysed and their opinions on whether the software met their aims was collated.
+As the application was aiming to solve a problem, a set of potential users were asked to perform a user study of the application. Their responses was analysed and their opinions on whether the software met their aims was collated.
 
-Prior to the actual scheduled user-testing, feedback was given regarding the displaying of the Tesseract output confidence. These ``over the shoulder'' comments were along the lines of: ``It would be great if you could click the identified text and it would automatically populate the text boxes''. This was then implemented as a result from pre-user testing.
+Prior to the actual scheduled user-testing, feedback was given regarding the displaying of the Tesseract output confidence. These informal comments were along the lines of: ``It would be great if you could click the identified text and it would automatically populate the text boxes''. This was then implemented as a result from pre-user testing.
 
 Further issues which were identified during the user testing were:
 \begin{itemize}
@@ -173,19 +176,21 @@ Further issues which were identified during the user testing were:
   \item Uploading an image with a previously uploaded filename caused the application to display the old file.
 \end{itemize}
 
-These issues were caught and modified thanks to extensive user-testing of the application.
+These issues were caught and modified and changed from areas of the design which were potentially over looked.
 
 \begin{figure}[h!]
   \centering
   \includegraphics[scale=0.5]{images/user_response}
-  \caption{A pie chart from the Google forms questionnaire that the users conducted showing that they would not use the application for archiving their notes.}
+  \caption{A pie chart from the Google forms questionnaire \cite{citeulike:14025272} that the users conducted showing that they would not use the application for archiving their notes.}
   \label{fig:user_response}
 \end{figure}
 
-One interesting reflection of the user-case study was that people would not use the application, as shown in Figure \ref{fig:user_response}. They were quick to defend the applications quality, but the use-case for them taking notes was not present. They much preferred to write up their notes from the lecture for memory retention.
+An interesting reflection from the user study was that participants would not use the application, as shown in Figure \ref{fig:user_response}. They were quick to defend the applications quality, but the use-case for them taking notes was not present. They much preferred to write up their notes from the lecture for memory retention, so the application would not benefit them.
 
-\section{Tesseract Testing}
-Due to there being no code written for the Tesseract training process there were no formal tests conducted for this section. However, what could be tested was how well the Tesseract learnt as it progressed through the training process.
+There were positives to come out of the user testing where users agreed that it was simple to use and easy to navigate around and the websites presentation was well received. See Appendix \ref{} for user study results.
+
+\section{Tesseract testing}
+As Tesseract was a training process no additional code was written for this. An analysis of how well Tesseract learnt as it progressed through the training process can be represented.
 
 \begin{figure}[h!]
   \centering
@@ -194,7 +199,30 @@ Due to there being no code written for the Tesseract training process there were
   \label{fig:tesseract_framework}
 \end{figure}
 
-Figure \ref{fig:tesseract_framework} shows a simple framework for analysing how well Tesseract trained the data. After the statistics has been collated then a graph was constructed to show the trends.
+Figure \ref{fig:tesseract_framework} shows a simple framework for analysing how well Tesseract trained the data. After the statistics has been collated a graph was constructed to show data collected.
+
+
+Before the Tesseract training can be analysed it is worth acknowledging the test results from the spike work conducted at the start of the project which compares different thresholding algorithms on which one was suitable.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{ ||p{3cm}||p{3cm}|p{3cm}|p{3cm}||  }
+ \hline
+ \multicolumn{4}{||c||}{Image pre-processing Spike work - Correct Results vs Characters on the page} \\
+ \hline
+      Paper type & Greyscale & Original & Threshold\\
+ \hline
+  Blue-Lined &  6.75\% & 13.5\% & 28.0\% \\
+  Lined & 0\% & 25\% & 13.5\% \\
+  Plain & 0\% & 0\% & 23\% \\
+ \hline
+\end{tabular}
+\caption{Table showing the results of non trained handwriting on different adaptive thresholding algorithms.}
+\label{table:pre-training}
+\end{table}
+
+Table \ref{table:pre-training} shows the results from the experiments conducted to analyse which thresholding algorithm works efficiently. The result clearly show that the thresholding image yielded the best accuracy. As a result, thresholding was used. The rest of the section discusses the Tesseract training performance on adaptive threshold with Gaussian. For further statistics on this test see Appendix \ref{tesseract:spike_results}.
+
 
 \begin{figure}[h!]
   \centering
@@ -238,17 +266,18 @@ Figure \ref{fig:tesseract_framework} shows a simple framework for analysing how 
     };
 \end{axis}
 \end{tikzpicture}
-\caption{A line-graph showing the success rate of the Tesseract training results over 12 examples.}
+\caption{A line-graph showing the success rate of the Tesseract training results over 12 examples. The trend line shows an almost horizontal linear line.}
 \label{fig:tesseract_graph}
 \end{figure}
 
-Figure \ref{fig:tesseract_graph} shows the output analysed from the Tesseract training. It shows each training example with an associated success rate for the characters identified. The conclusions clearly show that there is no improvement from the Tesseract output after around the 3rd example. A horizontal linear regression line shows that it has peaked at around 72\% correct recognition rate. Refer to appendix \ref{appendix:tesseract}, section \ref{appendix:tesseract_table} for the full statistics.
+Figure \ref{fig:tesseract_graph} shows the output analysed from the Tesseract training using the segmentation algorithm discussed in Section \ref{imp:image_proces}. It shows each training example with an associated success rate for the characters identified. The conclusions clearly show that there is no improvement from the Tesseract output after around the 3rd example. A horizontal linear regression line shows that it has peaked at around 72\% correct recognition rate. Refer to appendix \ref{appendix:tesseract}, section \ref{appendix:tesseract_table} for the full statistics.
 
-\section{Image threshold Testing}
-Due to the nature of the image processing script it was quickly realised a methodical approach to testing would not be beneficial, due to almost constant spike work.
+\vspace{2em}
+\section{Image threshold testing}
+A methodical testing approach would not appropriate for the segmentation script development, as it was predominantly spike work.
 
-TDD would not be performed before considering the design for the image bininarsation script. Instead the testing would consist of a more visual check of the outputted image to see if the result was successfully binarised. Once the script had been developed to a reasonable level of satisfaction the spike work would cease, and testing would ensue.
+The testing was conducted at more of a visual level, checking the output of the image to see if the image has been binarised successfully. Once the script had been developed to a suitable level then the spike work would stop and testing would begin.
 
-The code was re-written following a TDD approach. It involved analysing numpy arrays returned from OpenCV and checking, for instance, if any of the array contained black values.
+The code was re-written following a TDD approach, although a lot of the code was interacting with OpenCV it was assumed that these functions had been reliably tested. Nevertheless, testing for the script was produced and checks such as checking for black pixels in the image was written.
 
-ADD reference to appendix to show examples of output
+For examples of the test images used for the image threshold used as training examples for the Tesseract engine, see Appendix \ref{tesseract:training}.

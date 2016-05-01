@@ -74,7 +74,7 @@ Throughout each feature implemented into the system, the CRC cards were created,
 
 Overall CRC cards were at the forefront of the design during this project. They enabled a clear, concise and well considered design to evolve over a series of sprints. For a further example of an in-depth CRC card see, Appendix \ref{appendix:sup_design} section \ref{sup:crc}.
 
-\subsection{User interaction}
+\subsection{User interaction} \label{design:user_interaction}
 After decomposing the problem that a user would need to be able to add a note, edit and save to a calendar, an activity diagram was constructed to consider the flow of the application.
 
 Throughout the sprints, the design for the activity diagram expanded. The result is depicted in Figure \ref{fig:activity_show_note}. The user was not initially part of the application, so the activity did not include the first activity of logging into the system. This was included into diagram once the user story for users must be incorporated into the system was brought forward into the sprint.
@@ -131,7 +131,7 @@ It is worth considering the view files. The view files were the only section of 
 
 Figure \ref{fig:extension} shows the result after the sprint which the design was improved upon. All template files now extend ``root.html'', overriding the ``content'' block. This ensures that the Do not Repeat Yourself (DRY) principle is adhered to and HTML, such as the navigation, are only declared once.
 
-\subsubsection{Constructing URLs}
+\subsubsection{Constructing URLs} \label{design:urls}
 Often overlooked when considering a design is the URL structure. The design not only aids the developer, but the user interacting with the page can clearly see the intention of that page. Typically there are two types of URLs RESTful-like and query strings.
 
 During the iterations, especially when new functionality was being considered, specific routes were thought about carefully. In the search user-story, query strings were decided to be used. Query strings create URLs such as: \texttt{/search?module\_code=cs31310}; representing the query string as key-value pairs. During the search feature, it was decided that this approach would be adopted so that the user can easily bookmark the page.
@@ -161,7 +161,7 @@ Blue lined paper was one way to overcome this issue. Filtering the lines from a 
 
 This design initially considered blue lines to be important, but it was producing too much noise in the implementation. As a result, instead of trying to extract the lines, it was decided that the lines should be filtered and should only extract the text. This was the final iteration of development on the binarisation script.
 
-\section{Tesseract}
+\section{Tesseract} \label{design:tesseract}
 During the analysis phase Tesseract was identified as the OCR tool of choice. Patel et al. \cite{citeulike:13920892} performs a case study using Tesseract as the OCR tool to analyse printed text in an image. Patel et al., also discuss the comparison against a proprietary OCR tool, Transym \cite{citeulike:14023819}.
 
 Patel et al. concludes that Transym only yielded a 47\% accuracy on 20 images compared to 70\% accuracy using the Tesseract engine.
