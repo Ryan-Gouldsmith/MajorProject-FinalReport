@@ -9,7 +9,7 @@ This chapter discusses the implementation challenges of image processing, handwr
 \section{Image processing} \label{imp:image_proces}
 Image processing would prove to be an integral part of the application. Pre-processing of the image would be needed to improve the likelihood of Tesseract correctly identifying the characters. This went through several iterative prototypes prior to outputting a fully binarised image.
 \subsection{Optimising Tesseract}
-Prior to OpenCV being used as the image processing tool several attempts were made to binarise an image using ImageMagick. In sprint zero, converting the image to grey-scale was attempted but this returned poor results from Tesseract. The next iteration of the script was to convert the image to monochrome, this binarised the image, but left a lot of additional noise. It was then suggested by Dr Hannah Dee to use OpenCV for the binarisation process.
+Prior to OpenCV being used as the image processing tool, several attempts were made to binarise an image using ImageMagick. In sprint zero, converting the image to grey-scale was attempted but this returned poor results from Tesseract. The next iteration of the script was to convert the image to monochrome, this binarised the image, but left a lot of additional noise. It was then suggested by Dr. Hannah Dee to use OpenCV for the binarisation process.
 
 \subsubsection{Otsu}
 Otsu \cite{citeulike:2917492} is a binarisation technique which essentially converts an image to black and white. Otsu is a global thresholding algorithm, where it uses the whole image for pixel comparison. This is unlike local thresholding algorithms where comparisons are made on smaller segments of the image \cite{citeulike:6044081}.
@@ -19,7 +19,7 @@ Images of notes will often have non-uniform lighting; shadows will often be disp
 \begin{figure}[H]
   \centering
   \includegraphics{images/OTSU}
-  \caption{The use of Otsu binarisation technique on an image with a little shadow across the image}
+  \caption{The use of Otsu binarisation technique on an image with a shadow across the image}
   \label{fig:OTSU}
 \end{figure}
 
@@ -32,7 +32,7 @@ Hewlett-Packard, the creator of Tesseract, describe Otsu as its underlying pre-p
 Overall Otsu, although it is a very reliable binarisation method, suffers from imposed shadows over images.
 
 \subsubsection{Adaptive threshold} \label{section:threshold}
-As Tesseract uses Otsu as its pre-processing step, using an image which has been binarisated with Otsu already would not be advantageous in improving the accuracy of the characters detected. As a result, the next iteration evaluates an adaptive threshold technique.
+As Tesseract uses Otsu as its pre-processing step, using an image which has been binarised with Otsu already would not be advantageous in improving the accuracy of the characters detected. As a result, the next iteration evaluates an adaptive threshold technique.
 
 Adaptive threshold calculates the threshold over a series of smaller segments in the image \cite{citeulike:14021401}. As a result shadows have a smaller impact over the whole image, due to adaptive threshold being a local threshold technique. This makes adaptive thresholding rewarding for non-uniform lighting situations, as it becomes more invariant to shadows.
 
@@ -49,7 +49,7 @@ Using the OpenCV library there was two options with adaptive threshold \cite{cit
   \label{fig:adaptive_mean}
 \end{figure}
 
-Mean adaptive threshold uses a specific block size around a given pixel. If the block size was four, then the neighbourhood size would be four and calculations would be made to calculate the mean pixel value in that block. The mean value is selected as the thresholding value for the pixels inside the block; each of the pixels will then be identified as either foreground or background pixels \cite{citeulike:14021401}. Figure \ref{fig:adaptive_mean} shows mean adaptive threshold being used on an image. An additional issue present with the adaptive mean is the noise pixels; there are considerable amounts of noise polluting the image.
+Mean adaptive threshold uses a specific block size around a given pixel. If the block size was four, then the neighborhood size would be four. It would then calculate the mean pixel value in that block. The mean value is selected as the thresholding value for the pixels inside the block; each of the pixels will then be identified as either foreground or background pixels \cite{citeulike:14021401}. Figure \ref{fig:adaptive_mean} shows mean adaptive threshold being used on an image. An additional issue present with the adaptive mean is the noise pixels as there is considerable amounts of noise polluting the image.
 
 Gaussian adaptive threshold differs from the mean adaptive threshold, as instead of calculating the mean value over the block size, it first uses a Gaussian value over blocksize. A Gaussian weight is calculated dynamically depending on the blocksize used for the thresholding. Every pixel inside the block is then multiplied by the Gaussian, and an average value is then taken across the pixels which is used as a threshold. Like the mean adaptive threshold, this is then used to determine if the pixel is foreground or background \cite{bradski2008learning}\cite{citeulike:14021401}.
 
@@ -61,7 +61,7 @@ Gaussian adaptive threshold differs from the mean adaptive threshold, as instead
   \label{fig:adaptive_gaussian}
 \end{figure}
 
-Figure \ref{fig:adaptive_gaussian} shows the adaptive Gaussian being used to binarise an image. The output clearly does not have a shadow overlaying the image and there is less noise pixels than the mean adaptive thresholding.
+Figure \ref{fig:adaptive_gaussian} shows the adaptive Gaussian being used to binarise an image. The output clearly does not have a shadow overlaying the image and there are fewer noise pixels than the mean adaptive thresholding.
 
 \begin{figure}[H]
   \centering
@@ -70,10 +70,10 @@ Figure \ref{fig:adaptive_gaussian} shows the adaptive Gaussian being used to bin
   \label{fig:thresholding_options}
 \end{figure}
 
-Figure \ref{fig:thresholding_options} displays additional types of the thresholding that were investigated throughout the iterative process. The Gaussian adaptive threshold provides the clearest results from visual inspection of the different thresholding techniques experimented. As a result, the Gaussian adaptive threshold will be continued to be improved upon throughout a series of iterations to reduce additional noise, via morphological operations to aid in smoothing.
+Figure \ref{fig:thresholding_options} displays additional types of the thresholding that were investigated throughout the iterative process. The Gaussian adaptive threshold provides the clearest results from visual inspection of the different thresholding techniques experimented. As a result, the Gaussian adaptive threshold will be continued to be improved upon throughout a series of iterations to reduce additional noise, via morphological operations to aid in smoothing the image.
 
 \section{Lined paper}
-Initially normal lined paper was used for notes in the project, but after the binarisation process it left too much noise. Further smoothing of the image did not remove the noise, so bespoke lined paper was created to aid in removing the lines but keeping the text uniformly straight. Refer to Appendix \ref{appendix:image_processing}, Section \ref{fig:pre-line-editing}.
+Initially normal lined paper was used for notes in the project, but after the binarisation process it left too much noise. Further smoothing of the image did not remove the noise, so bespoke lined paper was created to aid in removing the lines but keeping the text uniformly straight (refer to Appendix \ref{appendix:image_processing}, Section \ref{fig:pre-line-editing} for more information) .
 
 \subsection{Filtering the blue lines}
 Over a series of iterations, the primary objective was to remove the blue lines from the image. Examples of the lined paper can be found in Appendix \ref{appendix:image_processing}.
@@ -97,7 +97,7 @@ Algorithm \ref{algorithm:threshold1} attempted to filter all the colour values b
 \begin{figure}[H]
   \centering
   \includegraphics[scale=0.5]{images/removed_lines_still_noise}
-  \caption{An example output from the algorithm \ref{algorithm:threshold1}. There is still significant amounts of noise in the image.}
+  \caption{An example output from the algorithm \ref{algorithm:threshold1}. There are significant amounts of noise in the image.}
   \label{fig:remove_lines_noise}
 \end{figure}
 
@@ -106,9 +106,9 @@ Different morphological operations were used on the image in an attempt to clear
 The result of the morphological operations ended up reducing the quality of the segmentation, as shown in Figure \ref{fig:remove_lines_noise}. This highlighted further iterations were needed for an improved output.
 
 \subsection{Only extracting the text}
-There was no simplistic way to identify and filter the lines, therefore it was decided that the text will just be extracted.
+There was no simplistic way to identify and filter the lines, therefore it was decided that the text would just be extracted.
 
-OpenCV has an example of line extraction and binarsation \cite{citeulike:14006256}. From the example, structuring elements were used to extract the text from the image. Further erosion and dilation were used to remove additional noise. Throughout the process, masks were used to transfer the state of the image to another mask. An example is transferring the text to a mask, but had an unwanted side effect that line noise way transferred too.
+OpenCV has an example of line extraction and binarsation \cite{citeulike:14006256}. From the example, structuring elements were used to extract the text from the image. Further erosion and dilation were used to remove additional noise. Throughout the process, masks were used to transfer the state of the image to another mask. An example is transferring the text to a mask, but this had an unwanted side effect that line noise way transferred too.
 
 Due to the text having connected pixels, unlike the eroded noise, then connected components were used to identify characters. As a result of  morphological operations the lines were no longer connected. The identified characters were copied to a final mask.
 
@@ -158,10 +158,10 @@ The box files were too complex to analyse as it was not intuitive to see the ide
 Once the characters had been manually changed, the box file was passed through Tesseract's training process. \texttt{tesseract <file> -l eng.ryan.exp2a box.train} would train the engine on the image's box file, for the language \texttt{eng.ryan.exp2a}. Often there were issues with being unable to identify tagged characters; these box file lines were deleted.
 
 {{\ttfamily \hyphenchar\the\font=`\-}%
-Following this process, Tesseract required an additional file ( \texttt{unicharset}) to be able to extract all possible characters that is identified in the training examples.
+Following this process, Tesseract required an additional file ( \texttt{unicharset}) to be able to extract all possible characters that were identified in the training examples.
 
 {{\ttfamily \hyphenchar\the\font=`\-}%
-Tesseract's GitHub repository states that clustering is an important process to extract ``prototypes''. The clustering commands aid in ensuring the shapes of the characters tagged and identified are known so they can be used as a reference again.
+Tesseract's GitHub repository states that clustering is an important process to extract `prototypes'. The clustering commands ensured that the shapes of the characters identified are known so they can be used as a reference again.
 
 A frequent words file was created, from the \texttt{/usr/share/dict/words} directory, to help to identify common words. This would aid in improving the chances of detecting specific words. Common words could also be defined; ``by'' and ``date'' are examples of words in this file.
 
@@ -171,7 +171,7 @@ Finally, the \texttt{combine\_data} command was used to combine all the data tog
 {{\ttfamily \hyphenchar\the\font=`\-}%
 Reinforcement of the characters identified was needed, so further training examples were created. This was called ``bootstrapping''. Therefore when training on another example, if the language was set to \texttt{eng.ryan.exp2a} it would reinforce that specific language with new data.
 
-Throughout the sprints issues were identified whilst training the data. Characters would often not be identified correctly on the image, with specific issues with the letter ``g''  identified as a 3. When a blob could not be identified at all, Tesseract would label it ``$\thicksim $''; these were ultimately removed when it was discovered that it would fail to identify them if edited. The training was conducted on twelve training examples, a selection can be found in Appendix \ref{tesseract:training}.
+Throughout the sprints issues were identified whilst training the data. Characters would often not be identified correctly on the image, with specific issues with the letter ``g''  identified as the number 3. When a blob could not be identified at all, Tesseract would label it ``$\thicksim $''; these were ultimately removed when it was discovered that it would fail to identify them if edited. The training was conducted on twelve training examples, a selection can be found in Appendix \ref{tesseract:training}.
 
 \section{Web application}
 The web application was the main part of the development and specific sections proved to be more complex than anticipated.
@@ -179,28 +179,28 @@ The web application was the main part of the development and specific sections p
 \subsection{OAuth}\label{app:oauth}
 The Google OAuth integration was more complex than first considered. Google suggested to use the Google client library \cite{citeulike:14024993} for all OAuth requests, to avoid security issues when making requests. Therefore, this library was utilised throughout the project.
 
-The Google API client would, on occasion, raise peculiar errors. Whilst making a query to the calendar API it would raise the error, ``rootURL'', when using the build API call. This was mystifying as it was previously working. An issue was raised on the library's GitHub repository \cite{citeulike:14021433}. To confuse matters more, when querying the Google people plus API, it would work perfectly fine - however the Google calendar API would raise an exception. It eventually stopped throwing an exception, but the reason is unknown.
+The Google API client would, on occasion, raise peculiar errors. Whilst making a query to the calendar API it would raise the error, `rootURL', when using the build API call. This was mystifying as it was previously working. An issue was raised on the library's GitHub repository \cite{citeulike:14021433}. To confuse matters more, when querying the Google people plus API, it would work perfectly fine - however the Google Calendar API would raise an exception. It eventually stopped raising an exception, but the reason is unknown.
 
-OAuth2 was implemented in the application so when the user clicks ``authorise with Google'' it will initialise the process for OAuth.
+OAuth2 was implemented in the application so when the user clicks `authorise with Google' it will initialise the process for OAuth.
 Once the user accepts the use of selected services a secure JSON \footnote{JavaScript Object notation is stored in key-value pairs.} credential file was returned containing specific tokens used when querying; these are appended to the user's session.
 
 The credentials contain an expiration time, as shown in Appendix \ref{oauth:response}. When making a request this expiration time was checked, and if it was exceeded, then an error would be raised when querying the API's and displayed to the user. To overcome this, additional checks were made to ensure the credentials in the session were still valid. If they were not then it would redirect the user to the log-out route, clearing the session and asking the user to re-authenticate.
 
 \subsection{Reoccuring events}
-Reoccurring events within the Google Calendar integration, poised a lot of issues. It was identified in the pre-beta testing that if the user has a reoccurring event then it would not append the URL of the note to the event.
+Reoccurring events within the Google Calendar integration posed a lot of issues. It was identified in the pre-beta testing that if the user has a reoccurring event then it would not append the URL of the note to the event.
 
-When a query was made for a list of events if there were reoccurring events then it would group the events by the first instance of these events. This proved to be problematic as it would display to the user that the note was taken on the 12th March, for example, but there were events from February being shown.
+When a query was made for a list of events, if there were reoccurring events then it would group the events by the first instance of these events. This proved to be problematic as it would display to the user that the note was taken on the 12th March, for example, but there were events from February being shown.
 
 To account for this, the structure of the response was analysed and it was identified that grouped events had a \texttt{reoccurrenceID} key. After finding that the calendar API can fetch reoccurring items, a query was made using this ID key - filtering by the start and end date from the initial query. A check was included to ensure that when displaying to the user the event did not contain the \texttt{reoccurrenceID} key ensuring the singular events were displayed to the user.
 
-Editing a reoccurring event produced further unexpected behaviour: when the event had been successfully modified and the note URL had been appended, it returned both the grouped event and the modified edited event in the initial query. Google must classify that changed reoccurring events as new instances. Instead of displaying more duplicated events to the user, a check for the \texttt{recurringEventId} key, which was present in the modified event, was conducted; if it was present the event was omitted.
+Editing a reoccurring event produced further unexpected behaviour: when the event had been successfully modified and the note URL had been appended, it returned both the grouped event and the modified edited event in the initial query. Google must determine that changed reoccurring events are new instances. Instead of displaying more duplicated events to the user, a check for the \texttt{recurringEventId} key, which was present in the modified event, was conducted; if it was present the event was omitted.
 
 Another issue identified were all-day events. All-day events do not have a datetime key in their start response field, returned from the Google Calendar API. This would cause the application to raise an exception and prevent the user from adding a note. A check was made to make sure that the datetime key was present.
 
 \subsection{Tesseract confidence}
 Displaying the Tesseract data went through a series of iterations over the latter sprints.
 
-At a basic level integrating Tesseract into the web application was fairly simple and was implemented around sprint eight. The binarisation script, see Section \ref{imp:image_proces}, was incorporated to the application. This was added to the file upload route, as the user's image needs to be binarised when it is uploaded. A Tesseract wrapper could have been implemented but due to time constraints a 3rd party library, tesserocr \cite{citeulike:14021437}, was used.
+At a basic level, integrating Tesseract into the web application was fairly simple and was implemented at around sprint eight. The binarisation script (see Section \ref{imp:image_proces}), was incorporated into the application. This was added to the file upload route, as the user's image needs to be binarised when it is uploaded. A Tesseract wrapper could have been implemented but due to time constraints a third party library, tesserocr \cite{citeulike:14021437}, was used.
 
 \begin{figure}[H]
   \centering
@@ -211,9 +211,9 @@ At a basic level integrating Tesseract into the web application was fairly simpl
 
 Tesserocr is a Python implementation of Tesseract's  C++ API. Tesserocr uses textlines to extract the text from the uploaded image. The first three lines were then iterated over, identifying the box for the lines so that text could be extracted. Each of these lines mapped the words identified and the confidence score for each word on a scale of 0 - 100 (0 being uncertain and 100 being certain).
 
-The module code, lecturer, location and date were extracted via list-comprehensions, matching metadata structure defined in Section \ref{design:tesseract}. Modifications to the confidence scores were attempted in the controller to replace with a class name for the colours - so that the view file could render the content easily. Problems were encountered when the API returned tuples, an immutable type, so modification was not as eloquent as originally envisaged, therefore numbers remained.
+The module code, lecturer, location and date were extracted via list-comprehensions, matching the metadata structure defined in Section \ref{design:tesseract}. Modifications to the confidence scores were attempted in the controller to replace with a class name for the colours - so that the view file could render the content easily. Problems were encountered when the API returned tuples, an immutable type, so modifications were not as eloquent as originally envisaged, therefore numbers remained.
 
-Conditional checks were made in the view files on the confidence score; 75 would be green text, less than 74 and greater than 70 would be orange text and below 65 would be red text. Figure \ref{fig:tesseract_colour} shows the resulting output from the conditional checks. There are anomalies, with ``Date'' for example, it is orange but in-fact it is extracted perfectly.
+Conditional checks were made in the view files on the confidence score; 75 would be green text, less than 74 and greater than 70 would be orange text and below 65 would be red text. Figure \ref{fig:tesseract_colour} shows the resulting output from the conditional checks. There are anomalies, with ``Date'' for example, it is orange but in fact it is extracted perfectly.
 \begin{figure}[H]
   \centering
   \begin{subfigure}[h]{0.35\textwidth}
@@ -237,10 +237,10 @@ EXIF data parsing would be an important section of the application. EXIF data is
 
 Throughout the sprints the EXIF data parsing was extended to allow for a greater variation in images uploaded. Python's image library \cite{citeulike:14024992} was used to parse the data. Further additional checks were made to ensure that the images were either JPEG or TIFF as they only contain the metadata.
 
-During user-testing issues arose where a participant could not upload their note successfully. The image was formatted a JPEG but the mobile phone photo did not contain the ``dateTime'' EXIF key. Checks were implemented to ensure that this key existed.
+During user testing, issues arose where a participant could not upload their note successfully. The image was formatted a JPEG but the mobile phone photo did not contain the `dateTime' EXIF key. Checks were implemented to ensure that this key existed.
 
 \subsection{Displaying calendar events}
-Over several user stories displaying different events around the application were created. The first instance of displaying the events were incorporated into the homepage, displaying the last seven days worth of events from the user, shown in Figure \ref{fig:seven_days}. This was simple to implement but provided a strong foothold into the interactions with the Google Calendar API; this stretched from the application to the testing infrastructure.
+Over several user stories, events were displayed throughout the application. The first instance of this was displaying the events from the last seven days, from the user's calendar, on the homepage - shown in Figure \ref{fig:seven_days}. This was simple to implement but provided a strong foothold into the interactions with the Google Calendar API; this stretched from the application to the testing infrastructure.
 
 \begin{figure}[H]
   \centering
@@ -249,12 +249,12 @@ Over several user stories displaying different events around the application wer
   \label{fig:seven_days}
 \end{figure}
 
-One issue which arose was the change in timezones to British summer time during the project. If there was an event starting at 14:00, and the user queried for events at 14:00, then it would not return any results from the Google Calendar. Upon closer inspection if the query was for 13:00 then it would return the correct event. This issue rendered the application to a halt whilst this could be fixed: eventually, the timezone was appended to the user's input and querying with the timezone included returned the correct event from Google.
+One issue which arose was the change in timezones to British Summer Time during the project. If there was an event starting at 14:00, and the user queried for events at 14:00, then it would not return any results from the Google Calendar. Upon closer inspection if the query was for 13:00 then it would return the correct event. This issue rendered the application to a halt whilst this could be fixed: eventually, the timezone was appended to the user's input and querying with the timezone included returned the correct event from Google.
 
 \subsection{Editing calendar events}
-The user story for adding a note was implemented and as part of the tasks for this story, the note URL must be saved in the calendar event. When the user enters the date into the form, a query would be made to the Google Calendar API to return all associated events from that given day. Checks were then performed to ensure that the module code and the summary of the event matched.
+The user story for adding a note was implemented, and as part of the tasks for this story the note URL must be saved in the calendar event. When the user enters the date into the form, a query would be made to the Google Calendar API to return all associated events from that given day. Checks were then performed to ensure that the module code and the summary of the event matched.
 
-This poised the problem of being able to add the note's URL to the correct event; if there was more than one event with the same module code that day then there could be confusion as to which event to add to.
+This posed the problem of being able to add the note's URL to the correct event; if there was more than one event with the same module code that day then there could be confusion as to which event to add to.
 Over the next iteration of development, the calendar events were additionally validated against the start date from the event and the user's input.
 
 One issue which arose when adding the note's URL to the description field of the calendar was that it would replace the original content inside the description. This is a major concern for the users of the application as it would overwrite any data. Another issue it created was that multiple notes could not be attached to a given event. This was changed so that it would append to the description field, rather than overwriting it.
@@ -287,24 +287,24 @@ The algorithm for adding to a calendar is stated below.
 Figure \ref{fig:saved_to_calendar} shows the output from saving a note to a specific date and appending the note's URL to the description field.
 
 \subsubsection{Editing a note}
-The user story ``editing a note'' was established midway through the project, an example task included when editing a note's start date it should be reflected in the user's calendar. If the user changes their date then it should remove the URL from the old calendar item and append to a new one, if the event exists. This proved to be a complicated implementation.
+The user story ``editing a note'' was established midway through the project. An example task included when editing a note's start date it should be reflected in the user's calendar. If the user changes their date then it should remove the URL from the old calendar item and append to a new one, if the event exists. This proved to be a complicated implementation.
 
 When a user edits a note it would query the API to return the event for the given note, based on the time start which was persisted for the note's relation. This event was then modified by replacing the description field with an empty string, replacing all the content. This caused issues regarding the data stored by the user being deleted arbitrarily. As a result a find and replace was used on the description field to remove any strings which matched the URL.
 
 It is worth acknowledging at this point in the development considerable aspects of the codebase was refactored. There was duplicated functionality spread across multiple blueprints, making the codebase obfuscated. As a result the design decision for the \texttt{GoogleServicesHelper} emerged to abstract the duplication.
 
 \subsubsection{Logging in and out}
-Enabling the system to have users was an emerging user story midway through the project. As the log in would be deferred to Google, then the user would need to connect to the service. When the log in process has been completed a user's email address is extracted from the Google Plus API response and created in the database.
+Enabling the system to have users was an emerging user story midway through the project. As the log in would be deferred to Google, then the user would need to connect to the service. When the log in process has been completed, a user's email address is extracted from the Google Plus API response and created in the database.
 
-Using the application it was noticed that multiple user's were being created for a single email address. To reduce this problem a helper function was implemented which would find a user from their email address, if the user could not be found then they were added to the relation.
+Using the application it was noticed that multiple users were being created for a single email address. To reduce this problem a helper function was implemented which would find a user from their email address, if the user could not be found then they were added to the relation.
 
 The user's ID is then appended to the session. Every page on the application verifies that this key exists. Once a user had finished using the application, the log-out route would destroy the user's session.
 
-Delegating the responsibility to Google was a good design decision; the security which Google have would have been better than what could be implemented by the author. Furthermore, ethically, the only person information the system uses from a user is their email address.
+Delegating the responsibility to Google was a good design decision; the security which Google has would have been better than what could be implemented by the author. Furthermore, ethically, the only person information the system uses from a user is their email address.
 
 \section{Travis}
 Although not strictly a coding implementation, Travis formed a core part of the application and issues were found whilst using Travis.
 
-Firstly, at the start of the process extensive time was invested into trying to  auto-deploy from Travis. Whilst giving detailed instructions on how to deploy to 3rd party systems the documentation for deployment to a virtual private server was sparse. Over several sprints the auto-deploy pipeline was desired but due to the lack of documentation there was no auto-deployment from Travis to a server.
+Firstly, at the start of the process extensive time was invested into trying to  auto-deploy from Travis. Whilst giving detailed instructions on how to deploy to third party systems the documentation for deployment to a virtual private server was sparse. Over several sprints the auto-deploy pipeline was desired but due to the lack of documentation there was no auto-deployment from Travis to a server.
 
-When integrating Tesseract with the application, it became apparent of another issue with Travis: Tesseract and OpenCV had to be both built from source. TesserOCR uses Tesseract 3.04, and at the time of writing, Ubuntu's latest package is 3.02; this is the same for OpenCV 3.0.0. As a result, the build time for Travis was increased exponentially. The current build time was around thirty minutes; caching was investigated but no suitable solution was identified.
+When integrating Tesseract with the application, it became apparent of an issue with Travis: Tesseract and OpenCV had to be both built from source. TesserOCR uses Tesseract 3.04, and at the time of writing, Ubuntu's latest package is 3.02; this is the same for OpenCV 3.0.0. As a result, the build time for Travis was increased exponentially. The current build time was around thirty minutes; caching was investigated but no suitable solution was identified.
