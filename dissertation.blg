@@ -26,8 +26,6 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: References/references.bib
-Warning--I didn't find a database entry for "appendix:image_processing"
-Warning--I didn't find a database entry for "processing:pre-line"
 Warning--I didn't find a database entry for "citeulike:1402014"
 Warning--I didn't find a database entry for "apache_poi"
 Warning--I didn't find a database entry for "apache_license"
@@ -46,7 +44,7 @@ Warning--empty author in citeulike:2917492
 Done.
 You've used 72 entries,
             4538 wiz_defined-function locations,
-            1331 strings with 29273 characters,
+            1329 strings with 29229 characters,
 and the built_in function-call counts, 41166 in all, are:
 = -- 3860
 > -- 645
@@ -85,4 +83,4 @@ warning$ -- 7
 while$ -- 176
 width$ -- 74
 write$ -- 812
-(There were 12 warnings)
+(There were 10 warnings)

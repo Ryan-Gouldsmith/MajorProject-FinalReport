@@ -9,11 +9,11 @@
 \contentsline {figure}{\numberline {2.6}{\ignorespaces The final result of the entity-relation diagram - after a series of iterations.\relax }}{19}
 \contentsline {figure}{\numberline {2.7}{\ignorespaces From left to right, the homepage wiremock through the different iterations and the change of requirements\relax }}{21}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces The use of OTSU binarisation technique on an image with a little shadow across the image\relax }}{25}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces The use of Otsu binarisation technique on an image with a little shadow across the image\relax }}{25}
 \contentsline {figure}{\numberline {3.2}{\ignorespaces Adaptive mean threshold algorithm on a note, showing binarisation but there is still noise in the image.\relax }}{26}
 \contentsline {figure}{\numberline {3.3}{\ignorespaces Adaptive Gaussian used over the image, showing a lot smoother of an image\relax }}{27}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces A variety of thresholding techniques used on the same note, showing adaptive threshold resulting in the best\relax }}{28}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces An example output from the above algorithm. There is still significant amounts of noise in the image.\relax }}{29}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces A variety of thresholding techniques used on the same note, showing adaptive threshold resulting in the best output.\relax }}{28}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces An example output from the algorithm 2\hbox {}. There is still significant amounts of noise in the image.\relax }}{29}
 \contentsline {figure}{\numberline {3.6}{\ignorespaces A poor quality image has been binarised successfully with little noise.\relax }}{30}
 \contentsline {figure}{\numberline {3.7}{\ignorespaces A example of the jTessBoxEditor being used identify characters in the tiff box file.\relax }}{31}
 \contentsline {figure}{\numberline {3.8}{\ignorespaces Tesseract being integrated into the application at a very basic level\relax }}{33}

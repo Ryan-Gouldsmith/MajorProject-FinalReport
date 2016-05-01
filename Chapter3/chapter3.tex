@@ -73,7 +73,7 @@ Figure \ref{fig:adaptive_gaussian} shows the adaptive Gaussian being used to bin
 Figure \ref{fig:thresholding_options} displays additional types of the thresholding that were investigated throughout the iterative process. The Gaussian adaptive threshold provides the clearest results from visual inspection of the different thresholding techniques experimented. As a result, the Gaussian adaptive threshold will be continued to be improved upon throughout a series of iterations to reduce additional noise, via morphological operations to aid in smoothing.
 
 \section{Lined paper}
-Initially normal lined paper was used for notes in the project, but after the binarisation process it left too much noise. Further smoothing of the image did not remove the noise, so bespoke lined paper was created to aid in removing the lines but keeping the text uniformly straight. Refer to Appendix \cite{appendix:image_processing}, Section \cite{processing:pre-line}.
+Initially normal lined paper was used for notes in the project, but after the binarisation process it left too much noise. Further smoothing of the image did not remove the noise, so bespoke lined paper was created to aid in removing the lines but keeping the text uniformly straight. Refer to Appendix \ref{appendix:image_processing}, Section \ref{fig:pre-line-editing}.
 
 \subsection{Filtering the blue lines}
 Over a series of iterations, the primary objective was to remove the blue lines from the image. Examples of the lined paper can be found in Appendix \ref{appendix:image_processing}.
@@ -171,7 +171,7 @@ Finally, the \texttt{combine\_data} command was used to combine all the data tog
 {{\ttfamily \hyphenchar\the\font=`\-}%
 Reinforcement of the characters identified was needed, so further training examples were created. This was called ``bootstrapping''. Therefore when training on another example, if the language was set to \texttt{eng.ryan.exp2a} it would reinforce that specific language with new data.
 
-Throughout the sprints issues were identified whilst training the data. Characters would often not be identified correctly on the image, with specific issues with the letter ``g''  identified as a 3. When a blob could not be identified at all, Tesseract would label it $``\thicksim''$; these were ultimately removed when it was discovered that it would fail to identify them if edited. The training was conducted on twelve training examples, a selection can be found in Appendix \ref{tesseract:training}.
+Throughout the sprints issues were identified whilst training the data. Characters would often not be identified correctly on the image, with specific issues with the letter ``g''  identified as a 3. When a blob could not be identified at all, Tesseract would label it ``$\thicksim $''; these were ultimately removed when it was discovered that it would fail to identify them if edited. The training was conducted on twelve training examples, a selection can be found in Appendix \ref{tesseract:training}.
 
 \section{Web application}
 The web application was the main part of the development and specific sections proved to be more complex than anticipated.
@@ -182,7 +182,7 @@ The Google OAuth integration was more complex than first considered. Google sugg
 The Google API client would, on occasion, raise peculiar errors. Whilst making a query to the calendar API it would raise the error, ``rootURL'', when using the build API call. This was mystifying as it was previously working. An issue was raised on the library's GitHub repository \cite{citeulike:14021433}. To confuse matters more, when querying the Google people plus API, it would work perfectly fine - however the Google calendar API would raise an exception. It eventually stopped throwing an exception, but the reason is unknown.
 
 OAuth2 was implemented in the application so when the user clicks ``authorise with Google'' it will initialise the process for OAuth.
-Once the user accepts the use of selected services a secure JSON credential file was returned containing specific tokens used when querying; these are appended to the user's session.
+Once the user accepts the use of selected services a secure JSON \footnote{JavaScript Object notation is stored in key-value pairs.} credential file was returned containing specific tokens used when querying; these are appended to the user's session.
 
 The credentials contain an expiration time, as shown in Appendix \ref{oauth:response}. When making a request this expiration time was checked, and if it was exceeded, then an error would be raised when querying the API's and displayed to the user. To overcome this, additional checks were made to ensure the credentials in the session were still valid. If they were not then it would redirect the user to the log-out route, clearing the session and asking the user to re-authenticate.
 
@@ -279,7 +279,7 @@ The algorithm for adding to a calendar is stated below.
 
 \begin{figure}[H]
   \centering
-  \includegraphics[scale=0.4]{images/saved_to_calendar}
+  \includegraphics[scale=0.5]{images/saved_to_calendar}
   \caption{Saving a note correctly to a calendar event item}
   \label{fig:saved_to_calendar}
 \end{figure}

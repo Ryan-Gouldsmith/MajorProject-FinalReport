@@ -42,8 +42,8 @@
 \contentsline {subsection}{\numberline {2.6.5}Development environment}{23}
 \contentsline {chapter}{\numberline {3}Implementation}{24}
 \contentsline {section}{\numberline {3.1}Image processing}{24}
-\contentsline {subsection}{\numberline {3.1.1}Optimising tesseract}{24}
-\contentsline {subsubsection}{\numberline {3.1.1.1}OTSU}{24}
+\contentsline {subsection}{\numberline {3.1.1}Optimising Tesseract}{24}
+\contentsline {subsubsection}{\numberline {3.1.1.1}Otsu}{24}
 \contentsline {subsubsection}{\numberline {3.1.1.2}Adaptive threshold}{26}
 \contentsline {section}{\numberline {3.2}Lined paper}{28}
 \contentsline {subsection}{\numberline {3.2.1}Filtering the blue lines}{28}
@@ -55,7 +55,7 @@
 \contentsline {subsection}{\numberline {3.4.2}Reoccuring events}{33}
 \contentsline {subsection}{\numberline {3.4.3}Tesseract confidence}{33}
 \contentsline {subsection}{\numberline {3.4.4}Parsing EXIF data}{34}
-\contentsline {subsection}{\numberline {3.4.5}Displaying calendar events}{34}
+\contentsline {subsection}{\numberline {3.4.5}Displaying calendar events}{35}
 \contentsline {subsection}{\numberline {3.4.6}Editing calendar events}{35}
 \contentsline {subsubsection}{\numberline {3.4.6.1}Editing a note}{36}
 \contentsline {subsubsection}{\numberline {3.4.6.2}Logging in and out}{37}
@@ -78,19 +78,19 @@
 \contentsline {section}{\numberline {5.3}Use of tools}{49}
 \contentsline {subsection}{\numberline {5.3.1}Flask}{49}
 \contentsline {subsection}{\numberline {5.3.2}OpenCV}{49}
-\contentsline {subsection}{\numberline {5.3.3}PostgreSQL}{49}
+\contentsline {subsection}{\numberline {5.3.3}PostgreSQL}{50}
 \contentsline {subsection}{\numberline {5.3.4}Tesseract}{50}
 \contentsline {subsection}{\numberline {5.3.5}Google calendar}{50}
 \contentsline {subsection}{\numberline {5.3.6}Continuous integration tool}{50}
 \contentsline {section}{\numberline {5.4}Meeting the users needs}{50}
-\contentsline {section}{\numberline {5.5}Additional project aims}{50}
-\contentsline {subsection}{\numberline {5.5.1}Auto-correcting of image}{50}
+\contentsline {section}{\numberline {5.5}Additional project aims}{51}
+\contentsline {subsection}{\numberline {5.5.1}Auto-correcting of image}{51}
 \contentsline {subsection}{\numberline {5.5.2}Extracting images}{51}
 \contentsline {subsection}{\numberline {5.5.3}Generic handwriting recognition}{51}
 \contentsline {section}{\numberline {5.6}Evaluating the process}{51}
 \contentsline {section}{\numberline {5.7}Starting again}{52}
 \contentsline {section}{\numberline {5.8}Relevance to degree scheme}{52}
-\contentsline {section}{\numberline {5.9}Overall conclusions}{52}
+\contentsline {section}{\numberline {5.9}Overall conclusions}{53}
 \contentsline {chapter}{Appendices}{54}
 \contentsline {chapter}{\numberline {A}Third-Party Code and Libraries}{55}
 \contentsline {chapter}{\numberline {B}Ethics Submission}{56}
