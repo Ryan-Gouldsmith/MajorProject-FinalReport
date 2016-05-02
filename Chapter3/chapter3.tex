@@ -302,6 +302,45 @@ The user's ID is then appended to the session. Every page on the application ver
 
 Delegating the responsibility to Google was a good design decision; the security which Google has would have been better than what could be implemented by the author. Furthermore, ethically, the only person information the system uses from a user is their email address.
 
+\subsection{Saving and editing a note}
+Prior to saving a note the associated relations had to be created. The aim was to use migration files, which would help to keep versions of the different stages which the relation was developed. Flask did not implement migrations by default, so Flask-Migrate \cite{citeulike:14025941} was used as it is an extension used to create migration files. Migration files are run when a change needed to be made to a relation, this was performed through Flask-Script \cite{citeulike:14025943}. An excerpt is shown below:
+
+\begin{lstlisting}[language=python, caption={An excerpt of a specific migration file where the note relation was created}, label={migration}, breaklines, columns=fullflexible, keywordstyle=\color{blue}]
+  def upgrade():
+    op.create_table(
+          'notes',
+          sa.Column('id', sa.Integer, primary_key = True),
+          sa.Column('image_path', sa.String(150), nullable=False)
+    )
+  def downgrade():
+    op.drop_table('notes')
+\end{lstlisting}
+
+The listing \ref{migration} the \texttt{upgrade} function would be run when the migration is performed. As shown the revisions were developed iteratively, depending on the functionality being implemented.
+
+The route \texttt{add_meta_data} was created allowing for a HTTP POST request to be made. The controller checked for the associated key values from the request object. Before the parameters were forwarded onto the models checks were conducted to see if the module code already existed. Using the Flask-SQLAlchemy \cite{citeulike:14025864} API's it was simple to extract the module code using the \texttt{like} API.
+
+
+
+Flask-SQLAlchemy interacts with relational databases and enabled an Object-Relational Mapping (ORM) style syntax. Relationships could be constructed between the different relations. Listing \ref{orm_syntax} shows an example of how a query can be created, such that it is structurally identical to an object oriented design.
+
+\begin{lstlisting}[language=python, caption={The module code class calls the module code attribute and compared its value against a prepared module code.}, label={orm_syntax}, breaklines, columns=fullflexible, keywordstyle=\color{blue}]
+    query = ModuleCode.module_code.like(prepared_module_code)
+\end{lstlisting}
+
+A similar principle was adopted for the finding existing metadata items from the relation. The extraction of similar metadata items just compared the different attributes which make up a relation. This is then returned.
+
+If the edit data query returned any results then this ID was used for the notes foreign key to the \texttt{NoteMetaData} relation. If there were no results returned the data was created in the constructor for a new instance of the relation.
+
+The code was becoming obfuscated with database session handling, so a \texttt{save} function was created to abstract this code. Listings \ref{save_function} displays persisting an instance to the relation.
+\begin{lstlisting}[language=python, caption={Save function that was abstracted to remove the db session handling from the controller}, label={save_function}, breaklines, columns=fullflexible, keywordstyle=\color{blue}]
+  def save(self):
+    db.session.add(self)
+    db.session.commit()
+\end{lstlisting}
+
+Editing a note is very much the same except the data is sent via an HTTP post to \texttt{/edit\_meta\_data/:id} where the ID is the note's ID which is currently being edited.
+
 \section{Travis}
 Although not strictly a coding implementation, Travis formed a core part of the application and issues were found whilst using Travis.
 

@@ -28,7 +28,6 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: References/references.bib
 Warning--entry type for "apache_license" isn't style-file defined
 --line 975 of file References/references.bib
-Warning--I didn't find a database entry for "citeulike:1402014"
 Warning--I didn't find a database entry for "citeulike:1402058"
 -- IEEEtranS.bst version 1.11 (2003/04/02) by Michael Shell.
 -- http://www.ctan.org/tex-archive/macros/latex/contrib/supported/IEEEtran/
@@ -55,7 +54,7 @@ Warning--empty journal in citeulike:14004013
 Done.
 You've used 91 entries,
             4538 wiz_defined-function locations,
-            1422 strings with 33057 characters,
+            1421 strings with 33040 characters,
 and the built_in function-call counts, 50201 in all, are:
 = -- 4697
 > -- 748
@@ -94,4 +93,4 @@ warning$ -- 17
 while$ -- 206
 width$ -- 93
 write$ -- 1020
-(There were 20 warnings)
+(There were 19 warnings)

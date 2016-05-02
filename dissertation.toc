@@ -82,7 +82,7 @@
 \contentsline {subsection}{\numberline {5.3.3}PostgreSQL}{50}
 \contentsline {subsection}{\numberline {5.3.4}Google Calendar}{50}
 \contentsline {subsection}{\numberline {5.3.5}Continuous integration tool}{50}
-\contentsline {section}{\numberline {5.4}Meeting the users needs}{50}
+\contentsline {section}{\numberline {5.4}Meeting the user's needs}{50}
 \contentsline {section}{\numberline {5.5}Limitations of the project}{51}
 \contentsline {section}{\numberline {5.6}Further enhancements}{51}
 \contentsline {subsection}{\numberline {5.6.1}Handwriting training}{51}
