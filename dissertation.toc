@@ -40,6 +40,7 @@
 \contentsline {subsection}{\numberline {2.6.3}Continuous integration tools}{22}
 \contentsline {subsection}{\numberline {2.6.4}Version control}{22}
 \contentsline {subsection}{\numberline {2.6.5}Development environment}{23}
+\contentsline {section}{\numberline {2.7}OAuth}{23}
 \contentsline {chapter}{\numberline {3}Implementation}{24}
 \contentsline {section}{\numberline {3.1}Image processing}{24}
 \contentsline {subsection}{\numberline {3.1.1}Optimising Tesseract}{24}
@@ -89,37 +90,37 @@
 \contentsline {subsection}{\numberline {5.6.3}Web application}{52}
 \contentsline {section}{\numberline {5.7}Evaluating the process}{52}
 \contentsline {section}{\numberline {5.8}Starting again}{52}
-\contentsline {section}{\numberline {5.9}Relevance to degree scheme}{52}
+\contentsline {section}{\numberline {5.9}Relevance to degree scheme}{53}
 \contentsline {section}{\numberline {5.10}Overall conclusions}{53}
-\contentsline {chapter}{Appendices}{54}
-\contentsline {chapter}{\numberline {A}Third-Party Code and Libraries}{55}
-\contentsline {chapter}{\numberline {B}Ethics Submission}{56}
-\contentsline {chapter}{\numberline {C}Testing Results}{59}
-\contentsline {section}{\numberline {3.1}Unit tests}{59}
-\contentsline {subsection}{\numberline {3.1.1}Binarise image}{59}
-\contentsline {section}{\numberline {3.2}Acceptance tests}{59}
-\contentsline {subsection}{\numberline {3.2.1}Add meta-data}{60}
-\contentsline {subsection}{\numberline {3.2.2}Viewing all the notes}{60}
-\contentsline {section}{\numberline {3.3}Integration tests}{60}
-\contentsline {subsection}{\numberline {3.3.1}Add and edit meta data}{60}
-\contentsline {section}{\numberline {3.4}User study tests}{60}
-\contentsline {chapter}{\numberline {D}Tesseract}{61}
-\contentsline {section}{\numberline {4.1}Tesseract data results}{61}
-\contentsline {section}{\numberline {4.2}Training examples}{61}
-\contentsline {section}{\numberline {4.3}Pre-adaptive threshold results}{62}
-\contentsline {chapter}{\numberline {E}Example test data}{63}
-\contentsline {section}{\numberline {5.1}Calendar week response mock}{63}
-\contentsline {section}{\numberline {5.2}Google plus response mock}{64}
-\contentsline {section}{\numberline {5.3}Google Oauth response}{64}
-\contentsline {chapter}{\numberline {F}Image Processing}{66}
-\contentsline {section}{\numberline {6.1}Pre-blue lined image}{67}
-\contentsline {section}{\numberline {6.2}Filtering the blue lines}{68}
-\contentsline {chapter}{\numberline {G}Design decisions}{69}
-\contentsline {section}{\numberline {7.1}Class diagram}{69}
-\contentsline {chapter}{\numberline {H}Design suppliments}{71}
-\contentsline {section}{\numberline {8.1}CRC cards}{71}
-\contentsline {section}{\numberline {8.2}Wireframes}{73}
-\contentsline {chapter}{\numberline {I}Scrum process supplementary materials}{74}
-\contentsline {section}{\numberline {9.1}Sprint burndown charts}{74}
-\contentsline {section}{\numberline {9.2}Overall burndown chart}{75}
-\contentsline {chapter}{Annotated Bibliography}{77}
+\contentsline {chapter}{Appendices}{55}
+\contentsline {chapter}{\numberline {A}Third-Party Code and Libraries}{56}
+\contentsline {chapter}{\numberline {B}Ethics Submission}{59}
+\contentsline {chapter}{\numberline {C}Testing Results}{62}
+\contentsline {section}{\numberline {3.1}Unit tests}{62}
+\contentsline {subsection}{\numberline {3.1.1}Binarise image}{62}
+\contentsline {section}{\numberline {3.2}Acceptance tests}{62}
+\contentsline {subsection}{\numberline {3.2.1}Add meta-data}{63}
+\contentsline {subsection}{\numberline {3.2.2}Viewing all the notes}{63}
+\contentsline {section}{\numberline {3.3}Integration tests}{63}
+\contentsline {subsection}{\numberline {3.3.1}Add and edit meta data}{63}
+\contentsline {section}{\numberline {3.4}User study tests}{63}
+\contentsline {chapter}{\numberline {D}Tesseract}{64}
+\contentsline {section}{\numberline {4.1}Tesseract data results}{64}
+\contentsline {section}{\numberline {4.2}Training examples}{64}
+\contentsline {section}{\numberline {4.3}Pre-adaptive threshold results}{65}
+\contentsline {chapter}{\numberline {E}Example test data}{66}
+\contentsline {section}{\numberline {5.1}Calendar week response mock}{66}
+\contentsline {section}{\numberline {5.2}Google plus response mock}{67}
+\contentsline {section}{\numberline {5.3}Google Oauth response}{67}
+\contentsline {chapter}{\numberline {F}Image Processing}{69}
+\contentsline {section}{\numberline {6.1}Pre-blue lined image}{70}
+\contentsline {section}{\numberline {6.2}Filtering the blue lines}{71}
+\contentsline {chapter}{\numberline {G}Design decisions}{72}
+\contentsline {section}{\numberline {7.1}Class diagram}{72}
+\contentsline {chapter}{\numberline {H}Design suppliments}{74}
+\contentsline {section}{\numberline {8.1}CRC cards}{74}
+\contentsline {section}{\numberline {8.2}Wireframes}{76}
+\contentsline {chapter}{\numberline {I}Scrum process supplementary materials}{77}
+\contentsline {section}{\numberline {9.1}Sprint burndown charts}{77}
+\contentsline {section}{\numberline {9.2}Overall burndown chart}{78}
+\contentsline {chapter}{Annotated Bibliography}{80}

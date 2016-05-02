@@ -17,136 +17,137 @@
 
 %Review the discussion on the Evaluation section from the lectures. A recording is available on Blackboard.
 
-This chapter will evaluate the project as a whole. It will evaluate the requirements, any design decisions made, the good features of the project and areas which could be improved.
+This chapter will evaluate the project as a whole. It will evaluate the requirements, design decisions made, the good features of the project and areas which could be improved.
 
 \section{Correctly identified requirements}
 To recap, the following high-level requirements and objectives were identified in Section \ref{analysis:requirements}:
 \begin{enumerate}
-	\item Investigate how to extract handwriting text from an image - this will involve looking into ways OCR tools can interpret handwriting.
+	\item Investigate how to extract handwritten text from an image - this will involve looking into ways OCR tools can interpret handwriting.
 	\item Train the OCR to recognise text of the author's handwriting.
-	\item Produce a set of a rules which a note must comply to.
+	\item Produce a set of a rules which a note must comply.
 	\item Produce a web application to form the core part of the product. This includes allowing a user to upload an image, display the image. Add appropriate tagging to a note such as module code.
 	\item The user must be able to search for a given module code, showing the full list of notes based on the module code entered.
-	\item The backend of the application must conduct basic OCR recognition, analysing the first 3 lines of the notes.
-	\item The backend must integrate with a calendar to archive the notes away later to be found again.
+	\item The backend of the application must conduct basic OCR recognition, analysing the first three lines of the notes.
+	\item The backend must integrate with a calendar to archive the notes into users events.
 \end{enumerate}
 
 \noindent
-These were the classified as the minimum requirements needed to complete the application. At the start of the project it was made aware that completing these requirements would be a large challenge. Dr Hannah Dee had reservations about integrating the handwriting recognition, but it was added to make the application stand out from a simple web application.
+These were the classified as the minimum requirements needed to complete the application. At the start of the project it was made aware that completing these requirements would be a challenge. Dr. Hannah Dee had reservations about integrating the handwriting recognition, but it was added to make the application stand out from a simple web application.
 
-The investigation and prototype work into extracting handwriting text took longer than expected. This was partly due to turning images to grey-scale did not improve the recognition rate. The requirement took a diversion down a prototyping and almost research approach into the different binarisation techniques available. As this emerged as being an important part of the project, multiple sprints were dedicated to ensuring the image was correctly binarised.
+The investigation and prototype work into extracting handwriting text took longer than expected. This was partly due to turning images to grey-scale did not improve the recognition rate. The requirement took a diversion down a prototyping, and almost research, oriented solution into the different binarisation techniques available. As this emerged as being an important part of the project, multiple sprints were dedicated to ensuring the image was correctly binarised.
 
-The author's handwriting was successfully trained on twelve different notes. From Figure \ref{} is was clear that no further examples were improving the recognition rate. The training returned around a 72\% recognition rate for the author's handwriting. As it was not defined what the ideal recognition rate would be at the start of the project, then this is a very rewarding return.
+The author's handwriting was successfully trained on twelve different notes. From Figure \ref{fig:tesseract_graph} is was clear that no further examples were improving the recognition rate, returning around a 72\% recognition rate. As it was not defined what the ideal recognition rate would be at the start of the project, then this is a very rewarding return.
 
-Although it was not ideal it was acknowledged that the notes must have some structure. Although a little restrictive for the end user, which could have affected user experience, it was essential that this was conducted.
+Although it was not ideal it was acknowledged that the notes must have some structure. Although this is a little restrictive for the end user, it was imperative to have a structured format. Without it the analysis of the metadata would not have been as trivial as it was.
 
-The application was the main crux of the project, so a lot of effort was exerted in an attempt to implement the functionality from the requirements. Although an agile approach was adopted the high-level requirements did not change. There were a series of smaller requirements as the application grew - such as selecting the Tesseract data. Additionally, the metadata used in the application expanded on further investigation to include the title, location and date. The application was extended to include the searching and viewing all notes for the user.
+The application was the main crux of the project, so a considerable amount of effort was put into the project in attempt to implement the functionality from the requirements. Although an Agile approach was adopted, the initial high-level requirements did not change, they were only added to. There were a series of smaller requirements as the application grew, such as clicking on the suggested Tesseract data to populate the form. Additionally, the metadata used in the application expanded upon further investigation to include the title, location and date. Additionally, the application was extended to include the searching and viewing all notes for the user.
 
-At a basic level the handwriting recognition was integrated into the web application, parsing the first three lines. This was implemented on the requirements to train on the author's handwriting and the binarisation of the uploaded image. An aspect which was iteratively developed was the Tesseract confidence - where the colour was outputted. This was not initially in the requirements, but it was an emerging one throughout the iterations. This requirement ended up having design implications.
+At a basic level the handwriting recognition was integrated into the web application, where the first three lines of text were parsed. This resulted in incorporating the segmentation algorithm and previously trained handwriting recognition together. An area which was not initially defined was the output of Tesseract's confidence with the characters found. As this emerged throughout the sprints this impacted the design decisions such identifying that a library would be needed to parse the confidence from the text.
 
-Potentially the most structurally complex requirement to implement was the calendar integration. Initially it was only intended to save the URL to the event. This requirement expanded and went into a variety of directions which included: showing the last seven days of events, and editing the note would remove the URL from the event.
+The most structurally complex requirement to implement was the calendar integration. Initially it was only intended to save the URL to the user's event. This requirement expanded and went into a variety of directions which included: showing the last seven days of events and editing the note which would remove the URL from the event.
 
-As the application was developed in an agile approach not all of the requirements could be truly identified at the start - so the calendar integration task is an example of user stories being appended to the backlog as the project progresses. Therefore the initial requirements provided a good opportunity to discuss if there were any lower-level requirements. Nevertheless, as the project was developed all the initial requirements were completed throughout a diligent process coupled with extensive testing on each feature.
+As the application was developed in an Agile approach not all of the requirements could be identified at the start. The calendar integration task is an example of user stories being appended to the backlog as the project progressed. The initial requirements provided a good opportunity to discuss the high level aspects of what the note must do, but as the application grew so did feature creeping. Nevertheless, as the project was developed all the initial requirements were completed throughout a diligent process coupled with extensive testing on each feature.
 
 \section{Design decisions}
-The design decisions, see Section \ref{}, were a core part of the application process. The design to use an MVC approach was one of the most important design decisions made on the project. It enabled the code to become decoupled, which produces a modular system, greatly enhancing the readability of the application.
+The design decisions, see Chapter \ref{chapt:design}, were a core part of the application process. The MVC approach was one of the most important design decisions made on the project. The design pattern allowed the system to become decoupled, which produces a modular system, greatly enhancing the readability of the application.
 
-The entity-relation diagram has been well considered where each of the relations aims to reduce data-redundancy by being normalised. Although the design is clear, the image path from the \texttt{Note} relation could be extracted to its own relation, and form a 1-1 dependency with the Note.
+The entity-relation diagram has been well considered where each of the relations aims to reduce data-redundancy by being normalised. Although the design is clear, the image path from the \texttt{Note} relation could have be extracted to its own relation, forming a 1-1 dependency with the Note.
 
-The overall architecture of the system was well considered at the start of each feature. The resultant class diagram shows that there is low coupling but high cohesion within the models, obeying to good object oriented principles. Overall, the class diagram shows an overall good design of the system. Although the design is simple, there are sections of the classes which would be refactored slightly if given the chance. In the \texttt{BinariseImage} class there are several functions which would be better as static functions due to them not interacting with class properties. This would improve consistency amongst other classes where static methods have been included. Furthermore, the \texttt{OAuth} classes would be refactored to ensure that the \texttt{http\_auth} variable was not used as a parameter; this was implemented to help with mocking for the tests. The use of helpers and services throughout the design have helped to improve the readability and using these as a proxy reduced the amount of code duplication, resulting in a cleaner implementation.
+The overall architecture of the system was well considered at the start of each feature. The resulting class diagram shows that there is low coupling but high cohesion within the models, obeying to good object oriented principles. The class diagram shows a good overall design of the system.
 
-Strictly not related design, but the PEP8 standard \cite{citeulike:1402014} was adhered to from the start of the process. Partly due to the inexperience with Python the standardisation of the implementation was over looked. Identifying this at the beginning of the project would have not resulted in a large refactor of the application.
+Although the design is simple, there are sections of the system where refactoring would have improved the overall architecture. In the \texttt{BinariseImage} class there are several functions which would be better as static functions, as they do not interact with class attributes. This refactor would improve consistency amongst other classes where static methods have been included. Furthermore, the \texttt{OAuth} classes would be refactored to ensure that the \texttt{http\_auth} variable was not used as a parameter. The purpose of this parameter is to help during the mocking of tests. The use of helpers and services throughout the design have helped to improve the readability and using these as a proxy reduced the amount of code duplication, resulting in a cleaner implementation.
 
-Overall the design throughout the project has been kept as simple as possible, which is a credit to the process, resulting in an intuitive design which has emerged. An upfront design would not have identified the need for the service helpers as this was implemented midway through the project.
+Strictly not related design, but the PEP8 standard \cite{citeulike:14020141} was not adhered to from the start of the process. Partly due to the inexperience with Python the standardisation of the implementation was over looked. Identifying this at the beginning of the project would have not resulted in a large refactor of the application.
+
+The design throughout the project has been kept as simple as possible, which is a credit to the process, resulting in an intuitive design which has emerged. An upfront design would not have identified the need for the service helpers as this was implemented midway through the project.
 
 \section{Use of tools}
-This section will evaluate the key tools used in the application and justify their usefulness.
+This section will evaluate the key tools used in the application and how useful they were.
 
 \subsection{Flask}
-As the application increased in complexity there were times when the micro-framework, Flask, was thought to an incorrect design decision. On the surface Flask seemed to provide sufficient documentation, but beyond the simple applications Flask lacked in documentation. This would often increase the complexity of a task. An example of the over complexity is handling multiple configuration files. This was a lot harder than expected, as there was no support given from the framework for this basic functionality.
+As the application increased in complexity there were times when Flask was thought to an incorrect design decision. On the surface Flask seemed to provide sufficient documentation, but beyond simple applications Flask lacked any comprehensive documentation. This would often increase the complexity of a task. An example of the over complexity was handling multiple configuration files. This was a lot harder than expected, as there was no support given from the framework for this basic functionality.
 
-Additional libraries were often used to accommodate for the lack of functionality Flask offered. Cross site request forgery (CSRF) \footnote{}, is a big security concern but Flask did not offer any protection against this attack. The third party library, SeaSurf [CITE], had to be installed to offer protection in the application.
+Additional libraries were often used to accommodate for the lack of functionality Flask offered. Cross Site Request Forgery (CSRF) is a big security concern, however Flask did not offer any protection against this attack. The third party library SeaSurf \cite{citeulike:14025881} had to be installed to offer protection in the application.
 
-On reflection Flask did offer a flexible approach to the structuring of the application. Blueprints were useful when modularising the system as it enforced a modular design. For the most part Flask was a suitable choice, but the lack of testing documentation and support the application gave to developers was a little poor.
+On reflection Flask did offer a flexible approach to the structuring of the application. Blueprints were useful when modularising the system as it enforced a modular design. For the most part Flask was a suitable choice, but the lack of testing documentation and support the application gave to developers was poor.
 
 \subsection{OpenCV}
-Using OpenCV for the pre-processing stage was an important design change through the project, instead of using ImageMagick. By changing to use OpenCV a superior segmentation algorithm was created for the image. Potentially the Tesseract training process would not have reached the success it has reached without the use of OpenCV. This did result in further work,  but in doing so it helped to produce a better application overall.
+Using OpenCV for the pre-processing stage was an important design change through the project, instead of using ImageMagick. By changing to use OpenCV, a superior segmentation algorithm was created. Potentially the Tesseract training process would not have achieved the success it has without the use of OpenCV. This did result in further work,  but in doing so it helped to produce a better application overall.
 
 \subsection{PostgreSQL}
-PostgreSQL provided all the support that was needed in the application. In the design Section \ref{}, PostgreSQL was evaluated against MySQL and in hindsight the justification for using PostgreSQL instead of MySQL did not end up being used in the application. The more advanced queries and data types were not utilised, therefore using MySQL would also have been suitable in the application.
+PostgreSQL provided all the support that was needed in the application. In the design Section \ref{section:er_diagram}, PostgreSQL was evaluated against MySQL and in hindsight the justification for using PostgreSQL instead of MySQL was not as important as first envisaged. The more advanced queries and data types were not utilised, therefore using MySQL would also have been suitable in the application.
 
 \subsection{Google Calendar}
-Google Calendar was a sensible design decision. Although there were unexpected complexities, there was an abundance of support for the tool. Even when there were issues and support requests were made then the developers aided to help. Integrating the calendar into the application makes the application feel like a complete application. The only negative regarding Google Calendar be down to testing: it over complicated the design of the tests and a lot of time was lost testing this.
+Google Calendar was a sensible design decision. Although there were unexpected complexities, there was an abundance of support for the tool. Even when there were issues and support requests were made then the developers aided to help. Integrating the calendar into the application made the application feel complete. The only negative with using Google Calendar would be with the testing: it over complicated the design of the tests and a lot of time spent mocking the service was spent on this.
 
 \subsection{Continuous integration tool}
-Travis was a superb tool used throughout the development process. Testing in an isolated environment ensured that the application was working as intended. Chosen over Jenkins for the easy set up ended up was justified. However, there were disadvantages to using Travis the build times are \textit{slow}. As it has to compile OpenCV and Tesseract from source for every build when code is committed, then build times are around 25 minutes. This stopped development for 25 minutes every time a feature had been completed, which slowed down the development time.
+Travis was a superb tool used throughout the development process. Testing in an isolated environment ensured that the application was working as intended. It was chosen over Jenkins for the simplistic set up ended up being justified. However, there were disadvantages to using Travis, mainly being the build times are \textit{slow}. It has to compile OpenCV and Tesseract from source for every build when code is committed, leaving build times of around twenty-five minutes. This effectively stopped development for twenty-five minutes every time a feature had been completed, which slowed down development.
 
-\section{Meeting the users needs}
-A key feature of the application would be that the user can digitise their notes easily. A limitation in  user testing was that there was not a wide user study, only two students tested the application.  Regardless, the feedback which was received was that the system was intuitive and simple to use, but it did not fit with their process of note-taking - so they would not find it useful.
+\section{Meeting the user's needs}
+A key feature of the application is that the user can digitise their notes easily. User testing had its limitations as there was not a wide user study conducted - only two students tested the application and a  true indication of meeting the users needs can not be established off these two examples.  Regardless, the feedback which was received was that the system was intuitive and simple to use, but it did not fit with their process of note-taking so they would not find it useful, but it does solve a problem however it may not be of use to everyone.
 
-A true indication of meeting the users needs can not be established off two studies. However, the feedback which was received was that the application works well and does solve a problem, but due to the way different people take their notes it may not be for everyone.
 
 \section{Limitations of the project}
 Due to the time constraints of the project specific sections of the application could not be developed fully.
 
-One limitation which impacts the quality of the characters identified is that the image has to be correctly rotated to 90 \textdegree, and cropped sufficiently. When a user uploads from their cameras they would have to manually ensure the image is correctly oriented and cropped sufficiently - this is not ideal for user experience.
+One limitation which impacts the quality of the characters identified is that the image has to be correctly rotated to 90\textdegree, and then cropped sufficiently. When a user uploads an image from their camera they would have to manually ensure the image is correctly oriented and cropped sufficiently. This is not ideal and may potentially ruin the user experience.
 
 The system only handles handwritten text from the author. Tesseract was not generic enough to analyse handwriting generally. This reduces the extensibility of the application as other users can not use this application without training their handwriting first. Additionally, it only analyses non-cursive handwriting not cursive and in general most people write in a cursively.
 
-A known constraint is that the user has to write their notes in a specific format: the metadata has to be specified in a specific way to ensure that the metadata can be extracted reliably every time. Furthermore, the application only works with purely text notes not one which contains images - this reduces the type of notes which a user could work with.
+As mentioned before a known constraint is that the user has to write their notes in a specific format. The metadata had to be specified in a specific way to ensure that the metadata could be extracted reliably every time. Furthermore, the application only works with purely text notes not a note which contains images, this limits the types of notes which can be used and integrated into the system.
 
 \section{Further enhancements}
 Although the application produced is to a high quality there are sections which could be improved further.
 \subsection{Handwriting training}
-A major improvement would be to improve the handwriting recognition for multiple users. Figure \ref{fig:graph} shows that three training examples were user would be enough to train the application for a new user. This would enable more users to use the application. This could be incorporated into the web application as a setting section where the user uploads three handwritten notes.
+A major improvement would be to advance the handwriting recognition for multiple users. Figure \ref{fig:tesseract_graph} shows that three training examples for a user would be enough to train the application to a sufficient recognition rate. This would enable more users to use the application. This could be incorporated into the web application as a setting page where the user uploads three handwritten notes.
 
-Another feature which would be useful is extending Tesseract's popular words list with domain specific words when a user uploads an image. This would make common words from the user to be found more easily.
+Another feature which would be useful is extending Tesseract's popular words list with domain specific words when a user uploads an image. This would make common words that a user tags easier to be identified in subsequent training examples.
 \subsection{Image processing}
 
-When a user uploads their notes it would have been beneficial to auto-crop the image. This would remove the background from the note, leaving just the text. By enabling this feature the user would not have to crop prior to uploading creating a better user experience. It was identified in the analysis that existing systems implement this functionality.
+When a user uploads their notes it would have been beneficial to auto-crop the image. This would remove the background from the note, leaving just the text. By enabling this feature the user would not have to crop prior to uploading creating a better user experience. It was identified in the analysis that existing systems implement this functionality. By auto-cropping the OCR tool would be more likely to identify correct characters and not image noise.
 
-Extracting images would have been the next logical step for the direction of the application. This would allow a user to draw an item on a note knowing that this would be extracted from the uploaded note and displayed on the canvas.
+Extracting images would have been the next logical step for the direction of the application. This would allow a user to draw an item on a note, knowing that this would be extracted when they upload their image. This could then be placed on the canvas, so the user can change the size of the image.
 
 \subsection{Web application}
-The application could be enhanced to display more recognised text. A WYSIWYG editor would eventually be the aim of the application. This would give the user full control over the content which can be added to the note. More users may be interested in using the application when a feature which gives the user more control over the note's content to add hyperlinks, for example.
+The application could be enhanced to display more recognised text. A WYSIWYG editor would eventually be the aim of the application. This would give the user full control over the content which can be added to the note. More users may be interested in using the application when a feature which gives the user more control over the note's content.
 
 \section{Evaluating the process}
-A software methodology has been followed with diligence and precision through throughout the project. A Scrum approach has been fully adopted and which aided significantly during the design, development and testing. The weekly sprints helped to deconstruct the tasks ensuring that only the main priority tasks were completed. The burndown charts during the sprints were a useful representation of progress throughout the project, identifying problematic days.
+A software methodology has been followed with diligence and precision through throughout the project. A Scrum approach has been fully adopted,  which aided significantly during the design, development and testing process. The weekly sprints helped to deconstruct the tasks ensuring that only the top priority tasks were completed. The burndown charts during the sprints were a useful representation of progress throughout the project, identifying problematic days, these were evaluated against at the end of the sprint to analyse how well that sprint went.
 
 The use of TDD was an imperative process followed throughout the project. The system has been developed with an extensive testing infrastructure behind the development. This was professionally and diligently followed even when implementation issues arose. As a result the system has 248 tests, which fully test all aspects of the system; this would not have been possible if it was not for TDD.
 
-Overall, the process was stuck to thoroughly and meticulously. Scrum was fully adopted on the project and the structured guide to development made the development lifecycle a lot easier.
+Overall, the process was implemented to thoroughly and meticulously. Scrum was fully adopted on the project and the structured guide to development made the development lifecycle a lot easier.
 
 \section{Starting again}
-Although this project has been completed to a high standard, there are a few aspects which would be changed if this was to be started again.
+Although this project has been completed to a high standard, there are a few aspects which would be changed if the project were to be started again.
 
 When considering the use of the database management systems, a stronger analysis should have been considered when deciding if NoSQL would be useful. In hind-sight a NoSQL system would expand the application from not just a note-taking tool but one which could be used by the wider public. This would require a database which could accommodate for a variation in its structure.
 
 Whilst training the handwriting data it would be imperative to keep a record of  training statistics as each example was being trained. This would stop too many training examples being conducted which had marginal overall impact on the how well the characters were identified.
 
-A different framework would be chosen at the start of the project. Flask lacked support, especially on testing, which slowed down the development time considerably. Therefore, a more mainstream Python framework, like Django, would be used at the framework of choice.
+A different framework would have been chosen at the start of the project. Flask lacked support, especially on testing, which slowed down the development time considerably. Therefore, a more mainstream Python framework, like Django, would be used at the framework of choice.
 
 \section{Relevance to degree scheme}
 The author's degree scheme is \textit{Computer Science}. The project has shown a full range of capabilities which satisfy that this project has enhanced and furthered knowledge relating to the subject of Computer Science.
 
 The project incorporates many different engineering aspects:
 \begin{itemize}
-	\item It is developed in an Agile methodology process, enforcing good software engineering practices throughout the entire project.
+	\item It has been developed in an Agile methodology process, enforcing good software engineering practices throughout the entire project.
 	\item Design patterns were considered and used throughout the project, predominantly MVC.
-	\item Research work to identify how to segment an image using computer vision techniques.
+	\item Research work to identify how to segment an image using Computer Vision techniques.
 	\item Programming was conducted to implement a fully functioning web application, following a code re-usability ethos.
-	\item Evaluations and experiments conducted to analyse the accuracy of successful characters identified by an OCR engine.
+	\item Evaluations and experiments were conducted to analyse the accuracy of successful characters identified by an OCR engine.
 \end{itemize}
 
 \section{Overall conclusions}
-Although there were some limitations and aspects of the application which could be changed it should not overlook the product produced. There are 3 core achievements in the project: the image processing, handwriting analysis and the web application.
+Although there were some limitations and aspects of the application which could be changed, one should not overlook the product produced. There are 3 core achievements in the project: the image processing, handwriting analysis and the web application.
 
-Over the 15 week process a series of research and prototype work has been completed which can successfully binarise an image and remove any additional noise. The segmentation algorithm can take an image with non-uniform lighting conditions and still output a binarised image which clearly shows all the text on the page. This segmentation can now improve the Tesseract's handwriting recognition rate for handwritten text.
+Over the 15 week process a series of research and prototype task have been completed in an attempt to successfully binarise an image and remove any additional noise. The segmentation algorithm can take an image with non-uniform lighting conditions and still output a binarised image, clearly showing all the text on the page. This segmentation can now improve the Tesseract's handwriting recognition rate for handwritten text.
 
-The analysis of handwritten text to return a 72\% recognition rate is an achievement in itself. This was only achieved through the successes of the segmentation algorithm. Further analysis was conducted into the success rate which was achieved.
+The analysis of handwritten text to return a 72\% recognition rate is an achievement in itself. This was only achieved through the successes of the segmentation algorithm. Further analysis was conducted into the success rate achieved.
 
-The web application was developed to a high standard, using solid software engineering processes. At a basic level the user can log-in and authorise via OAuth2 with Google's servers. Images can be uploaded, which are binarised using the segmentation algorithm and the first three lines of the handwritten note are extracted and presented as to the user. This step alone shows how the three different sections of the project integrate into one flow for the user to selection information from their note. After this further complexity was added to make additional HTTP requests to the user's calendar to add and edit specific events based on the date of the lecture.
+The web application was developed to a high standard, using solid software engineering processes. At a basic level the user can log-in and authorise via OAuth2 with Google's services. Images can be uploaded and  are binarised using the segmentation algorithm. The first first three lines of the handwritten note are extracted and presented to the user, which they can interact with. This step alone shows how the three different sections of the project integrate into one component for the user to select the metadata for their note. After this further complexity was added to make additional HTTP requests to the user's calendar, adding and editing specific events based on the date of the lecture.
 
-At an in-depth level design patterns have been implemented to help to with the maintainability of the codebase. The application has succeeded in reducing the code duplication in the project by abstracting duplicated code into a series of helper classes. All of this is wrapped in a solid development methodology which has enabled the application to be iteratively developed gaining constant feedback from Dr Hannah Dee.
+At an in-depth level design patterns have been implemented to help to with the maintainability of the codebase. The application has succeeded in reducing the code duplication in the project by abstracting duplicated code into a series of helper classes. All of this is wrapped in a solid development methodology which has enabled the application to be iteratively developed gaining constant feedback from Dr. Hannah Dee.
 
-To conclude, a substantial project has been undertaken encompassing a variety of different aspects which all combined to produce an intuitive note-taking tool.
+To conclude, a substantial project has been undertaken encompassing a variety of different software-engineering processes, which all combine to produce an intuitive note-taking tool.

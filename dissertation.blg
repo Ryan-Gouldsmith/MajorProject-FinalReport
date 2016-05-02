@@ -26,9 +26,10 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: References/references.bib
+Warning--entry type for "apache_license" isn't style-file defined
+--line 975 of file References/references.bib
 Warning--I didn't find a database entry for "citeulike:1402014"
-Warning--I didn't find a database entry for "apache_poi"
-Warning--I didn't find a database entry for "apache_license"
+Warning--I didn't find a database entry for "citeulike:1402058"
 -- IEEEtranS.bst version 1.11 (2003/04/02) by Michael Shell.
 -- http://www.ctan.org/tex-archive/macros/latex/contrib/supported/IEEEtran/
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
@@ -39,48 +40,58 @@ Warning--to sort, need author, organization, or key in citeulike:13995818
 Warning--to sort, need author or key in citeulike:2917492
 Warning--to sort, need author, organization, or key in citeulike:14006256
 Warning--to sort, need author, organization, or key in citeulike:14021437
+Warning--to sort, need author, organization, or key in citeulike:14025881
+Warning--to sort, need author, organization, or key in citeulike:14025897
+Warning--to sort, need author, organization, or key in citeulike:14025936
+Warning--to sort, need author, organization, or key in citeulike:14025941
+Warning--to sort, need author, organization, or key in citeulike:14025943
+Warning--to sort, need author, organization, or key in citeulike:14025946
 Warning--empty author in citeulike:2917492
+Warning--empty journal in citeulike:14025914
+Warning--empty year in citeulike:14025914
+Warning--empty journal in citeulike:14025900
+Warning--empty journal in citeulike:14004013
 
 Done.
-You've used 72 entries,
+You've used 91 entries,
             4538 wiz_defined-function locations,
-            1329 strings with 29229 characters,
-and the built_in function-call counts, 41166 in all, are:
-= -- 3860
-> -- 645
-< -- 116
-+ -- 307
-- -- 158
-* -- 1922
-:= -- 7146
-add.period$ -- 147
-call.type$ -- 72
-change.case$ -- 356
-chr.to.int$ -- 267
-cite$ -- 79
-duplicate$ -- 2880
-empty$ -- 3356
-format.name$ -- 168
-if$ -- 8822
+            1422 strings with 33057 characters,
+and the built_in function-call counts, 50201 in all, are:
+= -- 4697
+> -- 748
+< -- 125
++ -- 356
+- -- 184
+* -- 2352
+:= -- 8761
+add.period$ -- 185
+call.type$ -- 91
+change.case$ -- 443
+chr.to.int$ -- 285
+cite$ -- 108
+duplicate$ -- 3545
+empty$ -- 4130
+format.name$ -- 194
+if$ -- 10714
 int.to.chr$ -- 0
-int.to.str$ -- 72
-missing$ -- 589
-newline$ -- 378
-num.names$ -- 132
-pop$ -- 1712
+int.to.str$ -- 91
+missing$ -- 728
+newline$ -- 486
+num.names$ -- 158
+pop$ -- 2158
 preamble$ -- 1
-purify$ -- 223
+purify$ -- 274
 quote$ -- 2
-skip$ -- 3070
+skip$ -- 3734
 stack$ -- 0
-substring$ -- 1183
-swap$ -- 1818
-text.length$ -- 27
+substring$ -- 1373
+swap$ -- 2166
+text.length$ -- 30
 text.prefix$ -- 0
 top$ -- 6
-type$ -- 583
-warning$ -- 7
-while$ -- 176
-width$ -- 74
-write$ -- 812
-(There were 10 warnings)
+type$ -- 740
+warning$ -- 17
+while$ -- 206
+width$ -- 93
+write$ -- 1020
+(There were 20 warnings)
