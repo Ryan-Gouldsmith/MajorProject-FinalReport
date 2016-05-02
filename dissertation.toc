@@ -44,7 +44,7 @@
 \contentsline {section}{\numberline {3.1}Image processing}{24}
 \contentsline {subsection}{\numberline {3.1.1}Optimising Tesseract}{24}
 \contentsline {subsubsection}{\numberline {3.1.1.1}Otsu}{24}
-\contentsline {subsubsection}{\numberline {3.1.1.2}Adaptive threshold}{26}
+\contentsline {subsubsection}{\numberline {3.1.1.2}Adaptive threshold}{25}
 \contentsline {section}{\numberline {3.2}Lined paper}{28}
 \contentsline {subsection}{\numberline {3.2.1}Filtering the blue lines}{28}
 \contentsline {subsection}{\numberline {3.2.2}Only extracting the text}{29}
@@ -94,32 +94,32 @@
 \contentsline {chapter}{Appendices}{54}
 \contentsline {chapter}{\numberline {A}Third-Party Code and Libraries}{55}
 \contentsline {chapter}{\numberline {B}Ethics Submission}{56}
-\contentsline {chapter}{\numberline {C}Testing Results}{57}
-\contentsline {section}{\numberline {3.1}Unit tests}{57}
-\contentsline {subsection}{\numberline {3.1.1}Binarise image}{57}
-\contentsline {section}{\numberline {3.2}Acceptance tests}{57}
-\contentsline {subsection}{\numberline {3.2.1}Add meta-data}{58}
-\contentsline {subsection}{\numberline {3.2.2}Viewing all the notes}{58}
-\contentsline {section}{\numberline {3.3}Integration tests}{58}
-\contentsline {subsection}{\numberline {3.3.1}Add and edit meta data}{58}
-\contentsline {section}{\numberline {3.4}User study tests}{58}
-\contentsline {chapter}{\numberline {D}Tesseract}{59}
-\contentsline {section}{\numberline {4.1}Tesseract data results}{59}
-\contentsline {section}{\numberline {4.2}Training examples}{59}
-\contentsline {section}{\numberline {4.3}Pre-adaptive threshold results}{61}
-\contentsline {chapter}{\numberline {E}Example test data}{62}
-\contentsline {section}{\numberline {5.1}Calendar week response mock}{62}
-\contentsline {section}{\numberline {5.2}Google plus response mock}{63}
-\contentsline {section}{\numberline {5.3}Google Oauth response}{63}
-\contentsline {chapter}{\numberline {F}Image Processing}{65}
-\contentsline {section}{\numberline {6.1}Pre-blue lined image}{66}
-\contentsline {section}{\numberline {6.2}Filtering the blue lines}{67}
-\contentsline {chapter}{\numberline {G}Design decisions}{68}
+\contentsline {chapter}{\numberline {C}Testing Results}{59}
+\contentsline {section}{\numberline {3.1}Unit tests}{59}
+\contentsline {subsection}{\numberline {3.1.1}Binarise image}{59}
+\contentsline {section}{\numberline {3.2}Acceptance tests}{59}
+\contentsline {subsection}{\numberline {3.2.1}Add meta-data}{60}
+\contentsline {subsection}{\numberline {3.2.2}Viewing all the notes}{60}
+\contentsline {section}{\numberline {3.3}Integration tests}{60}
+\contentsline {subsection}{\numberline {3.3.1}Add and edit meta data}{60}
+\contentsline {section}{\numberline {3.4}User study tests}{60}
+\contentsline {chapter}{\numberline {D}Tesseract}{61}
+\contentsline {section}{\numberline {4.1}Tesseract data results}{61}
+\contentsline {section}{\numberline {4.2}Training examples}{61}
+\contentsline {section}{\numberline {4.3}Pre-adaptive threshold results}{62}
+\contentsline {chapter}{\numberline {E}Example test data}{63}
+\contentsline {section}{\numberline {5.1}Calendar week response mock}{63}
+\contentsline {section}{\numberline {5.2}Google plus response mock}{64}
+\contentsline {section}{\numberline {5.3}Google Oauth response}{64}
+\contentsline {chapter}{\numberline {F}Image Processing}{66}
+\contentsline {section}{\numberline {6.1}Pre-blue lined image}{67}
+\contentsline {section}{\numberline {6.2}Filtering the blue lines}{68}
+\contentsline {chapter}{\numberline {G}Design decisions}{69}
 \contentsline {section}{\numberline {7.1}Class diagram}{69}
-\contentsline {chapter}{\numberline {H}Design suppliments}{70}
-\contentsline {section}{\numberline {8.1}CRC cards}{70}
-\contentsline {section}{\numberline {8.2}Wireframes}{72}
-\contentsline {chapter}{\numberline {I}Scrum process supplementary materials}{73}
+\contentsline {chapter}{\numberline {H}Design suppliments}{71}
+\contentsline {section}{\numberline {8.1}CRC cards}{71}
+\contentsline {section}{\numberline {8.2}Wireframes}{73}
+\contentsline {chapter}{\numberline {I}Scrum process supplementary materials}{74}
 \contentsline {section}{\numberline {9.1}Sprint burndown charts}{74}
 \contentsline {section}{\numberline {9.2}Overall burndown chart}{75}
 \contentsline {chapter}{Annotated Bibliography}{77}

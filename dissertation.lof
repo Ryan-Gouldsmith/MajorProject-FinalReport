@@ -6,14 +6,14 @@
 \contentsline {figure}{\numberline {2.3}{\ignorespaces A example of how the model-view-controller (MVC) framework integrates.\relax }}{15}
 \contentsline {figure}{\numberline {2.4}{\ignorespaces A diagram illustrating how extension in Jinga html template engine works.\relax }}{16}
 \contentsline {figure}{\numberline {2.5}{\ignorespaces An activity diagram to depict the design of the algorithm for the image segmentation.\relax }}{17}
-\contentsline {figure}{\numberline {2.6}{\ignorespaces The final result of the entity-relation diagram - after a series of iterations.\relax }}{19}
-\contentsline {figure}{\numberline {2.7}{\ignorespaces From left to right, the homepage wiremock through the different iterations and the change of requirements\relax }}{21}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces The final result of the entity-relation diagram (after a series of iterations).\relax }}{19}
+\contentsline {figure}{\numberline {2.7}{\ignorespaces From left to right, the homepage wireframe through the different iterations and the change of requirements\relax }}{21}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces The use of Otsu binarisation technique on an image with a little shadow across the image\relax }}{25}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces The use of Otsu binarisation technique on an image with a shadow across the image\relax }}{25}
 \contentsline {figure}{\numberline {3.2}{\ignorespaces Adaptive mean threshold algorithm on a note, showing binarisation but there is still noise in the image.\relax }}{26}
 \contentsline {figure}{\numberline {3.3}{\ignorespaces Adaptive Gaussian used over the image, showing a lot smoother of an image\relax }}{27}
 \contentsline {figure}{\numberline {3.4}{\ignorespaces A variety of thresholding techniques used on the same note, showing adaptive threshold resulting in the best output.\relax }}{28}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces An example output from the algorithm 2\hbox {}. There is still significant amounts of noise in the image.\relax }}{29}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces An example output from the algorithm 2\hbox {}. There are significant amounts of noise in the image.\relax }}{29}
 \contentsline {figure}{\numberline {3.6}{\ignorespaces A poor quality image has been binarised successfully with little noise.\relax }}{30}
 \contentsline {figure}{\numberline {3.7}{\ignorespaces A example of the jTessBoxEditor being used identify characters in the tiff box file.\relax }}{31}
 \contentsline {figure}{\numberline {3.8}{\ignorespaces Tesseract being integrated into the application at a very basic level\relax }}{33}
@@ -31,21 +31,21 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {C.1}{\ignorespaces Acceptance test being conducted for the homepage, to ensure that the homepage displays the correct content.\relax }}{57}
-\contentsline {figure}{\numberline {C.2}{\ignorespaces Acceptance test being performed to ensure that meta-data can be added to the correct note.\relax }}{58}
-\contentsline {figure}{\numberline {C.3}{\ignorespaces Acceptance test being conducted to ensure that all the notes can be viewed.\relax }}{58}
-\contentsline {figure}{\numberline {C.4}{\ignorespaces Integration tests carried on the add and edit meta url to ensure the system worked well together.\relax }}{58}
+\contentsline {figure}{\numberline {C.1}{\ignorespaces Acceptance test being conducted for the homepage, to ensure that the homepage displays the correct content.\relax }}{59}
+\contentsline {figure}{\numberline {C.2}{\ignorespaces Acceptance test being performed to ensure that meta-data can be added to the correct note.\relax }}{60}
+\contentsline {figure}{\numberline {C.3}{\ignorespaces Acceptance test being conducted to ensure that all the notes can be viewed.\relax }}{60}
+\contentsline {figure}{\numberline {C.4}{\ignorespaces Integration tests carried on the add and edit meta url to ensure the system worked well together.\relax }}{60}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {D.1}{\ignorespaces An example of the binarised images used as part of the training data for the Tesseract engine.\relax }}{60}
+\contentsline {figure}{\numberline {D.1}{\ignorespaces An example of the binarised images used as part of the training data for the Tesseract engine.\relax }}{62}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {F.1}{\ignorespaces The adaptive threshold on normal lined paper caused too much noise to be interfered with the Tesseract engine\relax }}{66}
-\contentsline {figure}{\numberline {F.2}{\ignorespaces Blue lines in the adaptive threshold have been identified and removed to be a white colour.\relax }}{67}
+\contentsline {figure}{\numberline {F.1}{\ignorespaces The adaptive threshold on normal lined paper caused too much noise to be interfered with the Tesseract engine\relax }}{67}
+\contentsline {figure}{\numberline {F.2}{\ignorespaces Blue lines in the adaptive threshold have been identified and removed to be a white colour.\relax }}{68}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {G.1}{\ignorespaces The overall class diagram of the models directory, not including the controllers\relax }}{69}
+\contentsline {figure}{\numberline {G.1}{\ignorespaces The overall class diagram of the models directory, not including the controllers\relax }}{70}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {H.1}{\ignorespaces An iterative approach to the CRC cards, used in the design of the Google calendar service. Each now card represents a new state in which the system has evolved.\relax }}{71}
-\contentsline {figure}{\numberline {H.2}{\ignorespaces An example of progressive wireframes for the note upload leading to an overall design which could be implemented for the end user. \relax }}{72}
+\contentsline {figure}{\numberline {H.1}{\ignorespaces An iterative approach to the CRC cards, used in the design of the Google calendar service. Each now card represents a new state in which the system has evolved.\relax }}{72}
+\contentsline {figure}{\numberline {H.2}{\ignorespaces An example of progressive wireframes for the note upload leading to an overall design which could be implemented for the end user. \relax }}{73}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {I.1}{\ignorespaces An example of the burndown chart for a sprint, showing areas where there may have been difficulty.\relax }}{74}
 \contentsline {figure}{\numberline {I.2}{\ignorespaces The overall burndown of the sprints during the development period. This clearly shows a consistent work flow up until more knowledge of the project was achieved, going below the expectation line.\relax }}{75}

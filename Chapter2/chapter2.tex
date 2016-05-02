@@ -284,3 +284,13 @@ Once the code was pushed to GitHub, Travis would automatically build the branch 
 
 \subsection{Development environment}
 The text editor Atom \cite{citeulike:14023852} was used for the majority of the project. It is a lightweight text editor, which provides suitable syntax highlighting. However, later in the project when refactoring became more cumbersome due to the increase in code base - PyCharm community edition \cite{citeulike:14023855} was used as it offered better refactoring functionality.
+
+\section{OAuth} \label{design:oauth}
+[CITE CITE GOOGLE OAUTH2s][REWRITE]
+To interact with the Google services then OAuth would have to be considered. OAuth is essentially a protocol used for authorisation and authentication. When a user makes a request to Google it will check that they the authentication credentials are correct (the password and username) and the authorisation would check to see if they are allowed to access the requested resource. In the example of the application, it would authorise the user's credentials to ensure the application can has access to their Calendar and their email address.
+
+There were specific stages which needed to be completed before the integration with the user's content could be performed. After analysing the available options Google OAuth provide then it would be decided that the `web applications server' would be the most appropriate implementation.
+
+When a user signs in with their Google credentials then the application is deferring the logic to Google to handle the authorisation. The user then has to agree to the application using specific details from their account. Once this process has been completed, then credentials are returned. Inside the credentials an `access token' is returned - this token is used for all the interactions with the API.
+
+OAuth would be used in the query of the Google services. No iterative design was conducted which decided OAuth would be the best option - it is just the default option with Google.
