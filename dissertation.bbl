@@ -126,6 +126,15 @@
  \begin{quotation}\noindent Used to make HTPTP queries throughout the
   application to the external services. \end{quotation}
 
+\bibitem{citeulike:11836766}
+\BIBentryALTinterwordspacing
+D.~H. <>, ``{The OAuth 2.0 Authorization Framework},'' Internet Requests for
+  Comment, RFC Editor, Fremont, CA, USA, Tech. Rep. 6749, Oct. 2012. [Online].
+  Available: \url{http://www.rfc-editor.org/rfc/rfc6749.txt}
+\BIBentrySTDinterwordspacing
+ \begin{quotation}\noindent A proposal of the the OAuth2 protocol. This is the
+  protocol which the Google services are required to use. \end{quotation}
+
 \bibitem{citeulike:13915786}
 \BIBentryALTinterwordspacing
 R.~Agarwal and D.~Umphress, ``{Extreme Programming for a Single Person Team},''
@@ -178,11 +187,21 @@ M.~Daly, ``{Mocking External Apis in Python - Matthew Daly's Blog},''
   external API is bad, and there should mocking objects instead.
   \end{quotation}
 
+\bibitem{citeulike:14026287}
+\BIBentryALTinterwordspacing
+G.~Developers, ``{Using OAuth 2.0 to Access Google APIs Â |Â  Google
+  Identity Platform Â |Â  Google Developers},'' last accessed 2nd May 2016.
+  [Online]. Available:
+  \url{https://developers.google.com/identity/protocols/OAuth2\#basicsteps}
+\BIBentrySTDinterwordspacing
+ \begin{quotation}\noindent Comprehensive documentation on the OAuth2 protocol
+  implementation for Google services. Excellent resource for understanding how
+  the flow of the requests work. \end{quotation}
+
 \bibitem{citeulike:14025877}
 \BIBentryALTinterwordspacing
-G.~Developers, ``{Getting Started Â |Â  API Client Library for Python
-  Â |Â  Google Developers},'' 2016, last accessed 2nd May 2016. [Online].
-  Available:
+------, ``{Getting Started Â |Â  API Client Library for Python Â |Â 
+  Google Developers},'' 2016, last accessed 2nd May 2016. [Online]. Available:
   \url{https://developers.google.com/api-client-library/python/start/get\_started\#setup}
 \BIBentrySTDinterwordspacing
  \begin{quotation}\noindent The Google client API library which is used

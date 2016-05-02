@@ -489,14 +489,14 @@ INPUT ./images/event_seven_day.png
 INPUT images/saved_to_calendar.png
 INPUT ./images/saved_to_calendar.png
 INPUT ./images/saved_to_calendar.png
+INPUT /usr/local/texlive/2015/texmf-dist/tex/latex/listings/lstlang1.sty
+INPUT /usr/local/texlive/2015/texmf-dist/tex/latex/listings/lstlang1.sty
 OUTPUT Chapter4/chapter4.aux
 INPUT Chapter4/chapter4.tex
 INPUT Chapter4/chapter4.tex
 INPUT images/tdd.png
 INPUT ./images/tdd.png
 INPUT ./images/tdd.png
-INPUT /usr/local/texlive/2015/texmf-dist/tex/latex/listings/lstlang1.sty
-INPUT /usr/local/texlive/2015/texmf-dist/tex/latex/listings/lstlang1.sty
 INPUT /usr/local/texlive/2015/texmf-dist/fonts/tfm/adobe/courier/pcrro7t.tfm
 INPUT /usr/local/texlive/2015/texmf-dist/fonts/vf/adobe/courier/pcrro7t.vf
 INPUT /usr/local/texlive/2015/texmf-dist/fonts/tfm/adobe/courier/pcrro8r.tfm

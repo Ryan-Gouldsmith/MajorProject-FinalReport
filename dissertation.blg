@@ -39,11 +39,11 @@ Warning--to sort, need author, organization, or key in citeulike:13995818
 Warning--to sort, need author or key in citeulike:2917492
 Warning--to sort, need author, organization, or key in citeulike:14006256
 Warning--to sort, need author, organization, or key in citeulike:14021437
+Warning--to sort, need author, organization, or key in citeulike:14025941
+Warning--to sort, need author, organization, or key in citeulike:14025943
 Warning--to sort, need author, organization, or key in citeulike:14025881
 Warning--to sort, need author, organization, or key in citeulike:14025897
 Warning--to sort, need author, organization, or key in citeulike:14025936
-Warning--to sort, need author, organization, or key in citeulike:14025941
-Warning--to sort, need author, organization, or key in citeulike:14025943
 Warning--to sort, need author, organization, or key in citeulike:14025946
 Warning--empty author in citeulike:2917492
 Warning--empty journal in citeulike:14025914
@@ -52,45 +52,45 @@ Warning--empty journal in citeulike:14025900
 Warning--empty journal in citeulike:14004013
 
 Done.
-You've used 91 entries,
+You've used 93 entries,
             4538 wiz_defined-function locations,
-            1421 strings with 33040 characters,
-and the built_in function-call counts, 50201 in all, are:
-= -- 4697
-> -- 748
-< -- 125
-+ -- 356
-- -- 184
-* -- 2352
-:= -- 8761
-add.period$ -- 185
-call.type$ -- 91
-change.case$ -- 443
+            1435 strings with 33677 characters,
+and the built_in function-call counts, 51267 in all, are:
+= -- 4805
+> -- 762
+< -- 126
++ -- 362
+- -- 188
+* -- 2404
+:= -- 8979
+add.period$ -- 189
+call.type$ -- 93
+change.case$ -- 452
 chr.to.int$ -- 285
-cite$ -- 108
-duplicate$ -- 3545
-empty$ -- 4130
-format.name$ -- 194
-if$ -- 10714
+cite$ -- 110
+duplicate$ -- 3620
+empty$ -- 4209
+format.name$ -- 198
+if$ -- 10931
 int.to.chr$ -- 0
-int.to.str$ -- 91
-missing$ -- 728
-newline$ -- 486
-num.names$ -- 158
-pop$ -- 2158
+int.to.str$ -- 93
+missing$ -- 745
+newline$ -- 498
+num.names$ -- 162
+pop$ -- 2198
 preamble$ -- 1
-purify$ -- 274
+purify$ -- 280
 quote$ -- 2
-skip$ -- 3734
+skip$ -- 3811
 stack$ -- 0
-substring$ -- 1373
-swap$ -- 2166
-text.length$ -- 30
+substring$ -- 1387
+swap$ -- 2215
+text.length$ -- 31
 text.prefix$ -- 0
 top$ -- 6
-type$ -- 740
+type$ -- 757
 warning$ -- 17
-while$ -- 206
-width$ -- 93
-write$ -- 1020
+while$ -- 210
+width$ -- 95
+write$ -- 1046
 (There were 19 warnings)

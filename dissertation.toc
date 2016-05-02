@@ -60,67 +60,68 @@
 \contentsline {subsection}{\numberline {3.4.6}Editing calendar events}{35}
 \contentsline {subsubsection}{\numberline {3.4.6.1}Editing a note}{36}
 \contentsline {subsubsection}{\numberline {3.4.6.2}Logging in and out}{37}
-\contentsline {section}{\numberline {3.5}Travis}{37}
-\contentsline {chapter}{\numberline {4}Testing}{38}
-\contentsline {section}{\numberline {4.1}Overall approach to testing}{38}
-\contentsline {subsection}{\numberline {4.1.1}Test-driven-development}{38}
-\contentsline {section}{\numberline {4.2}Automated testing}{39}
-\contentsline {section}{\numberline {4.3}Mocking tests}{39}
-\contentsline {subsection}{\numberline {4.3.1}Unit testing}{41}
-\contentsline {subsection}{\numberline {4.3.2}Integration testing}{42}
-\contentsline {subsection}{\numberline {4.3.3}Handling sessions}{42}
-\contentsline {section}{\numberline {4.4}Acceptance testing}{42}
-\contentsline {section}{\numberline {4.5}User Testing}{44}
-\contentsline {section}{\numberline {4.6}Tesseract testing}{44}
-\contentsline {section}{\numberline {4.7}Image threshold testing}{46}
-\contentsline {chapter}{\numberline {5}Evaluation}{47}
-\contentsline {section}{\numberline {5.1}Correctly identified requirements}{47}
-\contentsline {section}{\numberline {5.2}Design decisions}{48}
-\contentsline {section}{\numberline {5.3}Use of tools}{49}
-\contentsline {subsection}{\numberline {5.3.1}Flask}{49}
-\contentsline {subsection}{\numberline {5.3.2}OpenCV}{50}
-\contentsline {subsection}{\numberline {5.3.3}PostgreSQL}{50}
-\contentsline {subsection}{\numberline {5.3.4}Google Calendar}{50}
-\contentsline {subsection}{\numberline {5.3.5}Continuous integration tool}{50}
-\contentsline {section}{\numberline {5.4}Meeting the user's needs}{50}
-\contentsline {section}{\numberline {5.5}Limitations of the project}{51}
-\contentsline {section}{\numberline {5.6}Further enhancements}{51}
-\contentsline {subsection}{\numberline {5.6.1}Handwriting training}{51}
-\contentsline {subsection}{\numberline {5.6.2}Image processing}{51}
-\contentsline {subsection}{\numberline {5.6.3}Web application}{52}
-\contentsline {section}{\numberline {5.7}Evaluating the process}{52}
-\contentsline {section}{\numberline {5.8}Starting again}{52}
-\contentsline {section}{\numberline {5.9}Relevance to degree scheme}{53}
-\contentsline {section}{\numberline {5.10}Overall conclusions}{53}
-\contentsline {chapter}{Appendices}{55}
-\contentsline {chapter}{\numberline {A}Third-Party Code and Libraries}{56}
-\contentsline {chapter}{\numberline {B}Ethics Submission}{59}
-\contentsline {chapter}{\numberline {C}Testing Results}{62}
-\contentsline {section}{\numberline {3.1}Unit tests}{62}
-\contentsline {subsection}{\numberline {3.1.1}Binarise image}{62}
-\contentsline {section}{\numberline {3.2}Acceptance tests}{62}
-\contentsline {subsection}{\numberline {3.2.1}Add meta-data}{63}
-\contentsline {subsection}{\numberline {3.2.2}Viewing all the notes}{63}
-\contentsline {section}{\numberline {3.3}Integration tests}{63}
-\contentsline {subsection}{\numberline {3.3.1}Add and edit meta data}{63}
-\contentsline {section}{\numberline {3.4}User study tests}{63}
-\contentsline {chapter}{\numberline {D}Tesseract}{64}
-\contentsline {section}{\numberline {4.1}Tesseract data results}{64}
-\contentsline {section}{\numberline {4.2}Training examples}{64}
-\contentsline {section}{\numberline {4.3}Pre-adaptive threshold results}{65}
-\contentsline {chapter}{\numberline {E}Example test data}{66}
-\contentsline {section}{\numberline {5.1}Calendar week response mock}{66}
-\contentsline {section}{\numberline {5.2}Google plus response mock}{67}
-\contentsline {section}{\numberline {5.3}Google Oauth response}{67}
-\contentsline {chapter}{\numberline {F}Image Processing}{69}
-\contentsline {section}{\numberline {6.1}Pre-blue lined image}{70}
-\contentsline {section}{\numberline {6.2}Filtering the blue lines}{71}
-\contentsline {chapter}{\numberline {G}Design decisions}{72}
-\contentsline {section}{\numberline {7.1}Class diagram}{72}
-\contentsline {chapter}{\numberline {H}Design suppliments}{74}
-\contentsline {section}{\numberline {8.1}CRC cards}{74}
-\contentsline {section}{\numberline {8.2}Wireframes}{76}
-\contentsline {chapter}{\numberline {I}Scrum process supplementary materials}{77}
-\contentsline {section}{\numberline {9.1}Sprint burndown charts}{77}
-\contentsline {section}{\numberline {9.2}Overall burndown chart}{78}
-\contentsline {chapter}{Annotated Bibliography}{80}
+\contentsline {subsection}{\numberline {3.4.7}Saving and editing a note}{37}
+\contentsline {section}{\numberline {3.5}Travis}{38}
+\contentsline {chapter}{\numberline {4}Testing}{39}
+\contentsline {section}{\numberline {4.1}Overall approach to testing}{39}
+\contentsline {subsection}{\numberline {4.1.1}Test-driven-development}{39}
+\contentsline {section}{\numberline {4.2}Automated testing}{40}
+\contentsline {section}{\numberline {4.3}Mocking tests}{40}
+\contentsline {subsection}{\numberline {4.3.1}Unit testing}{42}
+\contentsline {subsection}{\numberline {4.3.2}Integration testing}{43}
+\contentsline {subsection}{\numberline {4.3.3}Handling sessions}{43}
+\contentsline {section}{\numberline {4.4}Acceptance testing}{43}
+\contentsline {section}{\numberline {4.5}User Testing}{45}
+\contentsline {section}{\numberline {4.6}Tesseract testing}{45}
+\contentsline {section}{\numberline {4.7}Image threshold testing}{47}
+\contentsline {chapter}{\numberline {5}Evaluation}{48}
+\contentsline {section}{\numberline {5.1}Correctly identified requirements}{48}
+\contentsline {section}{\numberline {5.2}Design decisions}{49}
+\contentsline {section}{\numberline {5.3}Use of tools}{50}
+\contentsline {subsection}{\numberline {5.3.1}Flask}{50}
+\contentsline {subsection}{\numberline {5.3.2}OpenCV}{51}
+\contentsline {subsection}{\numberline {5.3.3}PostgreSQL}{51}
+\contentsline {subsection}{\numberline {5.3.4}Google Calendar}{51}
+\contentsline {subsection}{\numberline {5.3.5}Continuous integration tool}{51}
+\contentsline {section}{\numberline {5.4}Meeting the user's needs}{51}
+\contentsline {section}{\numberline {5.5}Limitations of the project}{52}
+\contentsline {section}{\numberline {5.6}Further enhancements}{52}
+\contentsline {subsection}{\numberline {5.6.1}Handwriting training}{52}
+\contentsline {subsection}{\numberline {5.6.2}Image processing}{52}
+\contentsline {subsection}{\numberline {5.6.3}Web application}{53}
+\contentsline {section}{\numberline {5.7}Evaluating the process}{53}
+\contentsline {section}{\numberline {5.8}Starting again}{53}
+\contentsline {section}{\numberline {5.9}Relevance to degree scheme}{54}
+\contentsline {section}{\numberline {5.10}Overall conclusions}{54}
+\contentsline {chapter}{Appendices}{56}
+\contentsline {chapter}{\numberline {A}Third-Party Code and Libraries}{57}
+\contentsline {chapter}{\numberline {B}Ethics Submission}{60}
+\contentsline {chapter}{\numberline {C}Testing Results}{63}
+\contentsline {section}{\numberline {3.1}Unit tests}{63}
+\contentsline {subsection}{\numberline {3.1.1}Binarise image}{63}
+\contentsline {section}{\numberline {3.2}Acceptance tests}{63}
+\contentsline {subsection}{\numberline {3.2.1}Add meta-data}{64}
+\contentsline {subsection}{\numberline {3.2.2}Viewing all the notes}{64}
+\contentsline {section}{\numberline {3.3}Integration tests}{64}
+\contentsline {subsection}{\numberline {3.3.1}Add and edit meta data}{64}
+\contentsline {section}{\numberline {3.4}User study tests}{64}
+\contentsline {chapter}{\numberline {D}Tesseract}{67}
+\contentsline {section}{\numberline {4.1}Tesseract data results}{67}
+\contentsline {section}{\numberline {4.2}Training examples}{67}
+\contentsline {section}{\numberline {4.3}Pre-adaptive threshold results}{68}
+\contentsline {chapter}{\numberline {E}Example test data}{69}
+\contentsline {section}{\numberline {5.1}Calendar week response mock}{69}
+\contentsline {section}{\numberline {5.2}Google plus response mock}{70}
+\contentsline {section}{\numberline {5.3}Google Oauth response}{70}
+\contentsline {chapter}{\numberline {F}Image Processing}{72}
+\contentsline {section}{\numberline {6.1}Pre-blue lined image}{73}
+\contentsline {section}{\numberline {6.2}Filtering the blue lines}{74}
+\contentsline {chapter}{\numberline {G}Design decisions}{75}
+\contentsline {section}{\numberline {7.1}Class diagram}{75}
+\contentsline {chapter}{\numberline {H}Design suppliments}{77}
+\contentsline {section}{\numberline {8.1}CRC cards}{77}
+\contentsline {section}{\numberline {8.2}Wireframes}{79}
+\contentsline {chapter}{\numberline {I}Scrum process supplementary materials}{80}
+\contentsline {section}{\numberline {9.1}Sprint burndown charts}{80}
+\contentsline {section}{\numberline {9.2}Overall burndown chart}{81}
+\contentsline {chapter}{Annotated Bibliography}{83}
