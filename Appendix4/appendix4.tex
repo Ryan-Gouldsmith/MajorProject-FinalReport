@@ -9,7 +9,7 @@ This chapter shows the table outputting the results from the Tesseract training 
 
 \begin{table}[h!]
 \centering
- \begin{tabular}{||c c c c||}
+ \begin{tabular}{|c c c c|}
  \hline
  Experiment & Characters Identified & Characters Correct & Correct Percentage \\ [0.5ex]
  \hline\hline
@@ -59,12 +59,12 @@ This section displays some of the training examples which are used in the image 
 \section{Pre-adaptive threshold results} \label{tesseract:spike_results}
 \begin{table}[H]
 \centering
-\begin{tabular}{ ||p{3cm}||p{3cm}|p{3cm}|p{3cm}||  }
+\begin{tabular}{ |p{3cm}|p{3cm}|p{3cm}|p{3cm}|  }
  \hline
- \multicolumn{4}{||c||}{Image pre-processing Spike work - Correctly identified characters} \\
+ \multicolumn{4}{|c|}{Image pre-processing Spike work - Correctly identified characters} \\
  \hline
       Paper type & Greyscale & Original & Threshold\\
- \hline
+ \hline\hline
   Blue-Lined & 18 &  36 & 75 \\
   Lined & 0 & 67 & 36   \\
   Plain & 0 & 0 & 63 \\
@@ -76,12 +76,12 @@ This section displays some of the training examples which are used in the image 
 
 \begin{table}[H]
 \centering
-\begin{tabular}{ ||p{3cm}||p{3cm}|p{3cm}|p{3cm}||  }
+\begin{tabular}{ |p{3cm}|p{3cm}|p{3cm}|p{3cm}|  }
  \hline
- \multicolumn{4}{||c||}{Image pre-processing Spike work - Detected Characters} \\
+ \multicolumn{4}{|c|}{Image pre-processing Spike work - Detected Characters} \\
  \hline
       Paper type & Greyscale & Original & Threshold\\
- \hline
+ \hline\hline
   Blue-Lined &  85  & 119 &  157 \\
   Lined & 19 & 261 & 1186 \\
   Plain & 18 &  15 & 169 \\
@@ -90,4 +90,4 @@ This section displays some of the training examples which are used in the image 
 \caption{Table showing the results of the detected characters in an image over different paper styles and different image processing steps.}
 \label{table:pre-training}
 \end{table}
-%TC:endignore 
+%TC:endignore
