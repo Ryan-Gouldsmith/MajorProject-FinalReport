@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.8.29)  3 MAY 2016 02:28
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.8.29)  3 MAY 2016 02:33
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1138,25 +1138,22 @@ Appendix F.
 File: images/pre-line-editing.png Graphic file (type png)
  <use images/pre-line-editing.png>
 Package pdftex.def Info: images/pre-line-editing.png used on input line 10.
-(pdftex.def)             Requested size: 362.35286pt x 407.5215pt.
- [72
-
-
-
-]
-Overfull \vbox (30.4169pt too high) has occurred while \output is active []
-
- [73 <./images/pre-line-editing.png>] <images/blue_identified.png, id=350, 312.16624pt x 550.055pt>
+(pdftex.def)             Requested size: 253.64589pt x 285.2638pt.
+ <images/blue_identified.png, id=343, 312.16624pt x 550.055pt>
 File: images/blue_identified.png Graphic file (type png)
  <use images/blue_identified.png>
 Package pdftex.def Info: images/blue_identified.png used on input line 19.
-(pdftex.def)             Requested size: 312.16548pt x 550.05365pt.
-) [74 <./images/blue_identified.png>]
+(pdftex.def)             Requested size: 218.51488pt x 385.03587pt.
+) [72
+
+
+
+ <./images/pre-line-editing.png>] [73 <./images/blue_identified.png>]
 \openout2 = `Appendix7/appendix7.aux'.
 
  (./Appendix7/appendix7.tex
 Appendix G.
-<images/class_diagram.pdf, id=355, 2373.86874pt x 1518.67375pt>
+<images/class_diagram.pdf, id=352, 2373.86874pt x 1518.67375pt>
 File: images/class_diagram.pdf Graphic file (type pdf)
  <use images/class_diagram.pdf>
 Package pdftex.def Info: images/class_diagram.pdf used on input line 8.
@@ -1166,40 +1163,40 @@ Overfull \hbox (60.59802pt too wide) in paragraph at lines 8--9
 [][] 
  []
 
-) [75
+) [74
 
 
 
-] [76 <./images/class_diagram.pdf>]
+] [75 <./images/class_diagram.pdf>]
 \openout2 = `Appendix8/appendix8.aux'.
 
  (./Appendix8/appendix8.tex
 Appendix H.
-<images/google_calendar_service.pdf, id=366, 793.96625pt x 1358.07375pt>
+<images/google_calendar_service.pdf, id=363, 793.96625pt x 1358.07375pt>
 File: images/google_calendar_service.pdf Graphic file (type pdf)
  <use images/google_calendar_service.pdf>
 Package pdftex.def Info: images/google_calendar_service.pdf used on input line 9.
 (pdftex.def)             Requested size: 317.58087pt x 543.21988pt.
- [77
+ [76
 
 
 
-] <images/upload_note_wire_frame.pdf, id=370, 1163.34625pt x 1404.24625pt>
+] <images/upload_note_wire_frame.pdf, id=367, 1163.34625pt x 1404.24625pt>
 File: images/upload_note_wire_frame.pdf Graphic file (type pdf)
  <use images/upload_note_wire_frame.pdf>
 Package pdftex.def Info: images/upload_note_wire_frame.pdf used on input line 17.
 (pdftex.def)             Requested size: 407.17729pt x 491.49355pt.
-) [78 <./images/google_calendar_service.pdf>] [79 <./images/upload_note_wire_frame.pdf>]
+) [77 <./images/google_calendar_service.pdf>] [78 <./images/upload_note_wire_frame.pdf>]
 \openout2 = `Appendix9/appendix9.aux'.
 
  (./Appendix9/appendix9.tex
 Appendix I.
-<images/sprint-5-burndown-chart.png, id=383, 1194.4625pt x 396.48125pt>
+<images/sprint-5-burndown-chart.png, id=380, 1194.4625pt x 396.48125pt>
 File: images/sprint-5-burndown-chart.png Graphic file (type png)
  <use images/sprint-5-burndown-chart.png>
 Package pdftex.def Info: images/sprint-5-burndown-chart.png used on input line 8.
 (pdftex.def)             Requested size: 418.06813pt x 138.77051pt.
- <images/overall-burndown.png, id=384, 883.3pt x 208.78pt>
+ <images/overall-burndown.png, id=381, 883.3pt x 208.78pt>
 File: images/overall-burndown.png Graphic file (type png)
  <use images/overall-burndown.png>
 Package pdftex.def Info: images/overall-burndown.png used on input line 17.
@@ -1209,7 +1206,7 @@ Overfull \hbox (14.85759pt too wide) in paragraph at lines 17--18
  [][] 
  []
 
-[80
+[79
 
 
 
@@ -1224,7 +1221,7 @@ LaTeX Warning: Float too large for page by 17.29549pt on input line 57.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-) [81 <./images/overall-burndown.png>] [82] (./dissertation.bbl
+) [80 <./images/overall-burndown.png>] [81] (./dissertation.bbl
 Missing character: There is no Ã in font ptmr7t!
 Missing character: There is no ¢ in font ptmr7t!
 Missing character: There is no Â in font ptmr7t!
@@ -1243,7 +1240,7 @@ Missing character: There is no Â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no Â in font ptmr7t!
 Missing character: There is no ” in font ptmr7t!
- [83
+ [82
 
 
 ]
@@ -1259,7 +1256,7 @@ Missing character: There is no Â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no Â in font ptmr7t!
 Missing character: There is no ” in font ptmr7t!
- [84]
+ [83]
 Missing character: There is no Ã in font ptmr7t!
 Missing character: There is no ¢ in font ptmr7t!
 Missing character: There is no Â in font ptmr7t!
@@ -1309,7 +1306,7 @@ Missing character: There is no Â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no Â in font ptmr7t!
 Missing character: There is no ” in font ptmr7t!
-[85]
+[84]
 Underfull \hbox (badness 1112) in paragraph at lines 264--266
 []\OT1/ptm/m/n/10.95 Flask, ``Wel-come | Flask (A Python Mi-croframe-work),'' $http : / / ^^Mask . pocoo . org/$, last
  []
@@ -1326,7 +1323,7 @@ Missing character: There is no Â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no Â in font ptmr7t!
 Missing character: There is no ” in font ptmr7t!
-[86]
+[85]
 Missing character: There is no Â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no Â in font ptmr7t!
@@ -1351,12 +1348,12 @@ Underfull \hbox (badness 2418) in paragraph at lines 390--392
 []\OT1/ptm/m/n/10.95 C. Heer, ``Flask-Testing  Flask-Testing 0.3 doc-u-men-ta-tion,'' $http : / / pythonhosted . org /
  []
 
-[87]
+[86]
 Missing character: There is no Â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no Â in font ptmr7t!
 Missing character: There is no ” in font ptmr7t!
- [88]
+ [87]
 Missing character: There is no Ã in font ptmr7t!
 Missing character: There is no ¢ in font ptmr7t!
 Missing character: There is no Â in font ptmr7t!
@@ -1378,7 +1375,7 @@ Overfull \hbox (36.12662pt too wide) in paragraph at lines 507--510
 \OT1/ptm/m/n/10.95 Take-[]handwritten-[]notes-[]in-[]OneNote-[]2016-[]for-[]Windows-[]0ec88c54-[]05f3-[]4cac-[]b452-[]9ee62cebbd4c$,
  []
 
-[89]
+[88]
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no “ in font ptmr7t!
@@ -1392,12 +1389,12 @@ Missing character: There is no Â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no Â in font ptmr7t!
 Missing character: There is no ” in font ptmr7t!
- [90]
+ [89]
 Missing character: There is no Â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no Â in font ptmr7t!
 Missing character: There is no ” in font ptmr7t!
- [91]
+ [90]
 Underfull \hbox (badness 4036) in paragraph at lines 686--689
 []\OT1/ptm/m/n/10.95 M. G. Soft-ware, ``Plan-ning Poker: Ag-ile Es-ti-mat-ing Made Easy,'' $https : / / www .
  []
@@ -1418,14 +1415,14 @@ Missing character: There is no Â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no Â in font ptmr7t!
 Missing character: There is no “ in font ptmr7t!
-[92]
+[91]
 Missing character: There is no Ã in font ptmr7t!
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Â in font ptmr7t!
 Missing character: There is no · in font ptmr7t!
- [93]) 
+ [92]) 
 AED: lastpage setting LastPage
-[94] (./dissertation.aux (./cover.aux) (./declaration.aux) (./acknowledgements.aux) (./abstract.aux) (./Chapter1/chapter1.aux) (./Chapter2/chapter2.aux) (./Chapter3/chapter3.aux) (./Chapter4/chapter4.aux) (./Chapter5/chapter5.aux) (./Appendix1/appendix1.aux) (./Appendix2/appendix2.aux) (./Appendix3/appendix3.aux) (./Appendix4/appendix4.aux) (./Appendix5/appendix5.aux) (./Appendix6/appendix6.aux) (./Appendix7/appendix7.aux) (./Appendix8/appendix8.aux) (./Appendix9/appendix9.aux))
+[93] (./dissertation.aux (./cover.aux) (./declaration.aux) (./acknowledgements.aux) (./abstract.aux) (./Chapter1/chapter1.aux) (./Chapter2/chapter2.aux) (./Chapter3/chapter3.aux) (./Chapter4/chapter4.aux) (./Chapter5/chapter5.aux) (./Appendix1/appendix1.aux) (./Appendix2/appendix2.aux) (./Appendix3/appendix3.aux) (./Appendix4/appendix4.aux) (./Appendix5/appendix5.aux) (./Appendix6/appendix6.aux) (./Appendix7/appendix7.aux) (./Appendix8/appendix8.aux) (./Appendix9/appendix9.aux))
 
 LaTeX Warning: There were undefined references.
 
@@ -1454,10 +1451,10 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  62i,12n,102p,984b,2046s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/courier/ucrro8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on dissertation.pdf (104 pages, 7777393 bytes).
+Output written on dissertation.pdf (103 pages, 7777037 bytes).
 PDF statistics:
- 473 PDF objects out of 1000 (max. 8388607)
- 287 compressed objects within 3 object streams
+ 470 PDF objects out of 1000 (max. 8388607)
+ 285 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  203 words of extra memory for PDF output out of 10000 (max. 10000000)
 

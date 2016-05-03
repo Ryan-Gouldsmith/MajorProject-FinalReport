@@ -39,13 +39,13 @@
 \contentsline {figure}{\numberline {D.1}{\ignorespaces An example of the binarised images used as part of the training data for the Tesseract engine.\relax }}{68}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {F.1}{\ignorespaces The adaptive threshold on normal lined paper caused too much noise to be interfered with the Tesseract engine\relax }}{73}
-\contentsline {figure}{\numberline {F.2}{\ignorespaces Blue lines in the adaptive threshold have been identified and removed to be a white colour.\relax }}{74}
+\contentsline {figure}{\numberline {F.1}{\ignorespaces The adaptive threshold on normal lined paper caused too much noise to be interfered with the Tesseract engine\relax }}{72}
+\contentsline {figure}{\numberline {F.2}{\ignorespaces Blue lines in the adaptive threshold have been identified and removed to be a white colour.\relax }}{73}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {G.1}{\ignorespaces The overall class diagram of the models directory, not including the controllers\relax }}{76}
+\contentsline {figure}{\numberline {G.1}{\ignorespaces The overall class diagram of the models directory, not including the controllers\relax }}{75}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {H.1}{\ignorespaces An iterative approach to the CRC cards, used in the design of the Google calendar service. Each now card represents a new state in which the system has evolved.\relax }}{78}
-\contentsline {figure}{\numberline {H.2}{\ignorespaces An example of progressive wireframes for the note upload leading to an overall design which could be implemented for the end user. \relax }}{79}
+\contentsline {figure}{\numberline {H.1}{\ignorespaces An iterative approach to the CRC cards, used in the design of the Google calendar service. Each now card represents a new state in which the system has evolved.\relax }}{77}
+\contentsline {figure}{\numberline {H.2}{\ignorespaces An example of progressive wireframes for the note upload leading to an overall design which could be implemented for the end user. \relax }}{78}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {I.1}{\ignorespaces An example of the burndown chart for a sprint, showing areas where there may have been difficulty.\relax }}{80}
-\contentsline {figure}{\numberline {I.2}{\ignorespaces The overall burndown of the sprints during the development period. This clearly shows a consistent work flow up until more knowledge of the project was achieved, going below the expectation line.\relax }}{81}
+\contentsline {figure}{\numberline {I.1}{\ignorespaces An example of the burndown chart for a sprint, showing areas where there may have been difficulty.\relax }}{79}
+\contentsline {figure}{\numberline {I.2}{\ignorespaces The overall burndown of the sprints during the development period. This clearly shows a consistent work flow up until more knowledge of the project was achieved, going below the expectation line.\relax }}{80}

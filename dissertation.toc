@@ -114,14 +114,14 @@
 \contentsline {section}{\numberline {5.2}Google plus response mock}{70}
 \contentsline {section}{\numberline {5.3}Google Oauth response}{70}
 \contentsline {chapter}{\numberline {F}Image Processing}{72}
-\contentsline {section}{\numberline {6.1}Pre-blue lined image}{73}
-\contentsline {section}{\numberline {6.2}Filtering the blue lines}{74}
-\contentsline {chapter}{\numberline {G}Design decisions}{75}
-\contentsline {section}{\numberline {7.1}Class diagram}{75}
-\contentsline {chapter}{\numberline {H}Design suppliments}{77}
-\contentsline {section}{\numberline {8.1}CRC cards}{77}
-\contentsline {section}{\numberline {8.2}Wireframes}{79}
-\contentsline {chapter}{\numberline {I}Scrum process supplementary materials}{80}
-\contentsline {section}{\numberline {9.1}Sprint burndown charts}{80}
-\contentsline {section}{\numberline {9.2}Overall burndown chart}{81}
-\contentsline {chapter}{Annotated Bibliography}{83}
+\contentsline {section}{\numberline {6.1}Pre-blue lined image}{72}
+\contentsline {section}{\numberline {6.2}Filtering the blue lines}{73}
+\contentsline {chapter}{\numberline {G}Design decisions}{74}
+\contentsline {section}{\numberline {7.1}Class diagram}{74}
+\contentsline {chapter}{\numberline {H}Design suppliments}{76}
+\contentsline {section}{\numberline {8.1}CRC cards}{76}
+\contentsline {section}{\numberline {8.2}Wireframes}{78}
+\contentsline {chapter}{\numberline {I}Scrum process supplementary materials}{79}
+\contentsline {section}{\numberline {9.1}Sprint burndown charts}{79}
+\contentsline {section}{\numberline {9.2}Overall burndown chart}{80}
+\contentsline {chapter}{Annotated Bibliography}{82}
