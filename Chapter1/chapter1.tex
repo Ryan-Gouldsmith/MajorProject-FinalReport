@@ -35,7 +35,7 @@ As an initial step in this project an informal survey of note-takers was conduct
  \label{fig:taxonomyofnotes}
 \end{figure}
 
-Figure \ref{fig:taxonomyofnotes} shows a taxonomy of the different aspects which may form a part of a note. Textural descriptions form the core content of a note, this is essentially the important aspect that a note-taker is trying to remember and write down. Different note-takers form their notes in different ways, for example the headings may be underlined or hashed - if they were adopting a mark-down style approach. This syntax helps to show that there's a break in the content, and it should be sub-sectioned. Text points that are short, but important, are often characterised by a colon or a bullet point; these are the most common form of concise note building in the classification.
+Figure \ref{fig:taxonomyofnotes} shows a taxonomy of the different aspects which may form a part of a note. Textual descriptions form the core content of a note, this is essentially the important aspect that a note-taker is trying to remember and write down. Different note-takers form their notes in different ways, for example the headings may be underlined or hashed - if they were adopting a mark-down style approach. This syntax helps to show that there's a break in the content, and it should be sub-sectioned. Text points that are short, but important, are often characterised by a colon or a bullet point; these are the most common form of concise note building in the classification.
 
 Coloured text is often used for a variety of reasons: it stands out on the page and improves memory retention of that text \cite{citeulike:14014177}. Both congruent and incongruent  coloured text helped to increase memory retention of post-graduate learners \cite{Olurinola_Tayo_2015}. With congruent text, Olurinola et al. showed that for 30 students with a 20 word list, a 10.9 mean retention rate was achieved and a 8.1 mean retention rate was achieved for incongruent text. The studies conducted show that coloured items would improve a user's retention rate in a lecture. Finally, tables help to represent textual content in tabular form - this is often good in notes for comparisons.
 
@@ -53,12 +53,12 @@ Another approach is to analyse handwriting via an OCR (optical character recogni
 
 Another issue to overcome when analysing handwriting is disjointed characters; this is where sections of the letter are split off from the main body of the character, for example, the letter i. Rakshit et al. concludes that this is an issue which is ever-present in the Tesseract engine, with around a 53\% misclassification rate on this character alone.
 
-The problem of handwriting recognition has not been solved - but tools such as Tesseract offer support for improvement in this field. As Rakshit et al., discussed training had to be conducted with Tesseract to ensure that it can identify handwriting successfully. As a result, every implementation of handwriting recognition needs significant amounts of data of varying quality so that a system can succeed. However, considering Tesseract's high text identification rate of 83.5\% experienced by Rakshit et al., it is a viable option to use for handwriting recognition.
+The problem of handwriting recognition has not been solved - but tools such as Tesseract offer support for improvement in this field. As Rakshit et al. discussed training had to be conducted with Tesseract to ensure that it can identify handwriting successfully. As a result, every implementation of handwriting recognition needs significant amounts of data of varying quality so that a system can succeed. However, considering Tesseract's high text identification rate of 83.5\% experienced by Rakshit et al., it is a viable option to use for handwriting recognition.
 
 \subsubsection{How Tesseract works}
-Tesseract was initially developed by HP, but has now been made into an open-source tool. Smith \cite{33418} gives an excellent overview of the Tesseract engine. The following section summarises how Tesseract works. Tesseract uses connected components to identify the outline of characters and these are then collected into blobs. These blobs are then collected into text lines, which are deconstructed into individual words.
+Tesseract was initially developed by Hewlett-Packard, but has now been made into an open-source tool. Smith \cite{33418} gives an excellent overview of the Tesseract engine. The following section summarises how Tesseract works. Tesseract uses connected components to identify the outline of characters and these are then collected into blobs. These blobs are then collected into text lines, which are deconstructed into individual words.
 
-The process then goes through a two stage process, of identifying the words first - and the second identifies words which are not well known. Tesseract has the ability to identify textlines from skewed images \cite{citeulike:14024253}. Therefore, as long as the image is text, a slight skewing of the image would not affect the ability to identify text. Textlines are found from the blobs, filtered and then sorted for tracking. Blobs are then processed in order, checking for overlapping coordinates from which they're either added to a new line, or appended to an existing line.
+The process then goes through a two stage process, of identifying the words first - and the second identifies words which are not well known. Tesseract has the ability to identify textlines from skewed images \cite{citeulike:14024253}. Therefore, as long as the image is text, a slight skewing of the image would not affect the ability to identify text. Textlines are found from the blobs, filtered and then sorted for tracking. Blobs are then processed in order, checking for overlapping coordinates from which they are either added to a new line, or appended to an existing line.
 
 Smith discusses that the words are then split into characters. Due to handwritten text being varied, as a user would not write uniformly, chopping is complex.
 
@@ -114,7 +114,7 @@ A calendar event is already stored for every lecture that the author goes to, so
 %Taking into account the problem and what you learned from the background work, what was your analysis of the problem? How did your analysis help to decompose the problem into the main tasks that you would undertake? Were there alternative approaches? Why did you choose one approach compared to the alternatives?
 
 %In most cases, the agreed objectives or requirements will be the result of a compromise between what would ideally have been produced and what was felt to be possible in the time available. A discussion of the process of arriving at the final list is usually appropriate.
-As the project was originally proposed by Dr Harry Strange, a meeting was arranged to discuss the initial ideas that he wished the application would follow. It was here that it was highlighted that Dr Harry Strange wants to take a photo of his notes, archive them with specific data, make them searchable and integrate them with existing calendar entries he had for a given date.
+As the project was originally proposed by Dr. Harry Strange, a meeting was arranged to discuss the initial ideas that he wished the application would follow. It was here that it was highlighted that Dr. Harry Strange wants to take a photo of his notes, archive them with specific data, make them searchable and integrate them with existing calendar entries he had for a given date.
 
 \noindent
 \textbf{Parsing a note}
@@ -152,7 +152,7 @@ After research into OCR technologies, such as Tesseract \cite{citeulike:14014368
 \textbf{What platform is most suitable}
 
 
-During the meeting with Dr Harry Strange one of the core features that was needed was for the application to be accessible regardless of where the user is. After the research was conducted all the aforementioned software tools have a web application version of their system. A mobile application was considered but only one version of the application would be made, either Android or iPhone, therefore preventing other phone users from using the application. A bespoke desktop application was considered for a long time, however, the user would have to ensure infrastructure decisions, such as databases, are correctly set up. As a result a web application was chosen - following research found; the next steps were to consider appropriate tools to use.
+During the meeting with Dr. Harry Strange one of the core features that was needed was for the application to be accessible regardless of where the user is. After the research was conducted all the aforementioned software tools have a web application version of their system. A mobile application was considered but only one version of the application would be made, either Android or iPhone, therefore preventing other phone users from using the application. A bespoke desktop application was considered for a long time, however, the user would have to ensure infrastructure decisions, such as databases, are correctly set up. As a result a web application was chosen - following research found; the next steps were to consider appropriate tools to use.
 
 \noindent
 \textbf{What should the application do}
@@ -166,7 +166,7 @@ Reflecting on the premise of the application, that it was to aid the organisatio
 \textbf{Calendar integration}
 
 
-From evaluating the systems it was noticed that there was not a clear way to integrate into a calendar. Reflecting on the conversations with Dr Harry Strange, integrating with the calendar was important for keeping the different systems together. From an AYTM survey, in December 2015, \cite{citeulike:14010520} Google calendar is the most popular calendar application, therefore due to time constraints Google Calendar was the choice of integration and other competitors such as Microsoft would not be implemented. This formulates the task of integrating the calendar into the application to save the URL of the note to a specific event.
+From evaluating the systems it was noticed that there was not a clear way to integrate into a calendar. Reflecting on the conversations with Dr. Harry Strange, integrating with the calendar was important for keeping the different systems together. From an AYTM survey, in December 2015, \cite{citeulike:14010520} Google calendar is the most popular calendar application, therefore due to time constraints Google Calendar was the choice of integration and other competitors such as Microsoft would not be implemented. This formulates the task of integrating the calendar into the application to save the URL of the note to a specific event.
 
 %There should be a clear statement of the objectives of the work, which you will evaluate at the end of the work.
 \subsection{Objectives} \label{analysis:requirements}
@@ -175,7 +175,7 @@ As a result of the analysis of the problem, the following high-level requirement
 	\item Investigate how to extract handwritten text from an image - this will involve looking into ways OCR tools can interpret handwriting.
 	\item Train the OCR to recognise text of the author's handwriting.
 	\item Produce a set of a rules which a note must comply.
-	\item Produce a web application to form the core part of the product. This includes allowing a user to upload an image, display the image. Add appropriate tagging to a note such as module code.
+	\item Produce a web application to form the core part of the product. This includes allowing a user to upload an image and display the image. Add appropriate tagging to a note such as module code.
 	\item The user must be able to search for a given module code, showing the full list of notes based on the module code entered.
 	\item The backend of the application must conduct basic OCR recognition, analysing the first three lines of the notes.
 	\item The backend must integrate with a calendar to archive the notes into users events.
@@ -189,7 +189,7 @@ Some additional compromises were made separate of the analysis due to the comple
 	\item Make the handwriting training generic enough to identify a wide range of users handwriting.
 \end{itemize}
 
-It is worth noting down that the project supervisor Dr Hannah Dee felt as though the handwriting training would be too much for the dissertation and should be done as a ``maybe''. After much deliberation it was decided to include it, but as a background process.
+It is worth noting down that the project supervisor Dr. Hannah Dee felt as though the handwriting training would be too much for the dissertation and should be done as a ``maybe''. After much deliberation it was decided to include it, but as a background process.
 
 \section{Process}
 %You need to describe briefly the life cycle model or research method that you used. You do not need to write about all of the different process models that you are aware of. Focus on the process model that you have used. It is possible that you needed to adapt an existing process model to suit your project; clearly identify what you used and how you adapted it for your needs.
@@ -207,7 +207,7 @@ During the project this methodology was embraced and adapted. A one week long sp
 
 The epic was then broken down into user stories. Each user story was formulated as: ``As a \textless role\textgreater I want to \textless feature\textgreater so that \textless resolution\textgreater''. This gave specific client value that was known to have a purpose. Each of these stories were estimated on their complexity and compared to a `Goldilocks' task \footnote{A task which all other tasks are evaluated against.}.
 
-For planning a sprint, the planning poker \cite{citeulike:14014357} technique was adopted; user-stories are estimated on a scale of 1, 2, 3, 5, 8 etc. When a task was estimated about 15 story points, it would be reflected upon to ensure the scope was fully understood - this would be broken down to sub-stories where appropriate.
+For planning a sprint, the planning poker \cite{citeulike:14014357} technique was adopted; user-stories are estimated on a scale of 1, 2, 3, 5, 8 etc. When a task was estimated at around 15 story points, it would be reflected upon to ensure the scope was fully understood - this would be broken down to sub-stories where appropriate.
 
 At the end of a sprint, a review and retrospective was conducted in the form of a blog post \cite{citeulike:14014367}, instead of in a team. The retrospective was used to analyse what was achieved in the sprint, what went well and what needed to be improved upon. During this time, pre-planning was conducted to formulate a series of tasks to complete in the next sprint; this was agreed by the customer (Dr. Hannah Dee).
 

@@ -23,9 +23,9 @@ Images of notes will often have non-uniform lighting; shadows will often be disp
   \label{fig:OTSU}
 \end{figure}
 
-Figure \ref{fig:OTSU} shows the Otsu binarisation method used on an image with the a slight shadow over the top right of the image. It can be clearly seen that the binarisation segments the image into two distinct regions: the bottom half is white whereas the top half is black. It can be concluded that this would not be a sufficient solution for identifying characters, when specific regions of the image are unreadable.
+Figure \ref{fig:OTSU} shows the Otsu binarisation method used on an image with a slight shadow over the top right of the image. It can be clearly seen that the binarisation segments the image into two distinct regions: the bottom half is white whereas the top half is black. It can be concluded that this would not be a sufficient solution for identifying characters, when specific regions of the image are unreadable.
 
-Otsu attempts to segment the grey-level from the image into a series of histograms. Otsu then determines the optimal threshold value by ``maximising the discriminant measure'' \cite{citeulike:2917492}. Essentially, Otsu attempts to maximise the margin between the histograms, this margin would then act as the threshold value as to whether a pixel is segmented into either a foreground or background pixel \cite{citeulike:14021372}.
+Otsu attempts to segment the grey-level values from the image into a series of histograms. Otsu then determines the optimal threshold value by ``maximising the discriminant measure'' \cite{citeulike:2917492}. Essentially, Otsu attempts to maximise the margin between the histograms, this margin would then act as the threshold value as to whether a pixel is segmented into either a foreground or background pixel \cite{citeulike:14021372}.
 
 Hewlett-Packard, the creator of Tesseract, describe Otsu as its underlying pre-processing algorithm when converting the image prior to extracting textlines and characters \cite{citeulike:13931186}. Once the spike work was completed with Otsu, shown in Figure \ref{fig:OTSU}, it was clear to identify that Tesseract would find it difficult to identify the characters from the image when the output was so poorly binarised.
 
@@ -38,8 +38,8 @@ Adaptive threshold calculates the threshold over a series of smaller segments in
 
 Using the OpenCV library there was two options with adaptive threshold \cite{citeulike:14021409}:
 \begin{enumerate}
-  \item Gaussian adaptive threshold: the weighted sum of the neighborhood.
-  \item Mean adaptive threshold: the mean of the neighborhood.
+  \item Gaussian adaptive threshold: ``the weighted sum of the neighborhood''.
+  \item Mean adaptive threshold: ``the mean of the neighborhood''.
 \end{enumerate}
 
 \begin{figure}[H]
@@ -51,7 +51,7 @@ Using the OpenCV library there was two options with adaptive threshold \cite{cit
 
 Mean adaptive threshold uses a specific block size around a given pixel. If the block size was four, then the neighborhood size would be four. It would then calculate the mean pixel value in that block. The mean value is selected as the thresholding value for the pixels inside the block; each of the pixels will then be identified as either foreground or background pixels \cite{citeulike:14021401}. Figure \ref{fig:adaptive_mean} shows mean adaptive threshold being used on an image. An additional issue present with the adaptive mean is the noise pixels as there is considerable amounts of noise polluting the image.
 
-Gaussian adaptive threshold differs from the mean adaptive threshold, as instead of calculating the mean value over the block size, it first uses a Gaussian value over blocksize. A Gaussian weight is calculated dynamically depending on the blocksize used for the thresholding. Every pixel inside the block is then multiplied by the Gaussian, and an average value is then taken across the pixels which is used as a threshold. Like the mean adaptive threshold, this is then used to determine if the pixel is foreground or background \cite{bradski2008learning}\cite{citeulike:14021401}.
+Gaussian adaptive threshold differs from the mean adaptive threshold, as instead of calculating the mean value over the block size, it first uses a Gaussian value over blocksize. A Gaussian weight is calculated dynamically depending on the blocksize used for the thresholding. Each pixel inside the block is then multiplied by the Gaussian, and an average value is then taken across the pixels which is used as a threshold. Like the mean adaptive threshold, this is then used to determine if the pixel is foreground or background \cite{bradski2008learning}\cite{citeulike:14021401}.
 
 
 \begin{figure}[H]
@@ -65,12 +65,12 @@ Figure \ref{fig:adaptive_gaussian} shows the adaptive Gaussian being used to bin
 
 \begin{figure}[H]
   \centering
-  \includegraphics[scale=0.3]{images/thresholding_options}
+  \includegraphics[scale=0.25]{images/thresholding_options}
   \caption{A variety of thresholding techniques used on the same note, showing adaptive threshold resulting in the best output.}
   \label{fig:thresholding_options}
 \end{figure}
 
-Figure \ref{fig:thresholding_options} displays additional types of the thresholding that were investigated throughout the iterative process. The Gaussian adaptive threshold provides the clearest results from visual inspection of the different thresholding techniques experimented. As a result, the Gaussian adaptive threshold will be continued to be improved upon throughout a series of iterations to reduce additional noise, via morphological operations to aid in smoothing the image.
+Figure \ref{fig:thresholding_options} displays additional types of the thresholding that were investigated throughout the iterative process. This example image was adapted from the thresholding tutorial from OpenCV \cite{citeulike:14026982}, and later discarded as it was prototyping work. The Gaussian adaptive threshold provides the clearest results from visual inspection of the different thresholding techniques experimented. As a result, the Gaussian adaptive threshold will be continued to be improved upon throughout a series of iterations to reduce additional noise, via morphological operations to aid in smoothing the image.
 
 \section{Lined paper}
 Initially normal lined paper was used for notes in the project, but after the binarisation process it left too much noise. Further smoothing of the image did not remove the noise, so bespoke lined paper was created to aid in removing the lines but keeping the text uniformly straight (refer to Appendix \ref{appendix:image_processing}, Section \ref{fig:pre-line-editing} for more information) .
@@ -92,7 +92,7 @@ Over a series of iterations, the primary objective was to remove the blue lines 
   \label{algorithm:threshold1}
 \end{algorithm}
 
-Algorithm \ref{algorithm:threshold1} attempted to filter all the colour values between a grey and a black range. By restricting it to a specific range it was intended to bypass the blue lines. However, the blue lines would still contain dark pixels - so only segments of the line would be removed.
+Algorithm \ref{algorithm:threshold1} attempted to filter all the colour values between a grey and a black range - this was adapted from OpenCV's Changing Colorspaces tutorial \cite{citeulike:14026986}. By restricting it to a specific range it was intended to bypass the blue lines. However, the blue lines would still contain dark pixels - so only segments of the line would be removed.
 
 \begin{figure}[H]
   \centering
@@ -124,7 +124,7 @@ Further smoothing cleared up the image. After a series of iterations the binaris
 Figure \ref{fig:poor_quality} shows the result of the binarisation script. Adaptive threshold works well on the image, due to local thresholding not being affected by shadows. Images can be taken in non-uniform lighting and it will produce a fully binarised image. There were issues which affected the implementation such as changing to a bespoke lined paper. Overall the binarisation segmentation works well. Further examples can be found in Appendix \ref{appendix:image_processing}.
 
 \section{Handwriting training}
-The training of handwriting was a constant task through out the sprints. It was initially proving cumbersome in the early sprints. After the changes implemented from Section \ref{section:threshold} the results from the handwriting recognition improved considerably.
+The training of handwriting was a constant task throughout the sprints. It was initially proving cumbersome in the early sprints. After the changes implemented from Section \ref{section:threshold} the results from the handwriting recognition improved considerably.
 
 \subsection{Training process}
 Tesseract's training was a methodical process. Tesseract's GitHub wiki \cite{citeulike:13926796} and Gonzalez \cite{citeulike:13920943}, provided great reference tools on how to train the data.
@@ -186,7 +186,7 @@ Once the user accepts the use of selected services a secure JSON \footnote{JavaS
 
 The credentials contain an expiration time, as shown in Appendix \ref{oauth:response}. When making a request this expiration time was checked, and if it was exceeded, then an error would be raised when querying the API's and displayed to the user. To overcome this, additional checks were made to ensure the credentials in the session were still valid. If they were not then it would redirect the user to the log-out route, clearing the session and asking the user to re-authenticate.
 
-\subsection{Reoccuring events}
+\subsection{Reoccurring events}
 Reoccurring events within the Google Calendar integration posed a lot of issues. It was identified in the pre-beta testing that if the user has a reoccurring event then it would not append the URL of the note to the event.
 
 When a query was made for a list of events, if there were reoccurring events then it would group the events by the first instance of these events. This proved to be problematic as it would display to the user that the note was taken on the 12th March, for example, but there were events from February being shown.
@@ -209,7 +209,7 @@ At a basic level, integrating Tesseract into the web application was fairly simp
   \caption{Tesseract being integrated into the application at a very basic level}
 \end{figure}
 
-Tesserocr is a Python implementation of Tesseract's  C++ API. Tesserocr uses textlines to extract the text from the uploaded image. The first three lines were then iterated over, identifying the box for the lines so that text could be extracted. Each of these lines mapped the words identified and the confidence score for each word on a scale of 0 - 100 (0 being uncertain and 100 being certain).
+Tesserocr is a Python wrapper for Tesseract's  C++ API. Tesserocr uses textlines to extract the text from the uploaded image. The first three lines were then iterated over, identifying the box for the lines so that text could be extracted. Each of these lines mapped the words identified and the confidence score for each word on a scale of 0 - 100 (0 being uncertain and 100 being certain).
 
 The module code, lecturer, location and date were extracted via list-comprehensions, matching the metadata structure defined in Section \ref{design:tesseract}. Modifications to the confidence scores were attempted in the controller to replace with a class name for the colours - so that the view file could render the content easily. Problems were encountered when the API returned tuples, an immutable type, so modifications were not as eloquent as originally envisaged, therefore numbers remained.
 
@@ -262,7 +262,7 @@ One issue which arose when adding the note's URL to the description field of the
 The algorithm for adding to a calendar is stated below.
 \begin{algorithm}
   \caption{Adding a note URL to the calendar}
-  \label{algorithm:threshold1}
+  \label{algorithm:threshold2}
   \begin{algorithmic}[1]
       \State Create a calendar service object
       \State Prepare URL from saved note
@@ -300,10 +300,10 @@ Using the application it was noticed that multiple users were being created for 
 
 The user's ID is then appended to the session. Every page on the application verifies that this key exists. Once a user had finished using the application, the log-out route would destroy the user's session.
 
-Delegating the responsibility to Google was a good design decision; the security which Google has would have been better than what could be implemented by the author. Furthermore, ethically, the only person information the system uses from a user is their email address.
+Delegating the responsibility to Google was a good design decision; the security which Google has would have been better than what could be implemented by the author. Furthermore, ethically, the only personal information the system uses from a user is their email address.
 
 \subsection{Saving and editing a note}
-Prior to saving a note the associated relations had to be created. The aim was to use migration files, which would help to keep versions of the different stages which the relation was developed. Flask did not implement migrations by default, so Flask-Migrate \cite{citeulike:14025941} was used as it is an extension used to create migration files. Migration files are run when a change needed to be made to a relation, this was performed through Flask-Script \cite{citeulike:14025943}. An excerpt is shown below:
+Prior to saving a note the associated relations had to be created. The aim was to use migration files, which would help to keep versions of the different stages which the relation was developed. Flask did not implement migrations by default, so Flask-Migrate \cite{citeulike:14025941} was used as it is an extension to create migration files. Migration files are run when a change was needed to be made to a relation, this was performed through Flask-Script \cite{citeulike:14025943}. An excerpt is shown below:
 
 \begin{lstlisting}[language=python, caption={An excerpt of a specific migration file where the note relation was created}, label={migration}, breaklines, columns=fullflexible, keywordstyle=\color{blue}, basicstyle=\normalsize\ttfamily]
   def upgrade():
@@ -328,7 +328,7 @@ Flask-SQLAlchemy interacts with relational databases and enabled an Object-Relat
     query = ModuleCode.module_code.like(prepared_module_code)
 \end{lstlisting}
 
-A similar principle was adopted for the finding existing metadata items from the relation. The extraction of similar metadata items just compared the different attributes which make up a relation. This is then returned.
+A similar principle was adopted for the finding existing metadata items from the relation. The extraction of similar metadata items just compared the different attributes which make up a relation, which were then returned.
 
 If the edit data query returned any results then this ID was used for the notes foreign key to the \texttt{NoteMetaData} relation. If there were no results returned the data was created in the constructor for a new instance of the relation.
 

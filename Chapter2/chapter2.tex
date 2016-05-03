@@ -23,7 +23,7 @@ This section discusses the architecture of the web application. The design for t
 An overview of the resulting design of the class diagram is presented, with rationale for decisions made and how an iterative approach was used to reach the concluded design. The class diagram can be found in Appendix \ref{appendix:design}, section \ref{design:class_diagram}.
 
 \subsubsection{Justification of design}
-The following section discusses the appropriateness of the design and any justifications needed. Overall, the design clearly shows the object oriented principle of low coupling high cohesion being used on the project.
+The following section discusses the appropriateness of the design and any justifications needed. Overall, the design clearly shows the object oriented principle of low coupling and high cohesion being used on the project.
 
 \noindent
 \textbf{Google Services}
@@ -40,7 +40,7 @@ Eventually, the design was evaluated and duplicated functionality amongst the me
 \newline
 Helper classes, in the design, are independent classes that help to modularise the system whilst grouping related functionality into a single class. As the system grew the duplication of code was beginning to become apparent, so helper classes aid in keeping a design simple.
 
-For example the \texttt{SessionHelper} class was developed to initially store credentials after the oAuth log in, discussed in Section \ref{app:oauth}, had been completed and had successfully being appended to the session. The class' functions expanded as further duplication of the session handling was developed into the system.  This level of abstraction gave a semantic meaning to the interactions with the session.
+For example the \texttt{SessionHelper} class was developed to initially store credentials after the OAuth log in, discussed in Section \ref{app:oauth}, had been completed and had successfully being appended to the session. The class' functions expanded as further duplication of the session handling was developed into the system.  This level of abstraction gave a semantic meaning to the interactions with the session.
 
 Most of the helper classes do not interact with the other classes in the system. There is an exception with the \texttt{GoogleServicesHelper} class. In this class, majority of the functions are static. This design decision was induced due to the class not interacting with any specific class level attributes. Furthermore, prior to the implementation of editing a calendar event, the code was dispersed throughout the controllers. In an effort to reduce code duplication this helper class was created - but it was quickly decided that it would just be a proxy for calling specific functions in each of the services classes. Although ideally they should be class level functions, it is appropriate to use static functions.
 
@@ -56,10 +56,10 @@ In parts of the application, information needed to be extracted from the databas
 \noindent
 \textbf{Binarisation}
 \newline
-The \texttt{BinariseImage} class is the model representation of the image segmentation script, as seen in section \ref{imp:image_proces}. The class is called from the controller when a user uploads their image. The output from the class methods is a binarised image. There are a series of functions which integrate with OpenCV API's \cite{citeulike:13206865}, manipulating an image and performing morphological operations. The class has been constructed so most of the functions are modular.
+The \texttt{BinariseImage} class is the model representation of the image segmentation script, as seen in Section \ref{imp:image_proces}. The class is called from the controller when a user uploads their image. The output from the class methods is a binarised image. There are a series of functions which integrate with OpenCV API's \cite{citeulike:13206865}, manipulating an image and performing morphological operations. The class has been constructed so most of the functions are modular.
 
 \subsection{CRC cards} \label{design:CRC}
-To aid with the design, class collaboration cards (CRC) were drawn up for each feature. The user-story was decomposed into tasks and each of the tasks had associated CRC cards. This aided in thinking about the design for the class, as well as other classes it interacts with.  The overall design discussed in section \ref{architecture:class} is a result of the diligent planning with the CRC cards.
+To aid with the design, class collaboration cards (CRC) were drawn up for each feature. The user-story was decomposed into tasks and each of the tasks had associated CRC cards. This aided in thinking about the design for the class, as well as other classes it interacts with.  The overall design discussed in Section \ref{architecture:class} is a result of the diligent planning with the CRC cards.
 
 \begin{figure}[H]
   \centering
@@ -72,7 +72,7 @@ Figure \ref{fig:crc1} shows an example of a CRC card at the very beginning of th
 
 Throughout each feature implemented into the system, the CRC cards were created, evaluated and refactored as ``throw away designs''. Although they were lightweight design tools, they helped to think about the system for the current feature being implemented - reducing the future design creep. For example, during the creation of the note into CRC cards, the image patch attribute was considered to be its own relation. After evaluating that this would be overcomplicating the design for the current feature this design decision was rejected and it would not add benefits to the existing system. The CRC cards were kept for each design and formulated into the class diagram at the end of the development process for formal documentation.
 
-Overall CRC cards were at the forefront of the design during this project. They enabled a clear, concise and well considered design to evolve over a series of sprints. For a further example of an in-depth CRC card see, Appendix \ref{appendix:sup_design} section \ref{sup:crc}.
+Overall CRC cards were at the forefront of the design during this project. They enabled a clear, concise and well considered design to evolve over a series of sprints. For a further example of an in-depth CRC card see, Appendix \ref{appendix:sup_design} Section \ref{sup:crc}.
 
 \subsection{User interaction} \label{design:user_interaction}
 After deconstructing the problem that a user would need to be able to add a note, edit and save to a calendar, an activity diagram was constructed to consider the flow of the application.
@@ -86,7 +86,7 @@ Throughout the sprints, the design for the activity diagram expanded. The result
   \label{fig:activity_show_note}
 \end{figure}
 
-The conditional checks to identify if there was meta-data outputted from the Tesseract output could not be clicked on to populate the form. This activity was included into the design during the planning of the feature for that sprint.
+The design grew over the project as initially there was not a conditional check which enabled the user to click on the metadata suggested, instead they were expected to type it in the form. Overtime this was changed to offer the opportunity for the click the metadata to auto-populate the form.
 
 Overall, the activity diagram displayed shows the final output of how a note is added into the system. This design has been meticulously developed through a series of iterations to show the final output. It shows that a user can upload an image, they can select any associated meta-data from the suggestions, save the note and it will add it to the calendar item; there is also the option to edit the note.
 
@@ -134,7 +134,7 @@ Figure \ref{fig:extension} shows the result after the sprint which the design wa
 \subsubsection{Constructing URLs} \label{design:urls}
 Often overlooked when considering a design is the URL structure. The design not only aids the developer, but the user interacting with the page can clearly see the intention of that page. Typically there are two types of URLs - RESTful and query strings.
 
-During the iterations, especially when new functionality was being considered, specific routes were thought about carefully. In the search user-story, query strings were preferred. Query strings create URLs such as: \texttt{/search?module\_code=cs31310}; representing the query string as key-value pairs. During the search feature, it was decided that this approach would be adopted so that the user can easily bookmark the page.
+During the iterations, especially when new functionality was being considered, specific routes were thought about carefully. In the search user story, query strings were preferred. Query strings create URLs such as: \texttt{/search?module\_code=cs31310}; representing the query string as key-value pairs. During the search feature, it was decided that this approach would be adopted so that the user can easily bookmark the page.
 
 RESTful URLs help to show the a hierarchy of content. Exposing a user to such a URL helps them to clearly identify their content. When the system evolved to displaying a note for a user \texttt{/show\_note/1}, was chosen for the URL; it is easier to read than  \texttt{/show\_note?note\_id=1}. This allows the user to not have additional query parameters to decipher before working out the context of the page.
 
@@ -166,7 +166,7 @@ During the analysis phase Tesseract was identified as the OCR tool of choice. Pa
 
 Patel et al. concludes that Transym only yielded a 47\% accuracy on 20 images compared to 70\% accuracy using the Tesseract engine.
 
-The first few iterations gave significant insight into how the document might be parsed. Due to the complexities with analysing the whole text on the image, it was limited to the first three lines, parsing the most useful information. It was decided that the first three lines were to be extracted forming the information for the metadata. Although design considerations for parsing the image and looking for key words was considered, it was ultimately rejected due to the complexity. Therefore, a structured approach was adopted. Below is an example of how the meta-data needs to be structured for the notes:
+The first few iterations gave significant insight into how the document might be parsed. Due to the complexities with analysing the whole text on the image, it was limited to the first three lines, parsing the most useful information. It was decided that the first three lines were to be extracted forming the information for the metadata. Although design considerations for parsing the image and looking for key words was considered, it was ultimately rejected due to the complexity. Therefore, a structured approach was adopted. Below is an example of how the metadata needs to be structured for the notes:
 
 \begin{lstlisting}[caption={An example exert from a valid structured note}, label={lst:mock1}, breaklines, columns=fullflexible, basicstyle=\normalsize\ttfamily]
   CS31130: This is a title
@@ -188,15 +188,15 @@ Creating CRC cards enabled considerations to be made about the relations and how
   \label{fig:database}
 \end{figure}
 
-Figure \ref{fig:database}, shows the output from the result of the final design of the entity-relation diagram. Each new user story added new design implication to the design. For example, when the very basic user-story for creating a note was established, the metadata needed to be added in the future, but the story involved just a note. As a result just the image path attribute was added.
+Figure \ref{fig:database}, shows the output from the result of the final design of the entity-relation diagram. Each new user story added new design implication to the design. For example, when the very basic user story for creating a note was established, the metadata needed to be added in the future, but the story involved just a note, as a result just the image path attribute was created.
 
 \subsection{Justification of design}
 Below is a justification of the designs through various stories which affected the entity-relation design.
 
 \noindent
 \textbf{Note}
-\newline
-During design persisting the note was one of the first entity-relation design decisions which was made. The attributes selected for the \texttt{Note} relation best justify what is in a note. Firstly, the note contains an image link, which is a relative path to the image. This was persisted to ensure that it could be easily located. When the story for implementing users was actioned, an additional field containing the user's ID was added to the relation.
+
+During design persisting the note was one of the first entity-relation design decisions which was made. The attributes selected for the \texttt{Note} relation best justify what is in a note. Firstly, the note contains an image link, which is a relative path to the image. This was persisted to ensure that it could been easily located. When the story for implementing users was actioned, an additional field containing the user's ID was added to the relation.
 
 During the implementation of adding a URL to a calendar event, the calendar URL was persisted to the database of the associated note. The event ID could have be saved, but the URL was decided to persisted so additional queries were not made to the external service. Furthermore, a note will only have one URL.
 
@@ -204,7 +204,7 @@ When implementing the note's metadata, a relation was created and the foreign ke
 
 \noindent
 \textbf{Note\_meta\_data}
-\newline
+
 The \texttt{note\_meta\_data} relation was created in its own relation to reduce data-redundancy, following the principle of normalisation in relational databases. The content could be duplicated for multiple notes if a user tags the same metadata to more than one note. As denoted from the relationships, a note will have a singular metadata item, but one metadata item could have many notes.
 
 The attributes lecturer, location and datetime were the initially identified as part of the design decisions regarding what metadata should be saved. However, in a later iteration it was decided a title would be preferable; this was added to the relation. The date field is a date-time instead of a string due to integration with the calendar requires specific date-time strings, making it easier to parse.
@@ -213,12 +213,12 @@ Initially developed with the module code in this relation, in subsequent iterati
 
 \noindent
 \textbf{Module code}
-\newline
+
 The module code was developed into its own relation to prevent data-redundancy. A user may enter multiple notes for the same module code - as a result the database would only need to include one reference of that module code. The relationship between the metadata and the module code is explicit: the metadata must contain one module code but the module code can have more than one metadata item.
 
 \noindent
 \textbf{User}
-\newline
+
 This was not added to the application until around sprint five. However, the user will have an email address and that would be stored. It is in its own relation due to logic when creating a user: every time a user signs up to the system they are not creating a note instantly, therefore a relation was created to separate this logic. The foreign key was added to a note, so that a note can only have one user - and a user can have multiple notes.
 
 
@@ -251,7 +251,7 @@ The programming language would not change per sprint or over an iterative proces
 
 As a web application was being developed, investigatory work was completed into the suitability of several server-side languages. Traditionally server-side application languages are: PHP, Ruby, Python, C\#, Java and JavaScript, which has increased in popularity \cite{citeulike:14018462}.
 
-Decomposition of the analysis in the early sprints determined that OpenCV would be utilised on the project. OpenCV's source code is written in C++, however Python and Java bindings are available. Additional research was conducted to see if a reliable wrapper for either PHP or Ruby was available, and after a lot of investigation it was concluded there was not.
+Deconstruction of the analysis in the early sprints determined that OpenCV would be utilised on the project. OpenCV's source code is written in C++, however Python and Java bindings are available. Additional research was conducted to see if a reliable wrapper for either PHP or Ruby was available, and after a lot of investigation it was concluded there was not.
 
 C++ is not considered a standard web application development language,  therefore removing it as a viable option for the web application. Java applications are predominately large commercial applications, using a range of enterprise software - often renowned for their performance abilities \cite{citeulike:14019744}. This approach felt too cumbersome for a proposed light-weight application.
 
@@ -271,7 +271,7 @@ Continuous Integration (CI) is normally used in development teams to ensure that
 
 After identifying CI would be used in the analysis stage, an appropriate tool would have to be chosen. Jenkins \cite{citeulike:14023837} was an initial choice; it is a standalone Java application to which a repository can be synced to.
 
-Travis CI \cite{citeulike:14023840}, is a CI tool in the `cloud which can be synced to a GitHub repository. Tests can be run during every commit of the application and details regarding if it errors, passes or fails is available.
+Travis CI \cite{citeulike:14023840}, is a CI tool in the `cloud' which can be synced to a GitHub repository. Tests can be run during every commit of the application and details regarding if it errors, passes or fails is available.
 
 Although there was not much difference between the two tools, Travis did have the advantage that the web interface could be used rather than a standalone application. A disadvantage of Jenkins would be that for each branch, a built script would have to be developed. Ideally, the CI tool would be a quick set up and go process, not to be lumbered with further changes. As a result, Travis was chosen as the CI of choice.
 
@@ -283,7 +283,7 @@ It is worth making a mention on the Git flow which was used. As each story was i
 Once the code was pushed to GitHub, Travis would automatically build the branch - inside the travis.yml file it would run a series of tests on the application. Once the tests had passed, a pull request would be made to merge the feature into the development branch. If this test successfully passes, and it is safe to merge, then it was merged to development.
 
 \subsection{Development environment}
-The text editor Atom \cite{citeulike:14023852} was used for the majority of the project. It is a lightweight text editor, which provides suitable syntax highlighting. However, later in the project when refactoring became more cumbersome due to the increase in code base - PyCharm community edition \cite{citeulike:14023855} was used as it offered better refactoring functionality.
+The text editor Atom \cite{citeulike:14023852} was used for the majority of the project. It is a lightweight text editor, which provides suitable syntax highlighting. However, later in the project when refactoring became more cumbersome due to the increase in the codebase - PyCharm community edition \cite{citeulike:14023855} was used as it offered better refactoring functionality.
 
 \section{OAuth} \label{design:oauth}
 Interactions with Google services would require the use of the OAuth2 protocol \cite{citeulike:11836766}. OAuth is a protocol which enables the authorisation and authentication of users to specific content.
@@ -292,6 +292,6 @@ From Google's comprehensive documentation on using OAuth2 \cite{citeulike:140262
 
 When a user makes a request to the Google service it checks the authentication credentials, which are sent as part of the request, and authenticates the user. This checks to ensure that the email address and password are valid. If the user was to make another request to extract a list of events then the request would need to be authorised; a user may not be allowed to access specific content in the calendar, for example.
 
-In the context of the application, a user will sign in with their Google credentials and Google will ask the user if they authorise the application to access their email address. Once authorised a \texttt{code} key is returned which is then subsequently used to exchange with the Google services. This code is then used to communicate to Google's service to returned a credential object, which contains an \texttt{Access Token} ID. This token ID is then used for all communication external services.
+In the context of the application, a user will sign in with their Google credentials and Google will ask the user if to authorise the application to access their email address. Once authorised a \texttt{code} key is returned which is then subsequently used to exchange with the Google services. This code is then used to communicate to Google's service to returned a credential object, which contains an \texttt{Access Token} ID. This token ID is then used for all communication external services.
 
 This was an enforced design as a result of using Google services, rather than any iterative approach.

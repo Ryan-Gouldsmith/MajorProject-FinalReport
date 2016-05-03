@@ -6,7 +6,7 @@
 
 %The following sections indicate some areas you might include. Other sections may be more appropriate to your project.
 
-This chapter discusses the testing strategy which has been implemented during the project. This includes unit, integration acceptance and user testing utilised throughout the application. Additional testing strategies for the image segmentation and Tesseract training will be discussed.
+This chapter discusses the testing strategy which has been implemented during the project. This includes unit, integration, acceptance and user testing utilised throughout the application. Additional testing strategies for the image segmentation and Tesseract training will be discussed.
 
 \section{Overall approach to testing}
 To recap, an Agile approach was adopted throughout the project. Therefore, test-driven-development (TDD) was used throughout the application for almost all aspects of testing.
@@ -70,7 +70,7 @@ Looking for a more succinct solution in the mock API uncovered the option to pat
 
 As the development increased, so did the need for further mocking enhancements. During integration testing especially, multiple functions were called most than once. In order to mock a series of return values then the `side effects' were implemented from the mock library.
 
-\begin{lstlisting}[language=python, label={lst:mock3}, breaklines, columns=fullflexible, keywordstyle=\color{blue}, basicstyle=\normalsize\ttfamily]
+\begin{lstlisting}[language=python, label={lst:mock3}, breaklines, columns=fullflexible, keywordstyle=\color{blue}, basicstyle=\normalsize\ttfamily, caption={The refactored solution to use patch calls instead.}]
     def setUp(self):
         # some code
         self.google_patch = mock.patch.object(GoogleCalendarService, "execute_request")
@@ -83,14 +83,14 @@ As the development increased, so did the need for further mocking enhancements. 
 
 Listings \ref{lst:mock3} displays an example use of the `side effect' API. The example first outputs the Google response, then when \texttt{execute\_request} is executed again it returns new event and so on.
 
-Another example of where `side effects' were used was with the Google Calendar. During the integration tests, there were times which getting events from the calendar were called more than once; it would first get a list of events and a singular event. As the same function was called multiple times to execute the request the `side effects' were needed; multiple JSON files were returned from the functions in the test. Examples of mocking data used for the Google integration can be found in Appendix \ref{appendix:test_data}.
+Another example of where `side effects' were used was with the Google Calendar. During the integration tests, there were times where getting events from the calendar was called more than once; it would first get a list of events and a singular event. As the same function was called multiple times to execute the request, `side effects' were needed; multiple JSON files were returned from the functions in the test. Examples of mocking data used for the Google integration can be found in Appendix \ref{appendix:test_data}.
 
 Mocking was heavily featured in the testing. As it was not considered during the initial design phase it took longer than expected to overcome the issues. Most of the testing codebase was massively refactored in the light of the change of mocking style.
 
 \subsection{Unit testing}
-Unit testing aims to isolate other interactions with the class and focus the testing on a specific function to ensure that the correct data value or operation is being performed. During the testing stage this was one of the core testing strategies.
+Unit testing aims to isolate other interactions with the class and focus the testing on a specific function to ensure that the correct data is returned or operation is being performed. During the testing stage this was one of the core testing strategies.
 
-When testing the individual functions, there were often database transactions being tested. A live database would not be ideal to test against, therefore there needed to be a test database. In each of the tests \texttt{setUp} functions, the configuration was overwritten to use a test SQLite database. To fully ensure that previous tests were truly independently tested then the database was dropped and created before every test.
+When testing the individual functions, there were often database transactions being tested. A live database would not be ideal to test against, therefore there needed to be a test database. In each of the tests \texttt{setUp} functions, the configuration was overwritten to use a test SQLite database. To fully ensure that previous tests were truly being independently tested then the database was dropped and created before every test.
 
 Descriptive test names were the aim, to help to show a high-level of documentation in the system. With a well-tested system and detailed tests, then it is easy to see what the system does and does not do.
 
@@ -121,18 +121,18 @@ Appendix \ref{appendix:test_results} Section \ref{appendix:integration_tests} sh
 \subsection{Handling sessions}
 Session handling was a lot more complex than first anticipated. Throughout the application, sessions are used to handle server-side states of the system: i.e, is the user logged in.
 
-When testing the session with \texttt{SessionHelper}, it wwas mainly unit tested. Integration tests raise a lot of errors when testing with sessions. For example, if a route was accessed but the session was not set then the test would error. To overcome this, sessions needed to be modified in the tests. As the integration tests were using Flask's \texttt{test\_client} context, then modifying the sessions was a little easier. Flask had a solution to testing the session handling \cite{citeulike:14020609}.
+When testing the session with the \texttt{SessionHelper}, it was mainly unit tested. Integration tests raised a lot of errors when testing with sessions. For example, if a route was accessed but the session was not set then the test would error. To overcome this, sessions needed to be modified in the tests. As the integration tests were using Flask's \texttt{test\_client} context, then modifying the sessions was a little easier. Flask had a solution to testing the session handling \cite{citeulike:14020609}.
 
 \begin{lstlisting}[language=python, label={lst:session}, breaklines, columns=fullflexible, keywordstyle=\color{blue}, basicstyle=\normalsize\ttfamily, caption= {An example of how sessions were handled and modified in the tests.}]
   with self.client.session_transaction() as session:
           session['user_id'] = self.user_id
 \end{lstlisting}
 
-Figure \ref{lst:session}, displays an example on how the session had to be modified in the integration tests. After the session transaction context has exited then the session has been modified for that test.
+Listings \ref{lst:session}, displays an example on how the session had to be modified in the integration tests. After the session transaction context has exited then the session has been modified for that test.
 
-Acceptance testing initially proved to be problematic. The acceptance tests would not acknowledge that the session had been modified, like in Figure \ref{lst:session}, causing the tests to error. As there was a lack of documentation it was decided that the session helper would be mocked. By mocking the responses in the \texttt{create\_app} function, it enabled the sessions to be modified, allowing the acceptance tests to be run.
+Acceptance testing initially proved to be problematic. The acceptance tests would not acknowledge that the session had been modified, like in Listings \ref{lst:session}, causing the tests to error. As there was a lack of documentation it was decided that the session helper would be mocked. By mocking the responses in the \texttt{create\_app} function, it enabled the sessions to be modified, allowing the acceptance tests to be run.
 \section{Acceptance testing}
-Acceptance tests were created to check that the correct output was displayed for using the system. These tests ensured that the system integrated together, rendering the correct content and executing the correct operations.
+Acceptance tests were created to check that the correct output was displayed when using the system. These tests ensured that the system integrated together, rendering the correct content and executing the correct operations.
 
 Each user story was broken down and throughout the testing process the acceptance tests would be the final tests added to check that the functionality was completely integrated. Selenium for Python \cite{citeulike:14020625} was used as the acceptance tool for interacting with the web page. By interacting with the document object model (DOM) it was able to test any dynamic HTML rendered.
 
@@ -187,7 +187,7 @@ These issues were caught and modified and changed from areas of the design which
 
 An interesting reflection from the user study was that participants would not use the application, as shown in Figure \ref{fig:user_response}. They were quick to defend the applications quality, but the use-case for them taking notes was not present. They much preferred to write up their notes from the lecture for memory retention, so the application would not benefit them.
 
-There were positives to come out of the user testing where users agreed that it was simple to use and easy to navigate around and the websites presentation was well received. See Appendix \ref{} for user study results.
+There were positives to come out of the user testing where users agreed that it was simple to use and easy to navigate around and the websites presentation was well received. See Appendix \ref{results:user} for user study results.
 
 \section{Tesseract testing}
 As Tesseract was a training process no additional code was written for this. An analysis of how well Tesseract learnt as it progressed through the training process can be represented as thus.
@@ -206,9 +206,9 @@ Before the Tesseract training can be analysed it is worth acknowledging the test
 
 \begin{table}[H]
 \centering
-\begin{tabular}{ |p{3cm}||p{3cm}|p{3cm}|p{3cm}| }
+\begin{tabular}{ |p{3cm}|p{3cm}|p{3cm}|p{3cm}| }
  \hline
- \multicolumn{4}{||c||}{Image pre-processing Spike work - Correct Results vs Characters on the page} \\
+ \multicolumn{4}{|c|}{Image pre-processing Spike work - Correct Results vs Characters on the page} \\
  \hline
       Paper type & Greyscale & Original & Threshold\\
  \hline
@@ -218,10 +218,10 @@ Before the Tesseract training can be analysed it is worth acknowledging the test
  \hline
 \end{tabular}
 \caption{Table showing the results of non trained handwriting on different adaptive thresholding algorithms.}
-\label{table:pre-training}
+\label{table:pre-training-overall}
 \end{table}
 
-Table \ref{table:pre-training} shows the results from the experiments conducted to analyse which thresholding algorithm works efficiently. The results clearly show that the thresholding image yielded the best accuracy. As a result, thresholding was used. The rest of the section discusses the Tesseract training performance on adaptive threshold with Gaussian. For further statistics on this test see Appendix \ref{tesseract:spike_results}.
+Table \ref{table:pre-training-overall} shows the results from the experiments conducted to analyse which thresholding algorithm works efficiently. The results clearly show that the thresholding image yielded the best accuracy. As a result, thresholding was used. The rest of the section discusses the Tesseract training performance on adaptive threshold with Gaussian. For further statistics on this test see Appendix \ref{tesseract:spike_results}.
 
 
 \begin{figure}[h!]

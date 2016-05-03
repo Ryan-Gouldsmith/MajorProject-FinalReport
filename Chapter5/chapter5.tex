@@ -25,7 +25,7 @@ To recap, the following high-level requirements and objectives were identified i
 	\item Investigate how to extract handwritten text from an image - this will involve looking into ways OCR tools can interpret handwriting.
 	\item Train the OCR to recognise text of the author's handwriting.
 	\item Produce a set of a rules which a note must comply.
-	\item Produce a web application to form the core part of the product. This includes allowing a user to upload an image, display the image. Add appropriate tagging to a note such as module code.
+	\item Produce a web application to form the core part of the product. This includes allowing a user to upload an image and display the image. Add appropriate tagging to a note such as module code.
 	\item The user must be able to search for a given module code, showing the full list of notes based on the module code entered.
 	\item The backend of the application must conduct basic OCR recognition, analysing the first three lines of the notes.
 	\item The backend must integrate with a calendar to archive the notes into users events.
@@ -38,7 +38,7 @@ The investigation and prototype work into extracting handwriting text took longe
 
 The author's handwriting was successfully trained on twelve different notes. From Figure \ref{fig:tesseract_graph} is was clear that no further examples were improving the recognition rate, returning around a 72\% recognition rate. As it was not defined what the ideal recognition rate would be at the start of the project, then this is a very rewarding return.
 
-Although it was not ideal it was acknowledged that the notes must have some structure. Although this is a little restrictive for the end user, it was imperative to have a structured format. Without it the analysis of the metadata would not have been as trivial as it was.
+Although it was not ideal it was acknowledged that the notes must have some structure. Although this is a little restrictive for the end user, it was imperative to have a structured format. Without it the analysis of the metadata it would not have been as trivial as it was.
 
 The application was the main crux of the project, so a considerable amount of effort was put into the project in attempt to implement the functionality from the requirements. Although an Agile approach was adopted, the initial high-level requirements did not change, they were only added to. There were a series of smaller requirements as the application grew, such as clicking on the suggested Tesseract data to populate the form. Additionally, the metadata used in the application expanded upon further investigation to include the title, location and date. Additionally, the application was extended to include the searching and viewing all notes for the user.
 
@@ -92,7 +92,7 @@ Due to the time constraints of the project specific sections of the application 
 
 One limitation which impacts the quality of the characters identified is that the image has to be correctly rotated to 90\textdegree, and then cropped sufficiently. When a user uploads an image from their camera they would have to manually ensure the image is correctly oriented and cropped sufficiently. This is not ideal and may potentially ruin the user experience.
 
-The system only handles handwritten text from the author. Tesseract was not generic enough to analyse handwriting generally. This reduces the extensibility of the application as other users can not use this application without training their handwriting first. Additionally, it only analyses non-cursive handwriting not cursive and in general most people write in a cursively.
+The system only handles handwritten text from the author. Tesseract was not generic enough to analyse handwriting generally. This reduces the extensibility of the application as other users can not use this application without training their handwriting first. Additionally, it only analyses non-cursive handwriting not cursive and in general most people write cursively.
 
 As mentioned before a known constraint is that the user has to write their notes in a specific format. The metadata had to be specified in a specific way to ensure that the metadata could be extracted reliably every time. Furthermore, the application only works with purely text notes not a note which contains images, this limits the types of notes which can be used and integrated into the system.
 
@@ -116,7 +116,7 @@ A software methodology has been followed with diligence and precision through th
 
 The use of TDD was an imperative process followed throughout the project. The system has been developed with an extensive testing infrastructure behind the development. This was professionally and diligently followed even when implementation issues arose. As a result the system has 248 tests, which fully test all aspects of the system; this would not have been possible if it was not for TDD.
 
-Overall, the process was implemented to thoroughly and meticulously. Scrum was fully adopted on the project and the structured guide to development made the development lifecycle a lot easier.
+Overall, the process was implemented thoroughly and meticulously. Scrum was fully adopted on the project and the structured guide to development made the development lifecycle a lot easier.
 
 \section{Starting again}
 Although this project has been completed to a high standard, there are a few aspects which would be changed if the project were to be started again.
@@ -142,11 +142,11 @@ The project incorporates many different engineering aspects:
 \section{Overall conclusions}
 Although there were some limitations and aspects of the application which could be changed, one should not overlook the product produced. There are 3 core achievements in the project: the image processing, handwriting analysis and the web application.
 
-Over the 15 week process a series of research and prototype task have been completed in an attempt to successfully binarise an image and remove any additional noise. The segmentation algorithm can take an image with non-uniform lighting conditions and still output a binarised image, clearly showing all the text on the page. This segmentation can now improve the Tesseract's handwriting recognition rate for handwritten text.
+Over the 15 week process a series of research and prototype tasks have been completed in an attempt to successfully binarise an image and remove any additional noise. The segmentation algorithm can take an image with non-uniform lighting conditions and still output a binarised image, clearly showing all the text on the page. This segmentation can now improve the Tesseract's handwriting recognition rate for handwritten text.
 
 The analysis of handwritten text to return a 72\% recognition rate is an achievement in itself. This was only achieved through the successes of the segmentation algorithm. Further analysis was conducted into the success rate achieved.
 
-The web application was developed to a high standard, using solid software engineering processes. At a basic level the user can log-in and authorise via OAuth2 with Google's services. Images can be uploaded and  are binarised using the segmentation algorithm. The first first three lines of the handwritten note are extracted and presented to the user, which they can interact with. This step alone shows how the three different sections of the project integrate into one component for the user to select the metadata for their note. After this further complexity was added to make additional HTTP requests to the user's calendar, adding and editing specific events based on the date of the lecture.
+The web application was developed to a high standard, using solid software engineering processes. At a basic level the user can log-in and authorise via OAuth2 with Google's services. Images can be uploaded and  are binarised using the segmentation algorithm. The first three lines of the handwritten note are extracted and presented to the user, which they can interact with. This step alone shows how the three different sections of the project integrate into one component for the user to select the metadata for their note. After this further complexity was added to make additional HTTP requests to the user's calendar, adding and editing specific events based on the date of the lecture.
 
 At an in-depth level design patterns have been implemented to help to with the maintainability of the codebase. The application has succeeded in reducing the code duplication in the project by abstracting duplicated code into a series of helper classes. All of this is wrapped in a solid development methodology which has enabled the application to be iteratively developed gaining constant feedback from Dr. Hannah Dee.
 
