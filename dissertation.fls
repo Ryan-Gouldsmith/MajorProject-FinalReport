@@ -460,11 +460,11 @@ INPUT images/thresholding_options.png
 INPUT ./images/thresholding_options.png
 INPUT ./images/thresholding_options.png
 INPUT /usr/local/texlive/2015/texmf-dist/fonts/tfm/adobe/times/ptmrc7t.tfm
-INPUT /usr/local/texlive/2015/texmf-dist/fonts/vf/adobe/times/ptmrc7t.vf
-INPUT /usr/local/texlive/2015/texmf-dist/fonts/tfm/adobe/times/ptmr8r.tfm
 INPUT images/removed_lines_still_noise.png
 INPUT ./images/removed_lines_still_noise.png
 INPUT ./images/removed_lines_still_noise.png
+INPUT /usr/local/texlive/2015/texmf-dist/fonts/vf/adobe/times/ptmrc7t.vf
+INPUT /usr/local/texlive/2015/texmf-dist/fonts/tfm/adobe/times/ptmr8r.tfm
 INPUT images/hard_image.png
 INPUT ./images/hard_image.png
 INPUT ./images/hard_image.png

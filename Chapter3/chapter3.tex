@@ -85,7 +85,6 @@ Over a series of iterations, the primary objective was to remove the blue lines 
     \State lower\_black $\gets$ np.array([0,0,0])
     \State upper\_black $\gets$ np.array([175,20, 95])
     \State mask\_black $\gets$ cv2.inRange(erode, lower\_black, upper\_black)
-    \State mask[np.where(mask\_black == 0)] $\gets$ 255
   \EndFunction
   \end{algorithmic}
   \caption{Initial removing the blue lines algorithm}
@@ -110,7 +109,7 @@ There was no simplistic way to identify and filter the lines, therefore it was d
 
 OpenCV has an example of line extraction and binarsation \cite{citeulike:14006256}. From the example, structuring elements were used to extract the text from the image. Further erosion and dilation were used to remove additional noise. Throughout the process, masks were used to transfer the state of the image to another mask. An example is transferring the text to a mask, but this had an unwanted side effect that line noise way transferred too.
 
-Due to the text having connected pixels, unlike the eroded noise, then connected components were used to identify characters. As a result of  morphological operations the lines were no longer connected. The identified characters were copied to a final mask.
+Due to the text having connected pixels, unlike the eroded noise, then finding the contours on the mask would identify the characters \cite{citeulike:14027120} \cite{citeulike:14027122} \cite{citeulike:14027123}. As a result of  morphological operations the lines were no longer connected. The identified characters were copied to a final mask.
 
 Further smoothing cleared up the image. After a series of iterations the binarisation process was complete.
 

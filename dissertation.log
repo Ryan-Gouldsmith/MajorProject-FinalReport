@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.8.29)  3 MAY 2016 10:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.8.29)  4 MAY 2016 00:10
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -588,11 +588,7 @@ Package: rotating 2009/03/28 v2.16a rotated objects in LaTeX
 \rot@float@box=\box47
 \rot@mess@toks=\toks41
 )
-(./dissertation.aux (./cover.aux) (./declaration.aux) (./acknowledgements.aux) (./abstract.aux) (./Chapter1/chapter1.aux) (./Chapter2/chapter2.aux) (./Chapter3/chapter3.aux
-
-LaTeX Warning: Label `algorithm:threshold1' multiply defined.
-
-) (./Chapter4/chapter4.aux
+(./dissertation.aux (./cover.aux) (./declaration.aux) (./acknowledgements.aux) (./abstract.aux) (./Chapter1/chapter1.aux) (./Chapter2/chapter2.aux) (./Chapter3/chapter3.aux) (./Chapter4/chapter4.aux
 
 LaTeX Warning: Label `lst:mock1' multiply defined.
 
@@ -608,9 +604,6 @@ LaTeX Warning: Label `fig:second_tesseract' multiply defined.
 
 
 LaTeX Warning: Label `sub@fig:second_tesseract' multiply defined.
-
-
-LaTeX Warning: Label `table:pre-training' multiply defined.
 
 
 LaTeX Warning: Label `table:pre-training' multiply defined.
@@ -880,59 +873,59 @@ Package pdftex.def Info: images/adaptive_gaussian.png used on input line 59.
 File: images/thresholding_options.png Graphic file (type png)
  <use images/thresholding_options.png>
 Package pdftex.def Info: images/thresholding_options.png used on input line 68.
-(pdftex.def)             Requested size: 374.00014pt x 213.49927pt.
- [27 <./images/adaptive_gaussian.png>] [28 <./images/thresholding_options.png>] <images/removed_lines_still_noise.png, id=166, 409.53pt x 604.2575pt>
+(pdftex.def)             Requested size: 311.6636pt x 177.91425pt.
+ [27 <./images/adaptive_gaussian.png> <./images/thresholding_options.png>] <images/removed_lines_still_noise.png, id=163, 409.53pt x 604.2575pt>
 File: images/removed_lines_still_noise.png Graphic file (type png)
  <use images/removed_lines_still_noise.png>
-Package pdftex.def Info: images/removed_lines_still_noise.png used on input line 99.
+Package pdftex.def Info: images/removed_lines_still_noise.png used on input line 98.
 (pdftex.def)             Requested size: 204.7645pt x 302.128pt.
- [29 <./images/removed_lines_still_noise.png>] <images/hard_image.png, id=171, 1201.48875pt x 747.79375pt>
+ [28] [29 <./images/removed_lines_still_noise.png>] <images/hard_image.png, id=171, 1201.48875pt x 747.79375pt>
 File: images/hard_image.png Graphic file (type png)
  <use images/hard_image.png>
-Package pdftex.def Info: images/hard_image.png used on input line 119.
+Package pdftex.def Info: images/hard_image.png used on input line 118.
 (pdftex.def)             Requested size: 360.44942pt x 224.33984pt.
  [30 <./images/hard_image.png>] <images/box_editor.png, id=176, 1273.75874pt x 710.655pt>
 File: images/box_editor.png Graphic file (type png)
  <use images/box_editor.png>
-Package pdftex.def Info: images/box_editor.png used on input line 152.
+Package pdftex.def Info: images/box_editor.png used on input line 151.
 (pdftex.def)             Requested size: 426.79134pt x 238.10614pt.
  [31 <./images/box_editor.png>] [32] <images/tesseract_first.png, id=185, 260.975pt x 181.67876pt>
 File: images/tesseract_first.png Graphic file (type png)
 
 <use images/tesseract_first.png>
-Package pdftex.def Info: images/tesseract_first.png used on input line 207.
+Package pdftex.def Info: images/tesseract_first.png used on input line 206.
 (pdftex.def)             Requested size: 182.68126pt x 127.17424pt.
  [33 <./images/tesseract_first.png>] <images/tesseract_colour.png, id=191, 268.00125pt x 328.22626pt>
 File: images/tesseract_colour.png Graphic file (type png)
  <use images/tesseract_colour.png>
-Package pdftex.def Info: images/tesseract_colour.png used on input line 220.
+Package pdftex.def Info: images/tesseract_colour.png used on input line 219.
 (pdftex.def)             Requested size: 93.80183pt x 114.8809pt.
  <images/styled-tesseract-data.png, id=192, 667.49374pt x 350.81062pt>
 File: images/styled-tesseract-data.png Graphic file (type png)
  <use images/styled-tesseract-data.png>
-Package pdftex.def Info: images/styled-tesseract-data.png used on input line 226.
+Package pdftex.def Info: images/styled-tesseract-data.png used on input line 225.
 (pdftex.def)             Requested size: 200.24966pt x 105.24399pt.
 
-Overfull \hbox (50.8701pt too wide) in paragraph at lines 226--227
+Overfull \hbox (50.8701pt too wide) in paragraph at lines 225--226
 [][] 
  []
 
 [34 <./images/tesseract_colour.png> <./images/styled-tesseract-data.png>] <images/event_seven_day.png, id=199, 925.4575pt x 401.5pt>
 File: images/event_seven_day.png Graphic file (type png)
  <use images/event_seven_day.png>
-Package pdftex.def Info: images/event_seven_day.png used on input line 247.
+Package pdftex.def Info: images/event_seven_day.png used on input line 246.
 (pdftex.def)             Requested size: 462.72762pt x 200.7495pt.
 
-Overfull \hbox (35.93628pt too wide) in paragraph at lines 247--248
+Overfull \hbox (35.93628pt too wide) in paragraph at lines 246--247
  [][] 
  []
 
-[35 <./images/event_seven_day.png>] <images/saved_to_calendar.png, id=204, 671.50874pt x 365.365pt>
+<images/saved_to_calendar.png, id=200, 671.50874pt x 365.365pt>
 File: images/saved_to_calendar.png Graphic file (type png)
  <use images/saved_to_calendar.png>
-Package pdftex.def Info: images/saved_to_calendar.png used on input line 282.
+Package pdftex.def Info: images/saved_to_calendar.png used on input line 281.
 (pdftex.def)             Requested size: 335.75356pt x 182.68205pt.
- [36 <./images/saved_to_calendar.png>] (/usr/local/texlive/2015/texmf-dist/tex/latex/listings/lstlang1.sty
+ [35 <./images/event_seven_day.png>] [36 <./images/saved_to_calendar.png>] (/usr/local/texlive/2015/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2014/09/06 1.5e listings language file
 ) [37]) [38]
 \openout2 = `Chapter4/chapter4.aux'.
@@ -971,11 +964,7 @@ File: images/user_response.png Graphic file (type png)
  <use images/user_response.png>
 Package pdftex.def Info: images/user_response.png used on input line 183.
 (pdftex.def)             Requested size: 286.06804pt x 148.05275pt.
-
-
-LaTeX Warning: Reference `' on page 45 undefined on input line 190.
-
-<images/tesseract_testing.png, id=242, 414.54875pt x 243.91125pt>
+ <images/tesseract_testing.png, id=242, 414.54875pt x 243.91125pt>
 File: images/tesseract_testing.png Graphic file (type png)
  <use images/tesseract_testing.png>
 Package pdftex.def Info: images/tesseract_testing.png used on input line 197.
@@ -1228,18 +1217,6 @@ Missing character: There is no Â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no Â in font ptmr7t!
 Missing character: There is no ” in font ptmr7t!
-Missing character: There is no Ã in font ptmr7t!
-Missing character: There is no ¢ in font ptmr7t!
-Missing character: There is no Â in font ptmr7t!
-Missing character: There is no € in font ptmr7t!
-Missing character: There is no Â in font ptmr7t!
-Missing character: There is no ” in font ptmr7t!
-Missing character: There is no Ã in font ptmr7t!
-Missing character: There is no ¢ in font ptmr7t!
-Missing character: There is no Â in font ptmr7t!
-Missing character: There is no € in font ptmr7t!
-Missing character: There is no Â in font ptmr7t!
-Missing character: There is no ” in font ptmr7t!
  [82
 
 
@@ -1256,11 +1233,12 @@ Missing character: There is no Â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no Â in font ptmr7t!
 Missing character: There is no ” in font ptmr7t!
- [83]
 Missing character: There is no Ã in font ptmr7t!
 Missing character: There is no ¢ in font ptmr7t!
 Missing character: There is no Â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
+Missing character: There is no Â in font ptmr7t!
+Missing character: There is no ” in font ptmr7t!
 Missing character: There is no Â in font ptmr7t!
 Missing character: There is no ” in font ptmr7t!
 Missing character: There is no Ã in font ptmr7t!
@@ -1279,27 +1257,28 @@ Missing character: There is no Ã in font ptmr7t!
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Â in font ptmr7t!
 Missing character: There is no   in font ptmr7t!
+ [83]
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Â in font ptmr7t!
+Missing character: There is no   in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Â in font ptmr7t!
+Missing character: There is no   in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Â in font ptmr7t!
+Missing character: There is no   in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Â in font ptmr7t!
+Missing character: There is no   in font ptmr7t!
 
-Underfull \hbox (badness 1038) in paragraph at lines 197--199
+Underfull \hbox (badness 1038) in paragraph at lines 179--181
 []\OT1/ptm/m/n/10.95 Comprehensive doc-u-men-ta-tion on the OAuth2 pro-to-col im-ple-men-ta-tion for
  []
 
-Missing character: There is no Ã in font ptmr7t!
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Â in font ptmr7t!
-Missing character: There is no   in font ptmr7t!
-Missing character: There is no Ã in font ptmr7t!
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Â in font ptmr7t!
-Missing character: There is no   in font ptmr7t!
-Missing character: There is no Ã in font ptmr7t!
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Â in font ptmr7t!
-Missing character: There is no   in font ptmr7t!
-Missing character: There is no Ã in font ptmr7t!
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Â in font ptmr7t!
-Missing character: There is no   in font ptmr7t!
 Missing character: There is no Ã in font ptmr7t!
 Missing character: There is no ¢ in font ptmr7t!
 Missing character: There is no Â in font ptmr7t!
@@ -1307,23 +1286,13 @@ Missing character: There is no € in font ptmr7t!
 Missing character: There is no Â in font ptmr7t!
 Missing character: There is no ” in font ptmr7t!
 [84]
-Underfull \hbox (badness 1112) in paragraph at lines 264--266
-[]\OT1/ptm/m/n/10.95 Flask, ``Wel-come | Flask (A Python Mi-croframe-work),'' $http : / / ^^Mask . pocoo . org/$, last
- []
-
 Missing character: There is no Ã in font ptmr7t!
 Missing character: There is no ¢ in font ptmr7t!
 Missing character: There is no Â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no Â in font ptmr7t!
 Missing character: There is no ” in font ptmr7t!
-Missing character: There is no Ã in font ptmr7t!
-Missing character: There is no ¢ in font ptmr7t!
-Missing character: There is no Â in font ptmr7t!
-Missing character: There is no € in font ptmr7t!
-Missing character: There is no Â in font ptmr7t!
-Missing character: There is no ” in font ptmr7t!
-[85]
+ [85]
 Missing character: There is no Â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no Â in font ptmr7t!
@@ -1336,49 +1305,32 @@ Missing character: There is no Ã in font ptmr7t!
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Â in font ptmr7t!
 Missing character: There is no · in font ptmr7t!
-
-Underfull \hbox (badness 10000) in paragraph at lines 368--372
-\OT1/ptm/m/n/10.95 google/google-api-python-client,'' $https : / / github . com / google / google-[]api-[]python-[]client /
- []
-
+ [86]
+Missing character: There is no Â in font ptmr7t!
+Missing character: There is no € in font ptmr7t!
 Missing character: There is no Â in font ptmr7t!
 Missing character: There is no ” in font ptmr7t!
-
-Underfull \hbox (badness 2418) in paragraph at lines 390--392
-[]\OT1/ptm/m/n/10.95 C. Heer, ``Flask-Testing  Flask-Testing 0.3 doc-u-men-ta-tion,'' $http : / / pythonhosted . org /
- []
-
-[86]
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ¢ in font ptmr7t!
 Missing character: There is no Â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no Â in font ptmr7t!
 Missing character: There is no ” in font ptmr7t!
  [87]
+Overfull \hbox (33.38913pt too wide) in paragraph at lines 505--509
+\OT1/ptm/m/n/10.95 Take-[]handwritten-[]notes-[]in-[]OneNote-[]2016-[]for-[]Windows-[]0ec88c54-[]05f3-[]4cac-[]b452-[]9ee62cebbd4c$ 
+ []
+
+Missing character: There is no â in font ptmr7t!
+Missing character: There is no € in font ptmr7t!
+Missing character: There is no “ in font ptmr7t!
 Missing character: There is no Ã in font ptmr7t!
 Missing character: There is no ¢ in font ptmr7t!
 Missing character: There is no Â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no Â in font ptmr7t!
 Missing character: There is no ” in font ptmr7t!
-
-Underfull \hbox (badness 10000) in paragraph at lines 507--510
-[]\OT1/ptm/m/n/10.95 ------, ``Take hand-writ-ten notes in OneNote 2016 for Win-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 507--510
-\OT1/ptm/m/n/10.95 dows - OneNote,'' $https : / / support . o^^Nce . com / en-[]us / article /
- []
-
-
-Overfull \hbox (36.12662pt too wide) in paragraph at lines 507--510
-\OT1/ptm/m/n/10.95 Take-[]handwritten-[]notes-[]in-[]OneNote-[]2016-[]for-[]Windows-[]0ec88c54-[]05f3-[]4cac-[]b452-[]9ee62cebbd4c$,
- []
-
 [88]
-Missing character: There is no â in font ptmr7t!
-Missing character: There is no € in font ptmr7t!
-Missing character: There is no “ in font ptmr7t!
 Missing character: There is no Ã in font ptmr7t!
 Missing character: There is no ¢ in font ptmr7t!
 Missing character: There is no Â in font ptmr7t!
@@ -1394,33 +1346,25 @@ Missing character: There is no Â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no Â in font ptmr7t!
 Missing character: There is no ” in font ptmr7t!
- [90]
-Underfull \hbox (badness 4036) in paragraph at lines 686--689
-[]\OT1/ptm/m/n/10.95 M. G. Soft-ware, ``Plan-ning Poker: Ag-ile Es-ti-mat-ing Made Easy,'' $https : / / www .
- []
-
-
-Underfull \hbox (badness 1237) in paragraph at lines 722--726
-\OT1/ptm/m/n/10.95 age-ment Sys-tems | Dig-i-talO-cean,'' $https : / / www . digitalocean . com / community / tutorials /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 722--726
-\OT1/ptm/m/n/10.95 sqlite-[]vs-[]mysql-[]vs-[]postgresql-[]a-[]comparison-[]of-[]relational-[]database-[]management-[]systems$,
- []
-
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ¢ in font ptmr7t!
+Missing character: There is no Â in font ptmr7t!
+Missing character: There is no € in font ptmr7t!
+Missing character: There is no Â in font ptmr7t!
+Missing character: There is no ” in font ptmr7t!
+ [90] [91]
 Missing character: There is no Ã in font ptmr7t!
 Missing character: There is no ¢ in font ptmr7t!
 Missing character: There is no Â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no Â in font ptmr7t!
 Missing character: There is no “ in font ptmr7t!
-[91]
+ [92]
 Missing character: There is no Ã in font ptmr7t!
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Â in font ptmr7t!
 Missing character: There is no · in font ptmr7t!
- [92]) 
+) 
 AED: lastpage setting LastPage
 [93] (./dissertation.aux (./cover.aux) (./declaration.aux) (./acknowledgements.aux) (./abstract.aux) (./Chapter1/chapter1.aux) (./Chapter2/chapter2.aux) (./Chapter3/chapter3.aux) (./Chapter4/chapter4.aux) (./Chapter5/chapter5.aux) (./Appendix1/appendix1.aux) (./Appendix2/appendix2.aux) (./Appendix3/appendix3.aux) (./Appendix4/appendix4.aux) (./Appendix5/appendix5.aux) (./Appendix6/appendix6.aux) (./Appendix7/appendix7.aux) (./Appendix8/appendix8.aux) (./Appendix9/appendix9.aux))
 
@@ -1433,25 +1377,25 @@ LaTeX Warning: There were multiply-defined labels.
 (\end occurred inside a group at level 9)
 
 ### simple group (level 9) entered at line 34 ({)
-### simple group (level 8) entered at line 342 ({)
-### simple group (level 7) entered at line 171 ({)
-### simple group (level 6) entered at line 168 ({)
-### simple group (level 5) entered at line 163 ({)
-### simple group (level 4) entered at line 160 ({)
-### simple group (level 3) entered at line 157 ({)
-### simple group (level 2) entered at line 147 ({)
-### simple group (level 1) entered at line 132 ({)
+### simple group (level 8) entered at line 341 ({)
+### simple group (level 7) entered at line 170 ({)
+### simple group (level 6) entered at line 167 ({)
+### simple group (level 5) entered at line 162 ({)
+### simple group (level 4) entered at line 159 ({)
+### simple group (level 3) entered at line 156 ({)
+### simple group (level 2) entered at line 146 ({)
+### simple group (level 1) entered at line 131 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 27114 strings out of 493089
- 653001 string characters out of 6134842
- 812254 words of memory out of 5000000
- 29885 multiletter control sequences out of 15000+600000
+ 27119 strings out of 493089
+ 653119 string characters out of 6134842
+ 811968 words of memory out of 5000000
+ 29890 multiletter control sequences out of 15000+600000
  37190 words of font info for 79 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,12n,102p,984b,2046s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 62i,12n,102p,984b,2045s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/courier/ucrro8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on dissertation.pdf (103 pages, 7777051 bytes).
+Output written on dissertation.pdf (103 pages, 7778553 bytes).
 PDF statistics:
  470 PDF objects out of 1000 (max. 8388607)
  285 compressed objects within 3 object streams

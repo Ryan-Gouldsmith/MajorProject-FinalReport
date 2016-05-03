@@ -53,10 +53,10 @@
 \contentsline {subsection}{\numberline {3.3.1}Training process}{30}
 \contentsline {section}{\numberline {3.4}Web application}{32}
 \contentsline {subsection}{\numberline {3.4.1}OAuth}{32}
-\contentsline {subsection}{\numberline {3.4.2}Reoccuring events}{33}
+\contentsline {subsection}{\numberline {3.4.2}Reoccurring events}{33}
 \contentsline {subsection}{\numberline {3.4.3}Tesseract confidence}{33}
 \contentsline {subsection}{\numberline {3.4.4}Parsing EXIF data}{34}
-\contentsline {subsection}{\numberline {3.4.5}Displaying calendar events}{35}
+\contentsline {subsection}{\numberline {3.4.5}Displaying calendar events}{34}
 \contentsline {subsection}{\numberline {3.4.6}Editing calendar events}{35}
 \contentsline {subsubsection}{\numberline {3.4.6.1}Editing a note}{36}
 \contentsline {subsubsection}{\numberline {3.4.6.2}Logging in and out}{37}

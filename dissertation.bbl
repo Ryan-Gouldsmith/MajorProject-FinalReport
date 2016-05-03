@@ -18,91 +18,20 @@
 \fi
 #2}}
 
-\bibitem{citeulike:13995818}
-\BIBentryALTinterwordspacing
-``{CSS Bootstrap},'' last checked 3rd April 2016. [Online]. Available:
-  \url{http://getbootstrap.com/css/}
-\BIBentrySTDinterwordspacing
- \begin{quotation}\noindent Bootstrap library was considered when thinking
-  about the styling using CSS. \end{quotation}
-
-\bibitem{citeulike:14025943}
-\BIBentryALTinterwordspacing
-``{Flask-Script â Flask-Script 0.4.0 documentation},'' last accessed 2nd
-  May 2016. [Online]. Available:
-  \url{https://flask-script.readthedocs.io/en/latest/}
-\BIBentrySTDinterwordspacing
- \begin{quotation}\noindent Used in conjunction with the migration to enable
-  migration files to be executed \end{quotation}
-
-\bibitem{citeulike:14025897}
-\BIBentryALTinterwordspacing
-``{jQuery},'' last accessed 2nd May 2016. [Online]. Available:
-  \url{https://jquery.com/}
-\BIBentrySTDinterwordspacing
- \begin{quotation}\noindent Used to interact with the different elements on the
-  web page. \end{quotation}
-
-\bibitem{citeulike:13983911}
-\BIBentryALTinterwordspacing
-``{Modular Applications with Blueprints â Flask Documentation (0.10)},''
-  last checked 28th April 2016. [Online]. Available:
-  \url{http://flask.pocoo.org/docs/0.10/blueprints/}
-\BIBentrySTDinterwordspacing
- \begin{quotation}\noindent Blueprints were used to modularise the code and
-  expand it for a larger project. They were implemented to attempt to decouple
-  specific routing. \end{quotation}
-
-\bibitem{citeulike:14025946}
-\BIBentryALTinterwordspacing
-``{pip 8.1.1},'' last accessed 2nd May 2016. [Online]. Available:
-  \url{https://pypi.python.org/pypi/pip}
-\BIBentrySTDinterwordspacing
- \begin{quotation}\noindent Used as the package manager throughout the
-  application to install different Python modules. \end{quotation}
-
-\bibitem{citeulike:14021437}
-\BIBentryALTinterwordspacing
-``{sirfz/tesserocr: A Python wrapper for the tesseract-ocr API},'' last checked
-  25th April 2016. [Online]. Available:
-  \url{https://github.com/sirfz/tesserocr}
-\BIBentrySTDinterwordspacing
- \begin{quotation}\noindent The Tesseract wrapper which was used to extract the
-  data from the image. It gives the confidences and all the words associated to
-  the lines. \end{quotation}
-
-\bibitem{citeulike:14025941}
-\BIBentryALTinterwordspacing
-``{Welcome to Flask-Migrate's documentation! â Flask-Migrate
-  documentation},'' last accessed 2nd May 2016. [Online]. Available:
-  \url{http://flask-migrate.readthedocs.io/en/latest/}
-\BIBentrySTDinterwordspacing
- \begin{quotation}\noindent Used for the migration of the database
-  transactions. \end{quotation}
-
-\bibitem{citeulike:2917492}
-\BIBentryALTinterwordspacing
-``{A Threshold Selection Method from Gray-Level Histograms},'' \emph{IEEE
-  Transactions on Systems, Man, and Cybernetics}, vol.~9, no.~1, pp. 62--66,
-  Jan. 1979. [Online]. Available:
-  \url{http://dx.doi.org/10.1109/tsmc.1979.4310076}
-\BIBentrySTDinterwordspacing
- \begin{quotation}\noindent The original paper which OTSU is represented.
-  Although a bit mathematical, some bits were good for reference material on
-  how the algorithm works. \end{quotation}
-
 \bibitem{citeulike:13988110}
-``{Evernote Tech Blog | The Care and Feeding of Elephants},''
-  \url{https://blog.evernote.com/tech/2013/07/18/how-evernotes-image-recognition-works/},
-  2013, last checked 25th March 2016.
+\BIBentryALTinterwordspacing
+``{Evernote Tech Blog | The Care and Feeding of Elephants},'' 2013, last
+  accessed 25th March 2016. [Online]. Available:
+  \url{https://blog.evernote.com/tech/2013/07/18/how-evernotes-image-recognition-works/}
+\BIBentrySTDinterwordspacing
  \begin{quotation}\noindent An article explaining how Evernote does character
   recognition on images \end{quotation}
 
 \bibitem{citeulike:14006256}
 \BIBentryALTinterwordspacing
 ``{OpenCV: Extract horizontal and vertical lines by using morphological
-  operations},'' 2015, last checked 25th April 2016. [Online]. Available:
-  \url{http://docs.opencv.org/3.1.0/d1/dee/tutorial\_moprh\_lines\_detection.html\#gsc.tab=0}
+  operations},'' 2015, last accessed 25th April 2016. [Online]. Available:
+  \url{http://docs.opencv.org/3.1.0/d1/dee/tutorial_moprh_lines_detection.html#gsc.tab=0}
 \BIBentrySTDinterwordspacing
  \begin{quotation}\noindent A great reference on how to use different
   morphological operations and adaptive threshold techniques to extract and
@@ -149,22 +78,43 @@ R.~Agarwal and D.~Umphress, ``{Extreme Programming for a Single Person Team},''
   aspects of Extreme Programming can be used. \end{quotation}
 
 \bibitem{apache_license}
-{Apache Software Foundation}, ``{Apache License, Version 2.0},''
-  \url{http://www.apache.org/licenses/LICENSE-2.0}, 2004.
+\BIBentryALTinterwordspacing
+{Apache Software Foundation}, ``{Apache License, Version 2.0},'' 2004.
+  [Online]. Available: \url{http://www.apache.org/licenses/LICENSE-2.0}
+\BIBentrySTDinterwordspacing
  \begin{quotation}\noindent The apache 2 licence which some software solutions
   such as the Google Client tool uses \end{quotation}
 
+\bibitem{citeulike:14025941}
+\BIBentryALTinterwordspacing
+F.~M. authors, ``{Welcome to Flask-Migrate's documentation! â
+  Flask-Migrate documentation},'' 2016, last accessed 2nd May 2016. [Online].
+  Available: \url{http://flask-migrate.readthedocs.io/en/latest/}
+\BIBentrySTDinterwordspacing
+ \begin{quotation}\noindent Used for the migration of the database
+  transactions. \end{quotation}
+
+\bibitem{citeulike:13995818}
+\BIBentryALTinterwordspacing
+Bootstrap, ``{CSS Bootstrap},'' 2016, last accessed 3rd April 2016. [Online].
+  Available: \url{http://getbootstrap.com/css/}
+\BIBentrySTDinterwordspacing
+ \begin{quotation}\noindent Bootstrap library was considered when thinking
+  about the styling using CSS. \end{quotation}
+
 \bibitem{citeulike:14019792}
+\BIBentryALTinterwordspacing
 Bottle, ``{Bottle: Python Web Framework â Bottle 0.13-dev
-  documentation},'' \url{http://bottlepy.org/docs/dev/index.html}, last checked
-  22nd April 2016.
+  documentation},'' last accessed 22nd April 2016. [Online]. Available:
+  \url{http://bottlepy.org/docs/dev/index.html}
+\BIBentrySTDinterwordspacing
  \begin{quotation}\noindent The Python framework was used as a case-study of
   potential frameworks to use for the application. Discussed in the design
   section, but rejected as a choice. \end{quotation}
 
 \bibitem{bradski2008learning}
 G.~Bradski and A.~Kaehler, \emph{Learning OpenCV: Computer vision with the
-  OpenCV library}.\hskip 1em plus 0.5em minus 0.4em\relax " O'Reilly Media,
+  OpenCV library}.\hskip 1em plus 0.5em minus 0.4em\relax ``O'Reilly Media,
   Inc.", 2008, pp. 138--139.
  \begin{quotation}\noindent A book which explains how the Gaussian function for
   the adaptive threshold with OpenCV works. It gives a simple description, one
@@ -179,58 +129,75 @@ C.~Commons, ``{Attribution-ShareAlike 4.0 International â CC BY-SA 4.0},''
  \begin{quotation}\noindent The creative commons 4.0 licence, used throughout
   for the selenium options. \end{quotation}
 
+\bibitem{citeulike:14025943}
+\BIBentryALTinterwordspacing
+F.~contributors, ``{Flask-Script 0.4.0 documentation},'' 2016, last accessed
+  2nd May 2016. [Online]. Available:
+  \url{https://flask-script.readthedocs.io/en/latest/}
+\BIBentrySTDinterwordspacing
+ \begin{quotation}\noindent Used in conjunction with the migration to enable
+  migration files to be executed \end{quotation}
+
 \bibitem{citeulike:14020597}
-M.~Daly, ``{Mocking External Apis in Python - Matthew Daly's Blog},''
-  \url{http://matthewdaly.co.uk/blog/2016/01/26/mocking-external-apis-in-python/},
-  Jan. 2015, last checked 25th April 2016.
+\BIBentryALTinterwordspacing
+M.~Daly, ``{Mocking External Apis in Python - Matthew Daly's Blog},'' Jan.
+  2015, last accessed 25th April 2016. [Online]. Available:
+  \url{http://matthewdaly.co.uk/blog/2016/01/26/mocking-external-apis-in-python/}
+\BIBentrySTDinterwordspacing
  \begin{quotation}\noindent A nice simple blog post explaining why hitting an
   external API is bad, and there should mocking objects instead.
   \end{quotation}
 
-\bibitem{citeulike:14026287}
+\bibitem{citeulike:14020588}
 \BIBentryALTinterwordspacing
-G.~Developers, ``{Using OAuth 2.0 to Access Google APIs Â |Â  Google
-  Identity Platform Â |Â  Google Developers},'' last accessed 2nd May 2016.
-  [Online]. Available:
-  \url{https://developers.google.com/identity/protocols/OAuth2\#basicsteps}
+F.~T. developers, ``{Flask-Testing  Flask-Testing 0.3 documentation},'' 2016,
+  last accessed 25th April 2016. [Online]. Available:
+  \url{http://pythonhosted.org/Flask-Testing/}
 \BIBentrySTDinterwordspacing
- \begin{quotation}\noindent Comprehensive documentation on the OAuth2 protocol
-  implementation for Google services. Excellent resource for understanding how
-  the flow of the requests work. \end{quotation}
+ \begin{quotation}\noindent The documentation page for the testing library
+  Flask-Testing. It was used throughout the project after a refactor realising
+  it offered better support for testing Flask applications. \end{quotation}
 
 \bibitem{citeulike:14025877}
 \BIBentryALTinterwordspacing
-------, ``{Getting Started Â |Â  API Client Library for Python Â |Â 
-  Google Developers},'' 2016, last accessed 2nd May 2016. [Online]. Available:
-  \url{https://developers.google.com/api-client-library/python/start/get\_started\#setup}
+G.~Developers, ``{Getting Started Â |Â  API Client Library for Python
+  Â |Â  Google Developers},'' 2016, last accessed 2nd May 2016. [Online].
+  Available:
+  \url{https://developers.google.com/api-client-library/python/start/get_started#setup}
 \BIBentrySTDinterwordspacing
  \begin{quotation}\noindent The Google client API library which is used
   throughout the application to the query different services that are offered
   from Google. \end{quotation}
 
+\bibitem{citeulike:14026287}
+\BIBentryALTinterwordspacing
+------, ``{Using OAuth 2.0 to Access Google APIs Â |Â  Google Identity
+  Platform Â |Â  Google Developers},'' January 2016, last accessed 2nd May
+  2016. [Online]. Available:
+  \url{https://developers.google.com/identity/protocols/OAuth2#basicsteps}
+\BIBentrySTDinterwordspacing
+ \begin{quotation}\noindent Comprehensive documentation on the OAuth2 protocol
+  implementation for Google services. Excellent resource for understanding how
+  the flow of the requests work. \end{quotation}
+
 \bibitem{citeulike:14025883}
 \BIBentryALTinterwordspacing
-N.~Developers, ``{NumPy â Numpy},'' 2016, last accessed 2nd May 2016.
+N.~developers, ``{NumPy â Numpy},'' 2016, last accessed 2nd May 2016.
   [Online]. Available: \url{http://www.numpy.org/}
 \BIBentrySTDinterwordspacing
  \begin{quotation}\noindent Numpy was used throughout the development when
   analysing images with OpenCV \end{quotation}
 
 \bibitem{citeulike:14020141}
-P.~Developers, ``{PEP 8 -- Style Guide for Python Code | Python.org},''
-  \url{https://www.python.org/dev/peps/pep-0008/}, last checked 23rd April
-  2016.
+\BIBentryALTinterwordspacing
+P.~Developers, ``{PEP 8 -- Style Guide for Python Code | Python.org},'' Aug
+  2013, last accessed 23rd April 2016. [Online]. Available:
+  \url{https://www.python.org/dev/peps/pep-0008/}
+\BIBentrySTDinterwordspacing
  \begin{quotation}\noindent The PEP8 standard was used throughout the codebase
   as an implementation style guide. It is referenced in the evaluation to
   discuss the design decision that should have been implemented from the start
   of the project. \end{quotation}
-
-\bibitem{citeulike:14019784}
-Django, ``{The Web framework for perfectionists with deadlines | Django},''
-  \url{https://www.djangoproject.com/}, last checked 22nd April 2016.
- \begin{quotation}\noindent The Python framework was used as a case study,
-  looking at the different frameworks available. It was rejected for it being
-  too large for the project. \end{quotation}
 
 \bibitem{citeulike:14014177}
 \BIBentryALTinterwordspacing
@@ -244,65 +211,77 @@ M.~A.~A. Dzulkifli and M.~F.~F. Mustafar, ``{The influence of colour on memory
   notes section. \end{quotation}
 
 \bibitem{citeulike:14014282}
-Evernote, ``{The note-taking space for your life's work | Evernote},''
-  \url{https://evernote.com/?var=c}, 2016, last checked 17th April 2016.
+\BIBentryALTinterwordspacing
+Evernote, ``{The note-taking space for your life's work | Evernote},'' 2016,
+  last accessed 17th April 2016. [Online]. Available:
+  \url{https://evernote.com/?var=c}
+\BIBentrySTDinterwordspacing
  \begin{quotation}\noindent The Evernote application is an example of the
   organisational and note-taking application that this project is looking at as
   a similar system. \end{quotation}
 
 \bibitem{citeulike:14021401}
 \BIBentryALTinterwordspacing
-Fisher, ``{Point Operations - Adaptive Thresholding},'' 2003, last checked 25th
-  April 2016. [Online]. Available:
+Fisher, ``{Point Operations - Adaptive Thresholding},'' 2003, last accessed
+  25th April 2016. [Online]. Available:
   \url{http://homepages.inf.ed.ac.uk/rbf/HIPR2/adpthrsh.htm}
 \BIBentrySTDinterwordspacing
  \begin{quotation}\noindent An article explaining clearly and simply how the
   adaptive thresholding algorithm works. It gives a good level of detail and is
   concise in its points. \end{quotation}
 
-\bibitem{citeulike:13160396}
-Flask, ``{Welcome | Flask (A Python Microframework)},''
-  \url{http://flask.pocoo.org/}, last checked 22nd April 2016.
- \begin{quotation}\noindent The python framework used as an option. Was used in
-  the design section evaluating the decisions that were made. It was used as
-  the choice of framework. \end{quotation}
+\bibitem{citeulike:13983911}
+\BIBentryALTinterwordspacing
+Flask, ``{Modular Applications with Blueprints Flask Documentation (0.10)},''
+  2016, last accessed 28th April 2016. [Online]. Available:
+  \url{http://flask.pocoo.org/docs/0.10/blueprints/}
+\BIBentrySTDinterwordspacing
+ \begin{quotation}\noindent Blueprints were used to modularise the code and
+  expand it for a larger project. They were implemented to attempt to decouple
+  specific routing. \end{quotation}
 
-\bibitem{citeulike:14020609}
-------, ``{Testing Flask Applications â Flask Documentation (0.10)},''
-  \url{http://flask.pocoo.org/docs/0.10/testing/\#accessing-and-modifying-sessions},
-  2016, last checked 24th April 2016.
- \begin{quotation}\noindent The testing documentation for Flask which discusses
-  how session modifications should be handled. Used in the implementation and
-  the testing discussion. \end{quotation}
+\bibitem{citeulike:14019784}
+\BIBentryALTinterwordspacing
+D.~S. Foundation, ``{The Web framework for perfectionists with deadlines |
+  Django},'' 2106, last accessed 22nd April 2016. [Online]. Available:
+  \url{https://www.djangoproject.com/}
+\BIBentrySTDinterwordspacing
+ \begin{quotation}\noindent The Python framework was used as a case study,
+  looking at the different frameworks available. It was rejected for it being
+  too large for the project. \end{quotation}
 
 \bibitem{citeulike:14020599}
+\BIBentryALTinterwordspacing
 T.~P.~S. Foundation, ``{26.5. unittest.mock â mock object library},''
-  \url{https://docs.python.org/3/library/unittest.mock.html}, 2016, last
-  checked 24th April 2016.
+  2016, last accessed 24th April 2016. [Online]. Available:
+  \url{https://docs.python.org/3/library/unittest.mock.html}
+\BIBentrySTDinterwordspacing
  \begin{quotation}\noindent The mocking library used throughout the
   application. Although the documentation is for python 3, it works for python
   2.7 \end{quotation}
 
-\bibitem{citeulike:14020596}
-M.~Fowler, ``{Mocks Aren't Stubs},''
-  \url{http://martinfowler.com/articles/mocksArentStubs.html}, last checked
-  25th April 2016.
- \begin{quotation}\noindent When deciding whether mocks or stubs were used,
-  Martin Fowler gave a nice concise answer. It turns out all the tests are
-  mocking the behaviour from the external API. \end{quotation}
-
 \bibitem{citeulike:14023810}
 \BIBentryALTinterwordspacing
-------, ``{Extract Class},'' Oct. 1999, last checked 28th April 2016. [Online].
-  Available: \url{http://refactoring.com/catalog/extractClass.html}
+M.~Fowler, ``{Extract Class},'' Oct. 1999, last accessed 28th April 2016.
+  [Online]. Available: \url{http://refactoring.com/catalog/extractClass.html}
 \BIBentrySTDinterwordspacing
  \begin{quotation}\noindent The description of what the extract class
   refactoring technique, which was used extensively on the project.
   \end{quotation}
 
+\bibitem{citeulike:14020596}
+\BIBentryALTinterwordspacing
+------, ``{Mocks Aren't Stubs},'' January 2007, last accessed 25th April 2016.
+  [Online]. Available:
+  \url{http://martinfowler.com/articles/mocksArentStubs.html}
+\BIBentrySTDinterwordspacing
+ \begin{quotation}\noindent When deciding whether mocks or stubs were used,
+  Martin Fowler gave a nice concise answer. It turns out all the tests are
+  mocking the behaviour from the external API. \end{quotation}
+
 \bibitem{citeulike:14023852}
 \BIBentryALTinterwordspacing
-GitHub, ``{Atom},'' 2016, last checked 28th April 2016. [Online]. Available:
+GitHub, ``{Atom},'' 2016, last accessed 28th April 2016. [Online]. Available:
   \url{https://atom.io/}
 \BIBentrySTDinterwordspacing
  \begin{quotation}\noindent The text editor which was used for the majority of
@@ -311,7 +290,7 @@ GitHub, ``{Atom},'' 2016, last checked 28th April 2016. [Online]. Available:
 
 \bibitem{citeulike:13269771}
 \BIBentryALTinterwordspacing
-------, ``{GitHub},'' 2016, last checked TODO. [Online]. Available:
+------, ``{GitHub},'' 2016, last accessed 3rd May 2016. [Online]. Available:
   \url{http://www.github.com}
 \BIBentrySTDinterwordspacing
  \begin{quotation}\noindent The hosting service for the priavte git repository
@@ -331,7 +310,7 @@ B.~M. Gonzalez, ``{Iris : a solution for executing handwritten code},''
 \bibitem{citeulike:14024993}
 \BIBentryALTinterwordspacing
 Google, ``{API Client Library for Python | Google Developers},'' 2016, last
-  checked 30th April 2016. [Online]. Available:
+  accessed 30th April 2016. [Online]. Available:
   \url{https://developers.google.com/api-client-library/python/}
 \BIBentrySTDinterwordspacing
  \begin{quotation}\noindent The client library which is used to interact with
@@ -339,8 +318,8 @@ Google, ``{API Client Library for Python | Google Developers},'' 2016, last
 
 \bibitem{citeulike:14023831}
 \BIBentryALTinterwordspacing
-------, ``{Color - Style - Google design guidelines},'' 2016, last checked 28th
-  April 2016. [Online]. Available:
+------, ``{Color - Style - Google design guidelines},'' 2016, last accessed
+  28th April 2016. [Online]. Available:
   \url{https://www.google.com/design/spec/style/color.html}
 \BIBentrySTDinterwordspacing
  \begin{quotation}\noindent The colour guide was used for the CSS colours used
@@ -349,7 +328,7 @@ Google, ``{API Client Library for Python | Google Developers},'' 2016, last
 \bibitem{citeulike:14025272}
 \BIBentryALTinterwordspacing
 ------, ``{Map My Notes Usability Questionnaire - Google Forms},'' 2016, last
-  checked 30th April 2016. [Online]. Available:
+  accessed 30th April 2016. [Online]. Available:
   \url{https://docs.google.com/forms/d/10noZA1Jrq0H_ffLeGd1q8cf2le-m6uJGVSKhqWvNWoY}
 \BIBentrySTDinterwordspacing
  \begin{quotation}\noindent The questionnaire which was created for part of a
@@ -357,41 +336,42 @@ Google, ``{API Client Library for Python | Google Developers},'' 2016, last
   \end{quotation}
 
 \bibitem{citeulike:14014320}
+\BIBentryALTinterwordspacing
 ------, ``{Meet Google Keep, Save your thoughts, wherever you are - Keep
-  Google},'' \url{https://www.google.com/keep/}, 2016, last checked 17th April
-  2016.
+  Google},'' 2016, last accessed 17th April 2016. [Online]. Available:
+  \url{https://www.google.com/keep/}
+\BIBentrySTDinterwordspacing
  \begin{quotation}\noindent Google keep is an organisational and note-taking
   application, it is used as part of the evaluation and background analysis. It
   was compared against what the application could do. \end{quotation}
 
 \bibitem{citeulike:14021433}
+\BIBentryALTinterwordspacing
 R.~Gouldsmith, ``{build throws KeyError: 'rootUrl' error on Google Calendar API
-  Â· Issue \#208 Â· google/google-api-python-client},''
-  \url{https://github.com/google/google-api-python-client/issues/208}, 2016,
-  last checked 25th April 2016.
+  Â· Issue \#208 Â· google/google-api-python-client},'' 2016, last accessed
+  25th April 2016. [Online]. Available:
+  \url{https://github.com/google/google-api-python-client/issues/208}
+\BIBentrySTDinterwordspacing
  \begin{quotation}\noindent A issue which was raised by the author, regarding
   an issue experienced with a 3rd party library. \end{quotation}
 
 \bibitem{citeulike:14014367}
-------, ``{Ryan Gouldsmith's Blog},'' \url{https://ryangouldsmith.uk/}, 2016,
-  last checked TODO.
+\BIBentryALTinterwordspacing
+------, ``{Ryan Gouldsmith's Blog},'' 2016, last accessed 3rd May 2016.
+  [Online]. Available: \url{https://ryangouldsmith.uk/}
+\BIBentrySTDinterwordspacing
  \begin{quotation}\noindent A collection of blog posts which explain the
   progress every week through a review and reflection post. \end{quotation}
 
 \bibitem{citeulike:14021372}
-A.~Greensted, ``{Otsu Thresholding - The Lab Book Pages},''
-  \url{http://www.labbookpages.co.uk/software/imgProc/otsuThreshold.html}, June
-  2010, last checked 25th April 2016.
+\BIBentryALTinterwordspacing
+A.~Greensted, ``{Otsu Thresholding - The Lab Book Pages},'' June 2010, last
+  accessed 25th April 2016. [Online]. Available:
+  \url{http://www.labbookpages.co.uk/software/imgProc/otsuThreshold.html}
+\BIBentrySTDinterwordspacing
  \begin{quotation}\noindent A great reference tutorial aiding to identify what
   OTSU threshold is and how it works in a simple to understand manner, with
   plenty of example. \end{quotation}
-
-\bibitem{citeulike:14020588}
-C.~Heer, ``{Flask-Testing  Flask-Testing 0.3 documentation},''
-  \url{http://pythonhosted.org/Flask-Testing/}, last checked 25th April 2016.
- \begin{quotation}\noindent The documentation page for the testing library
-  Flask-Testing. It was used throughout the project after a refactor realising
-  it offered better support for testing Flask applications. \end{quotation}
 
 \bibitem{Hunter:2007}
 J.~D. Hunter, ``Matplotlib: A 2d graphics environment,'' \emph{Computing In
@@ -401,8 +381,8 @@ J.~D. Hunter, ``Matplotlib: A 2d graphics environment,'' \emph{Computing In
 
 \bibitem{citeulike:14023816}
 \BIBentryALTinterwordspacing
-ImageMagick, ``{ImageMagick: Convert, Edit, Or Compose Bitmap Images},'' last
-  checked 28th April 2016. [Online]. Available:
+ImageMagick, ``{ImageMagick: Convert, Edit, Or Compose Bitmap Images},'' 2016,
+  last accessed 28th April 2016. [Online]. Available:
   \url{http://www.imagemagick.org/script/index.php}
 \BIBentrySTDinterwordspacing
  \begin{quotation}\noindent ImageMagick is a library which was used for the
@@ -411,22 +391,24 @@ ImageMagick, ``{ImageMagick: Convert, Edit, Or Compose Bitmap Images},'' last
 
 \bibitem{citeulike:14025880}
 \BIBentryALTinterwordspacing
-O.~S. Initiative, ``{The MIT License (MIT)},'' last accessed 2nd May 2016.
-  [Online]. Available: \url{https://opensource.org/licenses/MIT}
+O.~S. Initiative, ``{The MIT License (MIT)},'' 2016, last accessed 2nd May
+  2016. [Online]. Available: \url{https://opensource.org/licenses/MIT}
 \BIBentrySTDinterwordspacing
  \begin{quotation}\noindent The MIT licence is used for specific libraries such
   as the Tesserocr library. \end{quotation}
 
 \bibitem{citeulike:14025861}
-------, ``{The BSD 3-Clause License | Open Source Initiative},''
-  \url{https://opensource.org/licenses/BSD-3-Clause}, last checked 2nd May
-  2016.
+\BIBentryALTinterwordspacing
+------, ``{The BSD 3-Clause License | Open Source Initiative},'' 1998, last
+  accessed 2nd May 2016. [Online]. Available:
+  \url{https://opensource.org/licenses/BSD-3-Clause}
+\BIBentrySTDinterwordspacing
  \begin{quotation}\noindent The 3 claused BSD licence which is used for parts
   of the third party application code. \end{quotation}
 
 \bibitem{citeulike:13206865}
 \BIBentryALTinterwordspacing
-Itseez, ``{OpenCV | OpenCV},'' 2016, last checked 28th April 2016. [Online].
+Itseez, ``{OpenCV | OpenCV},'' 2016, last accessed 28th April 2016. [Online].
   Available: \url{http://opencv.org/}
 \BIBentrySTDinterwordspacing
  \begin{quotation}\noindent The image processing library used for the image
@@ -436,7 +418,7 @@ Itseez, ``{OpenCV | OpenCV},'' 2016, last checked 28th April 2016. [Online].
 \bibitem{citeulike:14023855}
 \BIBentryALTinterwordspacing
 JetBrains, ``{PyCharm :: Download Latest Version of PyCharm},'' 2016, last
-  checked 28th April 2016. [Online]. Available:
+  accessed 28th April 2016. [Online]. Available:
   \url{https://www.jetbrains.com/pycharm/download/}
 \BIBentrySTDinterwordspacing
  \begin{quotation}\noindent An IDE used later on in the project to aid in more
@@ -449,6 +431,14 @@ jQuery, ``{Datepicker | jQuery UI},'' 2016, last accessed 2nd May 2016.
 \BIBentrySTDinterwordspacing
  \begin{quotation}\noindent The datepicker which is used throughout the
   application for the selection of a note's date. \end{quotation}
+
+\bibitem{citeulike:14025897}
+\BIBentryALTinterwordspacing
+T.~jQuery Foundation, ``{jQuery},'' 2016, last accessed 2nd May 2016. [Online].
+  Available: \url{https://jquery.com/}
+\BIBentrySTDinterwordspacing
+ \begin{quotation}\noindent Used to interact with the different elements on the
+  web page. \end{quotation}
 
 \bibitem{citeulike:13510433}
 \BIBentryALTinterwordspacing
@@ -464,16 +454,18 @@ S.~Knerr, L.~Personnaz, and G.~Dreyfus, ``{Handwritten digit recognition by
 \bibitem{citeulike:14024992}
 \BIBentryALTinterwordspacing
 F.~Lundh and Contributors, ``{Pillow - Pillow (PIL Fork) 3.2.0
-  documentation},'' 2016, last checked 30th April 2016. [Online]. Available:
+  documentation},'' 2016, last accessed 30th April 2016. [Online]. Available:
   \url{http://pillow.readthedocs.io/en/3.2.x/}
 \BIBentrySTDinterwordspacing
  \begin{quotation}\noindent The Python image library which was used for the
   EXIF data parsing. \end{quotation}
 
 \bibitem{citeulike:14014361}
+\BIBentryALTinterwordspacing
 C.~Maiden, ``{An Introduction to Test Driven Development | Code Enigma},''
-  \url{https://www.codeenigma.com/community/blog/introduction-test-driven-development},
-  2013, last checked 17th April 2016.
+  2013, last accessed 17th April 2016. [Online]. Available:
+  \url{https://www.codeenigma.com/community/blog/introduction-test-driven-development}
+\BIBentrySTDinterwordspacing
  \begin{quotation}\noindent A blog post giving a detailed description of what
   Test-driven development includes. Gives supportive detail to discussing that
   tests can be viewed as documentation. \end{quotation}
@@ -482,54 +474,68 @@ C.~Maiden, ``{An Introduction to Test Driven Development | Code Enigma},''
 \BIBentryALTinterwordspacing
 Matplotlib, ``{License â Matplotlib 1.5.1 documentation},'' 2016, last
   accessed 2nd May 2016. [Online]. Available:
-  \url{http://matplotlib.org/users/license.html\#license-agreement-for-matplotlib-version}
+  \url{http://matplotlib.org/users/license.html#license-agreement-for-matplotlib-version}
 \BIBentrySTDinterwordspacing
  \begin{quotation}\noindent Matplotlib license which follows a similar licence
   to PSF. \end{quotation}
 
 \bibitem{citeulike:onenote}
+\BIBentryALTinterwordspacing
 Microsoft, ``{Microsoft OneNote | The digital note-taking app for your
-  devices},'' \url{https://www.onenote.com/}, 2016, last checked 13 April 2016.
+  devices},'' 2016, last accessed 13 April 2016. [Online]. Available:
+  \url{https://www.onenote.com/}
+\BIBentrySTDinterwordspacing
  \begin{quotation}\noindent Used to look at and compare how similar note taking
   applications structure their application. Used the applicatation to test the
   user interface and what functionality OneNote offered that may be usedful for
   the application \end{quotation}
 
 \bibitem{citeulike:14014272}
-------, ``{Office LensWindows Apps on Microsoft Store},''
-  \url{https://www.microsoft.com/en-gb/store/apps/office-lens/9wzdncrfj3t8},
-  2016, last checked 17th April 2016.
+\BIBentryALTinterwordspacing
+------, ``{Office LensWindows Apps on Microsoft Store},'' 2016, last accessed
+  17th April 2016. [Online]. Available:
+  \url{https://www.microsoft.com/en-gb/store/apps/office-lens/9wzdncrfj3t8}
+\BIBentrySTDinterwordspacing
  \begin{quotation}\noindent The Microsoft Lens application which would
   automatically crop, resize and correctly orientate an image taken at an
   angle. \end{quotation}
 
 \bibitem{citeulike:14014236}
-------, ``{Take handwritten notes in OneNote 2016 for Windows - OneNote},''
-  \url{https://support.office.com/en-us/article/Take-handwritten-notes-in-OneNote-2016-for-Windows-0ec88c54-05f3-4cac-b452-9ee62cebbd4c},
-  2016, last checked 17th April 2016.
+\BIBentryALTinterwordspacing
+------, ``Take handwritten notes in onenote 2016 for windows - onenote,'' 2016,
+  last accessed 17th April 2016. [Online]. Available:
+  \url{https://support.office.com/en-us/article/Take-handwritten-notes-in-OneNote-2016-for-Windows-0ec88c54-05f3-4cac-b452-9ee62cebbd4c}
+\BIBentrySTDinterwordspacing
  \begin{quotation}\noindent An article on OneNote's use of handwriting
   extraction from an image. Shows simply how to extract text from a given
   image. \end{quotation}
 
 \bibitem{citeulike:14019766}
-MongoDB, ``{MongoDB for GIANT Ideas | MongoDB},''
-  \url{https://www.mongodb.com/}, last checked 22nd April 2016.
+\BIBentryALTinterwordspacing
+MongoDB, ``{MongoDB for GIANT Ideas | MongoDB},'' 2016, last accessed 22nd
+  April 2016. [Online]. Available: \url{https://www.mongodb.com/}
+\BIBentrySTDinterwordspacing
  \begin{quotation}\noindent The Mongo DB tool used as a comparison for
   relational database systems and NoSQL ones. \end{quotation}
 
 \bibitem{citeulike:14020625}
+\BIBentryALTinterwordspacing
 B.~Muthukadan, ``{Selenium with Python - Selenium Python Bindings 2
-  documentation},'' \url{https://selenium-python.readthedocs.org/}, 2014, last
-  checked 24th April 2016.
+  documentation},'' 2014, last accessed 24th April 2016. [Online]. Available:
+  \url{https://selenium-python.readthedocs.org/}
+\BIBentrySTDinterwordspacing
  \begin{quotation}\noindent The selenium library used for the acceptance tests.
   It gives good documentation on how to access elements and how to get specific
   values from the text. Distribute under the Creative commons licence 4.0 - no
   changes made. \end{quotation}
 
 \bibitem{citeulike:6044081}
+\BIBentryALTinterwordspacing
 H.-F. Ng, ``{Automatic thresholding for defect detection},'' \emph{Pattern
   Recognition Letters}, vol.~27, no.~14, pp. 1644--1649, Oct. 2006, last
-  checked 25th April 2016.
+  accessed 25th April 2016. [Online]. Available:
+  \url{http://dx.doi.org/10.1016/j.patrec.2006.03.009}
+\BIBentrySTDinterwordspacing
  \begin{quotation}\noindent This paper was interesting as it aided in the
   dicussion of the different thresholding algorithms. It was good to reaffirm
   some knowledge gained during the development process. \end{quotation}
@@ -542,11 +548,31 @@ O.~Olurinola and O.~Tayo, ``Colour in learning: Its effect on the retention
   better for the memory retention rates, than that of non-coloured text. Used
   during the taxonomy of notes section. \end{quotation}
 
+\bibitem{citeulike:14026982}
+\BIBentryALTinterwordspacing
+V.~OpenC, ``{Image Thresholding â OpenCV-Python Tutorials 1
+  documentation},'' 2016, last accessed 3rd May 2016. [Online]. Available:
+  \url{http://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_imgproc/py_thresholding/py_thresholding.html#thresholding}
+\BIBentrySTDinterwordspacing
+ \begin{quotation}\noindent The tutorial which was used to show the different
+  between a variety of the thresholds on a note. It was concluded that the
+  adaptive threshold would be good - this would then be discarded.
+  \end{quotation}
+
+\bibitem{citeulike:14026986}
+\BIBentryALTinterwordspacing
+OpenCV., ``{Changing Colorspaces},'' 2013, last accessed 3rd May 2016.
+  [Online]. Available:
+  \url{http://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_imgproc/py_colorspaces/py_colorspaces.html}
+\BIBentrySTDinterwordspacing
+ \begin{quotation}\noindent Used for the algorithm for extracting a range of
+  colours frm an image from a given mask. \end{quotation}
+
 \bibitem{citeulike:14024957}
 \BIBentryALTinterwordspacing
-OpenCV., ``{Eroding and Dilating â OpenCV 2.4.13.0 documentation},'' 2016,
-  last checked 30th April 2016. [Online]. Available:
-  \url{http://docs.opencv.org/2.4/doc/tutorials/imgproc/erosion\_dilatation/erosion\_dilatation.html}
+------, ``{Eroding and Dilating â OpenCV 2.4.13.0 documentation},'' 2016,
+  last accessed 30th April 2016. [Online]. Available:
+  \url{http://docs.opencv.org/2.4/doc/tutorials/imgproc/erosion_dilatation/erosion_dilatation.html}
 \BIBentrySTDinterwordspacing
  \begin{quotation}\noindent A reference for how dilation and errosion works in
   the OpenCV, used for reference throughout the development and implementation.
@@ -555,27 +581,40 @@ OpenCV., ``{Eroding and Dilating â OpenCV 2.4.13.0 documentation},'' 2016,
 \bibitem{citeulike:14021409}
 \BIBentryALTinterwordspacing
 Opencv, ``{Miscellaneous Image Transformations - OpenCV 2.4.13.0
-  documentation},'' 2016, last Checked 25th April 2016. [Online]. Available:
-  \url{http://docs.opencv.org/2.4/modules/imgproc/doc/miscellaneous\_transformations.html}
+  documentation},'' 2016, last accessed 25th April 2016. [Online]. Available:
+  \url{http://docs.opencv.org/2.4/modules/imgproc/doc/miscellaneous_transformations.html}
 \BIBentrySTDinterwordspacing
  \begin{quotation}\noindent A description of the adaptive threshold function,
   which shows that there are two different functionc can be used.
   \end{quotation}
 
 \bibitem{citeulike:14019744}
-Oracle, ``{Overview - The Java EE 6 Tutorial},''
-  \url{https://docs.oracle.com/javaee/6/tutorial/doc/bnaaw.html}, last checked
-  22nd April 2016.
+\BIBentryALTinterwordspacing
+Oracle, ``{Overview - The Java EE 6 Tutorial},'' 2013, last accessed 22nd April
+  2016. [Online]. Available:
+  \url{https://docs.oracle.com/javaee/6/tutorial/doc/bnaaw.html}
+\BIBentrySTDinterwordspacing
  \begin{quotation}\noindent An article which discusses the use of Java as a web
   application language. It reaffirms the point raised that it is good for
   performance. \end{quotation}
+
+\bibitem{citeulike:2917492}
+\BIBentryALTinterwordspacing
+N.~Otsu, ``{A Threshold Selection Method from Gray-Level Histograms},''
+  \emph{IEEE Transactions on Systems, Man, and Cybernetics}, vol.~9, no.~1, pp.
+  62--66, Jan. 1979. [Online]. Available:
+  \url{http://dx.doi.org/10.1109/tsmc.1979.4310076}
+\BIBentrySTDinterwordspacing
+ \begin{quotation}\noindent The original paper which OTSU is represented.
+  Although a bit mathematical, some bits were good for reference material on
+  how the algorithm works. \end{quotation}
 
 \bibitem{citeulike:13920892}
 \BIBentryALTinterwordspacing
 C.~{Patel}, A.~{Patel}, and D.~{Patel}, ``{Optical Character Recognition by
   Open source OCR Tool Tesseract: A Case Study},'' \emph{International Journal
   of Computer Applications}, vol.~55, no.~10, pp. 50--56, Oct. 2012, last
-  checked 28th January 2016. [Online]. Available:
+  accessed 28th January 2016. [Online]. Available:
   \url{http://dx.doi.org/10.5120/8794-2784}
 \BIBentrySTDinterwordspacing
  \begin{quotation}\noindent A great paper on a Tesseract case study tool. It
@@ -584,7 +623,7 @@ C.~{Patel}, A.~{Patel}, and D.~{Patel}, ``{Optical Character Recognition by
 
 \bibitem{citeulike:14024991}
 \BIBentryALTinterwordspacing
-D.~Peterson, ``{What is EXIF? :: Digital Photo Secrets},'' last checked 30th
+D.~Peterson, ``{What is EXIF? :: Digital Photo Secrets},'' last accessed 30th
   April 2016. [Online]. Available:
   \url{http://www.digital-photo-secrets.com/tip/38/what-is-exif/}
 \BIBentrySTDinterwordspacing
@@ -592,26 +631,40 @@ D.~Peterson, ``{What is EXIF? :: Digital Photo Secrets},'' last checked 30th
   data is and the purpose of it. \end{quotation}
 
 \bibitem{citeulike:14010520}
+\BIBentryALTinterwordspacing
 A.~Pilon, ``{Calendar Apps Stats: Google Calendar Named Most Popular | AYTM},''
-  \url{https://aytm.com/blog/daily-survey-results/calendar-apps-survey/}, 2015,
-  last checked 13th April 2016.
+  2015, last accessed 13th April 2016. [Online]. Available:
+  \url{https://aytm.com/blog/daily-survey-results/calendar-apps-survey/}
+\BIBentrySTDinterwordspacing
  \begin{quotation}\noindent A survery showing that Google calendar was ranked
   the most used calendar people use. Added to the analysis stage to justfy why
   Google calendar was chosen instead of other calendars available.
   \end{quotation}
 
+\bibitem{citeulike:14025946}
+\BIBentryALTinterwordspacing
+T.~pip developers, ``{pip 8.1.1},'' 2016, last accessed 2nd May 2016. [Online].
+  Available: \url{https://pypi.python.org/pypi/pip}
+\BIBentrySTDinterwordspacing
+ \begin{quotation}\noindent Used as the package manager throughout the
+  application to install different Python modules. \end{quotation}
+
 \bibitem{citeulike:14020583}
-pytest-dev team, ``{pytest: helps you write better programs},''
-  \url{http://pytest.org/latest/}, last checked 24th April 2016.
+\BIBentryALTinterwordspacing
+pytest-dev team, ``{pytest: helps you write better programs},'' 2015, last
+  accessed 24th April 2016. [Online]. Available:
+  \url{http://pytest.org/latest/}
+\BIBentrySTDinterwordspacing
  \begin{quotation}\noindent The library was used throughout the development for
   reference on testing. It was especially useful for mocking test data.
   \end{quotation}
 
 \bibitem{citeulike:13983611}
+\BIBentryALTinterwordspacing
 R.~Python, ``{Headless Selenium Testing with Python and PhantomJS - Real
-  Python},''
-  \url{https://realpython.com/blog/python/headless-selenium-testing-with-python-and-phantomjs/},
-  Aug. 2014, last checked 24th April 2016.
+  Python},'' Aug. 2014, last accessed 24th April 2016. [Online]. Available:
+  \url{https://realpython.com/blog/python/headless-selenium-testing-with-python-and-phantomjs/}
+\BIBentrySTDinterwordspacing
  \begin{quotation}\noindent A demonstration on how to use Selenium with the
   Python examples. Additionally references the fact what phantomjs is, and it
   is a headless browser. \end{quotation}
@@ -644,19 +697,50 @@ A.~Ronacher, ``{Welcome | Werkzeug (The Python WSGI Utility Library)},'' last
  \begin{quotation}\noindent The Flask SQL alchemy library which was used
   throughout the project for the integration with the database. \end{quotation}
 
+\bibitem{citeulike:14020609}
+\BIBentryALTinterwordspacing
+------, ``{Testing Flask Applications â Flask Documentation (0.10)},''
+  2016, last accessed 24th April 2016. [Online]. Available:
+  \url{http://flask.pocoo.org/docs/0.10/testing/#accessing-and-modifying-sessions}
+\BIBentrySTDinterwordspacing
+ \begin{quotation}\noindent The testing documentation for Flask which discusses
+  how session modifications should be handled. Used in the implementation and
+  the testing discussion. \end{quotation}
+
+\bibitem{citeulike:13160396}
+\BIBentryALTinterwordspacing
+------, ``{Welcome | Flask (A Python Microframework)},'' 2016, last accessed
+  22nd April 2016. [Online]. Available: \url{http://flask.pocoo.org/}
+\BIBentrySTDinterwordspacing
+ \begin{quotation}\noindent The python framework used as an option. Was used in
+  the design section evaluating the decisions that were made. It was used as
+  the choice of framework. \end{quotation}
+
 \bibitem{citeulike:14014350}
-Scrum.org, ``{Resources | Scrum.org - The home of Scrum},''
-  \url{https://www.scrum.org/Resources}, 2016, last checked 17th April 2016.
+\BIBentryALTinterwordspacing
+Scrum.org, ``{Resources | Scrum.org - The home of Scrum},'' 2016, last accessed
+  17th April 2016. [Online]. Available: \url{https://www.scrum.org/Resources}
+\BIBentrySTDinterwordspacing
  \begin{quotation}\noindent The website for the scrum methodology principles.
   The website was used to reference the process and methodology which was
   adapted in the project \end{quotation}
+
+\bibitem{citeulike:14021437}
+\BIBentryALTinterwordspacing
+sifz, ``{sirfz/tesserocr: A Python wrapper for the tesseract-ocr API},'' 2016,
+  last accessed 25th April 2016. [Online]. Available:
+  \url{https://github.com/sirfz/tesserocr}
+\BIBentrySTDinterwordspacing
+ \begin{quotation}\noindent The Tesseract wrapper which was used to extract the
+  data from the image. It gives the confidences and all the words associated to
+  the lines. \end{quotation}
 
 \bibitem{citeulike:14024253}
 \BIBentryALTinterwordspacing
 R.~Smith, ``{A simple and efficient skew detection algorithm via text row
   accumulation},'' in \emph{Document Analysis and Recognition, 1995.,
   Proceedings of the Third International Conference on}, vol.~2.\hskip 1em plus
-  0.5em minus 0.4em\relax IEEE, Aug. 1995, pp. 1145--1148 vol.2, last checked
+  0.5em minus 0.4em\relax IEEE, Aug. 1995, pp. 1145--1148 vol.2, last accessed
   29th April 2016. [Online]. Available:
   \url{http://dx.doi.org/10.1109/icdar.1995.602124}
 \BIBentrySTDinterwordspacing
@@ -666,7 +750,7 @@ R.~Smith, ``{A simple and efficient skew detection algorithm via text row
 \bibitem{33418}
 ------, ``An overview of the tesseract ocr engine,'' in \emph{Proc. Ninth Int.
   Conference on Document Analysis and Recognition (ICDAR)}, 2007, pp. 629--633,
-  last checked 29th April 2016.
+  last accessed 29th April 2016.
  \begin{quotation}\noindent An excellent paper which discusses how Tesseract
   works with a comprehensive description of the details of Tesseract.
   \end{quotation}
@@ -683,17 +767,19 @@ T.~J. Smoker, C.~E. Murphy, and A.~K. Rockwell, ``{Comparing Memory for
   text \end{quotation}
 
 \bibitem{citeulike:14014357}
-M.~G. Software, ``{Planning Poker: Agile Estimating Made Easy},''
-  \url{https://www.mountaingoatsoftware.com/tools/planning-poker}, 2016, last
-  checked 17th April 2016.
+\BIBentryALTinterwordspacing
+M.~G. Software, ``{Planning Poker: Agile Estimating Made Easy},'' 2016, last
+  accessed 17th April 2016. [Online]. Available:
+  \url{https://www.mountaingoatsoftware.com/tools/planning-poker}
+\BIBentrySTDinterwordspacing
  \begin{quotation}\noindent Showing the use of planning poker with exactly how
   it was implemented in the application using the scrum based approach.
   \end{quotation}
 
 \bibitem{citeulike:14025869}
 \BIBentryALTinterwordspacing
-P.~software foundation, ``{dateutil},'' last accessed 2nd May 2016. [Online].
-  Available: \url{https://dateutil.readthedocs.io/en/stable/}
+P.~software foundation, ``{dateutil},'' 2016, last accessed 2nd May 2016.
+  [Online]. Available: \url{https://dateutil.readthedocs.io/en/stable/}
 \BIBentrySTDinterwordspacing
  \begin{quotation}\noindent A date util library which is used to parse specific
   dates within the application. \end{quotation}
@@ -711,18 +797,22 @@ M.~Sturgill and S.~J. Simske, ``{An Optical Character Recognition Approach to
   pre-processing step. \end{quotation}
 
 \bibitem{citeulike:14014368}
-Tesseract, ``{Tesseract Open Source OCR Engine},''
-  \url{https://github.com/tesseract-ocr/tesseract}, 2016, last checked 17th
-  April 2016.
+\BIBentryALTinterwordspacing
+Tesseract, ``{Tesseract Open Source OCR Engine},'' 2016, last accessed 17th
+  April 2016. [Online]. Available:
+  \url{https://github.com/tesseract-ocr/tesseract}
+\BIBentrySTDinterwordspacing
  \begin{quotation}\noindent The open source optical character recognition
   engine which will be used in the application to analyse characters on a page.
   \end{quotation}
 
 \bibitem{citeulike:14019772}
+\BIBentryALTinterwordspacing
 O.~Tezer, ``{SQLite vs MySQL vs PostgreSQL: A Comparison Of Relational Database
-  Management Systems | DigitalOcean},''
-  \url{https://www.digitalocean.com/community/tutorials/sqlite-vs-mysql-vs-postgresql-a-comparison-of-relational-database-management-systems},
-  last checked 22nd April 2016.
+  Management Systems | DigitalOcean},'' February 2014, last accessed 22nd April
+  2016. [Online]. Available:
+  \url{https://www.digitalocean.com/community/tutorials/sqlite-vs-mysql-vs-postgresql-a-comparison-of-relational-database-management-systems}
+\BIBentrySTDinterwordspacing
  \begin{quotation}\noindent Used as a comparison between what relational
   management system should be used. Used in the design section for a
   comparision between the different systems presented and evaluated.
@@ -738,14 +828,17 @@ J.~Thornton, ``{Timepicker for jQuery â Demos and Documentation},'' 2014,
   \end{quotation}
 
 \bibitem{citeulike:14014360}
-Tiaga, ``{Taiga.io},'' \url{https://taiga.io/}, 2016, last checked TODO.
+\BIBentryALTinterwordspacing
+Tiaga, ``{Taiga.io},'' 2016, last accessed 3rd May 2016. [Online]. Available:
+  \url{https://taiga.io/}
+\BIBentrySTDinterwordspacing
  \begin{quotation}\noindent The project management toold which was utilised to
   help to keep track of the project's progress throughout the process. Utilised
   the Scrum tools available that the application gives. \end{quotation}
 
 \bibitem{citeulike:14023846}
 \BIBentryALTinterwordspacing
-L.~Torvalds, ``{Git},'' 2016, last checked 28th April 2016. [Online].
+L.~Torvalds, ``{Git},'' 2016, last accessed 28th April 2016. [Online].
   Available: \url{https://git-scm.com/}
 \BIBentrySTDinterwordspacing
  \begin{quotation}\noindent The version control management system used on the
@@ -754,7 +847,7 @@ L.~Torvalds, ``{Git},'' 2016, last checked 28th April 2016. [Online].
 \bibitem{citeulike:14023819}
 \BIBentryALTinterwordspacing
 Transym, ``{Transym - OCR software for Integrators | Transym Computer
-  Services},'' 2016, last checked 28th April 2016. [Online]. Available:
+  Services},'' 2016, last accessed 28th April 2016. [Online]. Available:
   \url{http://www.transym.com/}
 \BIBentrySTDinterwordspacing
  \begin{quotation}\noindent A comparison tool to the Tesseract OCR that is
@@ -763,7 +856,7 @@ Transym, ``{Transym - OCR software for Integrators | Transym Computer
 \bibitem{citeulike:14023840}
 \BIBentryALTinterwordspacing
 Travis, ``{Travis CI - Test and Deploy Your Code with Confidence},'' 2016, last
-  checked 28th April 2016. [Online]. Available: \url{https://travis-ci.org/}
+  accessed 28th April 2016. [Online]. Available: \url{https://travis-ci.org/}
 \BIBentrySTDinterwordspacing
  \begin{quotation}\noindent The Travis CI tool which was used during the
   process. Would be reliably, used and a great tool to aid in the development
@@ -771,7 +864,7 @@ Travis, ``{Travis CI - Test and Deploy Your Code with Confidence},'' 2016, last
 
 \bibitem{citeulike:14023837}
 \BIBentryALTinterwordspacing
-Various, ``{Jenkins},'' 2016, last checked 28th April 2016. [Online].
+Various, ``{Jenkins},'' 2016, last accessed 28th April 2016. [Online].
   Available: \url{https://jenkins.io/index.html}
 \BIBentrySTDinterwordspacing
  \begin{quotation}\noindent The Jenkins CI tool was considered when analysing
@@ -780,7 +873,7 @@ Various, ``{Jenkins},'' 2016, last checked 28th April 2016. [Online].
 
 \bibitem{citeulike:13926798}
 \BIBentryALTinterwordspacing
-R.~Viet~OC, ``{jTessBoxEditor - Tesseract box editor \& trainer},'' last
+R.~Viet~OC, ``{jTessBoxEditor - Tesseract box editor \& trainer},'' 2016, last
   Accessed 6th February 2016. [Online]. Available:
   \url{http://vietocr.sourceforge.net/training.html}
 \BIBentrySTDinterwordspacing
@@ -788,25 +881,30 @@ R.~Viet~OC, ``{jTessBoxEditor - Tesseract box editor \& trainer},'' last
   to train the box files with a great graphical user-interface. \end{quotation}
 
 \bibitem{citeulike:14018462}
+\BIBentryALTinterwordspacing
 w3Techs, ``{Usage Statistics and Market Share of JavaScript for Websites, April
-  2016},'' \url{http://w3techs.com/technologies/details/pl-js/all/all}, last
-  checked 22nd April 2016.
+  2016},'' last accessed 22nd April 2016. [Online]. Available:
+  \url{http://w3techs.com/technologies/details/pl-js/all/all}
+\BIBentrySTDinterwordspacing
  \begin{quotation}\noindent The website shows a graph of how Javascript has
   increased its market share on recent web applications. Used as part of the
   design consideration regarding the use of programming language
   \end{quotation}
 
 \bibitem{citeulike:Taxonomy}
-M.~Webster, ``{Taxonomy | Definition of Taxonomy by Merriam-Webster},''
-  \url{http://www.merriam-webster.com/dictionary/taxonomy}, 2016, last checked
-  17th April 2016.
+\BIBentryALTinterwordspacing
+M.~Webster, ``{Taxonomy | Definition of Taxonomy by Merriam-Webster},'' 2016,
+  last accessed 17th April 2016. [Online]. Available:
+  \url{http://www.merriam-webster.com/dictionary/taxonomy}
+\BIBentrySTDinterwordspacing
  \begin{quotation}\noindent A definition of exactly what a teaxonomy is.
   Clearly labelling it as a classification of a problem. \end{quotation}
 
 \bibitem{citeulike:13398676}
-D.~Wells, ``{CRC Cards},''
-  \url{http://www.extremeprogramming.org/rules/crccards.html}, 1999, last
-  checked 17th April 2016.
+\BIBentryALTinterwordspacing
+D.~Wells, ``{CRC Cards},'' 1999, last accessed 17th April 2016. [Online].
+  Available: \url{http://www.extremeprogramming.org/rules/crccards.html}
+\BIBentrySTDinterwordspacing
  \begin{quotation}\noindent A description of what CRC cards are and why they're
   useful when considering the design of an application. Used as a reference
   material throughout the process, as well as during the chapter discussing the
@@ -814,8 +912,8 @@ D.~Wells, ``{CRC Cards},''
 
 \bibitem{citeulike:13926796}
 \BIBentryALTinterwordspacing
-T.-O. Wiki, ``{TrainingTesseract Â· tesseract-ocr/tesseract Wiki},'' last
-  Accessed 6th February 2016. [Online]. Available:
+T.-O. Wiki, ``{Training Tesseract Â· tesseract-ocr/tesseract Wiki},'' March
+  2016, last Accessed 6th February 2016. [Online]. Available:
   \url{https://github.com/tesseract-ocr/tesseract/wiki/TrainingTesseract}
 \BIBentrySTDinterwordspacing
  \begin{quotation}\noindent A reference for how to train the different user
@@ -823,7 +921,7 @@ T.-O. Wiki, ``{TrainingTesseract Â· tesseract-ocr/tesseract Wiki},'' last
 
 \bibitem{citeulike:14023830}
 \BIBentryALTinterwordspacing
-F.~Words, ``{Pangrams},'' last checked 28th April 2016. [Online]. Available:
+F.~Words, ``{Pangrams},'' last accessed 28th April 2016. [Online]. Available:
   \url{http://www.fun-with-words.com/pangrams.html}
 \BIBentrySTDinterwordspacing
  \begin{quotation}\noindent A tool which describes what panagrams are as well
