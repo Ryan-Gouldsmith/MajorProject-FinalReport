@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.8.29)  3 MAY 2016 00:35
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.8.29)  3 MAY 2016 02:01
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -837,12 +837,7 @@ File: images/image_binarisation_activity.pdf Graphic file (type pdf)
  <use images/image_binarisation_activity.pdf>
 Package pdftex.def Info: images/image_binarisation_activity.pdf used on input line 151.
 (pdftex.def)             Requested size: 302.128pt x 141.5284pt.
- [17 <./images/image_binarisation_activity.pdf>]
-Overfull \hbox (16.46344pt too wide) in paragraph at lines 179--179
-[][]\OT1/ptm/m/n/9 https://blackboard.aber.ac.uk/webapps/blackboard/content/listContent.jsp?course[]id=[]15108[]1&content[]id=[]648523[]1| 
- []
-
-[18] <images/database_diagram.pdf, id=118, 724.7075pt x 417.56pt>
+ [17 <./images/image_binarisation_activity.pdf>] [18] <images/database_diagram.pdf, id=118, 724.7075pt x 417.56pt>
 File: images/database_diagram.pdf Graphic file (type pdf)
  <use images/database_diagram.pdf>
 Package pdftex.def Info: images/database_diagram.pdf used on input line 186.
@@ -939,12 +934,7 @@ Package pdftex.def Info: images/saved_to_calendar.png used on input line 282.
 (pdftex.def)             Requested size: 335.75356pt x 182.68205pt.
  [36 <./images/saved_to_calendar.png>] (/usr/local/texlive/2015/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2014/09/06 1.5e listings language file
-) [37]
-Overfull \hbox (52.8526pt too wide) in paragraph at lines 342--343
-[]\OT1/ptm/m/n/10.95 Editing a note is very much the same ex-cept the data is sent via an HTTP post to \OT1/pcr/m/n/10.95 /edit[]meta[]data/:id
- []
-
-) [38]
+) [37]) [38]
 \openout2 = `Chapter4/chapter4.aux'.
 
  (./Chapter4/chapter4.tex
@@ -1443,9 +1433,10 @@ LaTeX Warning: There were undefined references.
 LaTeX Warning: There were multiply-defined labels.
 
  )
-(\end occurred inside a group at level 8)
+(\end occurred inside a group at level 9)
 
-### simple group (level 8) entered at line 34 ({)
+### simple group (level 9) entered at line 34 ({)
+### simple group (level 8) entered at line 342 ({)
 ### simple group (level 7) entered at line 171 ({)
 ### simple group (level 6) entered at line 168 ({)
 ### simple group (level 5) entered at line 163 ({)
@@ -1457,13 +1448,13 @@ LaTeX Warning: There were multiply-defined labels.
 Here is how much of TeX's memory you used:
  27114 strings out of 493089
  653001 string characters out of 6134842
- 812207 words of memory out of 5000000
+ 812253 words of memory out of 5000000
  29885 multiletter control sequences out of 15000+600000
  37190 words of font info for 79 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,12n,102p,984b,2010s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 62i,12n,102p,984b,2046s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/courier/ucrro8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on dissertation.pdf (104 pages, 7777695 bytes).
+Output written on dissertation.pdf (104 pages, 7778011 bytes).
 PDF statistics:
  473 PDF objects out of 1000 (max. 8388607)
  287 compressed objects within 3 object streams
