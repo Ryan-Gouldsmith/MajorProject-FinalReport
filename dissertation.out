@@ -1,0 +1,112 @@
+\BOOKMARK [0][-]{chapter.1}{Background \046 Objectives}{}% 1
+\BOOKMARK [1][-]{section.1.1}{Background}{chapter.1}% 2
+\BOOKMARK [2][-]{subsection.1.1.1}{Taxonomy of notes}{section.1.1}% 3
+\BOOKMARK [2][-]{subsection.1.1.2}{Handwriting recognition}{section.1.1}% 4
+\BOOKMARK [2][-]{subsection.1.1.3}{Similar systems}{section.1.1}% 5
+\BOOKMARK [2][-]{subsection.1.1.4}{Motivation}{section.1.1}% 6
+\BOOKMARK [1][-]{section.1.2}{Analysis}{chapter.1}% 7
+\BOOKMARK [2][-]{subsection.1.2.1}{Objectives}{section.1.2}% 8
+\BOOKMARK [2][-]{subsection.1.2.2}{Compromising with objectives}{section.1.2}% 9
+\BOOKMARK [1][-]{section.1.3}{Process}{chapter.1}% 10
+\BOOKMARK [2][-]{subsection.1.3.1}{Scrum overview}{section.1.3}% 11
+\BOOKMARK [2][-]{subsection.1.3.2}{Adapted Scrum}{section.1.3}% 12
+\BOOKMARK [2][-]{subsection.1.3.3}{Incorporated Extreme Programming}{section.1.3}% 13
+\BOOKMARK [0][-]{chapter.2}{Design}{}% 14
+\BOOKMARK [1][-]{section.2.1}{Overall architecture}{chapter.2}% 15
+\BOOKMARK [2][-]{subsection.2.1.1}{Class Diagram}{section.2.1}% 16
+\BOOKMARK [2][-]{subsection.2.1.2}{CRC cards}{section.2.1}% 17
+\BOOKMARK [2][-]{subsection.2.1.3}{User interaction}{section.2.1}% 18
+\BOOKMARK [2][-]{subsection.2.1.4}{Model-view-controller}{section.2.1}% 19
+\BOOKMARK [1][-]{section.2.2}{Image processing}{chapter.2}% 20
+\BOOKMARK [1][-]{section.2.3}{Tesseract}{chapter.2}% 21
+\BOOKMARK [1][-]{section.2.4}{Entity-relation design}{chapter.2}% 22
+\BOOKMARK [2][-]{subsection.2.4.1}{Justification of design}{section.2.4}% 23
+\BOOKMARK [1][-]{section.2.5}{User Interface}{chapter.2}% 24
+\BOOKMARK [1][-]{section.2.6}{Implementation tools}{chapter.2}% 25
+\BOOKMARK [2][-]{subsection.2.6.1}{Programming language}{section.2.6}% 26
+\BOOKMARK [2][-]{subsection.2.6.2}{Framework}{section.2.6}% 27
+\BOOKMARK [2][-]{subsection.2.6.3}{Database management system}{section.2.6}% 28
+\BOOKMARK [2][-]{subsection.2.6.4}{Continuous integration tools}{section.2.6}% 29
+\BOOKMARK [2][-]{subsection.2.6.5}{Version control}{section.2.6}% 30
+\BOOKMARK [2][-]{subsection.2.6.6}{Development environment}{section.2.6}% 31
+\BOOKMARK [1][-]{section.2.7}{OAuth}{chapter.2}% 32
+\BOOKMARK [0][-]{chapter.3}{Implementation}{}% 33
+\BOOKMARK [1][-]{section.3.1}{Image processing}{chapter.3}% 34
+\BOOKMARK [2][-]{subsection.3.1.1}{Optimising Tesseract}{section.3.1}% 35
+\BOOKMARK [1][-]{section.3.2}{Lined paper}{chapter.3}% 36
+\BOOKMARK [2][-]{subsection.3.2.1}{Filtering the blue lines}{section.3.2}% 37
+\BOOKMARK [2][-]{subsection.3.2.2}{Only extracting the text}{section.3.2}% 38
+\BOOKMARK [1][-]{section.3.3}{Handwriting training}{chapter.3}% 39
+\BOOKMARK [2][-]{subsection.3.3.1}{Training process}{section.3.3}% 40
+\BOOKMARK [1][-]{section.3.4}{Web application}{chapter.3}% 41
+\BOOKMARK [2][-]{subsection.3.4.1}{OAuth}{section.3.4}% 42
+\BOOKMARK [2][-]{subsection.3.4.2}{Reoccurring events}{section.3.4}% 43
+\BOOKMARK [2][-]{subsection.3.4.3}{Tesseract confidence}{section.3.4}% 44
+\BOOKMARK [2][-]{subsection.3.4.4}{Parsing EXIF data}{section.3.4}% 45
+\BOOKMARK [2][-]{subsection.3.4.5}{Displaying calendar events}{section.3.4}% 46
+\BOOKMARK [2][-]{subsection.3.4.6}{Editing calendar events}{section.3.4}% 47
+\BOOKMARK [2][-]{subsection.3.4.7}{Saving and editing a note}{section.3.4}% 48
+\BOOKMARK [1][-]{section.3.5}{Travis}{chapter.3}% 49
+\BOOKMARK [0][-]{chapter.4}{Testing}{}% 50
+\BOOKMARK [1][-]{section.4.1}{Overall approach to testing}{chapter.4}% 51
+\BOOKMARK [2][-]{subsection.4.1.1}{Test-driven-development}{section.4.1}% 52
+\BOOKMARK [1][-]{section.4.2}{Automated testing}{chapter.4}% 53
+\BOOKMARK [1][-]{section.4.3}{Mocking tests}{chapter.4}% 54
+\BOOKMARK [2][-]{subsection.4.3.1}{Unit testing}{section.4.3}% 55
+\BOOKMARK [2][-]{subsection.4.3.2}{Integration testing}{section.4.3}% 56
+\BOOKMARK [2][-]{subsection.4.3.3}{Handling sessions}{section.4.3}% 57
+\BOOKMARK [1][-]{section.4.4}{Acceptance testing}{chapter.4}% 58
+\BOOKMARK [1][-]{section.4.5}{User Testing}{chapter.4}% 59
+\BOOKMARK [1][-]{section.4.6}{Tesseract testing}{chapter.4}% 60
+\BOOKMARK [1][-]{section.4.7}{Image threshold testing}{chapter.4}% 61
+\BOOKMARK [0][-]{chapter.5}{Evaluation}{}% 62
+\BOOKMARK [1][-]{section.5.1}{Correctly identified requirements}{chapter.5}% 63
+\BOOKMARK [1][-]{section.5.2}{Design decisions}{chapter.5}% 64
+\BOOKMARK [1][-]{section.5.3}{Use of tools}{chapter.5}% 65
+\BOOKMARK [2][-]{subsection.5.3.1}{Flask}{section.5.3}% 66
+\BOOKMARK [2][-]{subsection.5.3.2}{OpenCV}{section.5.3}% 67
+\BOOKMARK [2][-]{subsection.5.3.3}{PostgreSQL}{section.5.3}% 68
+\BOOKMARK [2][-]{subsection.5.3.4}{Google Calendar}{section.5.3}% 69
+\BOOKMARK [2][-]{subsection.5.3.5}{Continuous integration tool}{section.5.3}% 70
+\BOOKMARK [1][-]{section.5.4}{Meeting the user's needs}{chapter.5}% 71
+\BOOKMARK [1][-]{section.5.5}{Limitations of the project}{chapter.5}% 72
+\BOOKMARK [1][-]{section.5.6}{Further enhancements}{chapter.5}% 73
+\BOOKMARK [2][-]{subsection.5.6.1}{Handwriting training}{section.5.6}% 74
+\BOOKMARK [2][-]{subsection.5.6.2}{Image processing}{section.5.6}% 75
+\BOOKMARK [2][-]{subsection.5.6.3}{Web application}{section.5.6}% 76
+\BOOKMARK [1][-]{section.5.7}{Evaluating the process}{chapter.5}% 77
+\BOOKMARK [1][-]{section.5.8}{Starting again}{chapter.5}% 78
+\BOOKMARK [1][-]{section.5.9}{Relevance to degree scheme}{chapter.5}% 79
+\BOOKMARK [1][-]{section.5.10}{Overall conclusions}{chapter.5}% 80
+\BOOKMARK [0][-]{section.5.10}{Appendices}{}% 81
+\BOOKMARK [0][-]{appendix.A}{Third-Party Code and Libraries}{}% 82
+\BOOKMARK [0][-]{appendix.B}{Ethics Submission}{}% 83
+\BOOKMARK [0][-]{appendix.C}{Testing Results}{}% 84
+\BOOKMARK [1][-]{section.C.1}{Unit tests}{appendix.C}% 85
+\BOOKMARK [2][-]{subsection.C.1.1}{Binarise image}{section.C.1}% 86
+\BOOKMARK [1][-]{section.C.2}{Acceptance tests}{appendix.C}% 87
+\BOOKMARK [2][-]{subsection.C.2.1}{Add meta-data}{section.C.2}% 88
+\BOOKMARK [2][-]{subsection.C.2.2}{Viewing all the notes}{section.C.2}% 89
+\BOOKMARK [1][-]{section.C.3}{Integration tests}{appendix.C}% 90
+\BOOKMARK [2][-]{subsection.C.3.1}{Add and edit meta data}{section.C.3}% 91
+\BOOKMARK [1][-]{section.C.4}{User study tests}{appendix.C}% 92
+\BOOKMARK [0][-]{appendix.D}{Tesseract}{}% 93
+\BOOKMARK [1][-]{section.D.1}{Tesseract data results}{appendix.D}% 94
+\BOOKMARK [1][-]{section.D.2}{Training examples}{appendix.D}% 95
+\BOOKMARK [1][-]{section.D.3}{Pre-adaptive threshold results}{appendix.D}% 96
+\BOOKMARK [0][-]{appendix.E}{Example test data}{}% 97
+\BOOKMARK [1][-]{section.E.1}{Calendar week response mock}{appendix.E}% 98
+\BOOKMARK [1][-]{section.E.2}{Google plus response mock}{appendix.E}% 99
+\BOOKMARK [1][-]{section.E.3}{Google Oauth response}{appendix.E}% 100
+\BOOKMARK [0][-]{appendix.F}{Image Processing}{}% 101
+\BOOKMARK [1][-]{section.F.1}{Pre-blue lined image}{appendix.F}% 102
+\BOOKMARK [1][-]{section.F.2}{Filtering the blue lines}{appendix.F}% 103
+\BOOKMARK [0][-]{appendix.G}{Design decisions}{}% 104
+\BOOKMARK [1][-]{section.G.1}{Class diagram}{appendix.G}% 105
+\BOOKMARK [0][-]{appendix.H}{Design suppliments}{}% 106
+\BOOKMARK [1][-]{section.H.1}{CRC cards}{appendix.H}% 107
+\BOOKMARK [1][-]{section.H.2}{Wireframes}{appendix.H}% 108
+\BOOKMARK [0][-]{appendix.I}{Scrum process supplementary materials}{}% 109
+\BOOKMARK [1][-]{section.I.1}{Sprint burndown charts}{appendix.I}% 110
+\BOOKMARK [1][-]{section.I.2}{Overall burndown chart}{appendix.I}% 111
+\BOOKMARK [0][-]{table.caption.53}{Annotated Bibliography}{}% 112

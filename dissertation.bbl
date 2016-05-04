@@ -1,4 +1,4 @@
-\begin{thebibliography}{10}
+\begin{thebibliography}{100}
 \providecommand{\url}[1]{#1}
 \csname url@rmstyle\endcsname
 \providecommand{\newblock}{\relax}
@@ -55,6 +55,22 @@
  \begin{quotation}\noindent Used to make HTPTP queries throughout the
   application to the external services. \end{quotation}
 
+\bibitem{citeulike:14027312}
+\BIBentryALTinterwordspacing
+``{SQLite Copyright},'' 2016, last accessed 4th May 2016. [Online]. Available:
+  \url{https://www.sqlite.org/copyright.html}
+\BIBentrySTDinterwordspacing
+ \begin{quotation}\noindent The SQL copyright license. \end{quotation}
+
+\bibitem{citeulike:14027309}
+\BIBentryALTinterwordspacing
+``{SQLite Home Page},'' 2016, last accessed 4th May 2016. [Online]. Available:
+  \url{https://www.sqlite.org/}
+\BIBentrySTDinterwordspacing
+ \begin{quotation}\noindent SQLite was considered as the overall RDMBS used on
+  the application, but was rejected. Instead it was used for the testing
+  infrastructure. \end{quotation}
+
 \bibitem{citeulike:11836766}
 \BIBentryALTinterwordspacing
 D.~H. <>, ``{The OAuth 2.0 Authorization Framework},'' Internet Requests for
@@ -63,6 +79,26 @@ D.~H. <>, ``{The OAuth 2.0 Authorization Framework},'' Internet Requests for
 \BIBentrySTDinterwordspacing
  \begin{quotation}\noindent A proposal of the the OAuth2 protocol. This is the
   protocol which the Google services are required to use. \end{quotation}
+
+\bibitem{citeulike:14027122}
+\BIBentryALTinterwordspacing
+K.~Abid~Rahman, ``{OpenCV-Python: Contours - 1 : Getting Started},'' June 2012,
+  last accessed 4th May 2016. [Online]. Available:
+  \url{http://opencvpython.blogspot.co.uk/2012/06/hi-this-article-is-tutorial-which-try.html}
+\BIBentrySTDinterwordspacing
+ \begin{quotation}\noindent Same author as the Sudoku problem produced a blog
+  post on contours which were very useful for the binarisation and the
+  extraction of the text \end{quotation}
+
+\bibitem{citeulike:14027120}
+\BIBentryALTinterwordspacing
+------, ``{python - How to remove convexity defects in a Sudoku square? - Stack
+  Overflow},'' 2012, last accessed 4th May 2016. [Online]. Available:
+  \url{http://stackoverflow.com/questions/10196198/how-to-remove-convexity-defects-in-a-sudoku-square}
+\BIBentrySTDinterwordspacing
+ \begin{quotation}\noindent A great binarisation example on a sudoku square
+  which used contours and a range of morphological operations to extract the
+  text from an image. \end{quotation}
 
 \bibitem{citeulike:13915786}
 \BIBentryALTinterwordspacing
@@ -158,16 +194,33 @@ F.~T. developers, ``{Flask-Testing  Flask-Testing 0.3 documentation},'' 2016,
   Flask-Testing. It was used throughout the project after a refactor realising
   it offered better support for testing Flask applications. \end{quotation}
 
+\bibitem{citeulike:14027125}
+\BIBentryALTinterwordspacing
+G.~Developers, ``{API Reference Â |Â  Google Calendar API Â |Â  Google
+  Developers},'' 2016, last accessed 4th May 2016. [Online]. Available:
+  \url{https://developers.google.com/google-apps/calendar/v3/reference/}
+\BIBentrySTDinterwordspacing
+ \begin{quotation}\noindent The Google Calendar API used throughout the
+  application to reference the user's calendar \end{quotation}
+
 \bibitem{citeulike:14025877}
 \BIBentryALTinterwordspacing
-G.~Developers, ``{Getting Started Â |Â  API Client Library for Python
-  Â |Â  Google Developers},'' 2016, last accessed 2nd May 2016. [Online].
-  Available:
+------, ``{Getting Started Â |Â  API Client Library for Python Â |Â 
+  Google Developers},'' 2016, last accessed 2nd May 2016. [Online]. Available:
   \url{https://developers.google.com/api-client-library/python/start/get_started#setup}
 \BIBentrySTDinterwordspacing
  \begin{quotation}\noindent The Google client API library which is used
   throughout the application to the query different services that are offered
   from Google. \end{quotation}
+
+\bibitem{citeulike:14027127}
+\BIBentryALTinterwordspacing
+------, ``{Google+ API Â |Â  Google+ Platform for Web Â |Â  Google
+  Developers},'' 2016, last accessed 4th May 2016. [Online]. Available:
+  \url{https://developers.google.com/+/web/api/rest/\#api}
+\BIBentrySTDinterwordspacing
+ \begin{quotation}\noindent The Google Plus API used throughout the project for
+  user authentication. \end{quotation}
 
 \bibitem{citeulike:14026287}
 \BIBentryALTinterwordspacing
@@ -279,6 +332,13 @@ M.~Fowler, ``{Extract Class},'' Oct. 1999, last accessed 28th April 2016.
   Martin Fowler gave a nice concise answer. It turns out all the tests are
   mocking the behaviour from the external API. \end{quotation}
 
+\bibitem{Gamma:1995:DPE:186897}
+E.~Gamma, R.~Helm, R.~Johnson, and J.~Vlissides, \emph{Design Patterns:
+  Elements of Reusable Object-oriented Software}.\hskip 1em plus 0.5em minus
+  0.4em\relax Boston, MA, USA: Addison-Wesley Longman Publishing Co., Inc.,
+  1995, pp. 4--6, 0-201-63361-2.
+
+
 \bibitem{citeulike:14023852}
 \BIBentryALTinterwordspacing
 GitHub, ``{Atom},'' 2016, last accessed 28th April 2016. [Online]. Available:
@@ -389,6 +449,14 @@ ImageMagick, ``{ImageMagick: Convert, Edit, Or Compose Bitmap Images},'' 2016,
   image binarisation but was not used in the end, due to OpenCV providing
   better support. \end{quotation}
 
+\bibitem{citeulike:14027133}
+\BIBentryALTinterwordspacing
+------, ``{ImageMagick: License},'' 2016, last accessed 4th May 2016. [Online].
+  Available: \url{http://www.imagemagick.org/script/license.php}
+\BIBentrySTDinterwordspacing
+ \begin{quotation}\noindent The licence associated with ImageMagick.
+  \end{quotation}
+
 \bibitem{citeulike:14025880}
 \BIBentryALTinterwordspacing
 O.~S. Initiative, ``{The MIT License (MIT)},'' 2016, last accessed 2nd May
@@ -396,6 +464,14 @@ O.~S. Initiative, ``{The MIT License (MIT)},'' 2016, last accessed 2nd May
 \BIBentrySTDinterwordspacing
  \begin{quotation}\noindent The MIT licence is used for specific libraries such
   as the Tesserocr library. \end{quotation}
+
+\bibitem{citeulike:14027320}
+\BIBentryALTinterwordspacing
+------, ``{The PostgreSQL Licence (PostgreSQL) |},'' 2016, last accessed 4th
+  May 2016. [Online]. Available:
+  \url{https://opensource.org/licenses/postgresql}
+\BIBentrySTDinterwordspacing
+ \begin{quotation}\noindent PostgreSQL's licence. \end{quotation}
 
 \bibitem{citeulike:14025861}
 \BIBentryALTinterwordspacing
@@ -598,6 +674,14 @@ Oracle, ``{Overview - The Java EE 6 Tutorial},'' 2013, last accessed 22nd April
   application language. It reaffirms the point raised that it is good for
   performance. \end{quotation}
 
+\bibitem{citeulike:14027308}
+\BIBentryALTinterwordspacing
+------, ``{MySQL},'' 2016, last accessed 4th May 2016. [Online]. Available:
+  \url{https://www.mysql.com/}
+\BIBentrySTDinterwordspacing
+ \begin{quotation}\noindent MySQL was used as a potential design decision for
+  the RDBMS but rejected for PostgreSQL \end{quotation}
+
 \bibitem{citeulike:2917492}
 \BIBentryALTinterwordspacing
 N.~Otsu, ``{A Threshold Selection Method from Gray-Level Histograms},''
@@ -648,6 +732,15 @@ T.~pip developers, ``{pip 8.1.1},'' 2016, last accessed 2nd May 2016. [Online].
 \BIBentrySTDinterwordspacing
  \begin{quotation}\noindent Used as the package manager throughout the
   application to install different Python modules. \end{quotation}
+
+\bibitem{citeulike:1351635}
+\BIBentryALTinterwordspacing
+PostgreSQL., ``{PostgreSQL: The world's most advanced open source database},''
+  2016, last accessed 4th May 2016. [Online]. Available:
+  \url{http://www.postgresql.org/}
+\BIBentrySTDinterwordspacing
+ \begin{quotation}\noindent Used as the RDBMS in the application for the
+  interactions with the database. \end{quotation}
 
 \bibitem{citeulike:14020583}
 \BIBentryALTinterwordspacing
@@ -918,6 +1011,16 @@ T.-O. Wiki, ``{Training Tesseract Â· tesseract-ocr/tesseract Wiki},'' March
 \BIBentrySTDinterwordspacing
  \begin{quotation}\noindent A reference for how to train the different user
   languages with Tesseract. \end{quotation}
+
+\bibitem{citeulike:14027123}
+\BIBentryALTinterwordspacing
+William, ``{c++ - Extracting text OpenCV - Stack Overflow},'' May 2014, last
+  accessed 4th May 2016. [Online]. Available:
+  \url{http://stackoverflow.com/questions/23506105/extracting-text-opencv}
+\BIBentrySTDinterwordspacing
+ \begin{quotation}\noindent Discussed the use of contours within the context of
+  extracting text from an image. It was a valuable reference and one which
+  pointed me in the right direction. \end{quotation}
 
 \bibitem{citeulike:14023830}
 \BIBentryALTinterwordspacing

@@ -59,7 +59,7 @@ In parts of the application, information needed to be extracted from the databas
 The \texttt{BinariseImage} class is the model representation of the image segmentation script, as seen in Section \ref{imp:image_proces}. The class is called from the controller when a user uploads their image. The output from the class methods is a binarised image. There are a series of functions which integrate with OpenCV API's \cite{citeulike:13206865}, manipulating an image and performing morphological operations. The class has been constructed so most of the functions are modular.
 
 \subsection{CRC cards} \label{design:CRC}
-To aid with the design, class collaboration cards (CRC) were drawn up for each feature. The user-story was decomposed into tasks and each of the tasks had associated CRC cards. This aided in thinking about the design for the class, as well as other classes it interacts with.  The overall design discussed in Section \ref{architecture:class} is a result of the diligent planning with the CRC cards.
+To aid with the design, class collaboration cards (CRC) were drawn up for each feature. The user story was deconstructed into tasks and each of the tasks had associated CRC cards. This aided in thinking about the design for the class, as well as other classes it interacts with.  The overall design discussed in Section \ref{architecture:class} is a result of the diligent planning with the CRC cards.
 
 \begin{figure}[H]
   \centering
@@ -70,7 +70,7 @@ To aid with the design, class collaboration cards (CRC) were drawn up for each f
 
 Figure \ref{fig:crc1} shows an example of a CRC card at the very beginning of the note class creation. The left hand side helped to think about methods and attributes for the class. The right hand side shows the responsibilities, where the note may interact with other classes.
 
-Throughout each feature implemented into the system, the CRC cards were created, evaluated and refactored as ``throw away designs''. Although they were lightweight design tools, they helped to think about the system for the current feature being implemented - reducing the future design creep. For example, during the creation of the note into CRC cards, the image patch attribute was considered to be its own relation. After evaluating that this would be overcomplicating the design for the current feature this design decision was rejected and it would not add benefits to the existing system. The CRC cards were kept for each design and formulated into the class diagram at the end of the development process for formal documentation.
+Throughout each feature implemented into the system, the CRC cards were created, evaluated and refactored as ``throw away designs''. Although they were lightweight design tools, they helped to think about the system for the current feature being implemented - reducing the future design creep. For example, during the creation of the note into CRC cards, the image path attribute was considered to be its own relation. After evaluating that this would be overcomplicating the design for the current feature this design decision was rejected and it would not add benefits to the existing system. The CRC cards were kept for each design and formulated into the class diagram at the end of the development process for formal documentation.
 
 Overall CRC cards were at the forefront of the design during this project. They enabled a clear, concise and well considered design to evolve over a series of sprints. For a further example of an in-depth CRC card see, Appendix \ref{appendix:sup_design} Section \ref{sup:crc}.
 
@@ -94,7 +94,7 @@ Overall, the activity diagram displayed shows the final output of how a note is 
 The application would be designed in an Model-View-Controller (MVC) approach. Rationale for different aspects of the MVC structure will be discussed.
 
 \subsubsection{About MVC}
-MVC is a design pattern where logic is differentiated from the view layer, as shown in Figure \ref{fig:mvc}.
+MVC is a design pattern where logic is differentiated from the view layer \cite{Gamma:1995:DPE:186897}, as shown in Figure \ref{fig:mvc}.
 
 The controller's aim is not to directly integrate with database and specific logic, instead to interact with a series of models and services. Finally, the controllers will aid in passing dynamic content to view files, returning rendered HTML.
 
@@ -179,7 +179,7 @@ The first few iterations gave significant insight into how the document might be
 It is worth acknowledging that the test-data used for the Tesseract training had a design element attached to it. When considering what the test data should consist of, there had to be a variety in the data. Training data was drawn from a range of textual resources ranging from  lecture notes \footnote{\tiny https://blackboard.aber.ac.uk/webapps/blackboard/content/listContent.jsp?course\_id=\_15108\_1\&content\_id=\_648523\_1} to other objects such as mugs. Pangrams are a good way to represent text as it contains all alphabetical characters -  the ``quick brown fox'' is the most common example \cite{citeulike:14023830}. This would give Tesseract the best possible chance at learning different characters due to there being an abundance of each letter.
 
 \section{Entity-relation design}\label{section:er_diagram}
-Creating CRC cards enabled considerations to be made about the relations and how they are connected. Through each user-story analysed it was reflected upon and determined if it that would affect the entity-relation design.
+Creating CRC cards enabled considerations to be made about the relations and how they are connected. Through each user story analysed it was reflected upon and determined if it that would affect the entity-relation design.
 
 \begin{figure}[H]
   \centering
@@ -266,6 +266,15 @@ Flask and Bottle are classified as `micro-frameworks', offering a lightweight st
 
 As a result, Flask was chosen as the framework which will be used throughout the application. Spike work was completed into evaluating Flask's viability for the application quickly showed that it was a suitable tool.
 
+\subsection{Database management system} \label{section:database}
+The choice of a NoSQL database and a relational database was considered in depth. As the notes must follow a specific layout then a NoSQL implementation would not gain any benefits compared to a relational database management system (RDBMS). So it was decided that an RDBMS would be utilised.
+
+A specific choice of RDBMS had to be chosen as an appropriate tool to persist the data from a note; Digital Ocean offered a concise comparison aiding in the design decision \cite{citeulike:14019772} summarised below.
+
+SQLite \cite{citeulike:14027309} was rejected as the choice of RDBMS due to the application potentially having more than one user interacting with it. Instead this would be used for the testing database.
+
+Both MySQL \cite{citeulike:14027308} and PostgreSQL \cite{citeulike:1351635} are interchangeable, with Digital Ocean declaring that PostgreSQL is the more advanced RDBMS. The article states that it has more advanced querying and better attribute types, than MySQL. As a result, PostgreSQL was decided as the RDBMS for the application due to more advanced support.
+
 \subsection{Continuous integration tools} \label{tools:CI}
 Continuous Integration (CI) is normally used in development teams to ensure that all code is checked into the repository. As it was changed for a single person project, so did the point of using it; it was used to ensure every commit passed all tests when pushing to the repository.
 
@@ -288,7 +297,7 @@ The text editor Atom \cite{citeulike:14023852} was used for the majority of the 
 \section{OAuth} \label{design:oauth}
 Interactions with Google services would require the use of the OAuth2 protocol \cite{citeulike:11836766}. OAuth is a protocol which enables the authorisation and authentication of users to specific content.
 
-From Google's comprehensive documentation on using OAuth2 \cite{citeulike:14026287} it was decided that `web application server` would be the most appropriate implementation.
+From Google's comprehensive documentation on using OAuth2 \cite{citeulike:14026287} it was decided that `web application server` would be the most appropriate implementation. A summary is given below.
 
 When a user makes a request to the Google service it checks the authentication credentials, which are sent as part of the request, and authenticates the user. This checks to ensure that the email address and password are valid. If the user was to make another request to extract a list of events then the request would need to be authorised; a user may not be allowed to access specific content in the calendar, for example.
 

@@ -82,8 +82,8 @@ Over a series of iterations, the primary objective was to remove the blue lines 
 \begin{algorithmic}[1]
   \Function{remove\_lines}{}
     \State image $\gets$ read\_image\_as\_grayscale()
-    \State lower\_black $\gets$ np.array([0,0,0])
-    \State upper\_black $\gets$ np.array([175,20, 95])
+    \State lower\_black
+    \State upper\_black
     \State mask\_black $\gets$ cv2.inRange(erode, lower\_black, upper\_black)
   \EndFunction
   \end{algorithmic}
@@ -126,7 +126,7 @@ Figure \ref{fig:poor_quality} shows the result of the binarisation script. Adapt
 The training of handwriting was a constant task throughout the sprints. It was initially proving cumbersome in the early sprints. After the changes implemented from Section \ref{section:threshold} the results from the handwriting recognition improved considerably.
 
 \subsection{Training process}
-Tesseract's training was a methodical process. Tesseract's GitHub wiki \cite{citeulike:13926796} and Gonzalez \cite{citeulike:13920943}, provided great reference tools on how to train the data.
+Tesseract's training was a methodical process. Tesseract's GitHub wiki \cite{citeulike:13926796} and Gonzalez \cite{citeulike:13920943}, provided great reference tools on how to train the data; this is summarised below.
 
 {{\ttfamily \hyphenchar\the\font=`\-}%
 Firstly, as handwriting was being trained a new language would have to be created. Each training example has a specific format which must be adhered to: \texttt{lang.font.expNumber.tiff}. The file is then run through the Tesseract training process using \texttt{batch.nochop makebox} command, on the specific language \texttt{eng.ryan.exp2a}; this created  a box file for the given training example. The box file contains the characters which Tesseract believes are in the image; each line is a new character as shown below:
@@ -178,7 +178,7 @@ The web application was the main part of the development and specific sections p
 \subsection{OAuth}\label{app:oauth}
 The Google OAuth integration was more complex than first considered. Google suggested to use the Google client library \cite{citeulike:14024993} for all OAuth requests, to avoid security issues when making requests. Therefore, this library was utilised throughout the project.
 
-The Google API client would, on occasion, raise peculiar errors. Whilst making a query to the calendar API it would raise the error, `rootURL', when using the build API call. This was mystifying as it was previously working. An issue was raised on the library's GitHub repository \cite{citeulike:14021433}. To confuse matters more, when querying the Google people plus API, it would work perfectly fine - however the Google Calendar API would raise an exception. It eventually stopped raising an exception, but the reason is unknown.
+The Google API client would, on occasion, raise peculiar errors. Whilst making a query to the calendar API it would raise the error, `rootURL', when using the build API call. This was mystifying as it was previously working. An issue was raised on the library's GitHub repository \cite{citeulike:14021433}. To confuse matters more, when querying the Google Plus API, it would work perfectly fine - however the Google Calendar API would raise an exception. It eventually stopped raising an exception, but the reason is unknown.
 
 OAuth2 was implemented in the application so when the user clicks `authorise with Google' it will initialise the process for OAuth.
 Once the user accepts the use of selected services a secure JSON \footnote{JavaScript Object notation is stored in key-value pairs.} credential file was returned containing specific tokens used when querying; these are appended to the user's session.

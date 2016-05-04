@@ -2,25 +2,25 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {4.1}{\ignorespaces Table showing the results of non trained handwriting on different adaptive thresholding algorithms.\relax }}{46}
+\contentsline {table}{\numberline {4.1}{\ignorespaces Table showing the results of non trained handwriting on different adaptive thresholding algorithms.\relax }}{47}{table.caption.28}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {C.1}{\ignorespaces On a scale of 1-5 (1 being very hard, 5 being very hard) how easy was it to add a note?\relax }}{65}
-\contentsline {table}{\numberline {C.2}{\ignorespaces On a scale of 1-5 (1 being very hard, 5 being very hard) how easy was it to navigate around the application?\relax }}{65}
-\contentsline {table}{\numberline {C.3}{\ignorespaces On a scale of 1-5 (1 being very hard, 5 being very hard) How easy was it to add meta-data to your note?\relax }}{65}
-\contentsline {table}{\numberline {C.4}{\ignorespaces Did the application show all the meta-data you wanted? - yes or no\relax }}{65}
-\contentsline {table}{\numberline {C.5}{\ignorespaces On a scale of 1-5 (1 being very hard, 5 being very hard) How easy was it to search for a note?\relax }}{65}
-\contentsline {table}{\numberline {C.6}{\ignorespaces Do you like the user interface? - yes or no\relax }}{66}
-\contentsline {table}{\numberline {C.7}{\ignorespaces Would you use this software to track your notes? - yes or no\relax }}{66}
+\contentsline {table}{\numberline {C.1}{\ignorespaces On a scale of 1-5 (1 being very hard, 5 being very hard) how easy was it to add a note?\relax }}{66}{table.caption.35}
+\contentsline {table}{\numberline {C.2}{\ignorespaces On a scale of 1-5 (1 being very hard, 5 being very hard) how easy was it to navigate around the application?\relax }}{66}{table.caption.36}
+\contentsline {table}{\numberline {C.3}{\ignorespaces On a scale of 1-5 (1 being very hard, 5 being very hard) How easy was it to add meta-data to your note?\relax }}{66}{table.caption.37}
+\contentsline {table}{\numberline {C.4}{\ignorespaces Did the application show all the meta-data you wanted? - yes or no\relax }}{66}{table.caption.38}
+\contentsline {table}{\numberline {C.5}{\ignorespaces On a scale of 1-5 (1 being very hard, 5 being very hard) How easy was it to search for a note?\relax }}{66}{table.caption.39}
+\contentsline {table}{\numberline {C.6}{\ignorespaces Do you like the user interface? - yes or no\relax }}{67}{table.caption.40}
+\contentsline {table}{\numberline {C.7}{\ignorespaces Would you use this software to track your notes? - yes or no\relax }}{67}{table.caption.41}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {D.1}{\ignorespaces A table which shows the statistics from the correctly identified characters during the training process.\relax }}{67}
-\contentsline {table}{\numberline {D.2}{\ignorespaces Table showing the results of correctly identified characters in an image over different paper styles and different image processing steps.\relax }}{68}
-\contentsline {table}{\numberline {D.3}{\ignorespaces Table showing the results of the detected characters in an image over different paper styles and different image processing steps.\relax }}{68}
-\addvspace {10\p@ }
-\addvspace {10\p@ }
+\contentsline {table}{\numberline {D.1}{\ignorespaces A table which shows the statistics from the correctly identified characters during the training process.\relax }}{68}{table.caption.42}
+\contentsline {table}{\numberline {D.2}{\ignorespaces Table showing the results of correctly identified characters in an image over different paper styles and different image processing steps.\relax }}{69}{table.caption.44}
+\contentsline {table}{\numberline {D.3}{\ignorespaces Table showing the results of the detected characters in an image over different paper styles and different image processing steps.\relax }}{69}{table.caption.45}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {I.1}{\ignorespaces A table showing the user stories identified throughout the project, along with the sprint in which they were implemented and associated story points\relax }}{81}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {I.1}{\ignorespaces A table showing the user stories identified throughout the project, along with the sprint in which they were implemented and associated story points\relax }}{82}{table.caption.53}
