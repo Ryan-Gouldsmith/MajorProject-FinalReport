@@ -28,9 +28,9 @@ The following section discusses the appropriateness of the design and any justif
 \noindent
 \textbf{Google Services}
 \newline
-During early iterations, the Google Calendar API was only going to be utilised to parse the user's calendar events. As a result, the class \texttt{GoogleCalendarService} was created - this would ensure that the logic encapsulating the Google Calendar was centralised into one class. With the version number and API unlikely to change, constants were chosen as the best identifier; if the URLs and version number were to change in the future it would be easy to change these. The initial purpose of the class was to perform key operations to extract the events, as shown with the function \texttt{get\_events\_based\_on\_date}. The functions themselves were iteratively developed, initially only using the \texttt{execute\_request} and \texttt{get\_list\_of\_events}. Due to the scope changing with complexity, in the latter sprints  further functions were added.
+During early iterations, the Google Calendar API \cite{citeulike:14027125} was only going to be utilised to parse the user's calendar events. As a result, the class \texttt{GoogleCalendarService} was created - this would ensure that the logic encapsulating the Google Calendar was centralised into one class. With the version number and API unlikely to change, constants were chosen as the best identifier; if the URLs and version number were to change in the future it would be easy to change these. The initial purpose of the class was to perform key operations to extract the events, as shown with the function \texttt{get\_events\_based\_on\_date}. The functions themselves were iteratively developed, initially only using the \texttt{execute\_request} and \texttt{get\_list\_of\_events}. Due to the scope changing with complexity, in the latter sprints  further functions were added.
 
-Initially users were not considered a core part of the system. However, the user story to incorporate users into the system was created. Upon creation it was clear that another class to integrate with the Google Plus API would be required. This class followed a similar structure to the calendar class, except for parsing a user's email, so that it can be persisted in the database.
+Initially users were not considered a core part of the system. However, the user story to incorporate users into the system was created. Upon creation it was clear that another class to integrate with the Google Plus API \cite{citeulike:14027127} would be required. This class followed a similar structure to the calendar class, except for parsing a user's email, so that it can be persisted in the database.
 
 Eventually, the design was evaluated and duplicated functionality amongst the methods was discovered. In both of the classes the \texttt{build} and \texttt{execute\_request} functions were duplicated, without having class specific content. As a result, the extract class refactoring technique \cite{citeulike:14023810}, was used to create a super class \texttt{BaseGoogleService}. This class encapsulates logic for building  and executing queries. Extracting these functions to a super class ensured that pure logic for data and query manipulation can be moved to the \texttt{GoogleCalendarService} and \texttt{GooglePlusService} classes.
 
@@ -94,7 +94,7 @@ Overall, the activity diagram displayed shows the final output of how a note is 
 The application would be designed in an Model-View-Controller (MVC) approach. Rationale for different aspects of the MVC structure will be discussed.
 
 \subsubsection{About MVC}
-MVC is a design pattern where logic is differentiated from presentation layers, as shown in Figure \ref{fig:mvc}.
+MVC is a design pattern where logic is differentiated from the view layer, as shown in Figure \ref{fig:mvc}.
 
 The controller's aim is not to directly integrate with database and specific logic, instead to interact with a series of models and services. Finally, the controllers will aid in passing dynamic content to view files, returning rendered HTML.
 
