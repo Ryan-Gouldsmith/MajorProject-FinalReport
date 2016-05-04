@@ -33,7 +33,7 @@ It is worth noting that Flask's testing documentation is very sparse and not com
 
 During the first few sprints of testing, pytest \cite{citeulike:14020583} was originally being used to create test classes, with test classes sub-classing  \texttt{unittest.TestCase}.
 
-Flask tests were refactored midway through the sprints to use Flask-testing \cite{citeulike:14020588}. This offered better testing support for Flask applications, allowing the creation of a fake application and providing the functionality to run a live server for testing. This live server would be needed for the acceptance testing.
+Flask tests were refactored midway through the sprints to use Flask-Testing \cite{citeulike:14020588}. This offered better testing support for Flask applications, allowing the creation of a fake application and providing the functionality to run a live server for testing. This live server would be needed for the acceptance testing.
 
 \section{Mocking tests}
 The purpose of mocking is to change the output of a function to a value which is returned every time the test is called \cite{citeulike:14020596}. It was established that certain tests would need to be mocked, as the data returned would alter after every call. It was identified that \textit{all} interactions with Google APIs, any interactions with Tesseract and the Session would need to be mocked.

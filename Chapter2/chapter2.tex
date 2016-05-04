@@ -18,9 +18,9 @@ As the application was developed in an iterative manner, over a series of sprint
 \section{Overall architecture}
 This section discusses the architecture of the web application. The design for the web application was developed over a series of sprints, iteratively increasing with each user story, therefore no upfront design was conducted at the start of the process.
 
-\subsection{Class Diagram}
+\subsection{Class diagram}
 \label{architecture:class}
-An overview of the resulting design of the class diagram is presented, with rationale for decisions made and how an iterative approach was used to reach the concluded design. The class diagram can be found in Appendix \ref{appendix:design}, section \ref{design:class_diagram}.
+An overview of the resulting design of the class diagram is presented, with rationale for decisions made and how an iterative approach was used to reach the concluded design. The class diagram can be found in Appendix \ref{appendix:design}, Section \ref{design:class_diagram}.
 
 \subsubsection{Justification of design}
 The following section discusses the appropriateness of the design and any justifications needed. Overall, the design clearly shows the object oriented principle of low coupling and high cohesion being used on the project.
@@ -125,7 +125,7 @@ It is worth considering the view files. The view files were the only section of 
 \begin{figure}[H]
   \centering
   \includegraphics[scale=0.5]{images/view_file_extension}
-  \caption{A diagram illustrating how extension in Jinga html template engine works.}
+  \caption{A diagram illustrating how extension in Jinja2 \cite{citeulike:14027420} HTML template engine works.}
   \label{fig:extension}
 \end{figure}
 
@@ -153,7 +153,7 @@ Early work was conducted to investigate how to prepare images for the Tesseract 
   \label{fig:activity_binarise}
 \end{figure}
 
-Figure \ref{fig:activity_binarise} shows the overall activity of how the image processing will be intended to be implemented, after early design work showed binarisation was more complex. Further descriptions of specific implementation can be found in the implementation section \ref{imp:image_proces}.
+Figure \ref{fig:activity_binarise} shows the overall activity of how the image processing will be intended to be implemented, after early design work showed binarisation was more complex. Further descriptions of specific implementation can be found in the implementation Section \ref{imp:image_proces}.
 
 This high-level activity diagram shows the design stages which were used as a  high-level interpretation of the binarisation process. Initially a design was drawn up to just binarise the whole image, but due to implementation issues, this caused too much noise. Therefore, a new algorithm had to be established.
 

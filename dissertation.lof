@@ -4,7 +4,7 @@
 \contentsline {figure}{\numberline {2.1}{\ignorespaces An example from Sprint 3, showing a CRC card at the very beginning of creation.\relax }}{13}{figure.caption.5}
 \contentsline {figure}{\numberline {2.2}{\ignorespaces An activity diagram to show how to save a note and the integrations with the calendar.\relax }}{14}{figure.caption.6}
 \contentsline {figure}{\numberline {2.3}{\ignorespaces A example of how the model-view-controller (MVC) framework integrates.\relax }}{15}{figure.caption.7}
-\contentsline {figure}{\numberline {2.4}{\ignorespaces A diagram illustrating how extension in Jinga html template engine works.\relax }}{16}{figure.caption.8}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces A diagram illustrating how extension in Jinja2 \cite {citeulike:14027420} HTML template engine works.\relax }}{16}{figure.caption.8}
 \contentsline {figure}{\numberline {2.5}{\ignorespaces An activity diagram to depict the design of the algorithm for the image segmentation.\relax }}{17}{figure.caption.9}
 \contentsline {figure}{\numberline {2.6}{\ignorespaces The final result of the entity-relation diagram (after a series of iterations).\relax }}{19}{figure.caption.10}
 \contentsline {figure}{\numberline {2.7}{\ignorespaces From left to right, the homepage wireframe through the different iterations and the change of requirements\relax }}{21}{figure.caption.11}

@@ -18,26 +18,6 @@
 \fi
 #2}}
 
-\bibitem{citeulike:13988110}
-\BIBentryALTinterwordspacing
-``{Evernote Tech Blog | The Care and Feeding of Elephants},'' 2013, last
-  accessed 25th March 2016. [Online]. Available:
-  \url{https://blog.evernote.com/tech/2013/07/18/how-evernotes-image-recognition-works/}
-\BIBentrySTDinterwordspacing
- \begin{quotation}\noindent An article explaining how Evernote does character
-  recognition on images \end{quotation}
-
-\bibitem{citeulike:14006256}
-\BIBentryALTinterwordspacing
-``{OpenCV: Extract horizontal and vertical lines by using morphological
-  operations},'' 2015, last accessed 25th April 2016. [Online]. Available:
-  \url{http://docs.opencv.org/3.1.0/d1/dee/tutorial_moprh_lines_detection.html#gsc.tab=0}
-\BIBentrySTDinterwordspacing
- \begin{quotation}\noindent A great reference on how to use different
-  morphological operations and adaptive threshold techniques to extract and
-  binarise an image. Used extensively with the image segmentation script.
-  \end{quotation}
-
 \bibitem{citeulike:14025881}
 \BIBentryALTinterwordspacing
 ``{Flask-SeaSurf â SeaSurf 0.2.2 documentation},'' 2016, last accessed 2nd
@@ -70,15 +50,6 @@
  \begin{quotation}\noindent SQLite was considered as the overall RDMBS used on
   the application, but was rejected. Instead it was used for the testing
   infrastructure. \end{quotation}
-
-\bibitem{citeulike:11836766}
-\BIBentryALTinterwordspacing
-D.~H. <>, ``{The OAuth 2.0 Authorization Framework},'' Internet Requests for
-  Comment, RFC Editor, Fremont, CA, USA, Tech. Rep. 6749, Oct. 2012. [Online].
-  Available: \url{http://www.rfc-editor.org/rfc/rfc6749.txt}
-\BIBentrySTDinterwordspacing
- \begin{quotation}\noindent A proposal of the the OAuth2 protocol. This is the
-  protocol which the Google services are required to use. \end{quotation}
 
 \bibitem{citeulike:14027122}
 \BIBentryALTinterwordspacing
@@ -263,10 +234,19 @@ M.~A.~A. Dzulkifli and M.~F.~F. Mustafar, ``{The influence of colour on memory
   retention. Used for the analysis and further confirmation in the taxonomy of
   notes section. \end{quotation}
 
+\bibitem{citeulike:13988110}
+\BIBentryALTinterwordspacing
+Evernote, ``{Evernote Tech Blog | The Care and Feeding of Elephants},'' 2013,
+  last accessed 25th March 2016. [Online]. Available:
+  \url{https://blog.evernote.com/tech/2013/07/18/how-evernotes-image-recognition-works/}
+\BIBentrySTDinterwordspacing
+ \begin{quotation}\noindent An article explaining how Evernote does character
+  recognition on images \end{quotation}
+
 \bibitem{citeulike:14014282}
 \BIBentryALTinterwordspacing
-Evernote, ``{The note-taking space for your life's work | Evernote},'' 2016,
-  last accessed 17th April 2016. [Online]. Available:
+------, ``{The note-taking space for your life's work | Evernote},'' 2016, last
+  accessed 17th April 2016. [Online]. Available:
   \url{https://evernote.com/?var=c}
 \BIBentrySTDinterwordspacing
  \begin{quotation}\noindent The Evernote application is an example of the
@@ -337,7 +317,9 @@ E.~Gamma, R.~Helm, R.~Johnson, and J.~Vlissides, \emph{Design Patterns:
   Elements of Reusable Object-oriented Software}.\hskip 1em plus 0.5em minus
   0.4em\relax Boston, MA, USA: Addison-Wesley Longman Publishing Co., Inc.,
   1995, pp. 4--6, 0-201-63361-2.
-
+ \begin{quotation}\noindent The Gang of Four book was used as a reference
+  material for how the MVC design pattern worked. A really good reference.
+  \end{quotation}
 
 \bibitem{citeulike:14023852}
 \BIBentryALTinterwordspacing
@@ -432,6 +414,15 @@ A.~Greensted, ``{Otsu Thresholding - The Lab Book Pages},'' June 2010, last
  \begin{quotation}\noindent A great reference tutorial aiding to identify what
   OTSU threshold is and how it works in a simple to understand manner, with
   plenty of example. \end{quotation}
+
+\bibitem{citeulike:11836766}
+\BIBentryALTinterwordspacing
+D.~H., ``{The OAuth 2.0 Authorization Framework},'' Internet Requests for
+  Comment, RFC Editor, Fremont, CA, USA, Tech. Rep. 6749, Oct. 2012. [Online].
+  Available: \url{http://www.rfc-editor.org/rfc/rfc6749.txt}
+\BIBentrySTDinterwordspacing
+ \begin{quotation}\noindent A proposal of the the OAuth2 protocol. This is the
+  protocol which the Google services are required to use. \end{quotation}
 
 \bibitem{Hunter:2007}
 J.~D. Hunter, ``Matplotlib: A 2d graphics environment,'' \emph{Computing In
@@ -644,9 +635,20 @@ OpenCV., ``{Changing Colorspaces},'' 2013, last accessed 3rd May 2016.
  \begin{quotation}\noindent Used for the algorithm for extracting a range of
   colours frm an image from a given mask. \end{quotation}
 
+\bibitem{citeulike:14006256}
+\BIBentryALTinterwordspacing
+OpenCV, ``{OpenCV: Extract horizontal and vertical lines by using morphological
+  operations},'' 2015, last accessed 25th April 2016. [Online]. Available:
+  \url{http://docs.opencv.org/3.1.0/d1/dee/tutorial_moprh_lines_detection.html#gsc.tab=0}
+\BIBentrySTDinterwordspacing
+ \begin{quotation}\noindent A great reference on how to use different
+  morphological operations and adaptive threshold techniques to extract and
+  binarise an image. Used extensively with the image segmentation script.
+  \end{quotation}
+
 \bibitem{citeulike:14024957}
 \BIBentryALTinterwordspacing
-------, ``{Eroding and Dilating â OpenCV 2.4.13.0 documentation},'' 2016,
+OpenCV., ``{Eroding and Dilating â OpenCV 2.4.13.0 documentation},'' 2016,
   last accessed 30th April 2016. [Online]. Available:
   \url{http://docs.opencv.org/2.4/doc/tutorials/imgproc/erosion_dilatation/erosion_dilatation.html}
 \BIBentrySTDinterwordspacing
@@ -656,7 +658,7 @@ OpenCV., ``{Changing Colorspaces},'' 2013, last accessed 3rd May 2016.
 
 \bibitem{citeulike:14021409}
 \BIBentryALTinterwordspacing
-Opencv, ``{Miscellaneous Image Transformations - OpenCV 2.4.13.0
+OpenCV, ``{Miscellaneous Image Transformations - OpenCV 2.4.13.0
   documentation},'' 2016, last accessed 25th April 2016. [Online]. Available:
   \url{http://docs.opencv.org/2.4/modules/imgproc/doc/miscellaneous_transformations.html}
 \BIBentrySTDinterwordspacing
@@ -780,6 +782,15 @@ A.~Ronacher, ``{Welcome | Werkzeug (The Python WSGI Utility Library)},'' last
 \BIBentrySTDinterwordspacing
  \begin{quotation}\noindent Used when the user uplaods their file, the specific
   function secure filename is used. \end{quotation}
+
+\bibitem{citeulike:14027420}
+\BIBentryALTinterwordspacing
+------, ``{Welcome to Jinja2 â Jinja2 Documentation (2.8-dev)},'' 2008,
+  last accessed 4th May 2016. [Online]. Available:
+  \url{http://jinja.pocoo.org/docs/dev/}
+\BIBentrySTDinterwordspacing
+ \begin{quotation}\noindent The templating engine that was installed with Flask
+  as a dependency. Used to render the HTML in the view files. \end{quotation}
 
 \bibitem{citeulike:14025864}
 \BIBentryALTinterwordspacing

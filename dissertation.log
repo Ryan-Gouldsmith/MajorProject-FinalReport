@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.8.29)  4 MAY 2016 08:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.8.29)  4 MAY 2016 12:47
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -878,7 +878,7 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <24.88> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 22.
-<images/taxonomy.png, id=750, 715.67375pt x 735.74875pt>
+<images/taxonomy.png, id=752, 715.67375pt x 735.74875pt>
 File: images/taxonomy.png Graphic file (type png)
  <use images/taxonomy.png>
 Package pdftex.def Info: images/taxonomy.png used on input line 32.
@@ -909,37 +909,37 @@ File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 
 
 
-] [12] <images/CRC_card.png, id=904, 387.4475pt x 235.88126pt>
+] [12] <images/CRC_card.png, id=906, 387.4475pt x 235.88126pt>
 File: images/CRC_card.png Graphic file (type png)
  <use images/CRC_card.png>
 Package pdftex.def Info: images/CRC_card.png used on input line 66.
 (pdftex.def)             Requested size: 193.72327pt x 117.94034pt.
- [13 <./images/CRC_card.png>] <images/saving_note_activity.png, id=916, 786.94pt x 1046.91125pt>
+ [13 <./images/CRC_card.png>] <images/saving_note_activity.png, id=918, 786.94pt x 1046.91125pt>
 File: images/saving_note_activity.png Graphic file (type png)
  <use images/saving_note_activity.png>
 Package pdftex.def Info: images/saving_note_activity.png used on input line 84.
 (pdftex.def)             Requested size: 393.46904pt x 523.45435pt.
- [14 <./images/saving_note_activity.png>] <images/MVC.pdf, id=925, 523.9575pt x 453.695pt>
+ [14 <./images/saving_note_activity.png>] <images/MVC.pdf, id=927, 523.9575pt x 453.695pt>
 File: images/MVC.pdf Graphic file (type pdf)
  <use images/MVC.pdf>
 Package pdftex.def Info: images/MVC.pdf used on input line 107.
 (pdftex.def)             Requested size: 199.10591pt x 172.40588pt.
- [15 <./images/MVC.pdf>] <images/view_file_extension.png, id=940, 502.87875pt x 233.87375pt>
+ [15 <./images/MVC.pdf>] <images/view_file_extension.png, id=942, 502.87875pt x 233.87375pt>
 File: images/view_file_extension.png Graphic file (type png)
  <use images/view_file_extension.png>
 Package pdftex.def Info: images/view_file_extension.png used on input line 127.
 (pdftex.def)             Requested size: 251.43875pt x 116.93657pt.
- [16 <./images/view_file_extension.png>] <images/image_binarisation_activity.pdf, id=951, 604.2575pt x 283.0575pt>
+ [16 <./images/view_file_extension.png>] <images/image_binarisation_activity.pdf, id=955, 604.2575pt x 283.0575pt>
 File: images/image_binarisation_activity.pdf Graphic file (type pdf)
  <use images/image_binarisation_activity.pdf>
 Package pdftex.def Info: images/image_binarisation_activity.pdf used on input line 151.
 (pdftex.def)             Requested size: 302.128pt x 141.5284pt.
- [17 <./images/image_binarisation_activity.pdf>] [18] <images/database_diagram.pdf, id=981, 724.7075pt x 417.56pt>
+ [17 <./images/image_binarisation_activity.pdf>] [18] <images/database_diagram.pdf, id=985, 724.7075pt x 417.56pt>
 File: images/database_diagram.pdf Graphic file (type pdf)
  <use images/database_diagram.pdf>
 Package pdftex.def Info: images/database_diagram.pdf used on input line 186.
 (pdftex.def)             Requested size: 362.35286pt x 208.77948pt.
- [19 <./images/database_diagram.pdf>] <images/homepage_wiremock.pdf, id=993, 1820.8025pt x 513.92pt>
+ [19 <./images/database_diagram.pdf>] <images/homepage_wiremock.pdf, id=997, 1820.8025pt x 513.92pt>
 File: images/homepage_wiremock.pdf Graphic file (type pdf)
  <use images/homepage_wiremock.pdf>
 Package pdftex.def Info: images/homepage_wiremock.pdf used on input line 236.
@@ -954,7 +954,7 @@ Overfull \hbox (4.9236pt too wide) in paragraph at lines 263--264
 
  (./Chapter3/chapter3.tex
 Chapter 3.
-<images/OTSU.png, id=1065, 194.22563pt x 291.58937pt>
+<images/OTSU.png, id=1069, 194.22563pt x 291.58937pt>
 File: images/OTSU.png Graphic file (type png)
  <use images/OTSU.png>
 Package pdftex.def Info: images/OTSU.png used on input line 21.
@@ -963,50 +963,50 @@ Package pdftex.def Info: images/OTSU.png used on input line 21.
 
 
 
-] [26 <./images/OTSU.png>] <images/adaptive_mean.png, id=1090, 179.67125pt x 292.59312pt>
+] [26 <./images/OTSU.png>] <images/adaptive_mean.png, id=1094, 179.67125pt x 292.59312pt>
 File: images/adaptive_mean.png Graphic file (type png)
  <use images/adaptive_mean.png>
 Package pdftex.def Info: images/adaptive_mean.png used on input line 47.
 (pdftex.def)             Requested size: 179.67079pt x 292.59239pt.
- [27 <./images/adaptive_mean.png>] <images/adaptive_gaussian.png, id=1106, 191.71625pt x 298.11375pt>
+ [27 <./images/adaptive_mean.png>] <images/adaptive_gaussian.png, id=1110, 191.71625pt x 298.11375pt>
 File: images/adaptive_gaussian.png Graphic file (type png)
  <use images/adaptive_gaussian.png>
 Package pdftex.def Info: images/adaptive_gaussian.png used on input line 59.
 (pdftex.def)             Requested size: 191.71577pt x 298.11302pt.
- <images/thresholding_options.png, id=1108, 1246.6575pt x 711.65875pt>
+ <images/thresholding_options.png, id=1112, 1246.6575pt x 711.65875pt>
 File: images/thresholding_options.png Graphic file (type png)
  <use images/thresholding_options.png>
 Package pdftex.def Info: images/thresholding_options.png used on input line 68.
 (pdftex.def)             Requested size: 311.6636pt x 177.91425pt.
  [28 <./images/adaptive_gaussian.png> <./images/thresholding_options.png>]
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on input line 90.
- <images/removed_lines_still_noise.png, id=1124, 409.53pt x 604.2575pt>
+ <images/removed_lines_still_noise.png, id=1128, 409.53pt x 604.2575pt>
 File: images/removed_lines_still_noise.png Graphic file (type png)
  <use images/removed_lines_still_noise.png>
 Package pdftex.def Info: images/removed_lines_still_noise.png used on input line 98.
 (pdftex.def)             Requested size: 204.7645pt x 302.128pt.
- [29] [30 <./images/removed_lines_still_noise.png>] <images/hard_image.png, id=1149, 1201.48875pt x 747.79375pt>
+ [29] [30 <./images/removed_lines_still_noise.png>] <images/hard_image.png, id=1153, 1201.48875pt x 747.79375pt>
 File: images/hard_image.png Graphic file (type png)
  <use images/hard_image.png>
 Package pdftex.def Info: images/hard_image.png used on input line 118.
 (pdftex.def)             Requested size: 360.44942pt x 224.33984pt.
- [31 <./images/hard_image.png>] <images/box_editor.png, id=1168, 1273.75874pt x 710.655pt>
+ [31 <./images/hard_image.png>] <images/box_editor.png, id=1172, 1273.75874pt x 710.655pt>
 File: images/box_editor.png Graphic file (type png)
  <use images/box_editor.png>
 Package pdftex.def Info: images/box_editor.png used on input line 151.
 (pdftex.def)             Requested size: 426.79134pt x 238.10614pt.
- [32 <./images/box_editor.png>] [33] <images/tesseract_first.png, id=1202, 260.975pt x 181.67876pt>
+ [32 <./images/box_editor.png>] [33] <images/tesseract_first.png, id=1206, 260.975pt x 181.67876pt>
 File: images/tesseract_first.png Graphic file (type png)
 
 <use images/tesseract_first.png>
 Package pdftex.def Info: images/tesseract_first.png used on input line 206.
 (pdftex.def)             Requested size: 182.68126pt x 127.17424pt.
- [34 <./images/tesseract_first.png>] <images/tesseract_colour.png, id=1212, 268.00125pt x 328.22626pt>
+ [34 <./images/tesseract_first.png>] <images/tesseract_colour.png, id=1216, 268.00125pt x 328.22626pt>
 File: images/tesseract_colour.png Graphic file (type png)
  <use images/tesseract_colour.png>
 Package pdftex.def Info: images/tesseract_colour.png used on input line 219.
 (pdftex.def)             Requested size: 93.80183pt x 114.8809pt.
- <images/styled-tesseract-data.png, id=1213, 667.49374pt x 350.81062pt>
+ <images/styled-tesseract-data.png, id=1217, 667.49374pt x 350.81062pt>
 File: images/styled-tesseract-data.png Graphic file (type png)
  <use images/styled-tesseract-data.png>
 Package pdftex.def Info: images/styled-tesseract-data.png used on input line 225.
@@ -1016,7 +1016,7 @@ Overfull \hbox (50.8701pt too wide) in paragraph at lines 225--226
 [][] 
  []
 
-[35 <./images/tesseract_colour.png> <./images/styled-tesseract-data.png>] <images/event_seven_day.png, id=1226, 925.4575pt x 401.5pt>
+[35 <./images/tesseract_colour.png> <./images/styled-tesseract-data.png>] <images/event_seven_day.png, id=1230, 925.4575pt x 401.5pt>
 File: images/event_seven_day.png Graphic file (type png)
  <use images/event_seven_day.png>
 Package pdftex.def Info: images/event_seven_day.png used on input line 246.
@@ -1026,7 +1026,7 @@ Overfull \hbox (35.93628pt too wide) in paragraph at lines 246--247
  [][] 
  []
 
-<images/saved_to_calendar.png, id=1227, 671.50874pt x 365.365pt>
+<images/saved_to_calendar.png, id=1231, 671.50874pt x 365.365pt>
 File: images/saved_to_calendar.png Graphic file (type png)
  <use images/saved_to_calendar.png>
 Package pdftex.def Info: images/saved_to_calendar.png used on input line 281.
@@ -1043,7 +1043,7 @@ Overfull \hbox (8.2262pt too wide) in paragraph at lines 12--13
 \OT1/ptm/m/n/10.95 To re-cap, an Ag-ile ap-proach was adopted through-out the project. There-fore, test-driven-development
  []
 
-<images/tdd.png, id=1280, 447.6725pt x 269.005pt>
+<images/tdd.png, id=1284, 447.6725pt x 269.005pt>
 File: images/tdd.png Graphic file (type png)
  <use images/tdd.png>
 Package pdftex.def Info: images/tdd.png used on input line 18.
@@ -1055,22 +1055,22 @@ Package pdftex.def Info: images/tdd.png used on input line 18.
  <./images/tdd.png>] [41]
 LaTeX Font Info:    Font shape `OT1/pcr/m/it' in size <10.95> not available
 (Font)              Font shape `OT1/pcr/m/sl' tried instead on input line 59.
- [42] <images/unit_test_user.png, id=1342, 740.7675pt x 105.39375pt>
+ [42] <images/unit_test_user.png, id=1346, 740.7675pt x 105.39375pt>
 File: images/unit_test_user.png Graphic file (type png)
  <use images/unit_test_user.png>
 Package pdftex.def Info: images/unit_test_user.png used on input line 99.
 (pdftex.def)             Requested size: 426.79134pt x 60.72314pt.
- [43 <./images/unit_test_user.png>] [44] <images/acceptance_test_1.png, id=1370, 1165.35374pt x 98.3675pt>
+ [43 <./images/unit_test_user.png>] [44] <images/acceptance_test_1.png, id=1374, 1165.35374pt x 98.3675pt>
 File: images/acceptance_test_1.png Graphic file (type png)
  <use images/acceptance_test_1.png>
 Package pdftex.def Info: images/acceptance_test_1.png used on input line 159.
 (pdftex.def)             Requested size: 426.79134pt x 36.02464pt.
- [45 <./images/acceptance_test_1.png>] <images/user_response.png, id=1389, 572.1375pt x 296.10625pt>
+ [45 <./images/acceptance_test_1.png>] <images/user_response.png, id=1393, 572.1375pt x 296.10625pt>
 File: images/user_response.png Graphic file (type png)
  <use images/user_response.png>
 Package pdftex.def Info: images/user_response.png used on input line 183.
 (pdftex.def)             Requested size: 286.06804pt x 148.05275pt.
- <images/tesseract_testing.png, id=1394, 414.54875pt x 243.91125pt>
+ <images/tesseract_testing.png, id=1398, 414.54875pt x 243.91125pt>
 File: images/tesseract_testing.png Graphic file (type png)
  <use images/tesseract_testing.png>
 Package pdftex.def Info: images/tesseract_testing.png used on input line 197.
@@ -1121,11 +1121,7 @@ Overfull \hbox (1.683pt too wide) in paragraph at lines 25--26
 [58
 
 
-]
-
-LaTeX Warning: Citation `citeulike:1402058' on page 59 undefined on input line 47.
-
-[59]) [60]
+] [59]) [60]
 \openout2 = `Appendix2/appendix2.aux'.
 
  (./Appendix2/appendix2.tex
@@ -1143,12 +1139,12 @@ Missing character: There is no ™ in font ptmb7t!
 
  (./Appendix3/appendix3.tex
 Appendix C.
-<images/test_acceptance_homepage.png, id=1589, 837.1275pt x 77.28876pt>
+<images/test_acceptance_homepage.png, id=1597, 837.1275pt x 77.28876pt>
 File: images/test_acceptance_homepage.png Graphic file (type png)
  <use images/test_acceptance_homepage.png>
 Package pdftex.def Info: images/test_acceptance_homepage.png used on input line 12.
 (pdftex.def)             Requested size: 426.79134pt x 39.40376pt.
- <images/test_acceptance_meta_data_form.png, id=1590, 1121.18875pt x 340.27126pt>
+ <images/test_acceptance_meta_data_form.png, id=1598, 1121.18875pt x 340.27126pt>
 File: images/test_acceptance_meta_data_form.png Graphic file (type png)
  <use images/test_acceptance_meta_data_form.png>
 Package pdftex.def Info: images/test_acceptance_meta_data_form.png used on input line 25.
@@ -1157,12 +1153,12 @@ Package pdftex.def Info: images/test_acceptance_meta_data_form.png used on input
 
 
 
- <./images/test_acceptance_homepage.png>] <images/test_acceptance_view_notes.png, id=1597, 736.7525pt x 49.18375pt>
+ <./images/test_acceptance_homepage.png>] <images/test_acceptance_view_notes.png, id=1605, 736.7525pt x 49.18375pt>
 File: images/test_acceptance_view_notes.png Graphic file (type png)
  <use images/test_acceptance_view_notes.png>
 Package pdftex.def Info: images/test_acceptance_view_notes.png used on input line 34.
 (pdftex.def)             Requested size: 426.79134pt x 28.4913pt.
- <images/test_integration_add_edit_meta_data.png, id=1598, 1056.94875pt x 297.11pt>
+ <images/test_integration_add_edit_meta_data.png, id=1606, 1056.94875pt x 297.11pt>
 File: images/test_integration_add_edit_meta_data.png Graphic file (type png)
  <use images/test_integration_add_edit_meta_data.png>
 Package pdftex.def Info: images/test_integration_add_edit_meta_data.png used on input line 46.
@@ -1180,7 +1176,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
  (./Appendix4/appendix4.tex
 Appendix D.
-<images/training_data_1.png, id=1617, 1814.78pt x 2571.6075pt>
+<images/training_data_1.png, id=1626, 1814.78pt x 2571.6075pt>
 File: images/training_data_1.png Graphic file (type png)
  <use images/training_data_1.png>
 Package pdftex.def Info: images/training_data_1.png used on input line 43.
@@ -1190,7 +1186,7 @@ Overfull \hbox (32.10907pt too wide) in paragraph at lines 43--44
 [][] 
  []
 
-<images/training_data_2.png, id=1618, 1798.72pt x 2521.42pt>
+<images/training_data_2.png, id=1627, 1798.72pt x 2521.42pt>
 File: images/training_data_2.png Graphic file (type png)
  <use images/training_data_2.png>
 Package pdftex.def Info: images/training_data_2.png used on input line 49.
@@ -1229,12 +1225,12 @@ Overfull \hbox (13.40222pt too wide) in paragraph at lines 27--28
 
  (./Appendix6/appendix6.tex
 Appendix F.
-<images/pre-line-editing.png, id=1724, 362.35374pt x 407.5225pt>
+<images/pre-line-editing.png, id=1732, 362.35374pt x 407.5225pt>
 File: images/pre-line-editing.png Graphic file (type png)
  <use images/pre-line-editing.png>
 Package pdftex.def Info: images/pre-line-editing.png used on input line 10.
 (pdftex.def)             Requested size: 253.64589pt x 285.2638pt.
- <images/blue_identified.png, id=1725, 312.16624pt x 550.055pt>
+ <images/blue_identified.png, id=1733, 312.16624pt x 550.055pt>
 File: images/blue_identified.png Graphic file (type png)
  <use images/blue_identified.png>
 Package pdftex.def Info: images/blue_identified.png used on input line 19.
@@ -1248,7 +1244,7 @@ Package pdftex.def Info: images/blue_identified.png used on input line 19.
 
  (./Appendix7/appendix7.tex
 Appendix G.
-<images/class_diagram.pdf, id=1738, 2373.86874pt x 1518.67375pt>
+<images/class_diagram.pdf, id=1746, 2373.86874pt x 1518.67375pt>
 File: images/class_diagram.pdf Graphic file (type pdf)
  <use images/class_diagram.pdf>
 Package pdftex.def Info: images/class_diagram.pdf used on input line 8.
@@ -1267,7 +1263,7 @@ Overfull \hbox (60.59802pt too wide) in paragraph at lines 8--9
 
  (./Appendix8/appendix8.tex
 Appendix H.
-<images/google_calendar_service.pdf, id=1753, 793.96625pt x 1358.07375pt>
+<images/google_calendar_service.pdf, id=1761, 793.96625pt x 1358.07375pt>
 File: images/google_calendar_service.pdf Graphic file (type pdf)
  <use images/google_calendar_service.pdf>
 Package pdftex.def Info: images/google_calendar_service.pdf used on input line 9.
@@ -1276,7 +1272,7 @@ Package pdftex.def Info: images/google_calendar_service.pdf used on input line 9
 
 
 
-] <images/upload_note_wire_frame.pdf, id=1759, 1163.34625pt x 1404.24625pt>
+] <images/upload_note_wire_frame.pdf, id=1767, 1163.34625pt x 1404.24625pt>
 File: images/upload_note_wire_frame.pdf Graphic file (type pdf)
  <use images/upload_note_wire_frame.pdf>
 Package pdftex.def Info: images/upload_note_wire_frame.pdf used on input line 17.
@@ -1286,12 +1282,12 @@ Package pdftex.def Info: images/upload_note_wire_frame.pdf used on input line 17
 
  (./Appendix9/appendix9.tex
 Appendix I.
-<images/sprint-5-burndown-chart.png, id=1776, 1194.4625pt x 396.48125pt>
+<images/sprint-5-burndown-chart.png, id=1784, 1194.4625pt x 396.48125pt>
 File: images/sprint-5-burndown-chart.png Graphic file (type png)
  <use images/sprint-5-burndown-chart.png>
 Package pdftex.def Info: images/sprint-5-burndown-chart.png used on input line 8.
 (pdftex.def)             Requested size: 418.06813pt x 138.77051pt.
- <images/overall-burndown.png, id=1777, 883.3pt x 208.78pt>
+ <images/overall-burndown.png, id=1785, 883.3pt x 208.78pt>
 File: images/overall-burndown.png Graphic file (type png)
  <use images/overall-burndown.png>
 Package pdftex.def Info: images/overall-burndown.png used on input line 17.
@@ -1345,9 +1341,9 @@ Missing character: There is no Â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no Â in font ptmr7t!
 Missing character: There is no ” in font ptmr7t!
- [84]
 Missing character: There is no Â in font ptmr7t!
 Missing character: There is no ” in font ptmr7t!
+ [84]
 Missing character: There is no Ã in font ptmr7t!
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Â in font ptmr7t!
@@ -1450,7 +1446,7 @@ Missing character: There is no € in font ptmr7t!
 Missing character: There is no Â in font ptmr7t!
 Missing character: There is no ” in font ptmr7t!
  [89]
-Overfull \hbox (38.86412pt too wide) in paragraph at lines 581--585
+Overfull \hbox (38.86412pt too wide) in paragraph at lines 572--576
 \OT1/ptm/m/n/10.95 Take-[]handwritten-[]notes-[]in-[]OneNote-[]2016-[]for-[]Windows-[]0ec88c54-[]05f3-[]4cac-[]b452-[]9ee62cebbd4c$[] 
  []
 
@@ -1475,17 +1471,24 @@ Missing character: There is no € in font ptmr7t!
 Missing character: There is no Â in font ptmr7t!
 Missing character: There is no ” in font ptmr7t!
  [91]
-Missing character: There is no Â in font ptmr7t!
-Missing character: There is no € in font ptmr7t!
-Missing character: There is no Â in font ptmr7t!
-Missing character: There is no ” in font ptmr7t!
 Missing character: There is no Ã in font ptmr7t!
 Missing character: There is no ¢ in font ptmr7t!
 Missing character: There is no Â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no Â in font ptmr7t!
 Missing character: There is no ” in font ptmr7t!
- [92] [93]
+Missing character: There is no Â in font ptmr7t!
+Missing character: There is no € in font ptmr7t!
+Missing character: There is no Â in font ptmr7t!
+Missing character: There is no ” in font ptmr7t!
+ [92]
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ¢ in font ptmr7t!
+Missing character: There is no Â in font ptmr7t!
+Missing character: There is no € in font ptmr7t!
+Missing character: There is no Â in font ptmr7t!
+Missing character: There is no ” in font ptmr7t!
+ [93]
 Missing character: There is no Ã in font ptmr7t!
 Missing character: There is no ¢ in font ptmr7t!
 Missing character: There is no Â in font ptmr7t!
@@ -1497,19 +1500,16 @@ Missing character: There is no Ã in font ptmr7t!
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Â in font ptmr7t!
 Missing character: There is no · in font ptmr7t!
-) 
+ [95]) 
 AED: lastpage setting LastPage
-[95]
+[96]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 155.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 155.
  (./dissertation.aux (./cover.aux) (./declaration.aux) (./acknowledgements.aux) (./abstract.aux) (./Chapter1/chapter1.aux) (./Chapter2/chapter2.aux) (./Chapter3/chapter3.aux) (./Chapter4/chapter4.aux) (./Chapter5/chapter5.aux) (./Appendix1/appendix1.aux) (./Appendix2/appendix2.aux) (./Appendix3/appendix3.aux) (./Appendix4/appendix4.aux) (./Appendix5/appendix5.aux) (./Appendix6/appendix6.aux) (./Appendix7/appendix7.aux) (./Appendix8/appendix8.aux) (./Appendix9/appendix9.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 155.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 155.
 Package rerunfilecheck Info: File `dissertation.out' has not changed.
-(rerunfilecheck)             Checksum: E65F415F40D2E37AC6D61E7703E7626B;7425.
-
-
-LaTeX Warning: There were undefined references.
+(rerunfilecheck)             Checksum: 318ADD7CA7D392070B35126FF7A7E870;7425.
 
 
 LaTeX Warning: There were multiply-defined labels.
@@ -1529,18 +1529,18 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 155.
 ### simple group (level 1) entered at line 131 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 31140 strings out of 493089
- 714412 string characters out of 6134842
- 905075 words of memory out of 5000000
+ 31142 strings out of 493089
+ 714443 string characters out of 6134842
+ 905139 words of memory out of 5000000
  33337 multiletter control sequences out of 15000+600000
  37190 words of font info for 79 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  62i,12n,102p,1010b,2102s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/courier/ucrro8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on dissertation.pdf (105 pages, 7830224 bytes).
+Output written on dissertation.pdf (106 pages, 7831107 bytes).
 PDF statistics:
- 2159 PDF objects out of 2487 (max. 8388607)
- 1953 compressed objects within 20 object streams
- 554 named destinations out of 1000 (max. 500000)
+ 2173 PDF objects out of 2487 (max. 8388607)
+ 1965 compressed objects within 20 object streams
+ 556 named destinations out of 1000 (max. 500000)
  1099 words of extra memory for PDF output out of 10000 (max. 10000000)
 

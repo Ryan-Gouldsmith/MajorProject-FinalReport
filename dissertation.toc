@@ -21,7 +21,7 @@
 \contentsline {subsubsection}{\numberline {1.3.3.3}CRC cards}{10}{subsubsection.1.3.3.3}
 \contentsline {chapter}{\numberline {2}Design}{11}{chapter.2}
 \contentsline {section}{\numberline {2.1}Overall architecture}{11}{section.2.1}
-\contentsline {subsection}{\numberline {2.1.1}Class Diagram}{11}{subsection.2.1.1}
+\contentsline {subsection}{\numberline {2.1.1}Class diagram}{11}{subsection.2.1.1}
 \contentsline {subsubsection}{\numberline {2.1.1.1}Justification of design}{11}{subsubsection.2.1.1.1}
 \contentsline {subsection}{\numberline {2.1.2}CRC cards}{13}{subsection.2.1.2}
 \contentsline {subsection}{\numberline {2.1.3}User interaction}{13}{subsection.2.1.3}
@@ -119,7 +119,7 @@
 \contentsline {section}{\numberline {6.2}Filtering the blue lines}{74}{section.F.2}
 \contentsline {chapter}{\numberline {G}Design decisions}{75}{appendix.G}
 \contentsline {section}{\numberline {7.1}Class diagram}{75}{section.G.1}
-\contentsline {chapter}{\numberline {H}Design suppliments}{77}{appendix.H}
+\contentsline {chapter}{\numberline {H}Design supplements}{77}{appendix.H}
 \contentsline {section}{\numberline {8.1}CRC cards}{77}{section.H.1}
 \contentsline {section}{\numberline {8.2}Wireframes}{79}{section.H.2}
 \contentsline {chapter}{\numberline {I}Scrum process supplementary materials}{80}{appendix.I}

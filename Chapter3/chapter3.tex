@@ -81,9 +81,9 @@ Over a series of iterations, the primary objective was to remove the blue lines 
 \begin{algorithm} [H]
 \begin{algorithmic}[1]
   \Function{remove\_lines}{}
-    \State image $\gets$ read\_image\_as\_grayscale()
-    \State lower\_black
-    \State upper\_black
+    \State image $\gets$ read\_image\_as\_colour()
+    \State calculate lower\_black
+    \State calculate upper\_black
     \State mask\_black $\gets$ cv2.inRange(erode, lower\_black, upper\_black)
   \EndFunction
   \end{algorithmic}
